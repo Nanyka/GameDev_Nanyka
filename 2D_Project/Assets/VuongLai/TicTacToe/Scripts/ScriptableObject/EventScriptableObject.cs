@@ -7,9 +7,15 @@ using UnityEngine.Events;
 public class EventScriptableObject : ScriptableObject
 {
     public UnityEvent eventChangePlayer;
+    public UnityEvent eventTouchItem;
 
     public void RunEventChangePlayer()
     {
         eventChangePlayer?.Invoke();
+    }
+
+    public void RunEventTouchItem()
+    {
+        eventTouchItem?.Invoke();
     }
 }

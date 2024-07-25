@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class CheckItem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private EventScriptableObject eventScriptable;
 
-    // Update is called once per frame
-    void Update()
+    private void OnMouseDown()
     {
-        
+        eventScriptable.RunEventTouchItem();
     }
 }
