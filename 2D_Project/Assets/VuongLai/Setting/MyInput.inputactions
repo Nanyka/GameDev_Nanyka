@@ -1,0 +1,34 @@
+{
+    "name": "MyInput",
+    "maps": [
+        {
+            "name": "MacOs",
+            "id": "c211ca2f-9ecc-4c21-ac33-e8055888a49a",
+            "actions": [
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "2805fe2f-cb7d-4aab-91cf-ee00eff07fc8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d69aed62-b972-4548-9690-cba23d1008aa",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

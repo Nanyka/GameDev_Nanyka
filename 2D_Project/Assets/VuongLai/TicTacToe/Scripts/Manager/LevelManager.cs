@@ -5,17 +5,8 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] private EventScriptableObject eventScriptableObject;
-
-    private FirstPlayerController firstPlayerController;
-    private SecondPlayerController secondPlayerController;
-
-    static bool isPlayer1 = true;
-
-    private void Awake()
-    {
-        firstPlayerController = new FirstPlayerController();
-        secondPlayerController = new SecondPlayerController();
-    }
+    [SerializeField] private PlayerInfor playerInfor;
+    [SerializeField] private PlayerEvent playerEvent;
 
     private void OnEnable()
     {
@@ -31,30 +22,13 @@ public class LevelManager : MonoBehaviour
 
     public void ChangePlayer()
     {
-        isPlayer1 = !isPlayer1;
+        //playerInfor.ChangePlayer();
 
-        Debug.Log(isPlayer1 ? "turn of Player1" : "turn of Player2");
-    }
-
-    public static bool IsPlayer1()
-    {
-        return isPlayer1;
+        Debug.Log(playerInfor.IsFirstPlayer() ? "turn of Player1" : "turn of Player2");
     }
 
     private void OnTouchItem()
     {
-        if(isPlayer1)
-        {
-            PlayerTalk(firstPlayerController);
-        }
-        else
-        {
-            PlayerTalk(secondPlayerController);
-        }
-    }
-
-    private void PlayerTalk(IPlayerBehavior playerBehavior)
-    {
-        playerBehavior.PlayerTalk();
+        playerInfor.RunEventCurrentPlayerTalk();
     }
 }

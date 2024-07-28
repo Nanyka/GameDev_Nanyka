@@ -9,6 +9,7 @@ public class IngameMenu : MonoBehaviour
     [SerializeField] CanvasManager canvasManager;
     [SerializeField] Button _changePlayerButton;
     [SerializeField] TextMeshProUGUI _playerText;
+    [SerializeField] PlayerInfor playerInfor;
 
     private void Awake()
     {
@@ -19,6 +20,6 @@ public class IngameMenu : MonoBehaviour
     {
         canvasManager.RunEventChangePlayer();
 
-        _playerText.SetText(LevelManager.IsPlayer1() ? "Player1" : "Player2");
+        _playerText.SetText(playerInfor.IsFirstPlayer() ? "Player1" : "Player2");
     }
 }
