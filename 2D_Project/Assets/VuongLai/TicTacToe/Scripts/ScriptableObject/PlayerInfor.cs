@@ -14,6 +14,11 @@ public class PlayerInfor : ScriptableObject
         isFirstPlayer = !isFirstPlayer;
     }
 
+    public void SetIsFirstPlayer()
+    {
+        isFirstPlayer = true;
+    }
+
     public bool IsFirstPlayer()
     {
         return isFirstPlayer;

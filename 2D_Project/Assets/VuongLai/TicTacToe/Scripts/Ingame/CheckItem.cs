@@ -52,6 +52,8 @@ public class CheckItem : MonoBehaviour
         {
             isChecked = true;
             checkIconObject.SetActive(true);
+
+            eventScriptable.eventTouchItem?.Invoke();
         }
     }
 }

@@ -9,20 +9,21 @@ public class FirstPlayerController : MonoBehaviour, IPlayerBehavior
 
     private void Awake()
     {
+        playerInfor.SetIsFirstPlayer();
         playerInfor.SetCurrentPlayerBehavior(this);
     }
 
     private void OnEnable()
     {
-        eventScriptableObject.eventChangePlayer.AddListener(OnChangePlayer);
+        eventScriptableObject.eventChangePlayer.AddListener(ChangePlayer);
     }
 
     private void OnDisable()
     {
-        eventScriptableObject.eventChangePlayer.RemoveListener(OnChangePlayer);
+        eventScriptableObject.eventChangePlayer.RemoveListener(ChangePlayer);
     }
 
-    void OnChangePlayer()
+    public void ChangePlayer()
     {
         if (playerInfor.IsFirstPlayer())
         {

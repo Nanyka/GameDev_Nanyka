@@ -9,15 +9,15 @@ public class SecondPlayerController : MonoBehaviour, IPlayerBehavior
 
     private void OnEnable()
     {
-        eventScriptableObject.eventChangePlayer.AddListener(OnChangePlayer);
+        eventScriptableObject.eventChangePlayer.AddListener(ChangePlayer);
     }
 
     private void OnDisable()
     {
-        eventScriptableObject.eventChangePlayer.RemoveListener(OnChangePlayer);
+        eventScriptableObject.eventChangePlayer.RemoveListener(ChangePlayer);
     }
 
-    private void OnChangePlayer()
+    public void ChangePlayer()
     {
         if(!playerInfor.IsFirstPlayer())
         {
