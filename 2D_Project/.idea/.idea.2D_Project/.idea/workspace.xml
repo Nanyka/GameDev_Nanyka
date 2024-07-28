@@ -5,9 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/BooleanStorage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/BooleanStorage.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/IPlayerBehaviorStorage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/IPlayerBehaviorStorage.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/TutorialScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/TutorialScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/InputReader.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/InputReader.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Input/InputReaderSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Input/InputReaderSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Input/TestInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Input/TestInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Prefabs/FirstPlayerCheckItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Prefabs/FirstPlayerCheckItem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Prefabs/SecondPlayerCheckItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Prefabs/SecondPlayerCheckItem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scene/TicTacToe_Vuong.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scene/TicTacToe_Vuong.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Ingame/CheckItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Ingame/CheckItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Ingame/FirstPlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Ingame/FirstPlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Ingame/SecondPlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Ingame/SecondPlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Interface/Ingame/IPlayerBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Interface/Ingame/IPlayerBehavior.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Manager/CanvasManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Manager/CanvasManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Manager/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Manager/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/UI/IngameMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/UI/IngameMenu.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,32 +32,32 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/InputReaderSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/VoidChannel.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2jotvLMJZAJ3m7yvzLm2PeDQDg1" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "/Users/admin/Library/Application Support/JetBrains/Rider2023.1/resharper-host/DecompilerCache",
-      "/Users/admin/Library/Application Support/JetBrains/Rider2023.1/resharper-host/SourcesCache",
-      "/Users/admin/.local/share/Symbols/src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/Users/admin/Library/Application Support/JetBrains/Rider2023.1/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/admin/Library/Application Support/JetBrains/Rider2023.1/resharper-host/SourcesCache&quot;,
+      &quot;/Users/admin/.local/share/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../../../Game Unity/UnityEditor/2022.3.17f1/Unity.app/Contents/MacOS/Unity" />
@@ -88,6 +105,7 @@
       <option name="presentableId" value="Default" />
       <updated>1722065490117</updated>
       <workItem from="1722065491609" duration="1096000" />
+      <workItem from="1722147752803" duration="4224000" />
     </task>
     <servers />
   </component>

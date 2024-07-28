@@ -5,13 +5,15 @@ using UnityEngine;
 public class CanvasManager : MonoBehaviour
 {
     [SerializeField] UIBase currentMenu;
-    [SerializeField] EventScriptableObject eventScriptableObject;
+    // [SerializeField] EventScriptableObject eventScriptableObject;
+    [SerializeField] private VoidChannel changePlayerChannel;
     [SerializeField] PlayerInfor playerInfor;
 
     public void RunEventChangePlayer()
     {
-        playerInfor.ChangePlayer();
+        // playerInfor.ChangePlayer();
 
-        eventScriptableObject.RunEventChangePlayer();
+        // changePlayerChannel.channel.Invoke();
+        // eventScriptableObject.RunEventChangePlayer();
     }
 }

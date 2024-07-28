@@ -4,11 +4,12 @@ using UnityEngine.Events;
 
 namespace TheAiAlchemist
 {
-	[CreateAssetMenu(fileName = "InputReader", menuName = "TheAiAlchemist/Controller/InputReader")]
+	[CreateAssetMenu(fileName = "InputReader", menuName = "TheAiAlchemist/Settings/InputReader")]
 	public class InputReaderSO : ScriptableObject, GameInput.IGeneralInputActions
 	{
 		// Gameplay
 		public UnityEvent jumpEvent;
+		public UnityEvent<Vector3> mousePositionEvent;
 		// public UnityEvent jumpCanceledEvent;
 		// public UnityEvent attackEvent;
 		// public UnityEvent interactEvent; // Used to talk, pickup objects, interact with tools like the cooking cauldron
