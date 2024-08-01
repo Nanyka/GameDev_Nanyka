@@ -130,11 +130,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16fea3d74d05647f1bfd1b753f7cb1d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventScriptable: {fileID: 11400000, guid: dca7812a176a448b3a27b695b2ef63f3, type: 2}
+  touchItemChannel: {fileID: 11400000, guid: 03a234e1e30a3466d9cff29558d8117a, type: 2}
   checkIconObject: {fileID: 2306860213744980937}
   isFirstPlayerCheck: 1
   mouseEvent: {fileID: 11400000, guid: e425ed02eaeec4390828c78d84bc18a4, type: 2}
-  playerInfor: {fileID: 11400000, guid: 9b9458db9d6c34f3b830599a2b5d826a, type: 2}
+  isPlayerStorage: {fileID: 11400000, guid: 5af6fa465db7b4964a0e56992fabc11e, type: 2}
 --- !u!61 &2305788952838728852
 BoxCollider2D:
   m_ObjectHideFlags: 0

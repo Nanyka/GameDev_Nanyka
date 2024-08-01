@@ -9,11 +9,12 @@ namespace TheAiAlchemist
 {
     public class TestInput : MonoBehaviour
     {
-        [FormerlySerializedAs("_inputReader")] [SerializeField] private InputReaderSO inputReaderSo;
+        [SerializeField] private InputReaderSO inputReaderSo;
 
         private void OnEnable()
         {
             inputReaderSo.jumpEvent.AddListener(TestJumpPress);
+            inputReaderSo.mousePositionEvent.AddListener(PrintMousePosition);
         }
 
         private void OnDisable()
@@ -25,5 +26,12 @@ namespace TheAiAlchemist
         {
             Debug.Log("Successful jump");
         }
+        
+        // Ex1: Detect mouse position
+        private void PrintMousePosition(Vector3 arg0)
+        {
+            // print the position here --->
+        }
+        
     }
 }

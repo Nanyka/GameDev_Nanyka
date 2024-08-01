@@ -5,5 +5,5 @@ using UnityEngine;
 public interface IPlayerBehavior
 {
     public void PlayerTalk();
-    public void ChangePlayer();
+    // public void ChangePlayer();
 }

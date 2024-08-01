@@ -4,26 +4,33 @@ using UnityEngine;
 
 public class SecondPlayerController : MonoBehaviour, IPlayerBehavior
 {
-    [SerializeField] EventScriptableObject eventScriptableObject;
-    [SerializeField] PlayerInfor playerInfor;
+    [SerializeField] private IPlayerBehaviorStorage m_PlayerBehavior;
 
-    private void OnEnable()
+    // [SerializeField] EventScriptableObject eventScriptableObject;
+    // [SerializeField] PlayerInfor playerInfor;
+    
+    private void Awake()
     {
-        eventScriptableObject.eventChangePlayer.AddListener(ChangePlayer);
+        m_PlayerBehavior.value = this;
     }
 
-    private void OnDisable()
-    {
-        eventScriptableObject.eventChangePlayer.RemoveListener(ChangePlayer);
-    }
-
-    public void ChangePlayer()
-    {
-        if(!playerInfor.IsFirstPlayer())
-        {
-            playerInfor.SetCurrentPlayerBehavior(this);
-        }
-    }
+    // private void OnEnable()
+    // {
+    //     eventScriptableObject.eventChangePlayer.AddListener(ChangePlayer);
+    // }
+    //
+    // private void OnDisable()
+    // {
+    //     eventScriptableObject.eventChangePlayer.RemoveListener(ChangePlayer);
+    // }
+    //
+    // public void ChangePlayer()
+    // {
+    //     if(!playerInfor.IsFirstPlayer())
+    //     {
+    //         playerInfor.SetCurrentPlayerBehavior(this);
+    //     }
+    // }
 
     public void PlayerTalk()
     {

@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class CheckItem : MonoBehaviour
 {
-    [SerializeField] private EventScriptableObject eventScriptable;
+    // [SerializeField] private EventScriptableObject eventScriptable;
+    [SerializeField] private VoidChannel touchItemChannel;
     [SerializeField] private GameObject checkIconObject;
     [SerializeField] bool isFirstPlayerCheck;
     [SerializeField] private MouseEvent mouseEvent;
-    [SerializeField] private PlayerInfor playerInfor;
+    [SerializeField] private BooleanStorage isPlayerStorage;
+    // [SerializeField] private PlayerInfor playerInfor;
 
     bool isChecked;
 
@@ -34,7 +36,7 @@ public class CheckItem : MonoBehaviour
 
     private void DetectShowCheck(Vector3 mouseWorldPosition)
     {
-        if (playerInfor.IsFirstPlayer() != isFirstPlayerCheck)
+        if (isPlayerStorage.value != isFirstPlayerCheck)
         {
             return;
         }
@@ -53,7 +55,8 @@ public class CheckItem : MonoBehaviour
             isChecked = true;
             checkIconObject.SetActive(true);
 
-            eventScriptable.eventTouchItem?.Invoke();
+            // eventScriptable.eventTouchItem?.Invoke();
+            touchItemChannel.channel.Invoke();
         }
     }
 }
