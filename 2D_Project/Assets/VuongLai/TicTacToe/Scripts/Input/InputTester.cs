@@ -5,6 +5,18 @@ using UnityEngine.InputSystem;
 
 public class InputTester : MonoBehaviour
 {
+    [SerializeField] private InputSystem inputSystem;
+
+    private void OnEnable()
+    {
+        inputSystem.eventJump.AddListener(OnJump);
+    }
+
+    private void OnDisable()
+    {
+        inputSystem.eventJump.RemoveListener(OnJump);
+    }
+
     public void OnJump(InputAction.CallbackContext content)
     {
         if (content.phase == InputActionPhase.Performed)
