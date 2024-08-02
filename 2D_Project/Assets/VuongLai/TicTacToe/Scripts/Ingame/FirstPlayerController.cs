@@ -5,38 +5,12 @@ using UnityEngine;
 
 public class FirstPlayerController : MonoBehaviour, IPlayerBehavior
 {
-    [SerializeField] private IPlayerBehaviorStorage m_PlayerBehavior;
-    // [SerializeField] EventScriptableObject eventScriptableObject;
-    // [SerializeField] PlayerInfor playerInfor;
+    [SerializeField] private V_IPlayerBehaviorStorage m_PlayerBehavior;
 
     private void Awake()
     {
-        m_PlayerBehavior.value = this;
+        m_PlayerBehavior.SetValue(this);
     }
-
-    // private void Awake()
-    // {
-    //     playerInfor.SetIsFirstPlayer();
-    //     playerInfor.SetCurrentPlayerBehavior(this);
-    // }
-
-    // private void OnEnable()
-    // {
-    //     eventScriptableObject.eventChangePlayer.AddListener(ChangePlayer);
-    // }
-    //
-    // private void OnDisable()
-    // {
-    //     eventScriptableObject.eventChangePlayer.RemoveListener(ChangePlayer);
-    // }
-    //
-    // public void ChangePlayer()
-    // {
-    //     if (playerInfor.IsFirstPlayer())
-    //     {
-    //         playerInfor.SetCurrentPlayerBehavior(this);
-    //     }
-    // }
 
     public void PlayerTalk()
     {

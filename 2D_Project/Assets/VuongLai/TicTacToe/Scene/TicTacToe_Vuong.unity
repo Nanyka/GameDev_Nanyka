@@ -664,7 +664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff518dd3648ef4d06a66cc39ce5e0886, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlayerBehavior: {fileID: 11400000, guid: 47e390baa55e841cebfaca7eb5b873f5, type: 2}
+  m_PlayerBehavior: {fileID: 11400000, guid: 93185a7d2e87546dc98231ece345a3cb, type: 2}
 --- !u!1 &526233280
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,7 +859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350a58204d427418280f13adef498fc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlayerBehavior: {fileID: 11400000, guid: 2c2d8cfcfd66d47bfad40951799fb925, type: 2}
+  m_PlayerBehavior: {fileID: 11400000, guid: cbaa2a7eecb974625a4237b18cdc5186, type: 2}
 --- !u!1 &649868480
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,21 +917,13 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 649868481}
-        m_TargetAssemblyTypeName: InputTester, Assembly-CSharp
-        m_MethodName: OnJump
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 2805fe2f-cb7d-4aab-91cf-ee00eff07fc8
     m_ActionName: MacOs/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f70a27b5-374d-4535-a504-8f55024a9647
+    m_ActionName: MacOs/MouseTouch[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: MacOs
@@ -1233,13 +1225,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b16029b629d4710a934cfa6a5edca4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changePlayerChannel: {fileID: 11400000, guid: f28658ecf3d9946e59e23c3659afaea8, type: 2}
-  touchItemChannel: {fileID: 11400000, guid: 03a234e1e30a3466d9cff29558d8117a, type: 2}
-  isPlayerStorage: {fileID: 11400000, guid: 5af6fa465db7b4964a0e56992fabc11e, type: 2}
-  player1: {fileID: 11400000, guid: 2c2d8cfcfd66d47bfad40951799fb925, type: 2}
-  player2: {fileID: 11400000, guid: 47e390baa55e841cebfaca7eb5b873f5, type: 2}
-  playerInfor: {fileID: 11400000, guid: 9b9458db9d6c34f3b830599a2b5d826a, type: 2}
-  playerEvent: {fileID: 11400000, guid: aebbe3ece2232427fa6682a57b7214dd, type: 2}
+  changePlayerChannel: {fileID: 11400000, guid: c3016a2354562439c9163049ce626973, type: 2}
+  touchItemChannel: {fileID: 11400000, guid: 9819b865d51514a09b004b4b80feafd0, type: 2}
+  isFirstPlayer: {fileID: 11400000, guid: c360dfb7074d24199ae6e2dd72a09248, type: 2}
+  player1: {fileID: 11400000, guid: cbaa2a7eecb974625a4237b18cdc5186, type: 2}
+  player2: {fileID: 11400000, guid: 93185a7d2e87546dc98231ece345a3cb, type: 2}
 --- !u!1001 &1301091644
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1752,7 +1742,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1635862273}
-  - component: {fileID: 1635862274}
   m_Layer: 0
   m_Name: MouseInput
   m_TagString: Untagged
@@ -1775,19 +1764,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1835314497}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1635862274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1635862272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90edc872c17ff4fcca5eae96ec3e6baa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mouseEvent: {fileID: 11400000, guid: e425ed02eaeec4390828c78d84bc18a4, type: 2}
 --- !u!4 &1724429354 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8959695536174955430, guid: 1857c390d6027494dacf380dee0d6118, type: 3}
@@ -1900,10 +1876,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4bf06c9feef64dd2b750921a006cac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changePlayerChannel: {fileID: 11400000, guid: f28658ecf3d9946e59e23c3659afaea8, type: 2}
   _changePlayerButton: {fileID: 164734148}
   _playerText: {fileID: 163774081}
-  isPlayer: {fileID: 11400000, guid: 5af6fa465db7b4964a0e56992fabc11e, type: 2}
+  changePlayerChannel: {fileID: 11400000, guid: c3016a2354562439c9163049ce626973, type: 2}
+  isPlayer: {fileID: 11400000, guid: c360dfb7074d24199ae6e2dd72a09248, type: 2}
 --- !u!1001 &1784043072
 PrefabInstance:
   m_ObjectHideFlags: 0

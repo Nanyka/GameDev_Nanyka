@@ -35,6 +35,24 @@ public partial class @MyInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MouseTouch"",
+                    ""type"": ""Button"",
+                    ""id"": ""f70a27b5-374d-4535-a504-8f55024a9647"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MousePosition"",
+                    ""type"": ""Value"",
+                    ""id"": ""e913d44b-0cd1-4749-a976-7dfaade11b3c"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -48,6 +66,28 @@ public partial class @MyInput: IInputActionCollection2, IDisposable
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""915309a7-aa37-41ba-ae13-3735ddc22929"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MouseTouch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1ba2e67a-1f09-4412-826f-9541e9b062db"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MousePosition"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -57,6 +97,8 @@ public partial class @MyInput: IInputActionCollection2, IDisposable
         // MacOs
         m_MacOs = asset.FindActionMap("MacOs", throwIfNotFound: true);
         m_MacOs_Jump = m_MacOs.FindAction("Jump", throwIfNotFound: true);
+        m_MacOs_MouseTouch = m_MacOs.FindAction("MouseTouch", throwIfNotFound: true);
+        m_MacOs_MousePosition = m_MacOs.FindAction("MousePosition", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -119,11 +161,15 @@ public partial class @MyInput: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_MacOs;
     private List<IMacOsActions> m_MacOsActionsCallbackInterfaces = new List<IMacOsActions>();
     private readonly InputAction m_MacOs_Jump;
+    private readonly InputAction m_MacOs_MouseTouch;
+    private readonly InputAction m_MacOs_MousePosition;
     public struct MacOsActions
     {
         private @MyInput m_Wrapper;
         public MacOsActions(@MyInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Jump => m_Wrapper.m_MacOs_Jump;
+        public InputAction @MouseTouch => m_Wrapper.m_MacOs_MouseTouch;
+        public InputAction @MousePosition => m_Wrapper.m_MacOs_MousePosition;
         public InputActionMap Get() { return m_Wrapper.m_MacOs; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -136,6 +182,12 @@ public partial class @MyInput: IInputActionCollection2, IDisposable
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
+            @MouseTouch.started += instance.OnMouseTouch;
+            @MouseTouch.performed += instance.OnMouseTouch;
+            @MouseTouch.canceled += instance.OnMouseTouch;
+            @MousePosition.started += instance.OnMousePosition;
+            @MousePosition.performed += instance.OnMousePosition;
+            @MousePosition.canceled += instance.OnMousePosition;
         }
 
         private void UnregisterCallbacks(IMacOsActions instance)
@@ -143,6 +195,12 @@ public partial class @MyInput: IInputActionCollection2, IDisposable
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
+            @MouseTouch.started -= instance.OnMouseTouch;
+            @MouseTouch.performed -= instance.OnMouseTouch;
+            @MouseTouch.canceled -= instance.OnMouseTouch;
+            @MousePosition.started -= instance.OnMousePosition;
+            @MousePosition.performed -= instance.OnMousePosition;
+            @MousePosition.canceled -= instance.OnMousePosition;
         }
 
         public void RemoveCallbacks(IMacOsActions instance)
@@ -163,5 +221,7 @@ public partial class @MyInput: IInputActionCollection2, IDisposable
     public interface IMacOsActions
     {
         void OnJump(InputAction.CallbackContext context);
+        void OnMouseTouch(InputAction.CallbackContext context);
+        void OnMousePosition(InputAction.CallbackContext context);
     }
 }

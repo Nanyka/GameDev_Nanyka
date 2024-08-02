@@ -6,12 +6,10 @@ using UnityEngine.UI;
 
 public class IngameMenu : MonoBehaviour
 {
-    // [SerializeField] CanvasManager canvasManager;
-    [SerializeField] private VoidChannel changePlayerChannel;
     [SerializeField] Button _changePlayerButton;
     [SerializeField] TextMeshProUGUI _playerText;
-    [SerializeField] private BooleanStorage isPlayer;
-    // [SerializeField] PlayerInfor playerInfor;
+    [SerializeField] private V_VoidChannel changePlayerChannel;
+    [SerializeField] private V_BooleanStorage isPlayer;
 
     private void Awake()
     {
@@ -20,11 +18,9 @@ public class IngameMenu : MonoBehaviour
 
     private void OnChangePlayer()
     {
-        // canvasManager.RunEventChangePlayer();
-        // playerInfor.ChangePlayer();
-        isPlayer.value = !isPlayer.value;
-        _playerText.SetText(isPlayer.value ? "Player1" : "Player2");
+        isPlayer.SetValue(!isPlayer.GetValue());
+        _playerText.SetText(isPlayer.GetValue() ? "Player1" : "Player2");
 
-        changePlayerChannel.channel.Invoke();
+        changePlayerChannel.RunVoidChannel();
     }
 }

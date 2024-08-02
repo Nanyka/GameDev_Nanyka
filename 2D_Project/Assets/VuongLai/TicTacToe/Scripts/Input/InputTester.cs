@@ -17,11 +17,8 @@ public class InputTester : MonoBehaviour
         inputSystem.eventJump.RemoveListener(OnJump);
     }
 
-    public void OnJump(InputAction.CallbackContext content)
+    public void OnJump()
     {
-        if (content.phase == InputActionPhase.Performed)
-        {
-            Debug.Log("I am Jump");
-        }
+        Debug.Log("I am Jump");
     }
 }

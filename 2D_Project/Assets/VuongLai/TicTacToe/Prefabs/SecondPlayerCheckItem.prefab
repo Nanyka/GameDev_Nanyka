@@ -130,11 +130,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16fea3d74d05647f1bfd1b753f7cb1d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  touchItemChannel: {fileID: 11400000, guid: 03a234e1e30a3466d9cff29558d8117a, type: 2}
   checkIconObject: {fileID: 3794075662948346206}
   isFirstPlayerCheck: 0
   mouseEvent: {fileID: 11400000, guid: e425ed02eaeec4390828c78d84bc18a4, type: 2}
-  isPlayerStorage: {fileID: 11400000, guid: 5af6fa465db7b4964a0e56992fabc11e, type: 2}
+  touchItemChannel: {fileID: 11400000, guid: 9819b865d51514a09b004b4b80feafd0, type: 2}
+  isFirstPlayer: {fileID: 11400000, guid: c360dfb7074d24199ae6e2dd72a09248, type: 2}
+  inputSystem: {fileID: 11400000, guid: a24a43067be484b3b83529f635d1973d, type: 2}
 --- !u!61 &2305788952838728852
 BoxCollider2D:
   m_ObjectHideFlags: 0
