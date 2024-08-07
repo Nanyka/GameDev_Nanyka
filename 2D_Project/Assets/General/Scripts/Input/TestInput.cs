@@ -14,7 +14,7 @@ namespace TheAiAlchemist
         private void OnEnable()
         {
             inputReaderSo.jumpEvent.AddListener(TestJumpPress);
-            inputReaderSo.mousePositionEvent.AddListener(PrintMousePosition);
+            inputReaderSo.clickEvent.AddListener(PrintMousePosition);
         }
 
         private void OnDisable()

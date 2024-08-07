@@ -35,6 +35,15 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Click"",
+                    ""type"": ""Button"",
+                    ""id"": ""ab102bf7-ce37-42e9-8719-5a2f09ae7020"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -48,6 +57,17 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d7b6045c-b3bd-4fe9-8c68-18a95164099b"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -57,6 +77,7 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
         // GeneralInput
         m_GeneralInput = asset.FindActionMap("GeneralInput", throwIfNotFound: true);
         m_GeneralInput_Jump = m_GeneralInput.FindAction("Jump", throwIfNotFound: true);
+        m_GeneralInput_Click = m_GeneralInput.FindAction("Click", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -119,11 +140,13 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_GeneralInput;
     private List<IGeneralInputActions> m_GeneralInputActionsCallbackInterfaces = new List<IGeneralInputActions>();
     private readonly InputAction m_GeneralInput_Jump;
+    private readonly InputAction m_GeneralInput_Click;
     public struct GeneralInputActions
     {
         private @GameInput m_Wrapper;
         public GeneralInputActions(@GameInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Jump => m_Wrapper.m_GeneralInput_Jump;
+        public InputAction @Click => m_Wrapper.m_GeneralInput_Click;
         public InputActionMap Get() { return m_Wrapper.m_GeneralInput; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -136,6 +159,9 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
+            @Click.started += instance.OnClick;
+            @Click.performed += instance.OnClick;
+            @Click.canceled += instance.OnClick;
         }
 
         private void UnregisterCallbacks(IGeneralInputActions instance)
@@ -143,6 +169,9 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
+            @Click.started -= instance.OnClick;
+            @Click.performed -= instance.OnClick;
+            @Click.canceled -= instance.OnClick;
         }
 
         public void RemoveCallbacks(IGeneralInputActions instance)
@@ -163,5 +192,6 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
     public interface IGeneralInputActions
     {
         void OnJump(InputAction.CallbackContext context);
+        void OnClick(InputAction.CallbackContext context);
     }
 }

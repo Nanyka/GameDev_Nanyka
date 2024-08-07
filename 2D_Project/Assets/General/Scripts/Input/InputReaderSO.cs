@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 namespace TheAiAlchemist
 {
@@ -9,7 +10,7 @@ namespace TheAiAlchemist
 	{
 		// Gameplay
 		public UnityEvent jumpEvent;
-		public UnityEvent<Vector3> mousePositionEvent;
+		public UnityEvent<Vector3> clickEvent;
 		// public UnityEvent jumpCanceledEvent;
 		// public UnityEvent attackEvent;
 		// public UnityEvent interactEvent; // Used to talk, pickup objects, interact with tools like the cooking cauldron
@@ -51,6 +52,13 @@ namespace TheAiAlchemist
 			// if (jumpCanceledEvent != null
 			//     && context.phase == InputActionPhase.Canceled)
 			// 	jumpCanceledEvent.Invoke();
+		}
+
+		public void OnClick(InputAction.CallbackContext context)
+		{
+			if (clickEvent != null
+			    && context.phase == InputActionPhase.Performed)
+				clickEvent.Invoke(Mouse.current.position.value);
 		}
 
 		// public void OnAttack(InputAction.CallbackContext context)
@@ -126,12 +134,12 @@ namespace TheAiAlchemist
 		// 	gameInput.GeneralInput.Disable();
 		// }
 
-		public void EnableGameplayInput()
+		private void EnableGameplayInput()
 		{
 			gameInput.GeneralInput.Enable();
 		}
 
-		public void DisableAllInput()
+		private void DisableAllInput()
 		{
 			gameInput.GeneralInput.Disable();
 		}

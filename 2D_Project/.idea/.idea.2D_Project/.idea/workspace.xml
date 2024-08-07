@@ -4,14 +4,55 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="" />
+    <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/Vector3Channel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/Vector3Channel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/ICircleTrait.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/ICircleTrait.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/StorageSO/IntStorage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/StorageSO/IntStorage.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/StorageSO/Vector3Storage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/StorageSO/Vector3Storage.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Utils/IObjectPool.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Utils/IObjectPool.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/MergedScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/MergedScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Storages/IsPlayer.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Storages/IsPlayer.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/BooleanStorage.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/BooleanStorage.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Entity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Entity.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/IPlayerBehaviorStorage.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/IPlayerBehaviorStorage.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Input/InputReaderSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Input/InputReaderSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Input/TestInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Input/TestInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/InterfaceTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/InterfaceTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/VoidChannel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/VoidChannel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Settings/GameInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Settings/GameInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Settings/GameInput.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Settings/GameInput.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nana/Challenge1/Prefabs/Circle1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nana/Challenge1/Prefabs/Circle1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nana/Challenge1/Scripts/Circle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nana/Challenge1/Scripts/Circle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nana/Challenge1/Scripts/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nana/Challenge1/Scripts/InputManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nana/Challenge1/Scripts/Vector3Channel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Nana/Challenge1/Scripts/Vector3Channel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Manager/CanvasManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Manager/CanvasManager.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/VoidChannel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/VoidChannel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/GameManagers/IPlayerBehavior.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/Utils/Combination.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Nana/Challenge1/Scripts/BooleanStorage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../TestMLAgents/Assets/MAIN_LOT_Turnbase/Managers/Scripts/Utils/PointingChecker.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2jotvLMJZAJ3m7yvzLm2PeDQDg1" />
   <component name="ProjectViewState">
@@ -85,7 +126,8 @@
       <updated>1722065490117</updated>
       <workItem from="1722065491609" duration="1096000" />
       <workItem from="1722147752803" duration="4224000" />
-      <workItem from="1723014990306" duration="200000" />
+      <workItem from="1723014990306" duration="3655000" />
+      <workItem from="1723036407645" duration="13210000" />
     </task>
     <servers />
   </component>

@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Nana
+namespace TheAiAlchemist
 {
-    [CreateAssetMenu(menuName = "Nana/Channels/Vector3Channel")]
+    [CreateAssetMenu(fileName = "Vector3Channel", menuName = "TheAiAlchemist/Channels/Vector3Channel")]
     public class Vector3Channel : ScriptableObject
     {
         private UnityEvent<Vector3> channel;

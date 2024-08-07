@@ -6,18 +6,21 @@ using UnityEngine;
 // transform that position from screen space to word space via scriptable object event
 // asign the position to the game object (cirle have a component to print this position)
 
-public class InputManager : MonoBehaviour
+namespace Nana
 {
-    [SerializeField] private Vector3Channel mousePosChannel; 
-
-    private void Update()
+    public class InputManager : MonoBehaviour
     {
-        if (Input.GetMouseButtonDown(0))
+        [SerializeField] private Vector3Channel mousePosChannel; 
+
+        private void Update()
         {
-            var mousePosition = Input.mousePosition;
-            var wordPosition = Camera.main.ScreenToWorldPoint(mousePosition);
-            wordPosition = new Vector3(wordPosition.x, wordPosition.y, 0f);
-            mousePosChannel.Vector3Event.Invoke(wordPosition);
+            if (Input.GetMouseButtonDown(0))
+            {
+                var mousePosition = Input.mousePosition;
+                var wordPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+                wordPosition = new Vector3(wordPosition.x, wordPosition.y, 0f);
+                mousePosChannel.ExecuteChannel(wordPosition);
+            }
         }
     }
 }
