@@ -35,7 +35,6 @@ public class Circle : MonoBehaviour
         {
             m_Renderer.enabled = true;
         }
-        
     }
     
 }

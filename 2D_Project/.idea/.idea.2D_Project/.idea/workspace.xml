@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/BooleanStorage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/BooleanStorage.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/IPlayerBehaviorStorage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/IPlayerBehaviorStorage.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/TutorialScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/TutorialScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/InputReader.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/InputReader.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Input/InputReaderSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Input/InputReaderSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Input/TestInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Input/TestInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Prefabs/FirstPlayerCheckItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Prefabs/FirstPlayerCheckItem.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Prefabs/SecondPlayerCheckItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Prefabs/SecondPlayerCheckItem.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scene/TicTacToe_Vuong.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scene/TicTacToe_Vuong.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Ingame/CheckItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Ingame/CheckItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Ingame/FirstPlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Ingame/FirstPlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Ingame/SecondPlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Ingame/SecondPlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Interface/Ingame/IPlayerBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Interface/Ingame/IPlayerBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Manager/CanvasManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Manager/CanvasManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Manager/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Manager/LevelManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/UI/IngameMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/UI/IngameMenu.cs" afterDir="false" />
-    </list>
+    <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,6 +85,7 @@
       <updated>1722065490117</updated>
       <workItem from="1722065491609" duration="1096000" />
       <workItem from="1722147752803" duration="4224000" />
+      <workItem from="1723014990306" duration="200000" />
     </task>
     <servers />
   </component>
