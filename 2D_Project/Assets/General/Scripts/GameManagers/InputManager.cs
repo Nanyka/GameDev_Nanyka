@@ -25,18 +25,27 @@ namespace TheAiAlchemist
 
         [SerializeField] private InputReaderSO inputReaderSo;
         [SerializeField] private Vector3Channel mousePosChannel;
+        [SerializeField] private VoidChannel activateInput;
 
-        private Camera mainCamera;
+        [SerializeField] private Camera mainCamera;
 
         private void OnEnable()
         {
             inputReaderSo.clickEvent.AddListener(PrintMousePosition);
-            mainCamera = Camera.main;
+            activateInput.AddListener(ActivateInputReader);
         }
 
         private void OnDisable()
         {
             inputReaderSo.clickEvent.RemoveListener(PrintMousePosition);
+            activateInput.RemoveListener(ActivateInputReader);
+        }
+
+        private void ActivateInputReader()
+        {
+            mainCamera = Camera.main;
+            inputReaderSo.EnableGameplayInput();
+            Debug.Log($"Current input is enable: {inputReaderSo.CheckGameInputEnable()}");
         }
 
         private void PrintMousePosition(Vector3 clickPoint)

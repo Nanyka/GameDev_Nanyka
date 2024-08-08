@@ -5,6 +5,7 @@ using UnityEngine;
 // Spawn circles if no any circle is existing at the click point
 // Change state of the circle if it is enable before
 // Decide win condition
+// Reset player
 
 namespace TheAiAlchemist
 {
@@ -14,6 +15,8 @@ namespace TheAiAlchemist
         [SerializeField] private Vector3Channel mousePosChannel;
         [SerializeField] private VoidChannel changePlayerChannel;
         [SerializeField] private VoidChannel enableEndButtonChannel;
+        [SerializeField] private VoidChannel endGameChannel;
+        [SerializeField] private VoidChannel resetGameChannel;
         [SerializeField] private IntStorage currentPlayer;
         [SerializeField] private int playerId;
 
@@ -31,30 +34,22 @@ namespace TheAiAlchemist
         {
             mousePosChannel.AddListener(InTurnPlay);
             changePlayerChannel.AddListener(OnChangePlayer);
+            resetGameChannel.AddListener(ResetPlayer);
         }
 
         private void OnDisable()
         {
             mousePosChannel.RemoveListener(InTurnPlay);
             changePlayerChannel.AddListener(OnChangePlayer);
+            resetGameChannel.RemoveListener(ResetPlayer);
         }
 
         private void OnChangePlayer()
         {
             _isPlayed = false;
-
-            // var results = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 }.DifferentCombinations(3);
-            // foreach (var combination in results)
-            // {
-            //     string printCombination = "";
-            //     foreach (var item in combination)
-            //     {
-            //         printCombination += $"{item},";
-            //     }
-            //     printCombination += "\n";
-            //     Debug.Log(printCombination);
-            // }
         }
+
+        #region INTERFACE FUNCTIONS
 
         public void InTurnPlay(Vector3 clickPoint)
         {
@@ -70,7 +65,6 @@ namespace TheAiAlchemist
                 if (spawnObject.TryGetComponent(out ICircleTrait circle))
                 {
                     _circles.Add(circle);
-                    // spawnObject.transform.position = clickPoint;
                     spawnObject.SetActive(true);
                     circle.Init(clickPoint);
                     _isPlayed = true;
@@ -80,6 +74,15 @@ namespace TheAiAlchemist
                 CheckWin();
             }
         }
+
+        public void ResetPlayer()
+        {
+            _objectPool.ResetPool();
+            _circles.Clear();
+            _isPlayed = false;
+        }
+
+        #endregion
 
         private bool CheckCircleExist(Vector3 clickPoint)
         {
@@ -102,11 +105,6 @@ namespace TheAiAlchemist
             var combinations = _circles.DifferentCombinations(3);
             foreach (var combination in combinations)
             {
-                // string combinationString = "";
-                // foreach (var item in combination)
-                //     combinationString += $"{item.GetId()} ";
-                // Debug.Log(combination.Any(t => t.GetId()==4));
-                
                 var score = combination.Sum(t => t.GetId());
                 var includeFour = combination.Any(t => t.GetId() == 4);
                 bool isWin = false;
@@ -122,16 +120,7 @@ namespace TheAiAlchemist
                 }
 
                 if (isWin)
-                    Debug.Log($"Player {playerId} win!");
-
-                // if (includeFour && score == 12)
-                // {
-                //     Debug.Log($"Player {playerId} win with the combination: {combinationString}. Total: {combination.Sum(t => t.GetId())}");
-                // }
-                // else if ((score - 3) % 6 == 0)
-                // {
-                //     Debug.Log($"Player {playerId} win with the combination: {combinationString}. Total: {combination.Sum(t => t.GetId())}");
-                // }
+                    endGameChannel.ExecuteChannel();
             }
         }
     }

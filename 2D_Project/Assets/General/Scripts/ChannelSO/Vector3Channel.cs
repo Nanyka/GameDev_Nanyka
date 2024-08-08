@@ -6,7 +6,7 @@ namespace TheAiAlchemist
     [CreateAssetMenu(fileName = "Vector3Channel", menuName = "TheAiAlchemist/Channels/Vector3Channel")]
     public class Vector3Channel : ScriptableObject
     {
-        private UnityEvent<Vector3> channel;
+        private UnityEvent<Vector3> channel = new();
         
         public void AddListener(UnityAction<Vector3> action)
         {

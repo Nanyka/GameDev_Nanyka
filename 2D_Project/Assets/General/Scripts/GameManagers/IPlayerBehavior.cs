@@ -7,5 +7,6 @@ namespace TheAiAlchemist
     public interface IPlayerBehavior
     {
         public void InTurnPlay(Vector3 clickPoint);
+        public void ResetPlayer();
     }
 }

@@ -6,6 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Nana/Challenge1/Scene/Challenge1_Nana.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  m_configObjects: {}
+    path: Assets/General/Scenes/Initialization.unity
+    guid: e41e469004bf0494a841311810868684
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: e28e16b431fc448d1bf573d6a1832428, type: 2}

@@ -56,6 +56,7 @@ namespace TheAiAlchemist
 
 		public void OnClick(InputAction.CallbackContext context)
 		{
+			// Debug.Log("Click still works");
 			if (clickEvent != null
 			    && context.phase == InputActionPhase.Performed)
 				clickEvent.Invoke(Mouse.current.position.value);
@@ -134,14 +135,19 @@ namespace TheAiAlchemist
 		// 	gameInput.GeneralInput.Disable();
 		// }
 
-		private void EnableGameplayInput()
+		public void EnableGameplayInput()
 		{
 			gameInput.GeneralInput.Enable();
 		}
 
-		private void DisableAllInput()
+		public void DisableAllInput()
 		{
 			gameInput.GeneralInput.Disable();
+		}
+
+		public bool CheckGameInputEnable()
+		{
+			return gameInput.GeneralInput.enabled;
 		}
 	}
 }

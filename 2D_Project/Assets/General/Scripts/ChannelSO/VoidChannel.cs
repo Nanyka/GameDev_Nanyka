@@ -8,7 +8,7 @@ namespace TheAiAlchemist
     [CreateAssetMenu(fileName = "VoidChannel", menuName = "TheAiAlchemist/Channels/VoidChannel")]
     public class VoidChannel : ScriptableObject
     {
-        private UnityEvent channel;
+        private UnityEvent channel = new();
         
         public void AddListener(UnityAction action)
         {
