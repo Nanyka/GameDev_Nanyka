@@ -22,6 +22,14 @@ namespace TheAiAlchemist
 
         private IObjectPool _objectPool;
         private List<ICircleTrait> _circles = new();
+
+        private (int, int, int)[] winningCombinations = new[]
+        {
+            (0, 1, 2), (3, 4, 5), (6, 7, 8), // Horizontal
+            (0, 3, 6), (1, 4, 7), (2, 5, 8), // Vertical
+            (0, 4, 8), (2, 4, 6) // Diagonal
+        };
+
         private bool _isPlayed;
 
         private void Awake()
@@ -70,7 +78,7 @@ namespace TheAiAlchemist
                     _isPlayed = true;
                     enableEndButtonChannel.ExecuteChannel();
                 }
-                
+
                 CheckWin();
             }
         }
@@ -102,26 +110,42 @@ namespace TheAiAlchemist
 
         private void CheckWin()
         {
-            var combinations = _circles.DifferentCombinations(3);
-            foreach (var combination in combinations)
+            bool isWin = false;
+            var positionList = _circles.Select(t => t.GetId()).ToList();
+            foreach (var combination in winningCombinations)
             {
-                var score = combination.Sum(t => t.GetId());
-                var includeFour = combination.Any(t => t.GetId() == 4);
-                bool isWin = false;
-
-                if (includeFour)
-                    isWin = score == 12;
-                else if ((score - 3) % 6 == 0)
+                if (positionList.Contains(combination.Item1)
+                    && positionList.Contains(combination.Item2)
+                    && positionList.Contains(combination.Item3))
                 {
-                    var orderedCom = combination.OrderByDescending(t => t.GetId());
-                    var pairOne = orderedCom.ElementAt(0).GetId() - orderedCom.ElementAt(1).GetId();
-                    var pairTwo = orderedCom.ElementAt(1).GetId() - orderedCom.ElementAt(2).GetId();
-                    isWin = pairOne == pairTwo;
+                    isWin = true;
+                    break;
                 }
-
-                if (isWin)
-                    endGameChannel.ExecuteChannel();
             }
+
+            if (isWin)
+                endGameChannel.ExecuteChannel();
+
+            // var combinations = _circles.DifferentCombinations(3);
+            // foreach (var combination in combinations)
+            // {
+            //     var score = combination.Sum(t => t.GetId());
+            //     var includeFour = combination.Any(t => t.GetId() == 4);
+            //     bool isWin = false;
+            //
+            //     if (includeFour)
+            //         isWin = score == 12;
+            //     else if ((score - 3) % 6 == 0)
+            //     {
+            //         var orderedCom = combination.OrderByDescending(t => t.GetId());
+            //         var pairOne = orderedCom.ElementAt(0).GetId() - orderedCom.ElementAt(1).GetId();
+            //         var pairTwo = orderedCom.ElementAt(1).GetId() - orderedCom.ElementAt(2).GetId();
+            //         isWin = pairOne == pairTwo;
+            //     }
+            //
+            //     if (isWin)
+            //         endGameChannel.ExecuteChannel();
+            // }
         }
     }
 }

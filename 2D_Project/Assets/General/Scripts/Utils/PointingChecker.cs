@@ -1,12 +1,10 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 namespace TheAiAlchemist
 {
-    public class PointingChecker
+    public abstract class PointingChecker
     {
         public static bool IsPointerOverUIObject() {
             PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);

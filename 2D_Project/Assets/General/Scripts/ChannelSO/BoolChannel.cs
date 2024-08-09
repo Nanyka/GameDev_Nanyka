@@ -6,7 +6,7 @@ namespace TheAiAlchemist
     [CreateAssetMenu(fileName = "BoolChannel", menuName = "TheAiAlchemist/Channels/BoolChannel")]
     public class BoolChannel : ScriptableObject
     {
-        private UnityEvent<bool> channel;
+        private UnityEvent<bool> channel = new();
         
         public void AddListener(UnityAction<bool> action)
         {

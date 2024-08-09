@@ -50,6 +50,9 @@ namespace TheAiAlchemist
 
         private void PrintMousePosition(Vector3 clickPoint)
         {
+            if (mainCamera == null)
+                return;
+            
             if (PointingChecker.IsPointerOverUIObject() == false)
             {
                 var wordPosition = mainCamera.ScreenToWorldPoint(clickPoint);
