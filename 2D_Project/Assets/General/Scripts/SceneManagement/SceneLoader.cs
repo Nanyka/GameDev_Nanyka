@@ -12,7 +12,7 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
 	[SerializeField] private GameSceneSO _gameplayScene = default;
-	[SerializeField] private InputReaderSO _inputReader = default;
+	// [SerializeField] private InputReaderSO _inputReader = default;
 
 	[Header("Listening to")]
 	[SerializeField] private LoadEventChannel _loadLocation = default;

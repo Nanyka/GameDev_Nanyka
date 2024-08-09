@@ -4,7 +4,7 @@ using UnityEngine;
 
 // define mouse's position when mouse button down
 // transform that position from screen space to word space via scriptable object event
-// assign the position to the game object (circle have a component to print this position)
+// assign the position to the game object (circles have a component to print this position out)
 
 namespace TheAiAlchemist
 {
@@ -57,7 +57,7 @@ namespace TheAiAlchemist
             {
                 var wordPosition = mainCamera.ScreenToWorldPoint(clickPoint);
                 wordPosition = new Vector3(Mathf.RoundToInt(wordPosition.x), Mathf.RoundToInt(wordPosition.y), 0f);
-                if (Mathf.Abs(wordPosition.x + wordPosition.y) > 2)
+                if (Mathf.Abs(wordPosition.x) + Mathf.Abs(wordPosition.y) > 2)
                     Debug.Log("You are clicking outside the board");
                 else
                     mousePosChannel.ExecuteChannel(wordPosition);
