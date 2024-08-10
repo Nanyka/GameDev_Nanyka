@@ -32,7 +32,6 @@ namespace TheAiAlchemist
         {
             mainCamera = Camera.main;
             inputReaderSo.EnableGameplayInput();
-            Debug.Log($"Current input is enable: {inputReaderSo.CheckGameInputEnable()}");
         }
 
         private void PrintMousePosition(Vector3 clickPoint)
@@ -44,9 +43,7 @@ namespace TheAiAlchemist
             {
                 var wordPosition = mainCamera.ScreenToWorldPoint(clickPoint);
                 wordPosition = new Vector3(Mathf.RoundToInt(wordPosition.x), Mathf.RoundToInt(wordPosition.y), 0f);
-                if (Mathf.Abs(wordPosition.x) + Mathf.Abs(wordPosition.y) > 2)
-                    Debug.Log("You are clicking outside the board");
-                else
+                if (Mathf.Abs(wordPosition.x) + Mathf.Abs(wordPosition.y) < 2)
                     mousePosChannel.ExecuteChannel(wordPosition);
             }
         }

@@ -5,16 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameStateForTraining.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameStateForTraining.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/StorageSO/ListIntStorage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/StorageSO/ListIntStorage.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Systems/Settings/IndexAndPlotTranslator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Systems/Settings/IndexAndPlotTranslator.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/TicTacToeAgent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/TrainDrlModels/TrainDrlModel.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/TrainDrlModels/TrainDrlModel.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Channels/CountCirlces.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Channels/CountCirlces.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Character/Circle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/Circle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/TrainDrlModels/TrainDrlModels.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/TrainDrlModels/TrainDrlModels.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameStateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameStateManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/InputManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/AgentTicTacToe.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/AgentTicTacToe.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/TicTacToeAgent.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +30,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/GameManagers/IPlayerBehavior.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/SaveSystem/SaveSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/Test/TestSettings.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/AgentTicTacToe.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayerActuatorComp.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/TicTacToeAgent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/UI/EndGameMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/Utils/Combination.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nana/Challenge1/Scripts/BooleanStorage.cs" root0="FORCE_HIGHLIGHTING" />
@@ -116,6 +121,8 @@
       <workItem from="1723179043926" duration="2827000" />
       <workItem from="1723187894802" duration="563000" />
       <workItem from="1723203653288" duration="6813000" />
+      <workItem from="1723291716419" duration="2228000" />
+      <workItem from="1723311640424" duration="5245000" />
     </task>
     <servers />
   </component>

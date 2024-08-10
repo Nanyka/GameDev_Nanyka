@@ -1,14 +1,9 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-
-// Apply dedicated settings following specified state of the game
-// Reset game: reset currentPlayer to playerId = 0
 
 namespace TheAiAlchemist
 {
-    public class GameStateManager : MonoBehaviour
+    public class GameStateForTraining : MonoBehaviour
     {
         [SerializeField] private VoidChannel resetGameChannel;
         [SerializeField] private VoidChannel changePlayerChannel;
@@ -94,12 +89,14 @@ namespace TheAiAlchemist
             circleAmount++;
             if (circleAmount >= 9)
                 endGameChannel.ExecuteChannel(false);
+            else
+                changePlayerChannel.ExecuteChannel();
         }
 
         private void ResetCurrentPlayer()
         {
             circleAmount = 0;
-            currentPlayerIndex = 0;
+            // currentPlayerIndex = 0;
             currentPlayer.SetValue(players[currentPlayerIndex].GetValue().GetPlayerId());
             
             // Reset gameBoard
