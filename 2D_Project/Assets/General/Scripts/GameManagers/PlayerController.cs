@@ -16,23 +16,13 @@ namespace TheAiAlchemist
         [SerializeField] private Vector3Channel mousePosChannel;
         [SerializeField] private VoidChannel changePlayerChannel;
         [SerializeField] private VoidChannel enableEndButtonChannel;
-        // [SerializeField] private BoolChannel endGameChannel;
         [SerializeField] private VoidChannel resetGameChannel;
         [SerializeField] private TwoIntChannel announceStateChanged;
-        // [SerializeField] private VoidChannel countCircles;
         [SerializeField] private IntStorage currentPlayer;
         [SerializeField] private int playerId;
 
         private IObjectPool _objectPool;
         private List<ICircleTrait> _circles = new();
-
-        private (int, int, int)[] winningCombinations = new[]
-        {
-            (0, 1, 2), (3, 4, 5), (6, 7, 8), // Horizontal
-            (0, 3, 6), (1, 4, 7), (2, 5, 8), // Vertical
-            (0, 4, 8), (2, 4, 6) // Diagonal
-        };
-
         private bool _isPlayed;
 
         private void Awake()
@@ -82,8 +72,6 @@ namespace TheAiAlchemist
                     enableEndButtonChannel.ExecuteChannel();
                     announceStateChanged.ExecuteChannel(playerId,circle.GetId());
                 }
-
-                // CheckWin();
             }
         }
 
@@ -116,26 +104,5 @@ namespace TheAiAlchemist
 
             return isCircleExisted;
         }
-
-        // private void CheckWin()
-        // {
-        //     bool isWin = false;
-        //     var positionList = _circles.Select(t => t.GetId()).ToList();
-        //     foreach (var combination in winningCombinations)
-        //     {
-        //         if (positionList.Contains(combination.Item1)
-        //             && positionList.Contains(combination.Item2)
-        //             && positionList.Contains(combination.Item3))
-        //         {
-        //             isWin = true;
-        //             break;
-        //         }
-        //     }
-        //
-        //     if (isWin)
-        //         endGameChannel.ExecuteChannel(true);
-        //     else
-        //         countCircles.ExecuteChannel();
-        // }
     }
 }

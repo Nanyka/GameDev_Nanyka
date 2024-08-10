@@ -5,20 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/TwoIntChannel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/TwoIntChannel.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/BasicPlayer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/BasicPlayer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Locations/TestingLocation.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Locations/TestingLocation.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Channels/EndGameChannel.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Channels/EndGameChannel.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Storages/CurrentPlayer.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Storages/CurrentPlayer.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/TrainDrlModels/TrainDrlModel.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/TrainDrlModels/TrainDrlModel.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Channels/CountCirlces.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Channels/CountCirlces.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Character/Circle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/Circle.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameStateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameStateManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/IPlayerBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/IPlayerBehavior.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/InputManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UI/EndGameMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/EndGameMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UI/InGameMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/InGameMenu.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

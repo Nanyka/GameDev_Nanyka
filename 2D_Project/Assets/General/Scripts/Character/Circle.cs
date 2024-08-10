@@ -13,22 +13,9 @@ namespace TheAiAlchemist
 {
     public class Circle : MonoBehaviour, ICircleTrait
     {
-        // [SerializeField] private Vector3Channel mousePosChannel;
-        // [SerializeField] private SpriteRenderer m_Renderer;
-
         private ICheckState mState;
         private IRender mRenderer;
         [SerializeField] private int circleId;
-
-        // private void OnEnable()
-        // {
-        //     mousePosChannel.AddListener(DetectTouchPoint);
-        // }
-        //
-        // private void OnDisable()
-        // {
-        //     mousePosChannel.RemoveListener(DetectTouchPoint);
-        // }
 
         public void Init(Vector3 spawnPos)
         {

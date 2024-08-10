@@ -10,24 +10,11 @@ namespace TheAiAlchemist
 {
     public class InputManager : MonoBehaviour
     {
-        // [SerializeField] private Vector3Channel mousePosChannel; 
-        //
-        // private void Update()
-        // {
-        //     if (Input.GetMouseButtonDown(0))
-        //     {
-        //         var mousePosition = Input.mousePosition;
-        //         var wordPosition = Camera.main.ScreenToWorldPoint(mousePosition);
-        //         wordPosition = new Vector3(Mathf.RoundToInt(wordPosition.x), Mathf.RoundToInt(wordPosition.y), 0f);
-        //         mousePosChannel.ExecuteChannel(wordPosition);
-        //     }
-        // }
-
         [SerializeField] private InputReaderSO inputReaderSo;
         [SerializeField] private Vector3Channel mousePosChannel;
         [SerializeField] private VoidChannel activateInput;
 
-        [SerializeField] private Camera mainCamera;
+        private Camera mainCamera;
 
         private void OnEnable()
         {

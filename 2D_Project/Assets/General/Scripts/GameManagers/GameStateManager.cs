@@ -11,20 +11,16 @@ namespace TheAiAlchemist
     public class GameStateManager : MonoBehaviour
     {
         [SerializeField] private VoidChannel resetGameChannel;
-        [SerializeField] private VoidChannel countCircles;
         [SerializeField] private VoidChannel changePlayerChannel;
         [SerializeField] private BoolChannel endGameChannel;
         [SerializeField] private TwoIntChannel announceStateChanged;
         [SerializeField] private IntStorage currentPlayer;
-        // [SerializeField] private IPlayerBehaviorStorage currentPlayer;
         [SerializeField] private List<IPlayerBehaviorStorage> players;
 
-        // private IPlayerBehaviorStorage currentPlayer;
-        // private int currentPlayerIndex;
+        private int currentPlayerIndex;
         private int circleAmount;
         private List<int> gameBoard = new(new int[9]);
-        private (int, int, int)[] winningCombinations = new[]
-        {
+        private (int, int, int)[] winningCombinations = {
             (0, 1, 2), (3, 4, 5), (6, 7, 8), // Horizontal
             (0, 3, 6), (1, 4, 7), (2, 5, 8), // Vertical
             (0, 4, 8), (2, 4, 6) // Diagonal
@@ -35,7 +31,6 @@ namespace TheAiAlchemist
             resetGameChannel.AddListener(ResetCurrentPlayer);
             announceStateChanged.AddListener(StateChanged);
             changePlayerChannel.AddListener(SetCurrentPlayer);
-            // countCircles.AddListener(IncreaseCircleAmount);
         }
         
         private void OnDisable()
@@ -43,7 +38,6 @@ namespace TheAiAlchemist
             resetGameChannel.RemoveListener(ResetCurrentPlayer);
             announceStateChanged.RemoveListener(StateChanged);
             changePlayerChannel.RemoveListener(SetCurrentPlayer);
-            // countCircles.RemoveListener(IncreaseCircleAmount);
         }
 
         // TODO: consider to execute it with a START GAME button
@@ -54,19 +48,16 @@ namespace TheAiAlchemist
 
         private void SetCurrentPlayer()
         {
-            currentPlayer.SetValue((currentPlayer.GetValue() + 1) / players.Count);
-            // currentPlayer.SetValue(players[currentPlayerIndex].GetValue());
-            Debug.Log($"Current player id: {currentPlayer.GetValue()}");
+            currentPlayerIndex = (currentPlayerIndex + 1) % players.Count;
+            currentPlayer.SetValue(players[currentPlayerIndex].GetValue().GetPlayerId());
         }
 
         private void StateChanged(int playerId, int location)
         {
             // Record environment state
             gameBoard[location] = playerId;
-            // Debug.Log(gameBoard);
             
             var isWin = CheckWinCondition();
-
             if (isWin)
                 endGameChannel.ExecuteChannel(true);
             else
@@ -106,9 +97,11 @@ namespace TheAiAlchemist
 
         private void ResetCurrentPlayer()
         {
-            // TODO: find the way to reset current value to player one
             circleAmount = 0;
-            currentPlayer.SetValue(players[0].GetValue().GetPlayerId());
+            currentPlayerIndex = 0;
+            currentPlayer.SetValue(players[currentPlayerIndex].GetValue().GetPlayerId());
+            for (int i = 0; i < gameBoard.Count(); i++)
+                gameBoard[i] = 0;
         }
     }
 }

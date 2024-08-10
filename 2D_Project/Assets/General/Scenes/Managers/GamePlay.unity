@@ -302,7 +302,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resetGameChannel: {fileID: 11400000, guid: c4ab14a3f61c34cc297c58192f1e27e3, type: 2}
-  countCircles: {fileID: 11400000, guid: aed7f0d24bd55434789bc6058f665b25, type: 2}
   changePlayerChannel: {fileID: 11400000, guid: f28658ecf3d9946e59e23c3659afaea8, type: 2}
   endGameChannel: {fileID: 11400000, guid: d1a037fe1d9e9452996bdbc29f4afccd, type: 2}
   announceStateChanged: {fileID: 11400000, guid: 3eddbb3309d0f493190fd96b1ba02744, type: 2}
@@ -362,7 +361,6 @@ MonoBehaviour:
   inputReaderSo: {fileID: 11400000, guid: 35f2875548c8844219198c09fbc26756, type: 2}
   mousePosChannel: {fileID: 11400000, guid: 58b3b6a9ebc6845158660d8982537965, type: 2}
   activateInput: {fileID: 11400000, guid: e3771b2e4ce834baa8b5aee9b097b476, type: 2}
-  mainCamera: {fileID: 0}
 --- !u!1 &252316315
 GameObject:
   m_ObjectHideFlags: 0
