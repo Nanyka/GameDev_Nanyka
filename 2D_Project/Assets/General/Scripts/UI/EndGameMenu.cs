@@ -9,7 +9,7 @@ namespace TheAiAlchemist
 {
     public class EndGameMenu : MonoBehaviour
     {
-        [SerializeField] private VoidChannel endGameChannel;
+        [SerializeField] private BoolChannel endGameChannel;
         [SerializeField] private VoidChannel resetGameChannel;
         [SerializeField] private IntStorage currentPlayer;
         [SerializeField] private GameObject endGamePanel;
@@ -27,10 +27,10 @@ namespace TheAiAlchemist
             endGameChannel.RemoveListener(ShowPanel);
         }
 
-        private void ShowPanel()
+        private void ShowPanel(bool hasWinner)
         {
             endGamePanel.SetActive(true);
-            winPlayerText.text = $"PLAYER {currentPlayer.GetValue()} WIN!";
+            winPlayerText.text = hasWinner ? $"PLAYER {currentPlayer.GetValue()} WIN!" : "DRAW GAME";
         }
 
         private void OnClickReset()

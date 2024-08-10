@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - prefab: {fileID: 0}
+  - prefab: {fileID: 5564855977137456209, guid: fb0b582ff88c148b689a49330f2859c7, type: 3}
     prefCollector: {fileID: 4860082029203828858}
     amount: 0
     expandable: 1
@@ -63,11 +63,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fbc360fc3ff44c10b425134d46284a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlayerBehavior: {fileID: 0}
+  m_PlayerBehavior: {fileID: 11400000, guid: 2c2d8cfcfd66d47bfad40951799fb925, type: 2}
   mousePosChannel: {fileID: 11400000, guid: 58b3b6a9ebc6845158660d8982537965, type: 2}
   changePlayerChannel: {fileID: 11400000, guid: f28658ecf3d9946e59e23c3659afaea8, type: 2}
   enableEndButtonChannel: {fileID: 11400000, guid: e7e105687ae024cf09982b725508bac1, type: 2}
-  endGameChannel: {fileID: 11400000, guid: d1a037fe1d9e9452996bdbc29f4afccd, type: 2}
   resetGameChannel: {fileID: 11400000, guid: c4ab14a3f61c34cc297c58192f1e27e3, type: 2}
-  currentPlayer: {fileID: 11400000, guid: 116edc871c38d4e4eabd81a173534e03, type: 2}
-  playerId: -1
+  announceStateChanged: {fileID: 11400000, guid: 3eddbb3309d0f493190fd96b1ba02744, type: 2}
+  currentPlayer: {fileID: 11400000, guid: 44712aa94874e4d16a0c27be1eaa0ef3, type: 2}
+  playerId: 1

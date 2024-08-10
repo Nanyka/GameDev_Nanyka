@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 // Spawn circles if no any circle is existing at the click point
 // Change state of the circle if it is enable before
@@ -15,8 +16,10 @@ namespace TheAiAlchemist
         [SerializeField] private Vector3Channel mousePosChannel;
         [SerializeField] private VoidChannel changePlayerChannel;
         [SerializeField] private VoidChannel enableEndButtonChannel;
-        [SerializeField] private VoidChannel endGameChannel;
+        // [SerializeField] private BoolChannel endGameChannel;
         [SerializeField] private VoidChannel resetGameChannel;
+        [SerializeField] private TwoIntChannel announceStateChanged;
+        // [SerializeField] private VoidChannel countCircles;
         [SerializeField] private IntStorage currentPlayer;
         [SerializeField] private int playerId;
 
@@ -77,9 +80,10 @@ namespace TheAiAlchemist
                     circle.Init(clickPoint);
                     _isPlayed = true;
                     enableEndButtonChannel.ExecuteChannel();
+                    announceStateChanged.ExecuteChannel(playerId,circle.GetId());
                 }
 
-                CheckWin();
+                // CheckWin();
             }
         }
 
@@ -88,6 +92,11 @@ namespace TheAiAlchemist
             _objectPool.ResetPool();
             _circles.Clear();
             _isPlayed = false;
+        }
+
+        public int GetPlayerId()
+        {
+            return playerId;
         }
 
         #endregion
@@ -108,44 +117,25 @@ namespace TheAiAlchemist
             return isCircleExisted;
         }
 
-        private void CheckWin()
-        {
-            bool isWin = false;
-            var positionList = _circles.Select(t => t.GetId()).ToList();
-            foreach (var combination in winningCombinations)
-            {
-                if (positionList.Contains(combination.Item1)
-                    && positionList.Contains(combination.Item2)
-                    && positionList.Contains(combination.Item3))
-                {
-                    isWin = true;
-                    break;
-                }
-            }
-
-            if (isWin)
-                endGameChannel.ExecuteChannel();
-
-            // var combinations = _circles.DifferentCombinations(3);
-            // foreach (var combination in combinations)
-            // {
-            //     var score = combination.Sum(t => t.GetId());
-            //     var includeFour = combination.Any(t => t.GetId() == 4);
-            //     bool isWin = false;
-            //
-            //     if (includeFour)
-            //         isWin = score == 12;
-            //     else if ((score - 3) % 6 == 0)
-            //     {
-            //         var orderedCom = combination.OrderByDescending(t => t.GetId());
-            //         var pairOne = orderedCom.ElementAt(0).GetId() - orderedCom.ElementAt(1).GetId();
-            //         var pairTwo = orderedCom.ElementAt(1).GetId() - orderedCom.ElementAt(2).GetId();
-            //         isWin = pairOne == pairTwo;
-            //     }
-            //
-            //     if (isWin)
-            //         endGameChannel.ExecuteChannel();
-            // }
-        }
+        // private void CheckWin()
+        // {
+        //     bool isWin = false;
+        //     var positionList = _circles.Select(t => t.GetId()).ToList();
+        //     foreach (var combination in winningCombinations)
+        //     {
+        //         if (positionList.Contains(combination.Item1)
+        //             && positionList.Contains(combination.Item2)
+        //             && positionList.Contains(combination.Item3))
+        //         {
+        //             isWin = true;
+        //             break;
+        //         }
+        //     }
+        //
+        //     if (isWin)
+        //         endGameChannel.ExecuteChannel(true);
+        //     else
+        //         countCircles.ExecuteChannel();
+        // }
     }
 }

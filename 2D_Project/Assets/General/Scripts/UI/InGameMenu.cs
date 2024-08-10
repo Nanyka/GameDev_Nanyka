@@ -39,8 +39,8 @@ namespace TheAiAlchemist
 
         private void OnChangePlayer()
         {
-            currentPlayer.SetValue((currentPlayer.GetValue() + 1) % 2);
-            _playerText.SetText(currentPlayer.GetValue() == 0 ? "Player1" : "Player2");
+            // currentPlayer.SetValue((currentPlayer.GetValue() + 1) % 2);
+            _playerText.SetText($"Player {currentPlayer.GetValue()}");
 
             changePlayerChannel.ExecuteChannel();
             _changePlayerButton.interactable = false;
@@ -48,7 +48,7 @@ namespace TheAiAlchemist
         
         private void ResetUI()
         {
-            _playerText.SetText(currentPlayer.GetValue() == 0 ? "Player1" : "Player2");
+            _playerText.SetText($"Player {currentPlayer.GetValue()}");
             _changePlayerButton.interactable = false;
         }
     }

@@ -8,5 +8,6 @@ namespace TheAiAlchemist
     {
         public void InTurnPlay(Vector3 clickPoint);
         public void ResetPlayer();
+        public int GetPlayerId();
     }
 }

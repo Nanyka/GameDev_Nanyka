@@ -5,10 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/TwoIntChannel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/TwoIntChannel.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/SceneManagement/SceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/SceneManagement/SceneLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/BasicPlayer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/BasicPlayer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Locations/TestingLocation.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Locations/TestingLocation.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Channels/EndGameChannel.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Channels/EndGameChannel.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Storages/CurrentPlayer.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Storages/CurrentPlayer.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameStateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameStateManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/IPlayerBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/IPlayerBehavior.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UI/EndGameMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/EndGameMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UI/InGameMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/InGameMenu.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +31,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/GameManagers/IPlayerBehavior.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/SaveSystem/SaveSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/Test/TestSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/AgentTicTacToe.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/UI/EndGameMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/Utils/Combination.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nana/Challenge1/Scripts/BooleanStorage.cs" root0="FORCE_HIGHLIGHTING" />
@@ -107,7 +118,8 @@
       <workItem from="1723122982445" duration="4466000" />
       <workItem from="1723139639027" duration="2694000" />
       <workItem from="1723179043926" duration="2827000" />
-      <workItem from="1723187894802" duration="155000" />
+      <workItem from="1723187894802" duration="563000" />
+      <workItem from="1723203653288" duration="6813000" />
     </task>
     <servers />
   </component>
