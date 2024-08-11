@@ -2,18 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName ="V_BooleanStorage",menuName ="ScriptableObject/Storage/V_BooleanStorage")]
-public class V_BooleanStorage : ScriptableObject
+namespace V_TicTacToe
 {
-    [SerializeField] private bool value;
-
-    public void SetValue(bool value)
+    [CreateAssetMenu(fileName = "V_BooleanStorage", menuName = "ScriptableObject/Storage/V_BooleanStorage")]
+    public class V_BooleanStorage : ScriptableObject
     {
-        this.value = value;
-    }
+        [SerializeField] private bool value;
 
-    public bool GetValue()
-    {
-        return value;
+        public void SetValue(bool value)
+        {
+            this.value = value;
+        }
+
+        public bool GetValue()
+        {
+            return value;
+        }
     }
 }

@@ -3,22 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class InputTester : MonoBehaviour
+namespace V_TicTacToe
 {
-    [SerializeField] private InputSystem inputSystem;
-
-    private void OnEnable()
+    public class InputTester : MonoBehaviour
     {
-        inputSystem.eventJump.AddListener(OnJump);
-    }
+        [SerializeField] private InputSystem inputSystem;
 
-    private void OnDisable()
-    {
-        inputSystem.eventJump.RemoveListener(OnJump);
-    }
+        private void OnEnable()
+        {
+            inputSystem.eventJump.AddListener(OnJump);
+        }
 
-    public void OnJump()
-    {
-        Debug.Log("I am Jump");
+        private void OnDisable()
+        {
+            inputSystem.eventJump.RemoveListener(OnJump);
+        }
+
+        public void OnJump()
+        {
+            Debug.Log("I am Jump");
+        }
     }
 }

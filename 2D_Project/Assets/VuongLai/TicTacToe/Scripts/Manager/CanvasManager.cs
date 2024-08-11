@@ -3,18 +3,21 @@ using System.Collections.Generic;
 using TheAiAlchemist;
 using UnityEngine;
 
-public class CanvasManager : MonoBehaviour
+namespace V_TicTacToe
 {
-    [SerializeField] UIBase currentMenu;
-    // [SerializeField] EventScriptableObject eventScriptableObject;
-    [SerializeField] private VoidChannel changePlayerChannel;
-    [SerializeField] PlayerInfor playerInfor;
-
-    public void RunEventChangePlayer()
+    public class CanvasManager : MonoBehaviour
     {
-        // playerInfor.ChangePlayer();
+        [SerializeField] UIBase currentMenu;
+        // [SerializeField] EventScriptableObject eventScriptableObject;
+        [SerializeField] private VoidChannel changePlayerChannel;
+        [SerializeField] PlayerInfor playerInfor;
 
-        // changePlayerChannel.channel.Invoke();
-        // eventScriptableObject.RunEventChangePlayer();
+        public void RunEventChangePlayer()
+        {
+            // playerInfor.ChangePlayer();
+
+            // changePlayerChannel.channel.Invoke();
+            // eventScriptableObject.RunEventChangePlayer();
+        }
     }
 }

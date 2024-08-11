@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SecondPlayerController : MonoBehaviour, IPlayerBehavior
+namespace V_TicTacToe
 {
-    [SerializeField] private V_IPlayerBehaviorStorage m_PlayerBehavior;
-    
-    private void Awake()
+    public class SecondPlayerController : MonoBehaviour, IPlayerBehavior
     {
-        m_PlayerBehavior.SetValue(this);
-    }
+        [SerializeField] private V_IPlayerBehaviorStorage m_PlayerBehavior;
 
-    public void PlayerTalk()
-    {
-        Debug.Log("I am SecondPlayer");
+        private void Awake()
+        {
+            m_PlayerBehavior.SetValue(this);
+        }
+
+        public void PlayerTalk()
+        {
+            Debug.Log("I am SecondPlayer");
+        }
     }
 }

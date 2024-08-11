@@ -3,18 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class MouseInput : MonoBehaviour
+namespace V_TicTacToe
 {
-    [SerializeField] MouseEvent mouseEvent;
-
-    private void Update()
+    public class MouseInput : MonoBehaviour
     {
-        if(Mouse.current.leftButton.wasReleasedThisFrame)
+        [SerializeField] MouseEvent mouseEvent;
+
+        private void Update()
         {
-            var mousePosition = Mouse.current.position.ReadValue();
-            var wordPosition = Camera.main.ScreenToWorldPoint(mousePosition);
-            wordPosition = new Vector3(wordPosition.x, wordPosition.y, 0f);
-            mouseEvent.eventMouseTouch.Invoke(wordPosition);
+            if (Mouse.current.leftButton.wasReleasedThisFrame)
+            {
+                var mousePosition = Mouse.current.position.ReadValue();
+                var wordPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+                wordPosition = new Vector3(wordPosition.x, wordPosition.y, 0f);
+                mouseEvent.eventMouseTouch.Invoke(wordPosition);
+            }
         }
     }
 }

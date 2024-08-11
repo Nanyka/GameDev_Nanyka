@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace V_TicTacToe
 {
-    public interface IPlayerBehavior
+    public interface ISpriteRendererStatus
     {
-        public void PlayerTalk();
-        // public void ChangePlayer();
+        public void Show();
+        public void Hide();
     }
 }

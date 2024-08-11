@@ -3,23 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[CreateAssetMenu(fileName ="V_VoidChannel",menuName ="ScriptableObject/Channel/V_VoidChannel")]
-public class V_VoidChannel : ScriptableObject
+namespace V_TicTacToe
 {
-    private UnityEvent value;
-
-    public void AddListener(UnityAction action)
+    [CreateAssetMenu(fileName = "V_VoidChannel", menuName = "ScriptableObject/Channel/V_VoidChannel")]
+    public class V_VoidChannel : ScriptableObject
     {
-        value.AddListener(action);
-    }
+        private UnityEvent value;
 
-    public void RemoveListener(UnityAction action)
-    {
-        value.RemoveListener(action);
-    }
+        public void AddListener(UnityAction action)
+        {
+            value.AddListener(action);
+        }
 
-    public void RunVoidChannel()
-    {
-        value?.Invoke();
+        public void RemoveListener(UnityAction action)
+        {
+            value.RemoveListener(action);
+        }
+
+        public void RunVoidChannel()
+        {
+            value?.Invoke();
+        }
     }
 }

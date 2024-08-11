@@ -3,35 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[CreateAssetMenu(fileName = "PlayerInfor", menuName = "ScriptableObject/PlayerInfor")]
-public class PlayerInfor : ScriptableObject
+namespace V_TicTacToe
 {
-    private bool isFirstPlayer = true;
-    private IPlayerBehavior currentPlayerBehavior;
-
-    public void ChangePlayer()
+    [CreateAssetMenu(fileName = "PlayerInfor", menuName = "ScriptableObject/PlayerInfor")]
+    public class PlayerInfor : ScriptableObject
     {
-        isFirstPlayer = !isFirstPlayer;
-    }
+        private bool isFirstPlayer = true;
+        private IPlayerBehavior currentPlayerBehavior;
 
-    public void SetIsFirstPlayer()
-    {
-        isFirstPlayer = true;
-    }
+        public void ChangePlayer()
+        {
+            isFirstPlayer = !isFirstPlayer;
+        }
 
-    public bool IsFirstPlayer()
-    {
-        return isFirstPlayer;
-    }
+        public void SetIsFirstPlayer()
+        {
+            isFirstPlayer = true;
+        }
 
-    public void SetCurrentPlayerBehavior(IPlayerBehavior playerBehavior)
-    {
-        currentPlayerBehavior = playerBehavior;
-    }
+        public bool IsFirstPlayer()
+        {
+            return isFirstPlayer;
+        }
 
-    public void RunEventCurrentPlayerTalk()
-    {
-        if (currentPlayerBehavior != null)
-            currentPlayerBehavior.PlayerTalk();
+        public void SetCurrentPlayerBehavior(IPlayerBehavior playerBehavior)
+        {
+            currentPlayerBehavior = playerBehavior;
+        }
+
+        public void RunEventCurrentPlayerTalk()
+        {
+            if (currentPlayerBehavior != null)
+                currentPlayerBehavior.PlayerTalk();
+        }
     }
 }

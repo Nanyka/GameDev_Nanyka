@@ -1,26 +1,72 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
+using UnityEditor.Localization.Platform.Android;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class IngameMenu : MonoBehaviour
+namespace V_TicTacToe
 {
-    [SerializeField] Button _changePlayerButton;
-    [SerializeField] TextMeshProUGUI _playerText;
-    [SerializeField] private V_VoidChannel changePlayerChannel;
-    [SerializeField] private V_BooleanStorage isPlayer;
-
-    private void Awake()
+    public class IngameMenu : MonoBehaviour
     {
-        _changePlayerButton.onClick.AddListener(OnChangePlayer);
-    }
+        [SerializeField] private Button _changePlayerButton;
+        [SerializeField] private TextMeshProUGUI _playerText;
+        [SerializeField] private V_VoidChannel changePlayerChannel;
+        [SerializeField] private V_VoidChannel endTurnChannel;
+        [SerializeField] private V_VoidChannel showIngameMenuChannel;
 
-    private void OnChangePlayer()
-    {
-        isPlayer.SetValue(!isPlayer.GetValue());
-        _playerText.SetText(isPlayer.GetValue() ? "Player1" : "Player2");
+        [SerializeField] private V_IntegerStorage currentPlayerId;
 
-        changePlayerChannel.RunVoidChannel();
+        [SerializeField] private V_BooleanStorage isPlayed;
+
+        private void Awake()
+        {
+            _changePlayerButton.onClick.AddListener(OnChangePlayer);
+
+            _changePlayerButton.gameObject.SetActive(false);
+        }
+
+        private void OnEnable()
+        {
+            endTurnChannel.AddListener(OnEndTurn);
+            showIngameMenuChannel.AddListener(Init);
+        }
+
+        private void OnDisable()
+        {
+            endTurnChannel.RemoveListener(OnEndTurn);
+            showIngameMenuChannel.RemoveListener(Init);
+        }
+
+        private void Init()
+        {
+            _changePlayerButton.gameObject.SetActive(false);
+        }
+
+        private void OnChangePlayer()
+        {
+            if (currentPlayerId.GetValue().Equals(0))
+            {
+                currentPlayerId.SetValue(1);
+                _playerText.SetText("Player2");
+            }
+            else if (currentPlayerId.GetValue().Equals(1))
+            {
+                currentPlayerId.SetValue(0);
+                _playerText.SetText("Player1");
+            }
+
+            isPlayed.SetValue(false);
+
+            _changePlayerButton.gameObject.SetActive(false);
+
+            changePlayerChannel.RunVoidChannel();
+        }
+
+        private void OnEndTurn()
+        {
+            _changePlayerButton.gameObject.SetActive(true);
+        }
     }
 }

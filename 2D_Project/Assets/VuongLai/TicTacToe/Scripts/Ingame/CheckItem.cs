@@ -2,63 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CheckItem : MonoBehaviour
+namespace V_TicTacToe
 {
-    [SerializeField] private GameObject checkIconObject;
-    [SerializeField] bool isFirstPlayerCheck;
-    [SerializeField] private MouseEvent mouseEvent;
-    [SerializeField] private V_VoidChannel touchItemChannel;
-    [SerializeField] private V_BooleanStorage isFirstPlayer;
-    [SerializeField] private InputSystem inputSystem;
-
-    bool isChecked;
-
-    private void Awake()
+    public class CheckItem : MonoBehaviour, ICheckItemStatus
     {
-        checkIconObject.SetActive(false);
-    }
+        private ISpriteRendererStatus itemRender;
 
-    private void OnEnable()
-    {
-        mouseEvent.eventMouseTouch.AddListener(DetectShowCheck);
-
-        inputSystem.eventMouseTouch.AddListener(DetectShowCheck);
-    }
-
-    private void OnDisable()
-    {
-        mouseEvent.eventMouseTouch.RemoveListener(DetectShowCheck);
-
-        inputSystem.eventMouseTouch.RemoveListener(DetectShowCheck);
-    }
-
-    private void OnMouseDown()
-    {
-        //eventScriptable.RunEventTouchItem();
-    }
-
-    private void DetectShowCheck(Vector3 mouseWorldPosition)
-    {
-        if (isFirstPlayer.GetValue() != isFirstPlayerCheck)
+        private void Awake()
         {
-            return;
+            itemRender = GetComponent<ISpriteRendererStatus>();
         }
 
-        if (isChecked)
+        public void Init(Vector3 itemPosition)
         {
-            return;
+            transform.position = itemPosition;
         }
 
-        Vector3 myPosition = transform.position;
-
-        float distance = Vector3.Distance(myPosition, mouseWorldPosition);
-
-        if (distance <= 0.5f)
+        public void SetShowItem(bool showItem)
         {
-            isChecked = true;
-            checkIconObject.SetActive(true);
-
-            touchItemChannel.RunVoidChannel();
+            if(showItem)
+            {
+                itemRender.Show();
+            }
+            else
+            {
+                itemRender.Hide();
+            }
         }
     }
 }
