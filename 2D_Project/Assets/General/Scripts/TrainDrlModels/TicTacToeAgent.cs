@@ -22,14 +22,25 @@ namespace TheAiAlchemist
         // Collect current player state as an array of existing circles in conjunction with unoccupied slots
         public override void CollectObservations(VectorSensor sensor)
         {
+            // string observation = "";
             foreach (var plot in gameBoard.GetValue())
             {
                 if (plot == 0)
+                {
                     sensor.AddObservation(0);
+                    // observation += $"0,";
+                }
                 else
-                    sensor.AddObservation(plot == _playerBehavior.GetPlayerId() ? 1 : -1);
+                {
+                    int addValue = plot == _playerBehavior.GetPlayerId() ? 1 : -1;
+                    sensor.AddObservation(addValue);
+                    // observation += $"{addValue},";
+                }
             }
-            
+
+            // Debug.Log(observation);
+            // for (int i = 0; i < sensor.GetObservationSpec().Shape.Length; i++)
+            //     Debug.Log($"{sensor.GetObservationSpec().Rank}");
         }
 
         public override void OnEpisodeBegin()

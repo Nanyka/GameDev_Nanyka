@@ -169,7 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _managersScene: {fileID: 11400000, guid: 743c1f9e52e8149d791049b306f3a22c, type: 2}
   _menuToLoad: {fileID: 11400000, guid: a2e3438c80df445e1b7d372e1ed170be, type: 2}
-  _menuLoadChannel:
+  _loadMenuChannel:
     m_AssetGUID: 202aa3967ce7d43dfb3b9cc7700c9f53
     m_SubObjectName: 
     m_SubObjectType: 

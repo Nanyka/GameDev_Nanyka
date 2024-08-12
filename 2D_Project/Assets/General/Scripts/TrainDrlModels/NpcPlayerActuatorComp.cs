@@ -8,7 +8,7 @@ namespace TheAiAlchemist
     public class NpcPlayerActuatorComp : ActuatorComponent
     {
         [SerializeField] private NpcPlayer controller;
-        private ActionSpec _actionSpec = ActionSpec.MakeDiscrete(1);
+        private ActionSpec _actionSpec = ActionSpec.MakeDiscrete(9);
         
         public override IActuator[] CreateActuators()
         {
@@ -29,7 +29,7 @@ namespace TheAiAlchemist
         public NpcPlayerActuator(NpcPlayer controller)
         {
             _controller = controller;
-            _actionSpec = ActionSpec.MakeDiscrete(1);
+            _actionSpec = ActionSpec.MakeDiscrete(9);
         }
     
         public void OnActionReceived(ActionBuffers actionBuffers)

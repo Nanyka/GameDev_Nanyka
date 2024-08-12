@@ -13,9 +13,11 @@ namespace TheAiAlchemist
 {
     public class Circle : MonoBehaviour, ICircleTrait
     {
+        [SerializeField] private IndexAndPlotTranslator indexTranslator;
+        [SerializeField] private int circleId;
+        
         private ICheckState mState;
         private IRender mRenderer;
-        [SerializeField] private int circleId;
 
         public void Init(Vector3 spawnPos)
         {
@@ -23,7 +25,8 @@ namespace TheAiAlchemist
             mRenderer = GetComponent<IRender>();
 
             transform.position = spawnPos;
-            circleId = Mathf.RoundToInt(spawnPos.x + spawnPos.y * 3 + 4); //TODO: replace hard coding by a flexible grid size
+            circleId = indexTranslator.PlotToIndex(spawnPos); //TODO: replace hard coding by a flexible grid size
+            // circleId = Mathf.RoundToInt(spawnPos.x + spawnPos.y * 3 + 4); 
         }
 
         public bool DetectTouchPoint(Vector3 inputPosition)

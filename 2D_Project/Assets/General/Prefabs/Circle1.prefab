@@ -124,3 +124,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff9a94cbfa372470dad2447ec680b33c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indexTranslator: {fileID: 11400000, guid: 6b53ed37cad3a4e84a465054dcbab969, type: 2}
+  circleId: 0

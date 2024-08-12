@@ -1,0 +1,29 @@
+{
+    "NpcPlayer": {
+        "checkpoints": [
+            {
+                "steps": 112134,
+                "file_path": "results/TicTacToe_v2/NpcPlayer/NpcPlayer-112134.onnx",
+                "reward": null,
+                "creation_time": 1723379242.217172,
+                "auxillary_file_paths": [
+                    "results/TicTacToe_v2/NpcPlayer/NpcPlayer-112134.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 112134,
+            "file_path": "results/TicTacToe_v2/NpcPlayer.onnx",
+            "reward": null,
+            "creation_time": 1723379242.217172,
+            "auxillary_file_paths": [
+                "results/TicTacToe_v2/NpcPlayer/NpcPlayer-112134.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.0.0",
+        "torch_version": "2.2.2"
+    }
+}

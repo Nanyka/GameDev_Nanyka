@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 758775768749301828}
   - component: {fileID: 4603823593961493707}
-  - component: {fileID: 7746180509057205242}
   - component: {fileID: 4910468686828394196}
   - component: {fileID: 1901209808949332743}
+  - component: {fileID: 7746180509057205242}
   m_Layer: 0
   m_Name: Circle2
   m_TagString: Untagged
@@ -87,19 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7746180509057205242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5564855977137456209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff9a94cbfa372470dad2447ec680b33c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mousePosChannel: {fileID: 11400000, guid: 58b3b6a9ebc6845158660d8982537965, type: 2}
 --- !u!114 &4910468686828394196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,3 +112,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Renderer: {fileID: 4603823593961493707}
+--- !u!114 &7746180509057205242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5564855977137456209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff9a94cbfa372470dad2447ec680b33c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indexTranslator: {fileID: 11400000, guid: 6b53ed37cad3a4e84a465054dcbab969, type: 2}
+  circleId: 0
