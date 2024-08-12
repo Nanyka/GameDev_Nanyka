@@ -12,29 +12,28 @@ namespace TheAiAlchemist
         [SerializeField] private TwoIntChannel announceStateChanged;
         [SerializeField] private IntStorage currentPlayer;
         [SerializeField] private ListIntStorage gameBoard;
+        [SerializeField] private Vector3Storage gameBoardPos;
         [SerializeField] private IndexAndPlotTranslator winRuler;
         [SerializeField] private List<IPlayerBehaviorStorage> players;
 
-        private int currentPlayerIndex;
+        [SerializeField] private int currentPlayerIndex;
         private int circleAmount;
 
         private void OnEnable()
         {
             resetGameChannel.AddListener(ResetCurrentPlayer);
             announceStateChanged.AddListener(StateChanged);
-            // changePlayerChannel.AddListener(SetCurrentPlayer);
         }
         
         private void OnDisable()
         {
             resetGameChannel.RemoveListener(ResetCurrentPlayer);
             announceStateChanged.RemoveListener(StateChanged);
-            // changePlayerChannel.RemoveListener(SetCurrentPlayer);
         }
 
-        // TODO: consider to execute it with a START GAME button
         private void Start()
         {
+            gameBoardPos.SetValue(transform.position);
             ResetCurrentPlayer();
         }
 

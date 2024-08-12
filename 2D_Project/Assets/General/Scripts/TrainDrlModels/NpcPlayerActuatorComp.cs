@@ -34,8 +34,8 @@ namespace TheAiAlchemist
     
         public void OnActionReceived(ActionBuffers actionBuffers)
         {
-            // Debug.Log($"Receive an action");
             _controller.TakeAction(actionBuffers.DiscreteActions[0]);
+            // Debug.Log($"Player {_controller.GetPlayerId()} action: {actionBuffers.DiscreteActions[0]}");
         }
         
         public void Heuristic(in ActionBuffers actionBuffersOut)

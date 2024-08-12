@@ -59,8 +59,8 @@ namespace TheAiAlchemist
                 Debug.Log("You played this turn already");
                 return;
             }
-
-            if (currentPlayer.GetValue() == playerId && CheckCircleExist(clickPoint) == false)
+            
+            if (currentPlayer.GetValue() == playerId)
             {
                 var spawnObject = _objectPool.GetObject();
                 if (spawnObject.TryGetComponent(out ICircleTrait circle))
@@ -69,6 +69,7 @@ namespace TheAiAlchemist
                     spawnObject.SetActive(true);
                     circle.Init(clickPoint);
                     _isPlayed = true;
+                    // Debug.Log($"Player {playerId} places at {circle.GetId()}");
                     enableEndButtonChannel.ExecuteChannel();
                     announceStateChanged.ExecuteChannel(playerId,circle.GetId());
                 }
@@ -89,20 +90,20 @@ namespace TheAiAlchemist
 
         #endregion
 
-        private bool CheckCircleExist(Vector3 clickPoint)
-        {
-            bool isCircleExisted = false;
-
-            foreach (var checkedCircle in _circles)
-            {
-                if (checkedCircle.DetectTouchPoint(clickPoint))
-                {
-                    isCircleExisted = true;
-                    break;
-                }
-            }
-
-            return isCircleExisted;
-        }
+        // private bool CheckCircleExist(Vector3 clickPoint)
+        // {
+        //     bool isCircleExisted = false;
+        //
+        //     foreach (var checkedCircle in _circles)
+        //     {
+        //         if (checkedCircle.DetectTouchPoint(clickPoint))
+        //         {
+        //             isCircleExisted = true;
+        //             break;
+        //         }
+        //     }
+        //
+        //     return isCircleExisted;
+        // }
     }
 }

@@ -14,6 +14,7 @@ namespace TheAiAlchemist
     public class Circle : MonoBehaviour, ICircleTrait
     {
         [SerializeField] private IndexAndPlotTranslator indexTranslator;
+        [SerializeField] private Vector3Storage gameBoardPos;
         [SerializeField] private int circleId;
         
         private ICheckState mState;
@@ -24,7 +25,7 @@ namespace TheAiAlchemist
             mState = GetComponent<ICheckState>();
             mRenderer = GetComponent<IRender>();
 
-            transform.position = spawnPos;
+            transform.position = spawnPos + gameBoardPos.GetValue();
             circleId = indexTranslator.PlotToIndex(spawnPos); //TODO: replace hard coding by a flexible grid size
             // circleId = Mathf.RoundToInt(spawnPos.x + spawnPos.y * 3 + 4); 
         }

@@ -126,53 +126,58 @@ namespace TheAiAlchemist
                 // AskForAction();
             }
 
-            if (Input.GetKeyDown(KeyCode.S))
+            else if (Input.GetKeyDown(KeyCode.S))
             {
                 currentAction = 1;
                 // AskForAction();
             }
 
-            if (Input.GetKeyDown(KeyCode.D))
+            else if (Input.GetKeyDown(KeyCode.D))
             {
                 currentAction = 2;
                 // AskForAction();
             }
 
-            if (Input.GetKeyDown(KeyCode.F))
+            else if (Input.GetKeyDown(KeyCode.F))
             {
                 currentAction = 3;
                 // AskForAction();
             }
 
-            if (Input.GetKeyDown(KeyCode.Z))
+            else if (Input.GetKeyDown(KeyCode.Z))
             {
                 currentAction = 4;
                 // AskForAction();
             }
 
-            if (Input.GetKeyDown(KeyCode.X))
+            else if (Input.GetKeyDown(KeyCode.X))
             {
                 currentAction = 5;
                 // AskForAction();
             }
 
-            if (Input.GetKeyDown(KeyCode.C))
+            else if (Input.GetKeyDown(KeyCode.C))
             {
                 currentAction = 6;
                 // AskForAction();
             }
 
-            if (Input.GetKeyDown(KeyCode.V))
+            else if (Input.GetKeyDown(KeyCode.V))
             {
                 currentAction = 7;
                 // AskForAction();
             }
 
-            if (Input.GetKeyDown(KeyCode.B))
+            else if (Input.GetKeyDown(KeyCode.B))
             {
                 currentAction = 8;
                 // AskForAction();
             }
+        }
+
+        public int GetPlayerId()
+        {
+            return _playerBehavior.GetPlayerId();
         }
         
         #endregion
