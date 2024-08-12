@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,6 +20,7 @@ namespace TheAiAlchemist
 
         [SerializeField] private int currentPlayerIndex;
         private int circleAmount;
+        private bool isNewStep;
 
         private void OnEnable()
         {
@@ -40,6 +42,15 @@ namespace TheAiAlchemist
             ResetCurrentPlayer();
         }
 
+        private void FixedUpdate()
+        {
+            if (isNewStep)
+            {
+                isNewStep = false;
+                MoveToNextStep();
+            }
+        }
+
         private void SetCurrentPlayer()
         {
             currentPlayerIndex = (currentPlayerIndex + 1) % players.Count;
@@ -50,7 +61,12 @@ namespace TheAiAlchemist
         {
             // Record environment state
             gameBoard.GetValue()[location] = playerId;
-            
+            isNewStep = true;
+        }
+
+        private void MoveToNextStep()
+        {
+
             var isWin = CheckWinCondition();
             if (isWin)
             {
@@ -103,18 +119,22 @@ namespace TheAiAlchemist
         private void ResetCurrentPlayer()
         {
             circleAmount = 0;
+            gameBoard.ResetList();
             currentPlayer.SetValue(players[currentPlayerIndex].GetValue().GetPlayerId());
-            
-            // Reset gameBoard
-            if (gameBoard.GetValue().Count < 9)
-                gameBoard.SetValue(new(new int[9]));
-            for (int i = 0; i < gameBoard.GetValue().Count; i++)
-                gameBoard.GetValue()[i] = 0;
             
             // Ask current player to play
             newGameChannel.ExecuteChannel();
         }
-        
+
+        // private void ResetGameBoard()
+        // {
+        //     // Reset gameBoard
+        //     if (gameBoard.GetValue().Count < 9)
+        //         gameBoard.SetValue(new(new int[9]));
+        //     for (int i = 0; i < gameBoard.GetValue().Count; i++)
+        //         gameBoard.GetValue()[i] = 0;
+        // }
+
         private void GameInterrupted()
         {
             endGameChannel.ExecuteChannel(false);

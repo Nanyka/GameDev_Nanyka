@@ -6,17 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/NpcPlayer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/NpcPlayer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/TrainDrlModels/TrainDrlModels.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/TrainDrlModels/TrainDrlModels.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameStateForTraining.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameStateForTraining.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/StorageSO/ListIntStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/StorageSO/ListIntStorage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayerActuatorComp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayerActuatorComp.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/TicTacToeAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/TicTacToeAgent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ML-Agents/Timers/TrainDrlModels_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers/TrainDrlModels_timers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/NpcPlayer.onnx" beforeDir="false" afterPath="$PROJECT_DIR$/results/TicTacToe_v2/NpcPlayer.onnx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/NpcPlayer/NpcPlayer-112134.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/NpcPlayer/NpcPlayer-112134.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/NpcPlayer/checkpoint.pt" beforeDir="false" afterPath="$PROJECT_DIR$/results/TicTacToe_v2/NpcPlayer/checkpoint.pt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/NpcPlayer/events.out.tfevents.1723378355.admins-MacBook-Pro.local.8016.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/configuration.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/results/TicTacToe_v2/configuration.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/run_logs/timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/results/TicTacToe_v2/run_logs/timers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/run_logs/training_status.json" beforeDir="false" afterPath="$PROJECT_DIR$/results/TicTacToe_v2/run_logs/training_status.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/tictactoe_v3.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/tictactoe_v3.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TrainingDiary.rtf" beforeDir="false" afterPath="$PROJECT_DIR$/results/TrainingDiary.rtf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +35,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/UI/EndGameMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/Utils/Combination.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nana/Challenge1/Scripts/BooleanStorage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ml-agents@a66ffbf062/Runtime/Academy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ml-agents@a66ffbf062/Runtime/Actuators/ActuatorManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ml-agents@a66ffbf062/Runtime/Actuators/IDiscreteActionMask.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ml-agents@a66ffbf062/Runtime/Agent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ml-agents@a66ffbf062/Runtime/Sensors/VectorSensor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Learn--ScriptableObjects/UOP1_Project/Assets/Scripts/Events/ScriptableObjects/VoidEventChannelSO.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../TestMLAgents/Assets/MAIN_LOT_Turnbase/Managers/Scripts/Utils/PointingChecker.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -128,7 +131,9 @@
       <workItem from="1723361536329" duration="3903000" />
       <workItem from="1723369256282" duration="3182000" />
       <workItem from="1723421496958" duration="4118000" />
-      <workItem from="1723442137647" duration="382000" />
+      <workItem from="1723442137647" duration="6584000" />
+      <workItem from="1723467621978" duration="3446000" />
+      <workItem from="1723478533638" duration="9257000" />
     </task>
     <servers />
   </component>

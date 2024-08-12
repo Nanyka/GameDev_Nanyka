@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5421691318143048221}
   - component: {fileID: 2968416967445571125}
-  - component: {fileID: 1113212675031511622}
   - component: {fileID: 62079483179316886}
   - component: {fileID: 2178890731660692752}
   m_Layer: 0
@@ -49,17 +48,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 9
+    VectorObservationSize: 27
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 0
-      BranchSizes: 
-    VectorActionSize: 
+      BranchSizes: 09000000
+    VectorActionSize: 09000000
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
   m_Model: {fileID: 0}
-  m_InferenceDevice: 2
+  m_InferenceDevice: 0
   m_BehaviorType: 1
   m_BehaviorName: NpcPlayer
   TeamId: 0
@@ -67,19 +66,6 @@ MonoBehaviour:
   m_UseChildActuators: 1
   m_DeterministicInference: 0
   m_ObservableAttributeHandling: 0
---- !u!114 &1113212675031511622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5977986689189226730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54f964119f03d427da3c1512f1290f79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 2178890731660692752}
 --- !u!114 &62079483179316886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,7 +99,7 @@ MonoBehaviour:
   currentAction: 0
   endGameChannel: {fileID: 11400000, guid: d1a037fe1d9e9452996bdbc29f4afccd, type: 2}
   newGameChannel: {fileID: 11400000, guid: 0e9934c90b00c4d8f95d028332460cfb, type: 2}
-  resetGameChannel: {fileID: 11400000, guid: c4ab14a3f61c34cc297c58192f1e27e3, type: 2}
+  interruptGameChannel: {fileID: 0}
   changePlayerChannel: {fileID: 11400000, guid: f28658ecf3d9946e59e23c3659afaea8, type: 2}
   indexTranslator: {fileID: 11400000, guid: 6b53ed37cad3a4e84a465054dcbab969, type: 2}
   currentPlayer: {fileID: 11400000, guid: 44712aa94874e4d16a0c27be1eaa0ef3, type: 2}

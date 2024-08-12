@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.MLAgents;
+using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Policies;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -24,14 +25,14 @@ namespace TheAiAlchemist
 
         private Agent _agent;
         private BehaviorType behaviorType;
+
         private IPlayerBehavior _playerBehavior;
-        private int turnCount;
+        // private int turnCount;
 
-        private float wrongPlotPunishment = -0.5f;
-        private float surviveReward = -0.1f;
-
-        private float winReward = 10f;
-        // private int maxTurnCount = 9;
+        // private float wrongPlotPunishment = -0.5f;
+        private float surviveReward = 0.1f;
+        private float winReward = 1f;
+        private int maxTurnCount = 10;
 
         public void Awake()
         {
@@ -70,7 +71,7 @@ namespace TheAiAlchemist
             {
                 // Debug.Log($"Player {_playerBehavior.GetPlayerId()} place on an unavailable plot");
                 interruptGameChannel.ExecuteChannel(); // v1: End episode when the agent go beyond maximum step
-                // OnPlayATurn();
+                // OnPlayATurn(); // v2: End episode when the agent go beyond maximum step
             }
             else
                 _playerBehavior.InTurnPlay(indexTranslator.IndexToPlot(action));
@@ -78,9 +79,9 @@ namespace TheAiAlchemist
 
         private void OnPlayATurn()
         {
-            var currentMultiplier = _playerBehavior.GetPlayerId() == currentPlayer.GetValue() ? 1 : -1;
-            currentMultiplier *= turnCount;
-            _agent.AddReward(surviveReward * currentMultiplier);
+            // var currentMultiplier = _playerBehavior.GetPlayerId() == currentPlayer.GetValue() ? 1 : -1;
+            // currentMultiplier *= turnCount;
+            // _agent.AddReward(surviveReward * currentMultiplier); // v1 --> v4
 
             if (_playerBehavior.GetPlayerId() == currentPlayer.GetValue())
             {
@@ -89,15 +90,15 @@ namespace TheAiAlchemist
 
                 // v2: End episode when the agent go beyond maximum step
                 // if (turnCount >= maxTurnCount)
-                //     endGameChannel.ExecuteChannel(false); 
+                //     interruptGameChannel.ExecuteChannel();
                 // else
-                // {
                 //     AskForAction();
-                //     _agent.AddReward(surviveReward);
-                // }
+
+                // v5: Add reward any playing turn
+                // _agent.AddReward(surviveReward);
             }
 
-            turnCount++;
+            // turnCount++;
             // Debug.Log($"Player {_playerBehavior.GetPlayerId()} reward: {_agent.GetCumulativeReward()}");
         }
 
@@ -106,11 +107,12 @@ namespace TheAiAlchemist
             // Grant a reward for this agent if it is the winner and adverse for the loser
             // If the agent go wrong plot, punish it a small reward and grant this reward to another
             var currentMultiplier = _playerBehavior.GetPlayerId() == currentPlayer.GetValue() ? 1 : -1;
-            _agent.AddReward(hasWinner ? winReward * currentMultiplier : wrongPlotPunishment * currentMultiplier);
+            // _agent.AddReward(hasWinner ? winReward * currentMultiplier : wrongPlotPunishment * currentMultiplier); // v1 --> v4
+            _agent.AddReward(hasWinner ? winReward * currentMultiplier : 0f); // v5
 
             // Debug.Log($"Player {_playerBehavior.GetPlayerId()} final reward: {_agent.GetCumulativeReward()}");
             _agent.EndEpisode();
-            turnCount = 0;
+            // turnCount = 0;
 
             // Assign current player to reset game
             // if (_playerBehavior.GetPlayerId() != currentPlayer.GetValue())

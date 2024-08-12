@@ -34,8 +34,8 @@ namespace TheAiAlchemist
     
         public void OnActionReceived(ActionBuffers actionBuffers)
         {
+            Debug.Log($"Player {_controller.GetPlayerId()} action: {actionBuffers.DiscreteActions[0]}");
             _controller.TakeAction(actionBuffers.DiscreteActions[0]);
-            // Debug.Log($"Player {_controller.GetPlayerId()} action: {actionBuffers.DiscreteActions[0]}");
         }
         
         public void Heuristic(in ActionBuffers actionBuffersOut)
@@ -52,7 +52,20 @@ namespace TheAiAlchemist
             get { return "NpcPlayer"; }
         }
         
-        public void WriteDiscreteActionMask(IDiscreteActionMask actionMask) { }
+        public void WriteDiscreteActionMask(IDiscreteActionMask actionMask)
+        {
+            // string actionDisable = "";
+            // for (int i = 0; i < _gameBoard.GetValue().Count; i++)
+            // {
+            //     if (_gameBoard.GetValue()[i] != 0)
+            //     {
+            //         actionMask.SetActionEnabled(0, i, false);
+            //         actionDisable += $"{i},";
+            //     }
+            // }
+            // Debug.Log(actionDisable);
+        }
+        
         public void ResetData() { }
     
     }
