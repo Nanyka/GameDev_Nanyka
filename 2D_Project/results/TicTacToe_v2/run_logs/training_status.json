@@ -1,23 +1,60 @@
 {
     "NpcPlayer": {
+        "elo": 10499.440242234312,
         "checkpoints": [
             {
-                "steps": 112134,
-                "file_path": "results/TicTacToe_v2/NpcPlayer/NpcPlayer-112134.onnx",
-                "reward": null,
-                "creation_time": 1723379242.217172,
+                "steps": 499998,
+                "file_path": "results/TicTacToe_v2/NpcPlayer/NpcPlayer-499998.onnx",
+                "reward": 5.9581394311647085,
+                "creation_time": 1723442089.9033039,
                 "auxillary_file_paths": [
-                    "results/TicTacToe_v2/NpcPlayer/NpcPlayer-112134.pt"
+                    "results/TicTacToe_v2/NpcPlayer/NpcPlayer-499998.pt"
+                ]
+            },
+            {
+                "steps": 505831,
+                "file_path": "results/TicTacToe_v2/NpcPlayer/NpcPlayer-505831.onnx",
+                "reward": 4.113235227708869,
+                "creation_time": 1723442110.3874009,
+                "auxillary_file_paths": [
+                    "results/TicTacToe_v2/NpcPlayer/NpcPlayer-505831.pt"
+                ]
+            },
+            {
+                "steps": 505862,
+                "file_path": "results/TicTacToe_v2/NpcPlayer/NpcPlayer-505862.onnx",
+                "reward": 7.60000002842683,
+                "creation_time": 1723443024.397747,
+                "auxillary_file_paths": [
+                    "results/TicTacToe_v2/NpcPlayer/NpcPlayer-505862.pt"
+                ]
+            },
+            {
+                "steps": 999999,
+                "file_path": "results/TicTacToe_v2/NpcPlayer/NpcPlayer-999999.onnx",
+                "reward": 7.959090744568543,
+                "creation_time": 1723445073.30472,
+                "auxillary_file_paths": [
+                    "results/TicTacToe_v2/NpcPlayer/NpcPlayer-999999.pt"
+                ]
+            },
+            {
+                "steps": 1020663,
+                "file_path": "results/TicTacToe_v2/NpcPlayer/NpcPlayer-1020663.onnx",
+                "reward": 9.219148749525242,
+                "creation_time": 1723445153.1151412,
+                "auxillary_file_paths": [
+                    "results/TicTacToe_v2/NpcPlayer/NpcPlayer-1020663.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 112134,
+            "steps": 1020663,
             "file_path": "results/TicTacToe_v2/NpcPlayer.onnx",
-            "reward": null,
-            "creation_time": 1723379242.217172,
+            "reward": 9.219148749525242,
+            "creation_time": 1723445153.1151412,
             "auxillary_file_paths": [
-                "results/TicTacToe_v2/NpcPlayer/NpcPlayer-112134.pt"
+                "results/TicTacToe_v2/NpcPlayer/NpcPlayer-1020663.pt"
             ]
         }
     },

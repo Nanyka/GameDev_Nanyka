@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.MLAgents;
+using Unity.MLAgents.Policies;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
@@ -14,7 +15,7 @@ namespace TheAiAlchemist
 
         [SerializeField] private BoolChannel endGameChannel;
         [SerializeField] private VoidChannel newGameChannel;
-        [SerializeField] private VoidChannel resetGameChannel;
+        [SerializeField] private VoidChannel interruptGameChannel;
         [SerializeField] private VoidChannel changePlayerChannel;
         [SerializeField] private IndexAndPlotTranslator indexTranslator;
         [SerializeField] private IntStorage currentPlayer;
@@ -22,10 +23,15 @@ namespace TheAiAlchemist
         [SerializeField] private GameObject playerController;
 
         private Agent _agent;
+        private BehaviorType behaviorType;
         private IPlayerBehavior _playerBehavior;
+        private int turnCount;
+
         private float wrongPlotPunishment = -0.5f;
-        private float suviveReward = 0.1f;
+        private float surviveReward = -0.1f;
+
         private float winReward = 10f;
+        // private int maxTurnCount = 9;
 
         public void Awake()
         {
@@ -43,6 +49,7 @@ namespace TheAiAlchemist
         private void OnEnable()
         {
             _agent = GetComponent<Agent>();
+            behaviorType = GetComponent<BehaviorParameters>().BehaviorType;
             _playerBehavior = playerController.GetComponent<IPlayerBehavior>();
             endGameChannel.AddListener(OnEpisodeEnd);
             newGameChannel.AddListener(OnPlayATurn);
@@ -62,35 +69,54 @@ namespace TheAiAlchemist
             if (gameBoard.GetValue()[action] != 0)
             {
                 // Debug.Log($"Player {_playerBehavior.GetPlayerId()} place on an unavailable plot");
-                _agent.AddReward(wrongPlotPunishment);
-                endGameChannel.ExecuteChannel(false); // End episode when the agent fail to select a plot
+                interruptGameChannel.ExecuteChannel(); // v1: End episode when the agent go beyond maximum step
+                // OnPlayATurn();
             }
             else
                 _playerBehavior.InTurnPlay(indexTranslator.IndexToPlot(action));
         }
-        
+
         private void OnPlayATurn()
         {
+            var currentMultiplier = _playerBehavior.GetPlayerId() == currentPlayer.GetValue() ? 1 : -1;
+            currentMultiplier *= turnCount;
+            _agent.AddReward(surviveReward * currentMultiplier);
+
             if (_playerBehavior.GetPlayerId() == currentPlayer.GetValue())
             {
+                // v1: End episode when the agent go beyond maximum step
                 AskForAction();
-                _agent.AddReward(suviveReward);
+
+                // v2: End episode when the agent go beyond maximum step
+                // if (turnCount >= maxTurnCount)
+                //     endGameChannel.ExecuteChannel(false); 
+                // else
+                // {
+                //     AskForAction();
+                //     _agent.AddReward(surviveReward);
+                // }
             }
+
+            turnCount++;
+            // Debug.Log($"Player {_playerBehavior.GetPlayerId()} reward: {_agent.GetCumulativeReward()}");
         }
-        
+
         private void OnEpisodeEnd(bool hasWinner)
         {
-            // Grant a reward for this agent if it is the winner
-            if (hasWinner && _playerBehavior.GetPlayerId() == currentPlayer.GetValue())
-                _agent.AddReward(winReward);
-            
+            // Grant a reward for this agent if it is the winner and adverse for the loser
+            // If the agent go wrong plot, punish it a small reward and grant this reward to another
+            var currentMultiplier = _playerBehavior.GetPlayerId() == currentPlayer.GetValue() ? 1 : -1;
+            _agent.AddReward(hasWinner ? winReward * currentMultiplier : wrongPlotPunishment * currentMultiplier);
+
+            // Debug.Log($"Player {_playerBehavior.GetPlayerId()} final reward: {_agent.GetCumulativeReward()}");
             _agent.EndEpisode();
-            
+            turnCount = 0;
+
             // Assign current player to reset game
-            if (_playerBehavior.GetPlayerId() == currentPlayer.GetValue())
-                resetGameChannel.ExecuteChannel();
+            // if (_playerBehavior.GetPlayerId() != currentPlayer.GetValue())
+            //     resetGameChannel.ExecuteChannel();
         }
-        
+
         #region AGENT INTERACTION
 
         private void AskForAction()
@@ -101,7 +127,7 @@ namespace TheAiAlchemist
             if (_agent == null)
                 return;
 
-            if (Academy.Instance.IsCommunicatorOn)
+            if (Academy.Instance.IsCommunicatorOn || behaviorType == BehaviorType.InferenceOnly)
                 _agent?.RequestDecision();
             else
                 StartCoroutine(WaitToRequestDecision());
@@ -179,7 +205,7 @@ namespace TheAiAlchemist
         {
             return _playerBehavior.GetPlayerId();
         }
-        
+
         #endregion
     }
 }

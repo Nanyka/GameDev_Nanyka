@@ -171,6 +171,7 @@ MonoBehaviour:
   changePlayerChannel: {fileID: 11400000, guid: f28658ecf3d9946e59e23c3659afaea8, type: 2}
   endGameChannel: {fileID: 11400000, guid: d1a037fe1d9e9452996bdbc29f4afccd, type: 2}
   newGameChannel: {fileID: 11400000, guid: 0e9934c90b00c4d8f95d028332460cfb, type: 2}
+  interruptGameChannel: {fileID: 11400000, guid: 0076addcc78764c18b9a8487aa52edc8, type: 2}
   announceStateChanged: {fileID: 11400000, guid: 3eddbb3309d0f493190fd96b1ba02744, type: 2}
   currentPlayer: {fileID: 11400000, guid: 44712aa94874e4d16a0c27be1eaa0ef3, type: 2}
   gameBoard: {fileID: 11400000, guid: 77ea84869dd6e4a6f8616368a1e4c690, type: 2}
@@ -220,6 +221,10 @@ PrefabInstance:
       propertyPath: changePlayerChannel
       value: 
       objectReference: {fileID: 11400000, guid: 061da1e1a2ed84479a29537b1ec1403b, type: 2}
+    - target: {fileID: 2178890731660692752, guid: 99b4a9ed126104c2a8245c830f867331, type: 3}
+      propertyPath: interruptGameChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: 8669280174d82465ca65892600ada205, type: 2}
     - target: {fileID: 2968416967445571125, guid: 99b4a9ed126104c2a8245c830f867331, type: 3}
       propertyPath: TeamId
       value: 1
@@ -362,6 +367,10 @@ PrefabInstance:
       propertyPath: changePlayerChannel
       value: 
       objectReference: {fileID: 11400000, guid: 2260741d0c2ce45fdbdff9583375a441, type: 2}
+    - target: {fileID: 2178890731660692752, guid: 99b4a9ed126104c2a8245c830f867331, type: 3}
+      propertyPath: interruptGameChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: ac5f328fc02854fcd8df9c271f4d31d3, type: 2}
     - target: {fileID: 2968416967445571125, guid: 99b4a9ed126104c2a8245c830f867331, type: 3}
       propertyPath: TeamId
       value: 1
@@ -472,12 +481,28 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 909114573}
     m_Modifications:
+    - target: {fileID: 2178890731660692752, guid: 99b4a9ed126104c2a8245c830f867331, type: 3}
+      propertyPath: interruptGameChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: 0076addcc78764c18b9a8487aa52edc8, type: 2}
     - target: {fileID: 2968416967445571125, guid: 99b4a9ed126104c2a8245c830f867331, type: 3}
       propertyPath: TeamId
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2968416967445571125, guid: 99b4a9ed126104c2a8245c830f867331, type: 3}
+      propertyPath: m_Model
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968416967445571125, guid: 99b4a9ed126104c2a8245c830f867331, type: 3}
       propertyPath: m_BehaviorType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968416967445571125, guid: 99b4a9ed126104c2a8245c830f867331, type: 3}
+      propertyPath: m_InferenceDevice
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968416967445571125, guid: 99b4a9ed126104c2a8245c830f867331, type: 3}
+      propertyPath: m_DeterministicInference
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5076921466071614498, guid: 99b4a9ed126104c2a8245c830f867331, type: 3}
@@ -838,6 +863,10 @@ PrefabInstance:
       propertyPath: changePlayerChannel
       value: 
       objectReference: {fileID: 11400000, guid: 2502270fc3f6043428eab49cf3db6b89, type: 2}
+    - target: {fileID: 2178890731660692752, guid: 99b4a9ed126104c2a8245c830f867331, type: 3}
+      propertyPath: interruptGameChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: 8c9ed36cb96f94708a2d92b72bf00e16, type: 2}
     - target: {fileID: 2968416967445571125, guid: 99b4a9ed126104c2a8245c830f867331, type: 3}
       propertyPath: TeamId
       value: 1
@@ -980,6 +1009,10 @@ PrefabInstance:
       propertyPath: changePlayerChannel
       value: 
       objectReference: {fileID: 11400000, guid: b94c850f50e81465b9bc6f12f459b596, type: 2}
+    - target: {fileID: 2178890731660692752, guid: 99b4a9ed126104c2a8245c830f867331, type: 3}
+      propertyPath: interruptGameChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: d0003ac7e07bf4967a174572ed1009a5, type: 2}
     - target: {fileID: 2968416967445571125, guid: 99b4a9ed126104c2a8245c830f867331, type: 3}
       propertyPath: m_BehaviorType
       value: 0
@@ -1126,6 +1159,7 @@ MonoBehaviour:
   changePlayerChannel: {fileID: 11400000, guid: 2502270fc3f6043428eab49cf3db6b89, type: 2}
   endGameChannel: {fileID: 11400000, guid: 9e01dc5c6d4d442f2b9721f4a1a4521a, type: 2}
   newGameChannel: {fileID: 11400000, guid: a7f50b21382194ddca0027f24929eac6, type: 2}
+  interruptGameChannel: {fileID: 11400000, guid: 8c9ed36cb96f94708a2d92b72bf00e16, type: 2}
   announceStateChanged: {fileID: 11400000, guid: 38bf8806f33464230b990b6a9ed5800b, type: 2}
   currentPlayer: {fileID: 11400000, guid: c94c179c01da9438c9d67654d89eade9, type: 2}
   gameBoard: {fileID: 11400000, guid: f88ec82221f594bffae4f2a6732eabf1, type: 2}
@@ -1343,6 +1377,10 @@ PrefabInstance:
       propertyPath: changePlayerChannel
       value: 
       objectReference: {fileID: 11400000, guid: 061da1e1a2ed84479a29537b1ec1403b, type: 2}
+    - target: {fileID: 2178890731660692752, guid: 99b4a9ed126104c2a8245c830f867331, type: 3}
+      propertyPath: interruptGameChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: 8669280174d82465ca65892600ada205, type: 2}
     - target: {fileID: 2968416967445571125, guid: 99b4a9ed126104c2a8245c830f867331, type: 3}
       propertyPath: m_BehaviorType
       value: 0
@@ -1591,6 +1629,7 @@ MonoBehaviour:
   changePlayerChannel: {fileID: 11400000, guid: b6d7fbd89f14647ebb5d146311a97109, type: 2}
   endGameChannel: {fileID: 11400000, guid: cd59d8ecf83dc469499653f0d11168d0, type: 2}
   newGameChannel: {fileID: 11400000, guid: 541aa30e79ee74e2da67f769ba67d45a, type: 2}
+  interruptGameChannel: {fileID: 11400000, guid: 51828e4088c0f4a21a3e3bdb127f7500, type: 2}
   announceStateChanged: {fileID: 11400000, guid: f1cd4d8c1126649b9915961954f0a3c9, type: 2}
   currentPlayer: {fileID: 11400000, guid: c1276ae2db4844d93939f1c69876df06, type: 2}
   gameBoard: {fileID: 11400000, guid: a29a1524d51f84190b18edd396ab8f06, type: 2}
@@ -2186,6 +2225,7 @@ MonoBehaviour:
   changePlayerChannel: {fileID: 11400000, guid: 2260741d0c2ce45fdbdff9583375a441, type: 2}
   endGameChannel: {fileID: 11400000, guid: 28368e1301faa4cb09223a9c5e13b9f7, type: 2}
   newGameChannel: {fileID: 11400000, guid: 72b1121aa13144dd5b8f02691347b239, type: 2}
+  interruptGameChannel: {fileID: 11400000, guid: ac5f328fc02854fcd8df9c271f4d31d3, type: 2}
   announceStateChanged: {fileID: 11400000, guid: e56697151426e4799ae8c1ebf4d8d401, type: 2}
   currentPlayer: {fileID: 11400000, guid: 89646ee79a8654dc19e6132b300cbdce, type: 2}
   gameBoard: {fileID: 11400000, guid: 62fe06f4e2e8a4baeb357277a0a7455b, type: 2}
@@ -2955,6 +2995,7 @@ MonoBehaviour:
   changePlayerChannel: {fileID: 11400000, guid: b94c850f50e81465b9bc6f12f459b596, type: 2}
   endGameChannel: {fileID: 11400000, guid: e328e44cea40644c0a0771529627cdb7, type: 2}
   newGameChannel: {fileID: 11400000, guid: 04c645d8310b749fca54d84488bb2024, type: 2}
+  interruptGameChannel: {fileID: 11400000, guid: d0003ac7e07bf4967a174572ed1009a5, type: 2}
   announceStateChanged: {fileID: 11400000, guid: 9eb37d849bfe04c65a42f9f5332e556f, type: 2}
   currentPlayer: {fileID: 11400000, guid: 44a12879c82b34c3d9df3e731a0eeae8, type: 2}
   gameBoard: {fileID: 11400000, guid: 8ae4bcba7899f4b699c6220a4f267114, type: 2}
@@ -3402,6 +3443,10 @@ PrefabInstance:
       propertyPath: changePlayerChannel
       value: 
       objectReference: {fileID: 11400000, guid: 2260741d0c2ce45fdbdff9583375a441, type: 2}
+    - target: {fileID: 2178890731660692752, guid: 99b4a9ed126104c2a8245c830f867331, type: 3}
+      propertyPath: interruptGameChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: ac5f328fc02854fcd8df9c271f4d31d3, type: 2}
     - target: {fileID: 2968416967445571125, guid: 99b4a9ed126104c2a8245c830f867331, type: 3}
       propertyPath: m_BehaviorType
       value: 0
@@ -3624,6 +3669,10 @@ PrefabInstance:
       propertyPath: changePlayerChannel
       value: 
       objectReference: {fileID: 11400000, guid: 2502270fc3f6043428eab49cf3db6b89, type: 2}
+    - target: {fileID: 2178890731660692752, guid: 99b4a9ed126104c2a8245c830f867331, type: 3}
+      propertyPath: interruptGameChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: 8c9ed36cb96f94708a2d92b72bf00e16, type: 2}
     - target: {fileID: 2968416967445571125, guid: 99b4a9ed126104c2a8245c830f867331, type: 3}
       propertyPath: m_BehaviorType
       value: 0
@@ -3814,6 +3863,10 @@ PrefabInstance:
       propertyPath: changePlayerChannel
       value: 
       objectReference: {fileID: 11400000, guid: b6d7fbd89f14647ebb5d146311a97109, type: 2}
+    - target: {fileID: 2178890731660692752, guid: 99b4a9ed126104c2a8245c830f867331, type: 3}
+      propertyPath: interruptGameChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: 51828e4088c0f4a21a3e3bdb127f7500, type: 2}
     - target: {fileID: 2968416967445571125, guid: 99b4a9ed126104c2a8245c830f867331, type: 3}
       propertyPath: m_BehaviorType
       value: 0
@@ -3991,6 +4044,7 @@ MonoBehaviour:
   changePlayerChannel: {fileID: 11400000, guid: 061da1e1a2ed84479a29537b1ec1403b, type: 2}
   endGameChannel: {fileID: 11400000, guid: b437e530328ca4e35ad1ccba8029f1da, type: 2}
   newGameChannel: {fileID: 11400000, guid: 7c746084138ab40b6957c520723531dd, type: 2}
+  interruptGameChannel: {fileID: 11400000, guid: 8669280174d82465ca65892600ada205, type: 2}
   announceStateChanged: {fileID: 11400000, guid: da375e562adfb456eb12a84b65ce194b, type: 2}
   currentPlayer: {fileID: 11400000, guid: 523f476595b804e899cccccc55b42e5a, type: 2}
   gameBoard: {fileID: 11400000, guid: 8a4ccc49be67e4a87b977740ff091470, type: 2}
@@ -4040,6 +4094,10 @@ PrefabInstance:
       propertyPath: changePlayerChannel
       value: 
       objectReference: {fileID: 11400000, guid: b6d7fbd89f14647ebb5d146311a97109, type: 2}
+    - target: {fileID: 2178890731660692752, guid: 99b4a9ed126104c2a8245c830f867331, type: 3}
+      propertyPath: interruptGameChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: 51828e4088c0f4a21a3e3bdb127f7500, type: 2}
     - target: {fileID: 2968416967445571125, guid: 99b4a9ed126104c2a8245c830f867331, type: 3}
       propertyPath: TeamId
       value: 1
@@ -5234,6 +5292,10 @@ PrefabInstance:
       propertyPath: changePlayerChannel
       value: 
       objectReference: {fileID: 11400000, guid: b94c850f50e81465b9bc6f12f459b596, type: 2}
+    - target: {fileID: 2178890731660692752, guid: 99b4a9ed126104c2a8245c830f867331, type: 3}
+      propertyPath: interruptGameChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: d0003ac7e07bf4967a174572ed1009a5, type: 2}
     - target: {fileID: 2968416967445571125, guid: 99b4a9ed126104c2a8245c830f867331, type: 3}
       propertyPath: TeamId
       value: 1
@@ -6362,6 +6424,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 909114573}
     m_Modifications:
+    - target: {fileID: 2178890731660692752, guid: 99b4a9ed126104c2a8245c830f867331, type: 3}
+      propertyPath: interruptGameChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: 0076addcc78764c18b9a8487aa52edc8, type: 2}
     - target: {fileID: 2968416967445571125, guid: 99b4a9ed126104c2a8245c830f867331, type: 3}
       propertyPath: m_BehaviorType
       value: 0

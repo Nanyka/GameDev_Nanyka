@@ -9,6 +9,7 @@ namespace TheAiAlchemist
         [SerializeField] private VoidChannel changePlayerChannel;
         [SerializeField] private BoolChannel endGameChannel;
         [SerializeField] private VoidChannel newGameChannel;
+        [SerializeField] private VoidChannel interruptGameChannel;
         [SerializeField] private TwoIntChannel announceStateChanged;
         [SerializeField] private IntStorage currentPlayer;
         [SerializeField] private ListIntStorage gameBoard;
@@ -23,12 +24,14 @@ namespace TheAiAlchemist
         {
             resetGameChannel.AddListener(ResetCurrentPlayer);
             announceStateChanged.AddListener(StateChanged);
+            interruptGameChannel.AddListener(GameInterrupted);
         }
         
         private void OnDisable()
         {
             resetGameChannel.RemoveListener(ResetCurrentPlayer);
             announceStateChanged.RemoveListener(StateChanged);
+            interruptGameChannel.RemoveListener(GameInterrupted);
         }
 
         private void Start()
@@ -50,7 +53,10 @@ namespace TheAiAlchemist
             
             var isWin = CheckWinCondition();
             if (isWin)
+            {
                 endGameChannel.ExecuteChannel(true);
+                resetGameChannel.ExecuteChannel();
+            }
             else
                 IncreaseCircleAmount();
         }
@@ -83,7 +89,10 @@ namespace TheAiAlchemist
         {
             circleAmount++;
             if (circleAmount >= 9)
+            {
                 endGameChannel.ExecuteChannel(false);
+                resetGameChannel.ExecuteChannel();
+            }
             else
             {
                 SetCurrentPlayer();
@@ -104,6 +113,12 @@ namespace TheAiAlchemist
             
             // Ask current player to play
             newGameChannel.ExecuteChannel();
+        }
+        
+        private void GameInterrupted()
+        {
+            endGameChannel.ExecuteChannel(false);
+            resetGameChannel.ExecuteChannel();
         }
     }
 }
