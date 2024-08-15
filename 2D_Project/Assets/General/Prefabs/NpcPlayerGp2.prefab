@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8402995805099513866}
   - component: {fileID: 3815189265602965501}
   - component: {fileID: 5976619044077388779}
+  - component: {fileID: 8787848189935245689}
   - component: {fileID: 708965066987559873}
   m_Layer: 0
   m_Name: NpcPlayerGp2
@@ -48,12 +49,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 27
+    VectorObservationSize: 72
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 0
-      BranchSizes: 09000000
-    VectorActionSize: 09000000
+      BranchSizes: 0900000003000000
+    VectorActionSize: 0900000003000000
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
@@ -84,6 +85,18 @@ MonoBehaviour:
   MaxStep: 0
   gameBoard: {fileID: 11400000, guid: 77ea84869dd6e4a6f8616368a1e4c690, type: 2}
   playerController: {fileID: 7130473636846068691}
+--- !u!114 &8787848189935245689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5855027802736223116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7434c647e3dd492994bf0d6785a9c6dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &708965066987559873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentAction: -1
+  currentPriority: 0
   endGameChannel: {fileID: 11400000, guid: d1a037fe1d9e9452996bdbc29f4afccd, type: 2}
   newGameChannel: {fileID: 11400000, guid: 0e9934c90b00c4d8f95d028332460cfb, type: 2}
   interruptGameChannel: {fileID: 11400000, guid: 0076addcc78764c18b9a8487aa52edc8, type: 2}
@@ -174,5 +188,6 @@ MonoBehaviour:
   enableEndButtonChannel: {fileID: 11400000, guid: e7e105687ae024cf09982b725508bac1, type: 2}
   resetGameChannel: {fileID: 11400000, guid: c4ab14a3f61c34cc297c58192f1e27e3, type: 2}
   announceStateChanged: {fileID: 11400000, guid: 3eddbb3309d0f493190fd96b1ba02744, type: 2}
+  disableCircleChannel: {fileID: 11400000, guid: f92c6f8ca398a4e12b6b3c2030b62133, type: 2}
   currentPlayer: {fileID: 11400000, guid: 44712aa94874e4d16a0c27be1eaa0ef3, type: 2}
   playerId: 1

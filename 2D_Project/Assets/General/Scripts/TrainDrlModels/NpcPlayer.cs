@@ -20,7 +20,7 @@ namespace TheAiAlchemist
         [SerializeField] private VoidChannel changePlayerChannel;
         [SerializeField] private IndexAndPlotTranslator indexTranslator;
         [SerializeField] private IntStorage currentPlayer;
-        [SerializeField] private ListIntStorage gameBoard;
+        [SerializeField] private ListCircleStorage gameBoard;
         [SerializeField] private GameObject playerController;
 
         private Agent _agent;
@@ -59,13 +59,13 @@ namespace TheAiAlchemist
             changePlayerChannel.RemoveListener(OnPlayATurn);
         }
 
-        public void TakeAction(int action)
+        public void TakeAction(ActionSegment<int> action)
         {
             // Send the index and playerId to GameStateManager
-            if (gameBoard.GetValue()[action] != 0)
-                interruptGameChannel.ExecuteChannel(); // v1: End episode when the agent go beyond maximum step
+            if (gameBoard.GetValue()[action[0]] != null)
+                interruptGameChannel.ExecuteChannel();
             else
-                _playerBehavior.InTurnPlay(indexTranslator.IndexToPlot(action));
+                _playerBehavior.InTurnPlay(indexTranslator.IndexToPlot(action[0]),0);
         }
 
         private void OnPlayATurn()
@@ -110,31 +110,31 @@ namespace TheAiAlchemist
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKeyDown(KeyCode.Z))
                 currentAction = 0;
 
-            else if (Input.GetKeyDown(KeyCode.S))
+            else if (Input.GetKeyDown(KeyCode.X))
                 currentAction = 1;
 
-            else if (Input.GetKeyDown(KeyCode.D))
+            else if (Input.GetKeyDown(KeyCode.C))
                 currentAction = 2;
 
-            else if (Input.GetKeyDown(KeyCode.F))
+            else if (Input.GetKeyDown(KeyCode.A))
                 currentAction = 3;
 
-            else if (Input.GetKeyDown(KeyCode.Z))
+            else if (Input.GetKeyDown(KeyCode.S))
                 currentAction = 4;
 
-            else if (Input.GetKeyDown(KeyCode.X))
+            else if (Input.GetKeyDown(KeyCode.D))
                 currentAction = 5;
 
-            else if (Input.GetKeyDown(KeyCode.C))
+            else if (Input.GetKeyDown(KeyCode.Q))
                 currentAction = 6;
 
-            else if (Input.GetKeyDown(KeyCode.V))
+            else if (Input.GetKeyDown(KeyCode.W))
                 currentAction = 7;
 
-            else if (Input.GetKeyDown(KeyCode.B))
+            else if (Input.GetKeyDown(KeyCode.E))
                 currentAction = 8;
         }
 
@@ -146,6 +146,11 @@ namespace TheAiAlchemist
         public int GetCurrentAction()
         {
             return currentAction;
+        }
+
+        public int GetCurrentPriority()
+        {
+            return 0;
         }
 
         #endregion

@@ -11,9 +11,9 @@ namespace TheAiAlchemist
         [SerializeField] private BoolChannel endGameChannel;
         [SerializeField] private VoidChannel newGameChannel;
         [SerializeField] private VoidChannel interruptGameChannel;
-        [SerializeField] private TwoIntChannel announceStateChanged;
+        [SerializeField] private CircleChannel announceStateChanged;
         [SerializeField] private IntStorage currentPlayer;
-        [SerializeField] private ListIntStorage gameBoard;
+        [SerializeField] private ListCircleStorage gameBoard;
         [SerializeField] private Vector3Storage gameBoardPos;
         [SerializeField] private IndexAndPlotTranslator winRuler;
         [SerializeField] private List<IPlayerBehaviorStorage> players;
@@ -57,10 +57,10 @@ namespace TheAiAlchemist
             currentPlayer.SetValue(players[currentPlayerIndex].GetValue().GetPlayerId());
         }
 
-        private void StateChanged(int playerId, int location)
+        private void StateChanged(ICircleTrait circleTrait)
         {
             // Record environment state
-            gameBoard.GetValue()[location] = playerId;
+            gameBoard.GetValue()[circleTrait.GetId()] = circleTrait;
             isNewStep = true;
         }
 
@@ -83,7 +83,7 @@ namespace TheAiAlchemist
             var positionList = new List<int>();
             for (int i = 0; i < gameBoard.GetValue().Count; i++)
             {
-                if (currentPlayer.GetValue() == gameBoard.GetValue()[i])
+                if (currentPlayer.GetValue() == gameBoard.GetValue()[i].GetPlayerId())
                     positionList.Add(i);
             }
 

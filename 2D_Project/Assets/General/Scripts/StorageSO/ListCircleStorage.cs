@@ -4,24 +4,24 @@ using UnityEngine;
 namespace TheAiAlchemist
 {
     [CreateAssetMenu(fileName = "ListIntStorage", menuName = "TheAiAlchemist/Storages/ListIntStorage")]
-    public class ListIntStorage : ScriptableObject
+    public class ListCircleStorage : ScriptableObject
     {
-        [SerializeField] private List<int> value;
+        [SerializeField] private List<ICircleTrait> value;
         [SerializeField] private int listSize = 9;
 
         private void OnEnable()
         {
-            value = new List<int>(listSize);
+            value = new List<ICircleTrait>(listSize);
             for (int i = 0; i < listSize; i++)
-                value.Add(0);
+                value.Add(null);
         }
 
-        public void SetValue(List<int> value)
+        public void SetValue(List<ICircleTrait> value)
         {
             this.value = value;
         }
 
-        public List<int> GetValue()
+        public List<ICircleTrait> GetValue()
         {
             return value;
         }
@@ -29,7 +29,7 @@ namespace TheAiAlchemist
         public void ResetList()
         {
             for (int i = 0; i < listSize; i++)
-                value[i] = 0;
+                value[i] = null;
         }
     }
 }

@@ -14,7 +14,7 @@ namespace TheAiAlchemist
         [SerializeField] private Vector3Channel mousePosChannel;
         [SerializeField] private VoidChannel activateInput;
         [SerializeField] private IndexAndPlotTranslator translator;
-        [SerializeField] private ListIntStorage gameBoard;
+        [SerializeField] private ListCircleStorage gameBoard;
         [SerializeField] private Vector3Storage gameBoardPos;
 
         private Camera mainCamera;
@@ -50,7 +50,7 @@ namespace TheAiAlchemist
                 wordPosition -= gameBoardPos.GetValue();
                 wordPosition = new Vector3(Mathf.RoundToInt(wordPosition.x), Mathf.RoundToInt(wordPosition.y), 0f);
                 if (Mathf.Abs(wordPosition.x) + Mathf.Abs(wordPosition.y) < 2 &&
-                    gameBoard.GetValue()[translator.PlotToIndex(wordPosition)] == 0)
+                    gameBoard.GetValue()[translator.PlotToIndex(wordPosition)] == null)
                 {
                     mousePosChannel.ExecuteChannel(wordPosition);
                 }

@@ -7,15 +7,17 @@ namespace TheAiAlchemist
 {
     public class TicTacToeAgentGpTwo : Agent
     {
-        [SerializeField] private ListIntStorage gameBoard;
+        [SerializeField] private ListCircleStorage gameBoard;
         [SerializeField] private GameObject playerController;
         
-        private INpcPlayer controller;
+        private INpcPlayer _controller;
+        private IInventoryComp _inventory;
         private IPlayerBehavior _playerBehavior;
         
         public override void Initialize()
         {
-            controller = GetComponent<INpcPlayer>();
+            _controller = GetComponent<INpcPlayer>();
+            _inventory = GetComponent<IInventoryComp>();
             _playerBehavior = playerController.GetComponent<IPlayerBehavior>();
         }
 
@@ -25,29 +27,37 @@ namespace TheAiAlchemist
             // string observation = "";
             foreach (var plot in gameBoard.GetValue())
             {
-                int addValue = 0;
-                if (plot != 0)
+                int addPlayerId = 0;
+                int addPriority = 0;
+                if (plot != null)
                 {
-                    addValue = plot == _playerBehavior.GetPlayerId() ? 1 : -1;
-                    // observation += $"{addValue},";
+                    addPlayerId = plot.GetPlayerId();
+                    addPriority = plot.GetPriority();
+                    // observation += $"{plot.GetId()}.({addPlayerId},{addPriority}),";
                 }
                 
-                sensor.AddOneHotObservation(addValue,3);
+                sensor.AddOneHotObservation(addPlayerId,3);
+                sensor.AddOneHotObservation(addPriority,4);                
             }
-
             // Debug.Log(observation);
+            
+            // Collect inventory state
+            var inventory = _inventory.GetInventory();
+            foreach (var item in inventory)
+                sensor.AddOneHotObservation(item,3);
         }
 
         public override void OnActionReceived(ActionBuffers actions)
         {
-            // Debug.Log($"Player {controller.GetPlayerId()} action: {actions.DiscreteActions[0]}");
-            controller.TakeAction(actions.DiscreteActions[0]);
+            // Debug.Log($"Player action: {actions.DiscreteActions[0]}, {actions.DiscreteActions[1]}");
+            _controller.TakeAction(actions.DiscreteActions);
         }
 
         public override void Heuristic(in ActionBuffers actionsOut)
         {
             var discreteActionOut = actionsOut.DiscreteActions;
-            discreteActionOut[0] = controller.GetCurrentAction();
+            discreteActionOut[0] = _controller.GetCurrentAction();
+            discreteActionOut[1] = _controller.GetCurrentPriority();
         }
 
         public override void WriteDiscreteActionMask(IDiscreteActionMask actionMask)
@@ -55,7 +65,7 @@ namespace TheAiAlchemist
             // string actionDisable = "";
             for (int i = 0; i < gameBoard.GetValue().Count; i++)
             {
-                if (gameBoard.GetValue()[i] != 0)
+                if (gameBoard.GetValue()[i] != null)
                 {
                     actionMask.SetActionEnabled(0, i, false);
                     // actionDisable += $"{i},";

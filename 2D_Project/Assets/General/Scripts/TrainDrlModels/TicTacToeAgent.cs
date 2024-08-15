@@ -9,7 +9,7 @@ namespace TheAiAlchemist
 {
     public class TicTacToeAgent : Agent
     {
-        [SerializeField] private ListIntStorage gameBoard;
+        [SerializeField] private ListCircleStorage gameBoard;
         [SerializeField] private GameObject playerController;
         
         private INpcPlayer controller;
@@ -28,9 +28,9 @@ namespace TheAiAlchemist
             foreach (var plot in gameBoard.GetValue())
             {
                 int addValue = 0;
-                if (plot != 0)
+                if (plot != null)
                 {
-                    addValue = plot == _playerBehavior.GetPlayerId() ? 1 : -1;
+                    addValue = plot.GetPlayerId() == _playerBehavior.GetPlayerId() ? 1 : -1;
                     // observation += $"{addValue},";
                 }
                 
@@ -43,7 +43,7 @@ namespace TheAiAlchemist
         public override void OnActionReceived(ActionBuffers actions)
         {
             // Debug.Log($"Player {controller.GetPlayerId()} action: {actions.DiscreteActions[0]}");
-            controller.TakeAction(actions.DiscreteActions[0]);
+            controller.TakeAction(actions.DiscreteActions);
         }
 
         public override void Heuristic(in ActionBuffers actionsOut)
@@ -57,7 +57,7 @@ namespace TheAiAlchemist
             // string actionDisable = "";
             for (int i = 0; i < gameBoard.GetValue().Count; i++)
             {
-                if (gameBoard.GetValue()[i] != 0)
+                if (gameBoard.GetValue()[i] != null)
                 {
                     actionMask.SetActionEnabled(0, i, false);
                     // actionDisable += $"{i},";

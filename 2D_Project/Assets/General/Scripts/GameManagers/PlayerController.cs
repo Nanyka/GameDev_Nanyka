@@ -17,7 +17,8 @@ namespace TheAiAlchemist
         [SerializeField] private VoidChannel changePlayerChannel;
         [SerializeField] private VoidChannel enableEndButtonChannel;
         [SerializeField] private VoidChannel resetGameChannel;
-        [SerializeField] private TwoIntChannel announceStateChanged;
+        [SerializeField] private CircleChannel announceStateChanged;
+        [SerializeField] private CircleChannel disableCircleChannel;
         [SerializeField] private IntStorage currentPlayer;
         [SerializeField] private int playerId;
 
@@ -33,16 +34,18 @@ namespace TheAiAlchemist
 
         private void OnEnable()
         {
-            mousePosChannel.AddListener(InTurnPlay);
+            mousePosChannel.AddListener(ListenMousePos);
             changePlayerChannel.AddListener(OnChangePlayer);
             resetGameChannel.AddListener(ResetPlayer);
+            disableCircleChannel.AddListener(DisableCircle);
         }
 
         private void OnDisable()
         {
-            mousePosChannel.RemoveListener(InTurnPlay);
-            changePlayerChannel.AddListener(OnChangePlayer);
+            mousePosChannel.RemoveListener(ListenMousePos);
+            changePlayerChannel.RemoveListener(OnChangePlayer);
             resetGameChannel.RemoveListener(ResetPlayer);
+            disableCircleChannel.RemoveListener(DisableCircle);
         }
 
         private void OnChangePlayer()
@@ -52,31 +55,37 @@ namespace TheAiAlchemist
 
         #region INTERFACE FUNCTIONS
 
-        public void InTurnPlay(Vector3 clickPoint)
+        private void ListenMousePos(Vector3 mousePos)
         {
             if (_isPlayed)
             {
                 Debug.Log("You played this turn already");
                 return;
             }
-            
+
             if (currentPlayer.GetValue() == playerId)
+                InTurnPlay(mousePos, 0);
+        }
+
+        public void InTurnPlay(Vector3 clickPoint, int priority)
+        {
+            var spawnObject = _objectPool.GetObject();
+            if (spawnObject.TryGetComponent(out ICircleTrait circle))
             {
-                var spawnObject = _objectPool.GetObject();
-                if (spawnObject.TryGetComponent(out ICircleTrait circle))
-                {
-                    _circles.Add(circle);
-                    spawnObject.SetActive(true);
-                    circle.Init(clickPoint);
-                    _isPlayed = true;
-                    // Debug.Log($"Player {playerId} places at {circle.GetId()}");
-                    enableEndButtonChannel.ExecuteChannel();
-                    announceStateChanged.ExecuteChannel(playerId,circle.GetId());
-                }
+                _circles.Add(circle);
+                spawnObject.SetActive(true);
+                circle.Init(clickPoint, playerId, priority);
+                _isPlayed = true;
+                // Debug.Log($"Player {playerId} places at {circle.GetId()}");
+                enableEndButtonChannel.ExecuteChannel();
+                announceStateChanged.ExecuteChannel(circle);
+
+                // Disable the opponent's circle if possible
+                disableCircleChannel.ExecuteChannel(circle);
             }
         }
 
-        public void ResetPlayer()
+        private void ResetPlayer()
         {
             _objectPool.ResetPool();
             _circles.Clear();
@@ -86,6 +95,15 @@ namespace TheAiAlchemist
         public int GetPlayerId()
         {
             return playerId;
+        }
+
+        public void DisableCircle(ICircleTrait circle)
+        {
+            if (circle.GetPlayerId() == playerId)
+                return;
+            
+            var disableCircle = _circles.Find(t => t.GetId() == circle.GetId());
+            disableCircle?.DisableCircle();
         }
 
         #endregion
