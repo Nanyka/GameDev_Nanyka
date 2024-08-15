@@ -1,16 +1,11 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using Unity.MLAgents;
-using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Policies;
 using UnityEngine;
-using UnityEngine.Serialization;
-using Random = UnityEngine.Random;
 
 namespace TheAiAlchemist
 {
-    public class NpcPlayer : MonoBehaviour, INpcPlayer
+    public class NpcPlayerGpTwo : MonoBehaviour, INpcPlayer
     {
         public int currentAction = -1;
 
@@ -59,6 +54,9 @@ namespace TheAiAlchemist
             changePlayerChannel.RemoveListener(OnPlayATurn);
         }
 
+        #region INTERFACE FUNCTIONS
+
+        
         public void TakeAction(int action)
         {
             // Send the index and playerId to GameStateManager
@@ -67,6 +65,13 @@ namespace TheAiAlchemist
             else
                 _playerBehavior.InTurnPlay(indexTranslator.IndexToPlot(action));
         }
+
+        public int GetCurrentAction()
+        {
+            return currentAction;
+        }
+
+        #endregion
 
         private void OnPlayATurn()
         {
@@ -141,11 +146,6 @@ namespace TheAiAlchemist
         public int GetPlayerId()
         {
             return _playerBehavior.GetPlayerId();
-        }
-
-        public int GetCurrentAction()
-        {
-            return currentAction;
         }
 
         #endregion

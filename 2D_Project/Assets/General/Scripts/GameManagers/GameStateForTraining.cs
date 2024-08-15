@@ -126,15 +126,6 @@ namespace TheAiAlchemist
             newGameChannel.ExecuteChannel();
         }
 
-        // private void ResetGameBoard()
-        // {
-        //     // Reset gameBoard
-        //     if (gameBoard.GetValue().Count < 9)
-        //         gameBoard.SetValue(new(new int[9]));
-        //     for (int i = 0; i < gameBoard.GetValue().Count; i++)
-        //         gameBoard.GetValue()[i] = 0;
-        // }
-
         private void GameInterrupted()
         {
             endGameChannel.ExecuteChannel(false);
