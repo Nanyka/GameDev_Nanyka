@@ -10,8 +10,14 @@ namespace V_TicTacToe
         [SerializeField] private V_IntegerStorage currentPlayerId;
         [SerializeField] private V_BooleanStorage isPlayed;
         [SerializeField] private V_Vector3Channel touchItemChannel;
-        [SerializeField] private V_VoidChannel endTurnChannel;
         [SerializeField] private int playerId;
+
+        [Header("Channel")]
+        [SerializeField] private V_Vector2Channel checkWinChannel;
+        [SerializeField] private V_VoidChannel resetLevelChannel;
+
+        [Header("Storage")]
+        [SerializeField] private V_Vector2Storage currentMatrixPosition;
 
         private ObjectPool _objectPool;
 
@@ -24,11 +30,13 @@ namespace V_TicTacToe
         private void OnEnable()
         {
             touchItemChannel.AddListener(TouchItem);
+            resetLevelChannel.AddListener(Reset);
         }
 
         private void OnDisable()
         {
             touchItemChannel.RemoveListener(TouchItem);
+            resetLevelChannel.RemoveListener(Reset);
         }
 
         public void PlayerTalk()
@@ -49,22 +57,25 @@ namespace V_TicTacToe
 
                 GameObject itemObject = _objectPool.GetObject();
 
-                itemObject.SetActive(true);
-
                 ICheckItemStatus checkItem = itemObject.GetComponent<ICheckItemStatus>();
                 if (checkItem != null)
                 {
                     checkItem.Init(touchPosition);
                     checkItem.SetShowItem(true);
-                }
 
-                endTurnChannel.RunVoidChannel();
+                    itemObject.SetActive(true);
+
+                    checkWinChannel.RunVector2Channel(currentMatrixPosition.Value);
+                }
             }
         }
 
-        private void EndTurn()
+        private void Reset()
         {
-            isPlayed.SetValue(false);
+            if (_objectPool != null)
+            {
+                _objectPool.ResetPool();
+            }
         }
     }
 }

@@ -13,10 +13,18 @@ namespace V_TicTacToe
         [SerializeField] private V_IPlayerBehaviorStorage player2;
         [SerializeField] private V_IntegerStorage currentPlayerId;
         [SerializeField] private V_VoidChannel showIngameMenuChannel;
+        [SerializeField] private V_VoidChannel resetLevelChannel;
 
         private void Awake()
         {
             isFirstPlayer.SetValue(true);
+
+            StartCoroutine(CRStartGame());
+        }
+
+        private IEnumerator CRStartGame()
+        {
+            yield return null;
 
             StartGame();
         }
@@ -25,18 +33,26 @@ namespace V_TicTacToe
         {
             changePlayerChannel.AddListener(ChangePlayer);
             touchItemChannel.AddListener(OnTouchItem);
+            resetLevelChannel.AddListener(OnResetLevel);
         }
 
         private void OnDisable()
         {
             changePlayerChannel.RemoveListener(ChangePlayer);
             touchItemChannel.RemoveListener(OnTouchItem);
+            resetLevelChannel.RemoveListener(OnResetLevel);
         }
 
         private void StartGame()
         {
-            showIngameMenuChannel.RunVoidChannel();
             currentPlayerId.SetValue(0);
+            showIngameMenuChannel.RunVoidChannel();
+        }
+
+        private void OnResetLevel()
+        {
+            currentPlayerId.SetValue(0);
+            showIngameMenuChannel.RunVoidChannel();
         }
 
         public void ChangePlayer()
