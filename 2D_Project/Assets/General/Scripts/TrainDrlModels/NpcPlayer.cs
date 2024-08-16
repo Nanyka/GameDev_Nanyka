@@ -2,23 +2,32 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.MLAgents;
+using Unity.MLAgents.Actuators;
+using Unity.MLAgents.Policies;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 namespace TheAiAlchemist
 {
-    public class NpcPlayer : MonoBehaviour
+    public class NpcPlayer : MonoBehaviour, INpcPlayer
     {
         public int currentAction = -1;
 
+        [SerializeField] private BoolChannel endGameChannel;
+        [SerializeField] private VoidChannel newGameChannel;
+        [SerializeField] private VoidChannel interruptGameChannel;
+        [SerializeField] private VoidChannel changePlayerChannel;
         [SerializeField] private IndexAndPlotTranslator indexTranslator;
         [SerializeField] private IntStorage currentPlayer;
-        [SerializeField] private ListIntStorage gameBoard;
+        [SerializeField] private ListCircleStorage gameBoard;
         [SerializeField] private GameObject playerController;
 
         private Agent _agent;
+        private BehaviorType behaviorType;
         private IPlayerBehavior _playerBehavior;
+        private float surviveReward = 0.1f;
+        private float winReward = 1f;
 
         public void Awake()
         {
@@ -33,84 +42,48 @@ namespace TheAiAlchemist
 #endif
         }
 
-        private void Start()
+        private void OnEnable()
         {
             _agent = GetComponent<Agent>();
+            behaviorType = GetComponent<BehaviorParameters>().BehaviorType;
             _playerBehavior = playerController.GetComponent<IPlayerBehavior>();
+            endGameChannel.AddListener(OnEpisodeEnd);
+            newGameChannel.AddListener(OnPlayATurn);
+            changePlayerChannel.AddListener(OnPlayATurn);
         }
 
-        public void TakeAction(int action)
+        private void OnDisable()
         {
-            // Debug.Log($"Current action is : {action}");
+            endGameChannel.RemoveListener(OnEpisodeEnd);
+            newGameChannel.RemoveListener(OnPlayATurn);
+            changePlayerChannel.RemoveListener(OnPlayATurn);
+        }
 
+        public void TakeAction(ActionSegment<int> action)
+        {
             // Send the index and playerId to GameStateManager
-            if (gameBoard.GetValue()[action] != 0)
-                Debug.Log($"Player {_playerBehavior.GetPlayerId()} place on an unavailable plot");
+            if (gameBoard.GetValue()[action[0]] != null)
+                interruptGameChannel.ExecuteChannel();
             else
-                _playerBehavior.InTurnPlay(indexTranslator.IndexToPlot(action));
+                _playerBehavior.InTurnPlay(indexTranslator.IndexToPlot(action[0]),0);
         }
 
-        #region FOR TESTING AGENT
-
-        private void Update()
+        private void OnPlayATurn()
         {
-            // TODO: get the key down
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                currentAction = 0;
+            if (_playerBehavior.GetPlayerId() == currentPlayer.GetValue())
                 AskForAction();
-            }
-
-            if (Input.GetKeyDown(KeyCode.S))
-            {
-                currentAction = 1;
-                AskForAction();
-            }
-
-            if (Input.GetKeyDown(KeyCode.D))
-            {
-                currentAction = 2;
-                AskForAction();
-            }
-
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                currentAction = 3;
-                AskForAction();
-            }
-
-            if (Input.GetKeyDown(KeyCode.Z))
-            {
-                currentAction = 4;
-                AskForAction();
-            }
-
-            if (Input.GetKeyDown(KeyCode.X))
-            {
-                currentAction = 5;
-                AskForAction();
-            }
-
-            if (Input.GetKeyDown(KeyCode.C))
-            {
-                currentAction = 6;
-                AskForAction();
-            }
-
-            if (Input.GetKeyDown(KeyCode.V))
-            {
-                currentAction = 7;
-                AskForAction();
-            }
-
-            if (Input.GetKeyDown(KeyCode.B))
-            {
-                currentAction = 8;
-                AskForAction();
-            }
         }
 
-        public void AskForAction()
+        private void OnEpisodeEnd(bool hasWinner)
+        {
+            var currentMultiplier = _playerBehavior.GetPlayerId() == currentPlayer.GetValue() ? 1 : -1;
+            _agent.AddReward(hasWinner ? winReward * currentMultiplier : 0f); // v5
+            _agent.EndEpisode();
+        }
+
+        #region AGENT INTERACTION
+
+        private void AskForAction()
         {
             if (_playerBehavior.GetPlayerId() != currentPlayer.GetValue())
                 return;
@@ -118,7 +91,7 @@ namespace TheAiAlchemist
             if (_agent == null)
                 return;
 
-            if (Academy.Instance.IsCommunicatorOn)
+            if (Academy.Instance.IsCommunicatorOn || behaviorType == BehaviorType.InferenceOnly)
                 _agent?.RequestDecision();
             else
                 StartCoroutine(WaitToRequestDecision());
@@ -126,8 +99,58 @@ namespace TheAiAlchemist
 
         private IEnumerator WaitToRequestDecision()
         {
-            yield return new WaitUntil(() => Input.anyKeyDown);
+            currentAction = -1;
+            yield return new WaitUntil(() => currentAction >= 0);
             _agent?.RequestDecision();
+        }
+
+        #endregion
+
+        #region FOR TESTING AGENT
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Z))
+                currentAction = 0;
+
+            else if (Input.GetKeyDown(KeyCode.X))
+                currentAction = 1;
+
+            else if (Input.GetKeyDown(KeyCode.C))
+                currentAction = 2;
+
+            else if (Input.GetKeyDown(KeyCode.A))
+                currentAction = 3;
+
+            else if (Input.GetKeyDown(KeyCode.S))
+                currentAction = 4;
+
+            else if (Input.GetKeyDown(KeyCode.D))
+                currentAction = 5;
+
+            else if (Input.GetKeyDown(KeyCode.Q))
+                currentAction = 6;
+
+            else if (Input.GetKeyDown(KeyCode.W))
+                currentAction = 7;
+
+            else if (Input.GetKeyDown(KeyCode.E))
+                currentAction = 8;
+        }
+
+        public int GetPlayerId()
+        {
+            return _playerBehavior.GetPlayerId();
+        }
+
+        public int GetCurrentAction()
+        {
+            return currentAction;
+        }
+
+        public int GetCurrentPriority()
+        {
+            return 0;
         }
 
         #endregion

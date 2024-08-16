@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -13,17 +14,26 @@ namespace TheAiAlchemist
 {
     public class Circle : MonoBehaviour, ICircleTrait
     {
+        [SerializeField] private IndexAndPlotTranslator indexTranslator;
+        [SerializeField] private Vector3Storage gameBoardPos;
+        [SerializeField] private TextMeshProUGUI circlePriority;
+        
         private ICheckState mState;
         private IRender mRenderer;
-        [SerializeField] private int circleId;
+        private int mPlayerId;
+        private int mCircleId;
+        private int mPriority;
 
-        public void Init(Vector3 spawnPos)
+        public void Init(Vector3 spawnPos, int playerId,int priority)
         {
             mState = GetComponent<ICheckState>();
             mRenderer = GetComponent<IRender>();
 
-            transform.position = spawnPos;
-            circleId = Mathf.RoundToInt(spawnPos.x + spawnPos.y * 3 + 4); //TODO: replace hard coding by a flexible grid size
+            transform.position = spawnPos + gameBoardPos.GetValue();
+            circlePriority.text = priority.ToString();
+            mPlayerId = playerId;
+            mCircleId = indexTranslator.PlotToIndex(spawnPos);
+            mPriority = priority;
         }
 
         public bool DetectTouchPoint(Vector3 inputPosition)
@@ -33,9 +43,24 @@ namespace TheAiAlchemist
             return distance < 0.5;
         }
 
+        public int GetPlayerId()
+        {
+            return mPlayerId;
+        }
+
         public int GetId()
         {
-            return circleId;
+            return mCircleId;
+        }
+
+        public int GetPriority()
+        {
+            return mPriority;
+        }
+
+        public void DisableCircle()
+        {
+            gameObject.SetActive(false);
         }
 
         // public void ChangeState()

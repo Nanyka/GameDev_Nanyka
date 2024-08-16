@@ -306,6 +306,7 @@ MonoBehaviour:
   endGameChannel: {fileID: 11400000, guid: d1a037fe1d9e9452996bdbc29f4afccd, type: 2}
   announceStateChanged: {fileID: 11400000, guid: 3eddbb3309d0f493190fd96b1ba02744, type: 2}
   currentPlayer: {fileID: 11400000, guid: 44712aa94874e4d16a0c27be1eaa0ef3, type: 2}
+  gameBoard: {fileID: 0}
   players:
   - {fileID: 11400000, guid: 2c2d8cfcfd66d47bfad40951799fb925, type: 2}
   - {fileID: 11400000, guid: 47e390baa55e841cebfaca7eb5b873f5, type: 2}
@@ -361,6 +362,9 @@ MonoBehaviour:
   inputReaderSo: {fileID: 11400000, guid: 35f2875548c8844219198c09fbc26756, type: 2}
   mousePosChannel: {fileID: 11400000, guid: 58b3b6a9ebc6845158660d8982537965, type: 2}
   activateInput: {fileID: 11400000, guid: e3771b2e4ce834baa8b5aee9b097b476, type: 2}
+  translator: {fileID: 11400000, guid: 6b53ed37cad3a4e84a465054dcbab969, type: 2}
+  gameBoard: {fileID: 11400000, guid: 77ea84869dd6e4a6f8616368a1e4c690, type: 2}
+  gameBoardPos: {fileID: 11400000, guid: a69a33f31767943758adac873d2073b8, type: 2}
 --- !u!1 &252316315
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,77 @@
+using Unity.MLAgents;
+using Unity.MLAgents.Actuators;
+using Unity.MLAgents.Sensors;
+using UnityEngine;
+
+namespace TheAiAlchemist
+{
+    public class TicTacToeAgentGpTwo : Agent
+    {
+        [SerializeField] private ListCircleStorage gameBoard;
+        [SerializeField] private GameObject playerController;
+        
+        private INpcPlayer _controller;
+        private IInventoryComp _inventory;
+        private IPlayerBehavior _playerBehavior;
+        
+        public override void Initialize()
+        {
+            _controller = GetComponent<INpcPlayer>();
+            _inventory = GetComponent<IInventoryComp>();
+            _playerBehavior = playerController.GetComponent<IPlayerBehavior>();
+        }
+
+        // Collect current player state as an array of existing circles in conjunction with unoccupied slots
+        public override void CollectObservations(VectorSensor sensor)
+        {
+            // string observation = "";
+            foreach (var plot in gameBoard.GetValue())
+            {
+                int addPlayerId = 0;
+                int addPriority = 0;
+                if (plot != null)
+                {
+                    addPlayerId = plot.GetPlayerId();
+                    addPriority = plot.GetPriority();
+                    // observation += $"{plot.GetId()}.({addPlayerId},{addPriority}),";
+                }
+                
+                sensor.AddOneHotObservation(addPlayerId,3);
+                sensor.AddOneHotObservation(addPriority,4);                
+            }
+            // Debug.Log(observation);
+            
+            // Collect inventory state
+            var inventory = _inventory.GetInventory();
+            foreach (var item in inventory)
+                sensor.AddOneHotObservation(item,3);
+        }
+
+        public override void OnActionReceived(ActionBuffers actions)
+        {
+            // Debug.Log($"Player action: {actions.DiscreteActions[0]}, {actions.DiscreteActions[1]}");
+            _controller.TakeAction(actions.DiscreteActions);
+        }
+
+        public override void Heuristic(in ActionBuffers actionsOut)
+        {
+            var discreteActionOut = actionsOut.DiscreteActions;
+            discreteActionOut[0] = _controller.GetCurrentAction();
+            discreteActionOut[1] = _controller.GetCurrentPriority();
+        }
+
+        public override void WriteDiscreteActionMask(IDiscreteActionMask actionMask)
+        {
+            // string actionDisable = "";
+            for (int i = 0; i < gameBoard.GetValue().Count; i++)
+            {
+                if (gameBoard.GetValue()[i] != null)
+                {
+                    actionMask.SetActionEnabled(0, i, false);
+                    // actionDisable += $"{i},";
+                }
+            }
+            // Debug.Log(actionDisable);
+        }
+    }
+}

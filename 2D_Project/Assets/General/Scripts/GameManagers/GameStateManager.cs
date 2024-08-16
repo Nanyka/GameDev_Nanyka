@@ -13,9 +13,9 @@ namespace TheAiAlchemist
         [SerializeField] private VoidChannel resetGameChannel;
         [SerializeField] private VoidChannel changePlayerChannel;
         [SerializeField] private BoolChannel endGameChannel;
-        [SerializeField] private TwoIntChannel announceStateChanged;
+        [SerializeField] private CircleChannel announceStateChanged;
         [SerializeField] private IntStorage currentPlayer;
-        [SerializeField] private ListIntStorage gameBoard;
+        [SerializeField] private ListCircleStorage gameBoard;
         [SerializeField] private List<IPlayerBehaviorStorage> players;
 
         private int currentPlayerIndex;
@@ -53,10 +53,10 @@ namespace TheAiAlchemist
             currentPlayer.SetValue(players[currentPlayerIndex].GetValue().GetPlayerId());
         }
 
-        private void StateChanged(int playerId, int location)
+        private void StateChanged(ICircleTrait circleTrait)
         {
             // Record environment state
-            gameBoard.GetValue()[location] = playerId;
+            gameBoard.GetValue()[circleTrait.GetId()] = circleTrait;
             
             var isWin = CheckWinCondition();
             if (isWin)
@@ -71,7 +71,7 @@ namespace TheAiAlchemist
             var positionList = new List<int>();
             for (int i = 0; i < gameBoard.GetValue().Count; i++)
             {
-                if (currentPlayer.GetValue() == gameBoard.GetValue()[i])
+                if (currentPlayer.GetValue() == gameBoard.GetValue()[i].GetPlayerId())
                     positionList.Add(i);
             }
 
@@ -103,10 +103,11 @@ namespace TheAiAlchemist
             currentPlayer.SetValue(players[currentPlayerIndex].GetValue().GetPlayerId());
             
             // Reset gameBoard
-            if (gameBoard.GetValue().Count < 9)
-                gameBoard.SetValue(new(new int[9]));
-            for (int i = 0; i < gameBoard.GetValue().Count; i++)
-                gameBoard.GetValue()[i] = 0;
+            gameBoard.ResetList();
+            // if (gameBoard.GetValue().Count < 9)
+            //     gameBoard.SetValue(new(new int[9]));
+            // for (int i = 0; i < gameBoard.GetValue().Count; i++)
+            //     gameBoard.GetValue()[i] = 0;
         }
     }
 }

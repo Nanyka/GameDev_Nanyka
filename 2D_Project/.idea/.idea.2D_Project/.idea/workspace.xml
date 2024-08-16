@@ -5,19 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameStateForTraining.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameStateForTraining.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/StorageSO/ListIntStorage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/StorageSO/ListIntStorage.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Systems/Settings/IndexAndPlotTranslator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Systems/Settings/IndexAndPlotTranslator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/TicTacToeAgent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameStateForTrainingGpTwo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameStateForTrainingGpTwo.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/TrainDrlModels/TrainDrlModels.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/TrainDrlModels/TrainDrlModels.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/Circle1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/Circle1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/Circle2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/Circle2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/NpcPlayerGp2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/NpcPlayerGp2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle1 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle1 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle1 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle1 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle1 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle1 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle1 4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle1 4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle1 5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle1 5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle2 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle2 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle2 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle2 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle2 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle2 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle2 4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle2 4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle2 5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle2 5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/TrainDrlModels/TrainDrlModels.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/TrainDrlModels/TrainDrlModels.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/TwoIntChannel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/CircleChannel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/TwoIntChannel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/CircleChannel.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Character/Circle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/Circle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Character/ICircleTrait.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/ICircleTrait.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameStateForTraining.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameStateForTraining.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameStateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameStateManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/IPlayerBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/IPlayerBehavior.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/InputManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/AgentTicTacToe.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/AgentTicTacToe.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/TicTacToeAgent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/StorageSO/ListIntStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/StorageSO/ListCircleStorage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/StorageSO/ListIntStorage.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/StorageSO/ListCircleStorage.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/INpcPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/INpcPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayerActuatorComp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayerActuatorComp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayerGpTwo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayerGpTwo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/TicTacToeAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/TicTacToeAgent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/TicTacToeAgentGpTwo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/TicTacToeAgentGpTwo.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,9 +55,15 @@
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayerActuatorComp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/TicTacToeAgent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/TrainingResult.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/UI/EndGameMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/Utils/Combination.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nana/Challenge1/Scripts/BooleanStorage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ml-agents@a66ffbf062/Runtime/Academy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ml-agents@a66ffbf062/Runtime/Actuators/ActuatorManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ml-agents@a66ffbf062/Runtime/Actuators/IDiscreteActionMask.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ml-agents@a66ffbf062/Runtime/Agent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ml-agents@a66ffbf062/Runtime/Sensors/VectorSensor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Learn--ScriptableObjects/UOP1_Project/Assets/Scripts/Events/ScriptableObjects/VoidEventChannelSO.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../TestMLAgents/Assets/MAIN_LOT_Turnbase/Managers/Scripts/Utils/PointingChecker.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -123,6 +151,15 @@
       <workItem from="1723203653288" duration="6813000" />
       <workItem from="1723291716419" duration="2228000" />
       <workItem from="1723311640424" duration="5245000" />
+      <workItem from="1723354246010" duration="2211000" />
+      <workItem from="1723361536329" duration="3903000" />
+      <workItem from="1723369256282" duration="3182000" />
+      <workItem from="1723421496958" duration="4118000" />
+      <workItem from="1723442137647" duration="6584000" />
+      <workItem from="1723467621978" duration="3446000" />
+      <workItem from="1723478533638" duration="9257000" />
+      <workItem from="1723705663203" duration="5978000" />
+      <workItem from="1723736542279" duration="8783000" />
     </task>
     <servers />
   </component>

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,38 +9,46 @@ namespace TheAiAlchemist
         [SerializeField] private VoidChannel resetGameChannel;
         [SerializeField] private VoidChannel changePlayerChannel;
         [SerializeField] private BoolChannel endGameChannel;
-        [SerializeField] private TwoIntChannel announceStateChanged;
+        [SerializeField] private VoidChannel newGameChannel;
+        [SerializeField] private VoidChannel interruptGameChannel;
+        [SerializeField] private CircleChannel announceStateChanged;
         [SerializeField] private IntStorage currentPlayer;
-        [SerializeField] private ListIntStorage gameBoard;
+        [SerializeField] private ListCircleStorage gameBoard;
+        [SerializeField] private Vector3Storage gameBoardPos;
+        [SerializeField] private IndexAndPlotTranslator winRuler;
         [SerializeField] private List<IPlayerBehaviorStorage> players;
 
-        private int currentPlayerIndex;
+        [SerializeField] private int currentPlayerIndex;
         private int circleAmount;
-        // [SerializeField] private List<int> gameBoard = new(new int[9]);
-        private (int, int, int)[] winningCombinations = {
-            (0, 1, 2), (3, 4, 5), (6, 7, 8), // Horizontal
-            (0, 3, 6), (1, 4, 7), (2, 5, 8), // Vertical
-            (0, 4, 8), (2, 4, 6) // Diagonal
-        };
+        private bool isNewStep;
 
         private void OnEnable()
         {
             resetGameChannel.AddListener(ResetCurrentPlayer);
             announceStateChanged.AddListener(StateChanged);
-            changePlayerChannel.AddListener(SetCurrentPlayer);
+            interruptGameChannel.AddListener(GameInterrupted);
         }
         
         private void OnDisable()
         {
             resetGameChannel.RemoveListener(ResetCurrentPlayer);
             announceStateChanged.RemoveListener(StateChanged);
-            changePlayerChannel.RemoveListener(SetCurrentPlayer);
+            interruptGameChannel.RemoveListener(GameInterrupted);
         }
 
-        // TODO: consider to execute it with a START GAME button
         private void Start()
         {
+            gameBoardPos.SetValue(transform.position);
             ResetCurrentPlayer();
+        }
+
+        private void FixedUpdate()
+        {
+            if (isNewStep)
+            {
+                isNewStep = false;
+                MoveToNextStep();
+            }
         }
 
         private void SetCurrentPlayer()
@@ -48,14 +57,22 @@ namespace TheAiAlchemist
             currentPlayer.SetValue(players[currentPlayerIndex].GetValue().GetPlayerId());
         }
 
-        private void StateChanged(int playerId, int location)
+        private void StateChanged(ICircleTrait circleTrait)
         {
             // Record environment state
-            gameBoard.GetValue()[location] = playerId;
-            
+            gameBoard.GetValue()[circleTrait.GetId()] = circleTrait;
+            isNewStep = true;
+        }
+
+        private void MoveToNextStep()
+        {
+
             var isWin = CheckWinCondition();
             if (isWin)
+            {
                 endGameChannel.ExecuteChannel(true);
+                resetGameChannel.ExecuteChannel();
+            }
             else
                 IncreaseCircleAmount();
         }
@@ -66,11 +83,11 @@ namespace TheAiAlchemist
             var positionList = new List<int>();
             for (int i = 0; i < gameBoard.GetValue().Count; i++)
             {
-                if (currentPlayer.GetValue() == gameBoard.GetValue()[i])
+                if (currentPlayer.GetValue() == gameBoard.GetValue()[i].GetPlayerId())
                     positionList.Add(i);
             }
 
-            foreach (var combination in winningCombinations)
+            foreach (var combination in winRuler.winningCombinations)
             {
                 if (positionList.Contains(combination.Item1)
                     && positionList.Contains(combination.Item2)
@@ -88,22 +105,31 @@ namespace TheAiAlchemist
         {
             circleAmount++;
             if (circleAmount >= 9)
+            {
                 endGameChannel.ExecuteChannel(false);
+                resetGameChannel.ExecuteChannel();
+            }
             else
+            {
+                SetCurrentPlayer();
                 changePlayerChannel.ExecuteChannel();
+            }
         }
 
         private void ResetCurrentPlayer()
         {
             circleAmount = 0;
-            // currentPlayerIndex = 0;
+            gameBoard.ResetList();
             currentPlayer.SetValue(players[currentPlayerIndex].GetValue().GetPlayerId());
             
-            // Reset gameBoard
-            if (gameBoard.GetValue().Count < 9)
-                gameBoard.SetValue(new(new int[9]));
-            for (int i = 0; i < gameBoard.GetValue().Count; i++)
-                gameBoard.GetValue()[i] = 0;
+            // Ask current player to play
+            newGameChannel.ExecuteChannel();
+        }
+
+        private void GameInterrupted()
+        {
+            endGameChannel.ExecuteChannel(false);
+            resetGameChannel.ExecuteChannel();
         }
     }
 }

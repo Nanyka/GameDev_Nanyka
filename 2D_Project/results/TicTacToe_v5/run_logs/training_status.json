@@ -1,0 +1,48 @@
+{
+    "NpcPlayer": {
+        "elo": 1664.277881958648,
+        "checkpoints": [
+            {
+                "steps": 166533,
+                "file_path": "results/TicTacToe_v5/NpcPlayer/NpcPlayer-166533.onnx",
+                "reward": 0.0,
+                "creation_time": 1723476225.5952792,
+                "auxillary_file_paths": [
+                    "results/TicTacToe_v5/NpcPlayer/NpcPlayer-166533.pt"
+                ]
+            },
+            {
+                "steps": 499994,
+                "file_path": "results/TicTacToe_v5/NpcPlayer/NpcPlayer-499994.onnx",
+                "reward": 0.0,
+                "creation_time": 1723477577.256036,
+                "auxillary_file_paths": [
+                    "results/TicTacToe_v5/NpcPlayer/NpcPlayer-499994.pt"
+                ]
+            },
+            {
+                "steps": 500012,
+                "file_path": "results/TicTacToe_v5/NpcPlayer/NpcPlayer-500012.onnx",
+                "reward": 0.0,
+                "creation_time": 1723477577.296659,
+                "auxillary_file_paths": [
+                    "results/TicTacToe_v5/NpcPlayer/NpcPlayer-500012.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500012,
+            "file_path": "results/TicTacToe_v5/NpcPlayer.onnx",
+            "reward": 0.0,
+            "creation_time": 1723477577.296659,
+            "auxillary_file_paths": [
+                "results/TicTacToe_v5/NpcPlayer/NpcPlayer-500012.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.0.0",
+        "torch_version": "2.2.2"
+    }
+}

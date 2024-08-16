@@ -1,0 +1,39 @@
+{
+    "NpcPlayer": {
+        "checkpoints": [
+            {
+                "steps": 499999,
+                "file_path": "results/TicTacToe_v3/NpcPlayer/NpcPlayer-499999.onnx",
+                "reward": -0.3801470806493479,
+                "creation_time": 1723456876.443392,
+                "auxillary_file_paths": [
+                    "results/TicTacToe_v3/NpcPlayer/NpcPlayer-499999.pt"
+                ]
+            },
+            {
+                "steps": 500007,
+                "file_path": "results/TicTacToe_v3/NpcPlayer/NpcPlayer-500007.onnx",
+                "reward": -0.38333335518836975,
+                "creation_time": 1723456876.485069,
+                "auxillary_file_paths": [
+                    "results/TicTacToe_v3/NpcPlayer/NpcPlayer-500007.pt"
+                ]
+            }
+        ],
+        "elo": 1145.993985756261,
+        "final_checkpoint": {
+            "steps": 500007,
+            "file_path": "results/TicTacToe_v3/NpcPlayer.onnx",
+            "reward": -0.38333335518836975,
+            "creation_time": 1723456876.485069,
+            "auxillary_file_paths": [
+                "results/TicTacToe_v3/NpcPlayer/NpcPlayer-500007.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.0.0",
+        "torch_version": "2.2.2"
+    }
+}
