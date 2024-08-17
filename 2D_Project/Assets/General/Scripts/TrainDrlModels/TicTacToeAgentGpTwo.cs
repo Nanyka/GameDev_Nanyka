@@ -37,14 +37,14 @@ namespace TheAiAlchemist
                 }
                 
                 sensor.AddOneHotObservation(addPlayerId,3);
-                sensor.AddOneHotObservation(addPriority,4);                
+                sensor.AddObservation(addPriority);
             }
             // Debug.Log(observation);
             
             // Collect inventory state
             var inventory = _inventory.GetInventory();
             foreach (var item in inventory)
-                sensor.AddOneHotObservation(item,3);
+                sensor.AddObservation(item);
         }
 
         public override void OnActionReceived(ActionBuffers actions)

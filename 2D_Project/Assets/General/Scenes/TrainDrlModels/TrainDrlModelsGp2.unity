@@ -136,6 +136,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 8a4ccc49be67e4a87b977740ff091470, type: 2}
     - target: {fileID: 147398995603790273, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: combatChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: d12b1e288b5fe4ecbbcec3614bbd26c8, type: 2}
+    - target: {fileID: 147398995603790273, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: currentPlayer
       value: 
       objectReference: {fileID: 11400000, guid: 523f476595b804e899cccccc55b42e5a, type: 2}
@@ -171,10 +175,18 @@ PrefabInstance:
       propertyPath: endGameChannel
       value: 
       objectReference: {fileID: 11400000, guid: b437e530328ca4e35ad1ccba8029f1da, type: 2}
+    - target: {fileID: 1711878836457477043, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 39
+      objectReference: {fileID: 0}
     - target: {fileID: 3090922004746807183, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: gameBoard
       value: 
       objectReference: {fileID: 11400000, guid: 8a4ccc49be67e4a87b977740ff091470, type: 2}
+    - target: {fileID: 3090922004746807183, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: combatChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: d12b1e288b5fe4ecbbcec3614bbd26c8, type: 2}
     - target: {fileID: 3090922004746807183, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: currentPlayer
       value: 
@@ -206,6 +218,14 @@ PrefabInstance:
     - target: {fileID: 3264820467131045662, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: m_Name
       value: Board (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3264820467131045662, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552949074430995965, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 5175208242609115151, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: winRuler
@@ -390,6 +410,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 62fe06f4e2e8a4baeb357277a0a7455b, type: 2}
     - target: {fileID: 147398995603790273, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: combatChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: b7bad9b06813545b19e363a84bfe44ff, type: 2}
+    - target: {fileID: 147398995603790273, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: currentPlayer
       value: 
       objectReference: {fileID: 11400000, guid: 89646ee79a8654dc19e6132b300cbdce, type: 2}
@@ -425,10 +449,18 @@ PrefabInstance:
       propertyPath: endGameChannel
       value: 
       objectReference: {fileID: 11400000, guid: 28368e1301faa4cb09223a9c5e13b9f7, type: 2}
+    - target: {fileID: 1711878836457477043, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 39
+      objectReference: {fileID: 0}
     - target: {fileID: 3090922004746807183, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: gameBoard
       value: 
       objectReference: {fileID: 11400000, guid: 62fe06f4e2e8a4baeb357277a0a7455b, type: 2}
+    - target: {fileID: 3090922004746807183, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: combatChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: b7bad9b06813545b19e363a84bfe44ff, type: 2}
     - target: {fileID: 3090922004746807183, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: currentPlayer
       value: 
@@ -460,6 +492,14 @@ PrefabInstance:
     - target: {fileID: 3264820467131045662, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: m_Name
       value: Board (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3264820467131045662, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552949074430995965, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 5175208242609115151, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: winRuler
@@ -681,6 +721,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: a29a1524d51f84190b18edd396ab8f06, type: 2}
     - target: {fileID: 147398995603790273, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: combatChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: a6a2a6c1b9f2849f085cdb194c161c89, type: 2}
+    - target: {fileID: 147398995603790273, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: currentPlayer
       value: 
       objectReference: {fileID: 11400000, guid: c1276ae2db4844d93939f1c69876df06, type: 2}
@@ -716,10 +760,18 @@ PrefabInstance:
       propertyPath: endGameChannel
       value: 
       objectReference: {fileID: 11400000, guid: cd59d8ecf83dc469499653f0d11168d0, type: 2}
+    - target: {fileID: 1711878836457477043, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 39
+      objectReference: {fileID: 0}
     - target: {fileID: 3090922004746807183, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: gameBoard
       value: 
       objectReference: {fileID: 11400000, guid: a29a1524d51f84190b18edd396ab8f06, type: 2}
+    - target: {fileID: 3090922004746807183, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: combatChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: a6a2a6c1b9f2849f085cdb194c161c89, type: 2}
     - target: {fileID: 3090922004746807183, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: currentPlayer
       value: 
@@ -751,6 +803,14 @@ PrefabInstance:
     - target: {fileID: 3264820467131045662, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: m_Name
       value: Board (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3264820467131045662, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552949074430995965, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 5175208242609115151, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: winRuler
@@ -1032,6 +1092,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 8ae4bcba7899f4b699c6220a4f267114, type: 2}
     - target: {fileID: 147398995603790273, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: combatChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: aa44a04101fb5484ba5c94ceb5598cdb, type: 2}
+    - target: {fileID: 147398995603790273, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: currentPlayer
       value: 
       objectReference: {fileID: 11400000, guid: 44a12879c82b34c3d9df3e731a0eeae8, type: 2}
@@ -1067,10 +1131,18 @@ PrefabInstance:
       propertyPath: endGameChannel
       value: 
       objectReference: {fileID: 11400000, guid: e328e44cea40644c0a0771529627cdb7, type: 2}
+    - target: {fileID: 1711878836457477043, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 39
+      objectReference: {fileID: 0}
     - target: {fileID: 3090922004746807183, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: gameBoard
       value: 
       objectReference: {fileID: 11400000, guid: 8ae4bcba7899f4b699c6220a4f267114, type: 2}
+    - target: {fileID: 3090922004746807183, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: combatChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: aa44a04101fb5484ba5c94ceb5598cdb, type: 2}
     - target: {fileID: 3090922004746807183, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: currentPlayer
       value: 
@@ -1102,6 +1174,14 @@ PrefabInstance:
     - target: {fileID: 3264820467131045662, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: m_Name
       value: Board (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3264820467131045662, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552949074430995965, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 5175208242609115151, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: winRuler
@@ -1286,6 +1366,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: f88ec82221f594bffae4f2a6732eabf1, type: 2}
     - target: {fileID: 147398995603790273, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: combatChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: 6e932f67b426e46a5b43c594cf6d61b5, type: 2}
+    - target: {fileID: 147398995603790273, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: currentPlayer
       value: 
       objectReference: {fileID: 11400000, guid: c94c179c01da9438c9d67654d89eade9, type: 2}
@@ -1321,10 +1405,18 @@ PrefabInstance:
       propertyPath: endGameChannel
       value: 
       objectReference: {fileID: 11400000, guid: 9e01dc5c6d4d442f2b9721f4a1a4521a, type: 2}
+    - target: {fileID: 1711878836457477043, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 39
+      objectReference: {fileID: 0}
     - target: {fileID: 3090922004746807183, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: gameBoard
       value: 
       objectReference: {fileID: 11400000, guid: f88ec82221f594bffae4f2a6732eabf1, type: 2}
+    - target: {fileID: 3090922004746807183, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: combatChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: 6e932f67b426e46a5b43c594cf6d61b5, type: 2}
     - target: {fileID: 3090922004746807183, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: currentPlayer
       value: 
@@ -1356,6 +1448,14 @@ PrefabInstance:
     - target: {fileID: 3264820467131045662, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: m_Name
       value: Board (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3264820467131045662, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552949074430995965, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 5175208242609115151, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: winRuler
@@ -1646,9 +1746,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 649435335}
     m_Modifications:
+    - target: {fileID: 147398995603790273, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: combatChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: 213e571ccf4c64efb88cb12cb5a58fbc, type: 2}
+    - target: {fileID: 1711878836457477043, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: m_Model
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711878836457477043, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: m_BehaviorType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711878836457477043, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 39
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090922004746807183, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: combatChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: 213e571ccf4c64efb88cb12cb5a58fbc, type: 2}
     - target: {fileID: 3264820467131045662, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: m_Name
       value: Board (0)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552949074430995965, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: m_Model
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552949074430995965, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: m_BehaviorType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552949074430995965, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 7308006520346243733, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: m_LocalPosition.x

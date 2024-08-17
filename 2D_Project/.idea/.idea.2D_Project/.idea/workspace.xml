@@ -5,41 +5,66 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameStateForTrainingGpTwo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameStateForTrainingGpTwo.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/IntChannel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/IntChannel.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/Circle1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/Circle1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/Circle2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/Circle2.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/NpcPlayerGp2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/NpcPlayerGp2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle1 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle1 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle1 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle1 2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle1 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle1 3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle1 4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle1 4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle1 5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle1 5.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle2 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle2 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle2 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle2 2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle2 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle2 3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle2 4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle2 4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle2 5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/TrainDrlModels/Circle2 5.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/TrainDrlModels/TrainDrlModels.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/TrainDrlModels/TrainDrlModels.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/TwoIntChannel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/CircleChannel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/TwoIntChannel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/CircleChannel.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Character/Circle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/Circle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Character/ICircleTrait.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/ICircleTrait.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameStateForTraining.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameStateForTraining.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameStateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameStateManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/IPlayerBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/IPlayerBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/InputManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/StorageSO/ListIntStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/StorageSO/ListCircleStorage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/StorageSO/ListIntStorage.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/StorageSO/ListCircleStorage.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/INpcPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/INpcPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayerActuatorComp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayerActuatorComp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/TrainDrlModels/TrainDrlModelsGp2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/TrainDrlModels/TrainDrlModelsGp2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayerGpTwo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayerGpTwo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/TicTacToeAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/TicTacToeAgent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/TicTacToeAgentGpTwo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/TicTacToeAgentGpTwo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ML-Agents/Timers/TrainDrlModelsGp2_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers/TrainDrlModelsGp2_timers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v1/NpcPlayer.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v1/NpcPlayer/NpcPlayer-96483.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v1/NpcPlayer/NpcPlayer-96483.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v1/NpcPlayer/checkpoint.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v1/NpcPlayer/events.out.tfevents.1723376891.admins-MacBook-Pro.local.7776.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v1/configuration.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v1/run_logs/timers.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v1/run_logs/training_status.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/NpcPlayer.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/NpcPlayer/NpcPlayer-1020663.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/NpcPlayer/NpcPlayer-1020663.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/NpcPlayer/NpcPlayer-499998.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/NpcPlayer/NpcPlayer-499998.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/NpcPlayer/NpcPlayer-505831.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/NpcPlayer/NpcPlayer-505831.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/NpcPlayer/NpcPlayer-505862.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/NpcPlayer/NpcPlayer-505862.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/NpcPlayer/NpcPlayer-999999.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/NpcPlayer/NpcPlayer-999999.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/NpcPlayer/checkpoint.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/NpcPlayer/events.out.tfevents.1723429952.admins-MacBook-Pro.local.5078.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/NpcPlayer/events.out.tfevents.1723430698.admins-MacBook-Pro.local.5351.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/NpcPlayer/events.out.tfevents.1723431140.admins-MacBook-Pro.local.5542.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/NpcPlayer/events.out.tfevents.1723440586.admins-MacBook-Pro.local.976.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/NpcPlayer/events.out.tfevents.1723440841.admins-MacBook-Pro.local.1031.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/NpcPlayer/events.out.tfevents.1723442066.admins-MacBook-Pro.local.1254.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/NpcPlayer/events.out.tfevents.1723443012.admins-MacBook-Pro.local.1735.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/NpcPlayer/events.out.tfevents.1723443116.admins-MacBook-Pro.local.1784.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/configuration.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/run_logs/timers.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v2/run_logs/training_status.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v3/NpcPlayer.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v3/NpcPlayer/NpcPlayer-499999.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v3/NpcPlayer/NpcPlayer-499999.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v3/NpcPlayer/NpcPlayer-500007.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v3/NpcPlayer/NpcPlayer-500007.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v3/NpcPlayer/checkpoint.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v3/NpcPlayer/events.out.tfevents.1723454423.admins-MacBook-Pro.local.4682.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v3/configuration.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v3/run_logs/timers.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v3/run_logs/training_status.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v4/NpcPlayer.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v4/NpcPlayer/NpcPlayer-174294.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v4/NpcPlayer/NpcPlayer-174294.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v4/NpcPlayer/checkpoint.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v4/NpcPlayer/events.out.tfevents.1723468991.admins-MacBook-Pro.local.1521.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v4/configuration.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v4/run_logs/timers.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_v4/run_logs/training_status.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TrainingDiary.rtf" beforeDir="false" afterPath="$PROJECT_DIR$/results/TrainingDiary.rtf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +117,14 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../TicTacToe_TrainGp2_v2.app/Contents/MacOS/GameDev_Nanyka_2D" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../TicTacToe_TrainGp2.app/Contents/MacOS" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../../../Game Unity/UnityEditor/2022.3.17f1/Unity.app/Contents/MacOS/Unity" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath $PROJECT_DIR$ -debugCodeOptimization" />
@@ -159,7 +192,10 @@
       <workItem from="1723467621978" duration="3446000" />
       <workItem from="1723478533638" duration="9257000" />
       <workItem from="1723705663203" duration="5978000" />
-      <workItem from="1723736542279" duration="8783000" />
+      <workItem from="1723736542279" duration="9039000" />
+      <workItem from="1723788483753" duration="905000" />
+      <workItem from="1723899737115" duration="3299000" />
+      <workItem from="1723904025112" duration="1280000" />
     </task>
     <servers />
   </component>
