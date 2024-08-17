@@ -9,11 +9,11 @@ namespace TheAiAlchemist
     {
         [SerializeField] private ListCircleStorage gameBoard;
         [SerializeField] private GameObject playerController;
-        
+
         private INpcPlayer _controller;
         private IInventoryComp _inventory;
         private IPlayerBehavior _playerBehavior;
-        
+
         public override void Initialize()
         {
             _controller = GetComponent<INpcPlayer>();
@@ -35,12 +35,12 @@ namespace TheAiAlchemist
                     addPriority = plot.GetPriority();
                     // observation += $"{plot.GetId()}.({addPlayerId},{addPriority}),";
                 }
-                
-                sensor.AddOneHotObservation(addPlayerId,3);
+
+                sensor.AddOneHotObservation(addPlayerId, 3);
                 sensor.AddObservation(addPriority);
             }
             // Debug.Log(observation);
-            
+
             // Collect inventory state
             var inventory = _inventory.GetInventory();
             foreach (var item in inventory)
@@ -62,12 +62,13 @@ namespace TheAiAlchemist
 
         public override void WriteDiscreteActionMask(IDiscreteActionMask actionMask)
         {
-            // string actionDisable = "";
+            // TODO: Adjust actionMask
             for (int i = 0; i < gameBoard.GetValue().Count; i++)
             {
                 if (gameBoard.GetValue()[i] != null)
                 {
-                    actionMask.SetActionEnabled(0, i, false);
+                    actionMask.SetActionEnabled(0, i,
+                        gameBoard.GetValue()[i].GetPlayerId() != _playerBehavior.GetPlayerId());
                     // actionDisable += $"{i},";
                 }
             }

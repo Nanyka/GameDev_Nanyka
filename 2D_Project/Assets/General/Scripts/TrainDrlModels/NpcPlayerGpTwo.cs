@@ -16,7 +16,7 @@ namespace TheAiAlchemist
         [SerializeField] private VoidChannel newGameChannel;
         [SerializeField] private VoidChannel interruptGameChannel;
         [SerializeField] private VoidChannel changePlayerChannel;
-        [SerializeField] private IntChannel combatChannel;
+        [SerializeField] private CombatChannel combatChannel;
         [SerializeField] private IndexAndPlotTranslator indexTranslator;
         [SerializeField] private IntStorage currentPlayer;
         [SerializeField] private ListCircleStorage gameBoard;
@@ -90,16 +90,18 @@ namespace TheAiAlchemist
             }
             else if ((action[1] + 1) <= plotValue.GetPriority())
             {
+                // Minus score for this one
+                combatChannel.ExecuteChannel(_playerBehavior.GetPlayerId(),false);
                 interruptGameChannel.ExecuteChannel();
+
                 // Debug.Log($"Unavailable priority. Current: {plotValue.GetPriority()}, New: {action[1]+1}");
             }
             else
             {
+                // Add score for this one
+                combatChannel.ExecuteChannel(_playerBehavior.GetPlayerId(),true);
                 _inventoryComp.Withdraw(action[1]);
                 _playerBehavior.InTurnPlay(indexTranslator.IndexToPlot(action[0]), action[1] + 1);
-                // Add score for this one
-                combatChannel.ExecuteChannel(_playerBehavior.GetPlayerId());
-                
                 // Debug.Log("Higher priority");
             }
         }
@@ -126,6 +128,7 @@ namespace TheAiAlchemist
         {
             var currentMultiplier = _playerBehavior.GetPlayerId() == currentPlayer.GetValue() ? 1 : -1;
             _agent.AddReward(hasWinner ? winReward * currentMultiplier : 0f);
+            // Debug.Log($"Player {_playerBehavior.GetPlayerId()} reward: {_agent.GetCumulativeReward()}");
             _agent.EndEpisode();
 
             // Fill up inventory
@@ -155,9 +158,10 @@ namespace TheAiAlchemist
             _agent?.RequestDecision();
         }
         
-        private void InACombat(int attacker)
+        private void InACombat(int attacker, bool isAttack)
         {
-            _agent.AddReward(attacker == _playerBehavior.GetPlayerId()? combatReward: -combatReward);
+            var reward = isAttack ? combatReward : -combatReward;
+            _agent.AddReward(attacker == _playerBehavior.GetPlayerId()? reward: -reward);
         }
 
         #endregion

@@ -51,6 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endGameChannel: {fileID: 11400000, guid: d1a037fe1d9e9452996bdbc29f4afccd, type: 2}
   currentPlayer: {fileID: 11400000, guid: 44712aa94874e4d16a0c27be1eaa0ef3, type: 2}
+  combatChannel: {fileID: 0}
   gameResultText: {fileID: 5262461831365483516}
 --- !u!1 &1942077506630703839
 GameObject:
@@ -382,7 +383,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &9000023359851932124
 RectTransform:
   m_ObjectHideFlags: 0

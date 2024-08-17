@@ -168,6 +168,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5564855977137456209, guid: 707f18135c0ba428d8c9de14c6ec1d80, type: 3}
     - target: {fileID: 254343294502072708, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: combatChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: d12b1e288b5fe4ecbbcec3614bbd26c8, type: 2}
+    - target: {fileID: 254343294502072708, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: currentPlayer
       value: 
       objectReference: {fileID: 11400000, guid: 523f476595b804e899cccccc55b42e5a, type: 2}
@@ -221,7 +225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3264820467131045662, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4552949074430995965, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
@@ -442,6 +446,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5564855977137456209, guid: 355debb75418f479a8079c440336b52e, type: 3}
     - target: {fileID: 254343294502072708, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: combatChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: b7bad9b06813545b19e363a84bfe44ff, type: 2}
+    - target: {fileID: 254343294502072708, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: currentPlayer
       value: 
       objectReference: {fileID: 11400000, guid: 89646ee79a8654dc19e6132b300cbdce, type: 2}
@@ -495,7 +503,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3264820467131045662, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4552949074430995965, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
@@ -753,6 +761,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5564855977137456209, guid: 6004a16433b254d108ca93c80026ad15, type: 3}
     - target: {fileID: 254343294502072708, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: combatChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: a6a2a6c1b9f2849f085cdb194c161c89, type: 2}
+    - target: {fileID: 254343294502072708, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: currentPlayer
       value: 
       objectReference: {fileID: 11400000, guid: c1276ae2db4844d93939f1c69876df06, type: 2}
@@ -806,7 +818,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3264820467131045662, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4552949074430995965, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
@@ -1124,6 +1136,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5564855977137456209, guid: aeaf4f600ed2e463e83df9009e4c6cb6, type: 3}
     - target: {fileID: 254343294502072708, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: combatChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: aa44a04101fb5484ba5c94ceb5598cdb, type: 2}
+    - target: {fileID: 254343294502072708, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: currentPlayer
       value: 
       objectReference: {fileID: 11400000, guid: 44a12879c82b34c3d9df3e731a0eeae8, type: 2}
@@ -1177,7 +1193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3264820467131045662, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4552949074430995965, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
@@ -1398,6 +1414,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5564855977137456209, guid: 32ac985eab6684b338746a43bfbc2ac2, type: 3}
     - target: {fileID: 254343294502072708, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: combatChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: 6e932f67b426e46a5b43c594cf6d61b5, type: 2}
+    - target: {fileID: 254343294502072708, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: currentPlayer
       value: 
       objectReference: {fileID: 11400000, guid: c94c179c01da9438c9d67654d89eade9, type: 2}
@@ -1451,7 +1471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3264820467131045662, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4552949074430995965, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
@@ -1747,6 +1767,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 649435335}
     m_Modifications:
     - target: {fileID: 147398995603790273, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: combatChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: 213e571ccf4c64efb88cb12cb5a58fbc, type: 2}
+    - target: {fileID: 254343294502072708, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: combatChannel
       value: 
       objectReference: {fileID: 11400000, guid: 213e571ccf4c64efb88cb12cb5a58fbc, type: 2}
