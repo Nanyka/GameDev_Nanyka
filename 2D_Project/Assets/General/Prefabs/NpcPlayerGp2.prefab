@@ -115,6 +115,7 @@ MonoBehaviour:
   newGameChannel: {fileID: 11400000, guid: 0e9934c90b00c4d8f95d028332460cfb, type: 2}
   interruptGameChannel: {fileID: 11400000, guid: 0076addcc78764c18b9a8487aa52edc8, type: 2}
   changePlayerChannel: {fileID: 11400000, guid: f28658ecf3d9946e59e23c3659afaea8, type: 2}
+  combatChannel: {fileID: 0}
   indexTranslator: {fileID: 11400000, guid: 6b53ed37cad3a4e84a465054dcbab969, type: 2}
   currentPlayer: {fileID: 11400000, guid: 44712aa94874e4d16a0c27be1eaa0ef3, type: 2}
   gameBoard: {fileID: 11400000, guid: 77ea84869dd6e4a6f8616368a1e4c690, type: 2}

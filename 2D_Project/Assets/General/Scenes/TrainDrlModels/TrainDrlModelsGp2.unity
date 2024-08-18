@@ -225,7 +225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3264820467131045662, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4552949074430995965, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
@@ -503,7 +503,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3264820467131045662, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4552949074430995965, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
@@ -818,7 +818,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3264820467131045662, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4552949074430995965, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
@@ -1193,7 +1193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3264820467131045662, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4552949074430995965, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
@@ -1471,7 +1471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3264820467131045662, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4552949074430995965, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
@@ -1793,6 +1793,10 @@ PrefabInstance:
     - target: {fileID: 3264820467131045662, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: m_Name
       value: Board (0)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434783582231134772, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4552949074430995965, guid: 3a392a0785e354bfe9ca7ec732fc3cc6, type: 3}
       propertyPath: m_Model

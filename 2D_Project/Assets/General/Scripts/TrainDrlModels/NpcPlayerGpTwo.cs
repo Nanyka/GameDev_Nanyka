@@ -14,18 +14,18 @@ namespace TheAiAlchemist
 
         [SerializeField] private BoolChannel endGameChannel;
         [SerializeField] private VoidChannel newGameChannel;
-        [SerializeField] private VoidChannel interruptGameChannel;
+        [SerializeField] protected VoidChannel interruptGameChannel;
         [SerializeField] private VoidChannel changePlayerChannel;
-        [SerializeField] private CombatChannel combatChannel;
-        [SerializeField] private IndexAndPlotTranslator indexTranslator;
+        [SerializeField] protected CombatChannel combatChannel;
+        [SerializeField] protected IndexAndPlotTranslator indexTranslator;
         [SerializeField] private IntStorage currentPlayer;
-        [SerializeField] private ListCircleStorage gameBoard;
+        [SerializeField] protected ListCircleStorage gameBoard;
         [SerializeField] private GameObject playerController;
 
         private Agent _agent;
         private BehaviorType behaviorType;
-        private IPlayerBehavior _playerBehavior;
-        private IInventoryComp _inventoryComp;
+        protected IPlayerBehavior _playerBehavior;
+        protected IInventoryComp _inventoryComp;
         private float combatReward = 0.1f;
         private float winReward = 1f;
 
@@ -66,7 +66,7 @@ namespace TheAiAlchemist
 
         #region INTERFACE FUNCTIONS
 
-        public void TakeAction(ActionSegment<int> action)
+        public virtual void TakeAction(ActionSegment<int> action)
         {
             // Check if the action[0] is available: not at the same playerId
             // Check the action[1] is at higher priority than the opponent
@@ -168,7 +168,7 @@ namespace TheAiAlchemist
 
         #region FOR TESTING AGENT
 
-        private void Update()
+        protected virtual void Update()
         {
             if (Input.GetKeyDown(KeyCode.Z))
                 currentAction = 0;

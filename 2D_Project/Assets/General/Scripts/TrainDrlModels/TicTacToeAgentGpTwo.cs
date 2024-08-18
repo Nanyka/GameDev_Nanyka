@@ -7,12 +7,12 @@ namespace TheAiAlchemist
 {
     public class TicTacToeAgentGpTwo : Agent
     {
-        [SerializeField] private ListCircleStorage gameBoard;
+        [SerializeField] protected ListCircleStorage gameBoard;
         [SerializeField] private GameObject playerController;
 
-        private INpcPlayer _controller;
-        private IInventoryComp _inventory;
-        private IPlayerBehavior _playerBehavior;
+        protected INpcPlayer _controller;
+        protected IInventoryComp _inventory;
+        protected IPlayerBehavior _playerBehavior;
 
         public override void Initialize()
         {
@@ -62,7 +62,6 @@ namespace TheAiAlchemist
 
         public override void WriteDiscreteActionMask(IDiscreteActionMask actionMask)
         {
-            // TODO: Adjust actionMask
             for (int i = 0; i < gameBoard.GetValue().Count; i++)
             {
                 if (gameBoard.GetValue()[i] != null)
