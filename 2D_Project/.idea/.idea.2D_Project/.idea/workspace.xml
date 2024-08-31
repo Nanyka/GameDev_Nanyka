@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="" />
+    <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/AiModels/NpcPlayerGp2.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/AiModels/NpcPlayerGp2.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/TrainDrlModels/TrainDrlModelsGp2_v2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/TrainDrlModels/TrainDrlModelsGp2_v2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayerGp2v2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayerGp2v2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ML-Agents/Timers/TrainDrlModelsGp2_v2_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers/TrainDrlModelsGp2_v2_timers.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +64,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../TicTacToe_TrainGp2_v3.app/Contents/MacOS/GameDev_Nanyka_2D" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../TicTacToe_TrainGp2_v2.app/Contents/MacOS/GameDev_Nanyka_2D" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../TicTacToe_TrainGp2.app/Contents/MacOS" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -138,6 +145,7 @@
       <workItem from="1723921977979" duration="415000" />
       <workItem from="1723922648204" duration="1683000" />
       <workItem from="1723958978041" duration="6970000" />
+      <workItem from="1725107876066" duration="272000" />
     </task>
     <servers />
   </component>

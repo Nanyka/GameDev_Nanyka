@@ -91,21 +91,21 @@ namespace TheAiAlchemist
             
             else if (Input.GetKeyDown(KeyCode.M))
                 currentAction = 2;
-            else if (Input.GetKeyDown(KeyCode.J))
+            else if (Input.GetKeyDown(KeyCode.Comma))
                 currentAction = 5;
-            else if (Input.GetKeyDown(KeyCode.K))
+            else if (Input.GetKeyDown(KeyCode.Period))
                 currentAction = 8;
-            else if (Input.GetKeyDown(KeyCode.L))
+            else if (Input.GetKeyDown(KeyCode.J))
                 currentAction = 11;
-            else if (Input.GetKeyDown(KeyCode.U))
+            else if (Input.GetKeyDown(KeyCode.K))
                 currentAction = 14;
-            else if (Input.GetKeyDown(KeyCode.I))
+            else if (Input.GetKeyDown(KeyCode.L))
                 currentAction = 17;
-            else if (Input.GetKeyDown(KeyCode.O))
+            else if (Input.GetKeyDown(KeyCode.U))
                 currentAction = 20;
-            else if (Input.GetKeyDown(KeyCode.P))
+            else if (Input.GetKeyDown(KeyCode.I))
                 currentAction = 23;
-            else if (Input.GetKeyDown(KeyCode.Space))
+            else if (Input.GetKeyDown(KeyCode.O))
                 currentAction = 26;
         }
     }
