@@ -21,7 +21,7 @@ namespace TheAiAlchemist
                     for (int j = 0; j < 3; j++)
                     {
                         // Debug.Log($"Player {_playerBehavior.GetPlayerId()}, action {i * 3 + j} is {_inventory.IsProductAvailable(j)}");
-                        actionMask.SetActionEnabled(0, i * 3 + j, _inventory.IsProductAvailable(j));
+                        actionMask.SetActionEnabled(0, i * 3 + j, _playerBehavior.GetInventory().IsProductAvailable(j));
                     }
                 }
                 else
@@ -45,7 +45,7 @@ namespace TheAiAlchemist
                         for (int j = selectedPlot.GetPriority(); j < 3; j++)
                         {
                             // Debug.Log($"Player {_playerBehavior.GetPlayerId()}, action {i * 3 + j} is {_inventory.IsProductAvailable(j)}");
-                            actionMask.SetActionEnabled(0, i * 3 + j, _inventory.IsProductAvailable(j));
+                            actionMask.SetActionEnabled(0, i * 3 + j, _playerBehavior.GetInventory().IsProductAvailable(j));
                         }
                     }
                 }

@@ -15,15 +15,15 @@ namespace TheAiAlchemist
             var plotSelecting = action[0] / 3;
             var prioritySelecting = action[0] % 3;
             var plotValue = gameBoard.GetValue()[plotSelecting];
-
-            if (_inventoryComp.IsProductAvailable(prioritySelecting) == false)
+            // Debug.Log($"Player {_playerBehavior.GetPlayerId()}: Plot {plotSelecting}, priority {prioritySelecting}");
+            if (_playerBehavior.GetInventory().IsProductAvailable(prioritySelecting) == false)
             {
-                // Debug.Log($"Run out of circle: {prioritySelecting + 1}");
                 interruptGameChannel.ExecuteChannel();
+                // Debug.Log($"Run out of circle: {prioritySelecting + 1}");
             }
             else if (plotValue == null)
             {
-                _inventoryComp.Withdraw(prioritySelecting);
+                _playerBehavior.GetInventory().Withdraw(prioritySelecting);
                 _playerBehavior.InTurnPlay(indexTranslator.IndexToPlot(plotSelecting), prioritySelecting + 1);
             }
             else if (plotValue.GetPlayerId() == _playerBehavior.GetPlayerId())
@@ -43,7 +43,7 @@ namespace TheAiAlchemist
             {
                 // Add score for this one
                 combatChannel.ExecuteChannel(_playerBehavior.GetPlayerId(),true);
-                _inventoryComp.Withdraw(prioritySelecting);
+                _playerBehavior.GetInventory().Withdraw(prioritySelecting);
                 _playerBehavior.InTurnPlay(indexTranslator.IndexToPlot(plotSelecting), prioritySelecting + 1);
                 // Debug.Log("Higher priority");
             }

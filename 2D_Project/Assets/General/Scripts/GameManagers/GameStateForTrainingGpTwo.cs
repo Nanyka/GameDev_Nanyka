@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace TheAiAlchemist
@@ -18,7 +19,8 @@ namespace TheAiAlchemist
         [SerializeField] private List<IPlayerBehaviorStorage> players;
 
         [SerializeField] private int currentPlayerIndex;
-        private int circleAmount;
+
+        // private int circleAmount;
         private bool isNewStep;
 
         private void OnEnable()
@@ -27,7 +29,7 @@ namespace TheAiAlchemist
             announceStateChanged.AddListener(StateChanged);
             interruptGameChannel.AddListener(GameInterrupted);
         }
-        
+
         private void OnDisable()
         {
             resetGameChannel.RemoveListener(ResetCurrentPlayer);
@@ -65,7 +67,6 @@ namespace TheAiAlchemist
 
         private void MoveToNextStep()
         {
-
             var isWin = CheckWinCondition();
             if (isWin)
             {
@@ -84,7 +85,7 @@ namespace TheAiAlchemist
             {
                 if (gameBoard.GetValue()[i] == null)
                     continue;
-                
+
                 if (currentPlayer.GetValue() == gameBoard.GetValue()[i].GetPlayerId())
                     positionList.Add(i);
             }
@@ -105,8 +106,8 @@ namespace TheAiAlchemist
 
         private void IncreaseCircleAmount()
         {
-            circleAmount++;
-            if (circleAmount >= 9)
+            // circleAmount++;
+            if (CheckDrawState())
             {
                 endGameChannel.ExecuteChannel(false);
                 resetGameChannel.ExecuteChannel();
@@ -118,12 +119,37 @@ namespace TheAiAlchemist
             }
         }
 
+        private bool CheckDrawState()
+        {
+            // Check is it any available slot --> if true, return true
+            // Check is any opponent slot has the minimum priority lower than the maximum priority of the player
+            // --> If true, return true
+            // Return false
+
+            // var circles = gameBoard.GetValue();
+            // for (int i = 0; i < circles.Count; i++)
+            // {
+            //     if (circles[i] == null)
+            //         return true;
+            //
+            // }
+
+            // Compute total priority of the current player. If it is larger than 10, then the game draw
+            var currentPlayerCircles = gameBoard.GetValue().FindAll(t => t != null);
+            currentPlayerCircles = currentPlayerCircles.FindAll(t => t.GetPlayerId() == currentPlayer.GetValue());
+            // Debug.Log($"Player {currentPlayer.GetValue()} priority: {currentPlayerCircles.Sum(t => t.GetPriority())}");
+            var totalPriority = currentPlayerCircles.Sum(t => t.GetPriority());
+            var isEmptyInventory = players[currentPlayerIndex].GetValue().GetInventory().IsEmpty();
+            return (totalPriority >= 9 && gameBoard.GetValue().Count(t => t == null) == 0) ||
+                   totalPriority >= 11 || isEmptyInventory;
+        }
+
         private void ResetCurrentPlayer()
         {
-            circleAmount = 0;
+            // circleAmount = 0;
             gameBoard.ResetList();
             currentPlayer.SetValue(players[currentPlayerIndex].GetValue().GetPlayerId());
-            
+
             // Ask current player to play
             newGameChannel.ExecuteChannel();
         }

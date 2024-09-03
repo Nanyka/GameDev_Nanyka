@@ -9,5 +9,6 @@ namespace TheAiAlchemist
         public void InTurnPlay(Vector3 clickPoint, int priority);
         public int GetPlayerId();
         public void DisableCircle(ICircleTrait circle);
+        public IInventoryComp GetInventory();
     }
 }

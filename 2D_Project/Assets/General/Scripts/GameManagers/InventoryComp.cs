@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace TheAiAlchemist
@@ -17,12 +18,17 @@ namespace TheAiAlchemist
             if (_inventory.Count < productId + 1)
                 return false;
 
-            return _inventory[productId] >= 1;
+            return _inventory[productId] > 0;
         }
 
-        public List<int> GetInventory()
+        public List<int> GetItems()
         {
             return _inventory;
+        }
+
+        public bool IsEmpty()
+        {
+            return _inventory.Sum() <= 0;
         }
 
         public void ResetInventory()

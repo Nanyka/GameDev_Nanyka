@@ -11,13 +11,12 @@ namespace TheAiAlchemist
         [SerializeField] private GameObject playerController;
 
         protected INpcPlayer _controller;
-        protected IInventoryComp _inventory;
+        // protected IInventoryComp _inventory;
         protected IPlayerBehavior _playerBehavior;
 
         public override void Initialize()
         {
             _controller = GetComponent<INpcPlayer>();
-            _inventory = GetComponent<IInventoryComp>();
             _playerBehavior = playerController.GetComponent<IPlayerBehavior>();
         }
 
@@ -42,7 +41,8 @@ namespace TheAiAlchemist
             // Debug.Log(observation);
 
             // Collect inventory state
-            var inventory = _inventory.GetInventory();
+            // _inventory = _playerBehavior.GetInventory();
+            var inventory = _playerBehavior.GetInventory().GetItems();
             foreach (var item in inventory)
                 sensor.AddObservation(item);
         }

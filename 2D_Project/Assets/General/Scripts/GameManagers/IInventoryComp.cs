@@ -6,7 +6,8 @@ namespace TheAiAlchemist
     {
         public void Withdraw(int productId);
         public bool IsProductAvailable(int productId);
-        public List<int> GetInventory();
+        public List<int> GetItems();
+        public bool IsEmpty();
         public void ResetInventory();
     }
 }

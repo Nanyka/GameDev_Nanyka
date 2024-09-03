@@ -24,12 +24,15 @@ namespace TheAiAlchemist
 
         private IObjectPool _objectPool;
         private List<ICircleTrait> _circles = new();
+        private IInventoryComp _inventoryComp;
         private bool _isPlayed;
 
         private void Awake()
         {
             m_PlayerBehavior.SetValue(this);
             _objectPool = GetComponent<IObjectPool>();
+            _inventoryComp = GetComponent<IInventoryComp>();
+            _inventoryComp.ResetInventory();
         }
 
         private void OnEnable()
@@ -104,6 +107,11 @@ namespace TheAiAlchemist
             
             var disableCircle = _circles.Find(t => t.GetId() == circle.GetId());
             disableCircle?.DisableCircle();
+        }
+
+        public IInventoryComp GetInventory()
+        {
+            return _inventoryComp;
         }
 
         #endregion

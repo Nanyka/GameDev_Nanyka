@@ -25,7 +25,7 @@ namespace TheAiAlchemist
         private Agent _agent;
         private BehaviorType behaviorType;
         protected IPlayerBehavior _playerBehavior;
-        protected IInventoryComp _inventoryComp;
+        // protected IInventoryComp _inventoryComp;
         private float combatReward = 0.1f;
         private float winReward = 1f;
 
@@ -47,8 +47,8 @@ namespace TheAiAlchemist
             _agent = GetComponent<Agent>();
             behaviorType = GetComponent<BehaviorParameters>().BehaviorType;
             _playerBehavior = playerController.GetComponent<IPlayerBehavior>();
-            _inventoryComp = GetComponent<IInventoryComp>();
-            _inventoryComp.ResetInventory();
+            // _inventoryComp = _playerBehavior.GetInventory();
+            // _inventoryComp.ResetInventory();
 
             endGameChannel.AddListener(OnEpisodeEnd);
             newGameChannel.AddListener(OnPlayATurn);
@@ -73,14 +73,14 @@ namespace TheAiAlchemist
             // Remember to add 1 into action[1] to turn from zero-based space to one-based space
             var plotValue = gameBoard.GetValue()[action[0]];
 
-            if (_inventoryComp.IsProductAvailable(action[1]) == false)
+            if (_playerBehavior.GetInventory().IsProductAvailable(action[1]) == false)
             {
                 // Debug.Log($"Run out of circle: {action[1] + 1}");
                 interruptGameChannel.ExecuteChannel();
             }
             else if (plotValue == null)
             {
-                _inventoryComp.Withdraw(action[1]);
+                _playerBehavior.GetInventory().Withdraw(action[1]);
                 _playerBehavior.InTurnPlay(indexTranslator.IndexToPlot(action[0]), action[1] + 1);
             }
             else if (plotValue.GetPlayerId() == _playerBehavior.GetPlayerId())
@@ -100,7 +100,7 @@ namespace TheAiAlchemist
             {
                 // Add score for this one
                 combatChannel.ExecuteChannel(_playerBehavior.GetPlayerId(),true);
-                _inventoryComp.Withdraw(action[1]);
+                _playerBehavior.GetInventory().Withdraw(action[1]);
                 _playerBehavior.InTurnPlay(indexTranslator.IndexToPlot(action[0]), action[1] + 1);
                 // Debug.Log("Higher priority");
             }
@@ -132,7 +132,7 @@ namespace TheAiAlchemist
             _agent.EndEpisode();
 
             // Fill up inventory
-            _inventoryComp.ResetInventory();
+            _playerBehavior.GetInventory().ResetInventory();
         }
 
         #region AGENT INTERACTION

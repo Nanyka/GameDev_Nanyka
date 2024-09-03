@@ -1,0 +1,78 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1725089593",
+        "python_version": "3.10.12 (main, Jul  5 2023, 15:34:07) [Clang 14.0.6 ]",
+        "command_line_arguments": "/Users/admin/opt/anaconda3/envs/mlagents/bin/mlagents-learn config/tictactoe_gp2.yaml --run-id=TicTacToe_Gp2_v2_2 --env=/Users/admin/Desktop/TicTacToe_TrainGp2_v2.app --no-graphic --resume",
+        "mlagents_version": "1.0.0",
+        "mlagents_envs_version": "1.0.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "2.2.2",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1725089604"
+    },
+    "total": 10.459692392000079,
+    "count": 1,
+    "self": 0.5344614600001023,
+    "children": {
+        "run_training.setup": {
+            "total": 0.04480345499996474,
+            "count": 1,
+            "self": 0.04480345499996474
+        },
+        "TrainerController.start_learning": {
+            "total": 9.880427477000012,
+            "count": 1,
+            "self": 0.00025608699979784433,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 9.807618196000021,
+                    "count": 1,
+                    "self": 9.807618196000021
+                },
+                "trainer_threads": {
+                    "total": 1.5552000149909873e-05,
+                    "count": 1,
+                    "self": 1.5552000149909873e-05,
+                    "children": {
+                        "thread_root": {
+                            "total": 0.0,
+                            "count": 0,
+                            "is_parallel": true,
+                            "self": 0.0,
+                            "children": {
+                                "trainer_advance": {
+                                    "total": 0.00018459699981576705,
+                                    "count": 1,
+                                    "is_parallel": true,
+                                    "self": 4.7207999841702986e-05,
+                                    "children": {
+                                        "process_trajectory": {
+                                            "total": 0.00013738899997406406,
+                                            "count": 1,
+                                            "is_parallel": true,
+                                            "self": 0.00013738899997406406
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "TrainerController._save_models": {
+                    "total": 0.07253764200004298,
+                    "count": 1,
+                    "self": 0.0011970959999416664,
+                    "children": {
+                        "RLTrainer._checkpoint": {
+                            "total": 0.07134054600010131,
+                            "count": 1,
+                            "self": 0.07134054600010131
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

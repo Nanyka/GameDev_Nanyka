@@ -6,8 +6,9 @@ namespace TheAiAlchemist
     [CreateAssetMenu(fileName = "ListIntStorage", menuName = "TheAiAlchemist/Storages/ListIntStorage")]
     public class ListCircleStorage : ScriptableObject
     {
-        [SerializeField] private List<ICircleTrait> value;
         [SerializeField] private int listSize = 9;
+        
+        private List<ICircleTrait> value;
 
         private void OnEnable()
         {
