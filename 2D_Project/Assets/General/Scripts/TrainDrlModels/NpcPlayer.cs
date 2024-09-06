@@ -83,7 +83,7 @@ namespace TheAiAlchemist
 
         #region AGENT INTERACTION
 
-        private void AskForAction()
+        public void AskForAction()
         {
             if (_playerBehavior.GetPlayerId() != currentPlayer.GetValue())
                 return;

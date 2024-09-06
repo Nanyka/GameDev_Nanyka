@@ -230,6 +230,7 @@ MonoBehaviour:
   indexTranslator: {fileID: 11400000, guid: 6b53ed37cad3a4e84a465054dcbab969, type: 2}
   gameBoardPos: {fileID: 11400000, guid: a69a33f31767943758adac873d2073b8, type: 2}
   circlePriority: {fileID: 61758140883418666}
+  mPlayerId: 0
 --- !u!1 &6560171610292088224
 GameObject:
   m_ObjectHideFlags: 0

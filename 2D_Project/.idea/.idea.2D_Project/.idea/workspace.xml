@@ -5,128 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/IntChannel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/IntChannel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/NpcChannel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/NpcChannel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/MaskTest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/MaskTest.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayerGp2Test.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayerGp2Test.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/TicTacToeAgentGp2Test.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/TicTacToeAgentGp2Test.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/BoardGp2_v2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/BoardGp2_v2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/TrainDrlModels/TrainDrlModelsGp2_v2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/TrainDrlModels/TrainDrlModelsGp2_v2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/Circle1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/Circle1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/Circle2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/Circle2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Character/Circle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/Circle.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameStateForTrainingGpTwo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameStateForTrainingGpTwo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/IInventoryComp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/IInventoryComp.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/IPlayerBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/IPlayerBehavior.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/InventoryComp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/InventoryComp.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/StorageSO/ListCircleStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/StorageSO/ListCircleStorage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/INpcPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/INpcPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayerGp2v2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayerGp2v2.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayerGpTwo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayerGpTwo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/TicTacToeAgentGp2v2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/TicTacToeAgentGp2v2.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/TicTacToeAgentGpTwo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/TicTacToeAgentGpTwo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ML-Agents/Timers/TrainDrlModelsGp2_v2_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers/TrainDrlModelsGp2_v2_timers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2/NpcPlayerGp2.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2/NpcPlayerGp2/NpcPlayerGp2-1989397.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2/NpcPlayerGp2/NpcPlayerGp2-1989397.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2/NpcPlayerGp2/NpcPlayerGp2-1999999.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2/NpcPlayerGp2/NpcPlayerGp2-1999999.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2/NpcPlayerGp2/NpcPlayerGp2-2499997.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2/NpcPlayerGp2/NpcPlayerGp2-2499997.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2/NpcPlayerGp2/NpcPlayerGp2-2999999.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2/NpcPlayerGp2/NpcPlayerGp2-2999999.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2/NpcPlayerGp2/NpcPlayerGp2-3000012.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2/NpcPlayerGp2/NpcPlayerGp2-3000012.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2/NpcPlayerGp2/checkpoint.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2/NpcPlayerGp2/events.out.tfevents.1723969080.admins-MacBook-Pro.local.4963.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2/NpcPlayerGp2/events.out.tfevents.1723985609.admins-MacBook-Pro.local.800.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2/configuration.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2/run_logs/Player-0.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2/run_logs/timers.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2/run_logs/training_status.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_2/NpcPlayerGp2.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_2/NpcPlayerGp2/NpcPlayerGp2-1999999.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_2/NpcPlayerGp2/NpcPlayerGp2-1999999.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_2/NpcPlayerGp2/NpcPlayerGp2-2499997.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_2/NpcPlayerGp2/NpcPlayerGp2-2499997.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_2/NpcPlayerGp2/NpcPlayerGp2-2999997.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_2/NpcPlayerGp2/NpcPlayerGp2-2999997.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_2/NpcPlayerGp2/NpcPlayerGp2-3000002.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_2/NpcPlayerGp2/NpcPlayerGp2-3000002.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_2/NpcPlayerGp2/checkpoint.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_2/NpcPlayerGp2/events.out.tfevents.1724004952.admins-MacBook-Pro.local.2349.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_2/NpcPlayerGp2/events.out.tfevents.1724040150.admins-MacBook-Pro.local.806.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_2/NpcPlayerGp2/events.out.tfevents.1725089602.admins-MacBook-Pro.local.1452.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_2/configuration.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_2/run_logs/Player-0.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_2/run_logs/timers.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_2/run_logs/training_status.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_3/NpcPlayerGp2.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_3/NpcPlayerGp2/NpcPlayerGp2-1499999.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_3/NpcPlayerGp2/NpcPlayerGp2-1499999.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_3/NpcPlayerGp2/NpcPlayerGp2-1999997.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_3/NpcPlayerGp2/NpcPlayerGp2-1999997.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_3/NpcPlayerGp2/NpcPlayerGp2-2499998.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_3/NpcPlayerGp2/NpcPlayerGp2-2499998.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_3/NpcPlayerGp2/NpcPlayerGp2-2999997.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_3/NpcPlayerGp2/NpcPlayerGp2-2999997.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_3/NpcPlayerGp2/NpcPlayerGp2-3000043.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_3/NpcPlayerGp2/NpcPlayerGp2-3000043.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_3/NpcPlayerGp2/checkpoint.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_3/NpcPlayerGp2/events.out.tfevents.1725089637.admins-MacBook-Pro.local.1468.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_3/configuration.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_3/run_logs/Player-0.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_3/run_logs/timers.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_3/run_logs/training_status.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_4/NpcPlayerGp2.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_4/NpcPlayerGp2/NpcPlayerGp2-1499995.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_4/NpcPlayerGp2/NpcPlayerGp2-1499995.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_4/NpcPlayerGp2/NpcPlayerGp2-1999998.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_4/NpcPlayerGp2/NpcPlayerGp2-1999998.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_4/NpcPlayerGp2/NpcPlayerGp2-2499998.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_4/NpcPlayerGp2/NpcPlayerGp2-2499998.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_4/NpcPlayerGp2/NpcPlayerGp2-2999998.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_4/NpcPlayerGp2/NpcPlayerGp2-2999998.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_4/NpcPlayerGp2/NpcPlayerGp2-3000002.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_4/NpcPlayerGp2/NpcPlayerGp2-3000002.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_4/NpcPlayerGp2/checkpoint.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_4/NpcPlayerGp2/events.out.tfevents.1725108345.admins-MacBook-Pro.local.4875.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_4/NpcPlayerGp2/events.out.tfevents.1725116176.admins-MacBook-Pro.local.812.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_4/configuration.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_4/run_logs/Player-0.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_4/run_logs/timers.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_4/run_logs/training_status.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_5/NpcPlayerGp2.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_5/NpcPlayerGp2/NpcPlayerGp2-1999995.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_5/NpcPlayerGp2/NpcPlayerGp2-1999995.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_5/NpcPlayerGp2/NpcPlayerGp2-2443211.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_5/NpcPlayerGp2/NpcPlayerGp2-2443211.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_5/NpcPlayerGp2/NpcPlayerGp2-2499996.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_5/NpcPlayerGp2/NpcPlayerGp2-2499996.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_5/NpcPlayerGp2/NpcPlayerGp2-2999997.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_5/NpcPlayerGp2/NpcPlayerGp2-2999997.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_5/NpcPlayerGp2/NpcPlayerGp2-3000009.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_5/NpcPlayerGp2/NpcPlayerGp2-3000009.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_5/NpcPlayerGp2/checkpoint.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_5/NpcPlayerGp2/events.out.tfevents.1725168738.admins-MacBook-Pro.local.835.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_5/NpcPlayerGp2/events.out.tfevents.1725189606.admins-MacBook-Pro.local.898.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_5/configuration.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_5/run_logs/Player-0.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_5/run_logs/timers.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_5/run_logs/training_status.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_6/NpcPlayerGp2.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_6/NpcPlayerGp2/NpcPlayerGp2-1999997.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_6/NpcPlayerGp2/NpcPlayerGp2-1999997.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_6/NpcPlayerGp2/NpcPlayerGp2-2212378.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_6/NpcPlayerGp2/NpcPlayerGp2-2212378.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_6/NpcPlayerGp2/NpcPlayerGp2-2499998.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_6/NpcPlayerGp2/NpcPlayerGp2-2499998.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_6/NpcPlayerGp2/NpcPlayerGp2-2999997.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_6/NpcPlayerGp2/NpcPlayerGp2-2999997.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_6/NpcPlayerGp2/NpcPlayerGp2-3000010.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_6/NpcPlayerGp2/NpcPlayerGp2-3000010.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_6/NpcPlayerGp2/checkpoint.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_6/NpcPlayerGp2/events.out.tfevents.1725194095.admins-MacBook-Pro.local.2076.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_6/NpcPlayerGp2/events.out.tfevents.1725204237.admins-MacBook-Pro.local.794.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_6/NpcPlayerGp2/events.out.tfevents.1725246911.admins-MacBook-Pro.local.800.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_6/configuration.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_6/run_logs/Player-0.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_6/run_logs/timers.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v2_6/run_logs/training_status.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/TrainingDiary.rtf" beforeDir="false" afterPath="$PROJECT_DIR$/results/TrainingDiary.rtf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/tictactoe_gp2_v3.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/tictactoe_gp2_v3.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v3_1/NpcPlayerGp2/events.out.tfevents.1725353120.admins-MacBook-Pro.local.8674.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/TicTacToe_Gp2_v3_1/run_logs/Player-0.log" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,6 +51,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayerActuatorComp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/TicTacToeAgent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/TrainingResult.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/UI/AskActionButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/UI/EndGameMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/Utils/Combination.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Nana/Challenge1/Scripts/BooleanStorage.cs" root0="FORCE_HIGHLIGHTING" />
@@ -267,6 +176,8 @@
       <workItem from="1725345275864" duration="3884000" />
       <workItem from="1725350213208" duration="1518000" />
       <workItem from="1725352660277" duration="466000" />
+      <workItem from="1725558989600" duration="510000" />
+      <workItem from="1725587174497" duration="15972000" />
     </task>
     <servers />
   </component>

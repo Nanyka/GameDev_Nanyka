@@ -10,7 +10,7 @@ namespace TheAiAlchemist
 
         public void Withdraw(int productId)
         {
-            _inventory[productId] -= _inventory.Count < productId + 1? 0 : 1;
+            _inventory[productId] -= 1;
         }
 
         public bool IsProductAvailable(int productId)
@@ -24,6 +24,16 @@ namespace TheAiAlchemist
         public List<int> GetItems()
         {
             return _inventory;
+        }
+
+        public int GetHighestPriority()
+        {
+            var highestPriority = 0;
+            for (var i = 0; i < _inventory.Count; i++)
+                if (_inventory[i] > 0)
+                    highestPriority = i;
+            
+            return highestPriority;
         }
 
         public bool IsEmpty()

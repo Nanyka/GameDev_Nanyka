@@ -1,7 +1,7 @@
 Mono path[0] = '/Users/admin/Desktop/TicTacToe_TrainGp2_v3.app/Contents/Resources/Data/Managed'
 Mono config path = '/Users/admin/Desktop/TicTacToe_TrainGp2_v3.app/Contents/MonoBleedingEdge/etc'
 Found 1 interfaces on host : 0) 192.168.1.7
-Player connection [140704274470848] Multi-casting "[IP] 192.168.1.7 [Port] 55000 [Flags] 2 [Guid] 4095409196 [EditorId] 1708453621 [Version] 1048832 [Id] OSXPlayer(1,admins-MacBook-Pro.local) [Debug] 0 [PackageName] OSXPlayer [ProjectName] GameDev_Nanyka_2D" to [225.0.0.222:54997]...
+Player connection [140704549562304] Multi-casting "[IP] 192.168.1.7 [Port] 55000 [Flags] 2 [Guid] 288099829 [EditorId] 2728324033 [Version] 1048832 [Id] OSXPlayer(1,admins-MacBook-Pro.local) [Debug] 0 [PackageName] OSXPlayer [ProjectName] GameDev_Nanyka_2D" to [225.0.0.222:54997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 7 workers.
 New input system (experimental) initialized
@@ -16,13 +16,13 @@ NullGfxDevice:
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.225 seconds
+- Loaded All Assemblies, in  0.296 seconds
 - Finished resetting the current domain, in  0.002 seconds
 ERROR: Shader Sprites/Default shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
 ERROR: Shader Sprites/Mask shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
 ERROR: Shader GUI/Text Shader shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
 ERROR: Shader TextMeshPro/Mobile/Distance Field shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
-UnloadTime: 3.567519 ms
+UnloadTime: 1.287627 ms
 Registered Communicator in Agent.
 UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
 UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])

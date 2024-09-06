@@ -35,8 +35,8 @@ namespace TheAiAlchemist
                     // observation += $"{plot.GetId()}.({addPlayerId},{addPriority}),";
                 }
 
-                sensor.AddOneHotObservation(addPlayerId, 3);
-                sensor.AddObservation(addPriority);
+                sensor.AddOneHotObservation(addPlayerId, 3); // 3x9 =27
+                sensor.AddObservation(addPriority); // 1x9 = 9
             }
             // Debug.Log(observation);
 
@@ -44,7 +44,7 @@ namespace TheAiAlchemist
             // _inventory = _playerBehavior.GetInventory();
             var inventory = _playerBehavior.GetInventory().GetItems();
             foreach (var item in inventory)
-                sensor.AddObservation(item);
+                sensor.AddObservation(item); // 3x1 = 3
         }
 
         public override void OnActionReceived(ActionBuffers actions)

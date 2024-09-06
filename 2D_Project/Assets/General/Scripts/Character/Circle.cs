@@ -20,7 +20,7 @@ namespace TheAiAlchemist
         
         private ICheckState mState;
         private IRender mRenderer;
-        private int mPlayerId;
+        [SerializeField] private int mPlayerId;
         private int mCircleId;
         private int mPriority;
 
@@ -28,9 +28,8 @@ namespace TheAiAlchemist
         {
             mState = GetComponent<ICheckState>();
             mRenderer = GetComponent<IRender>();
-
             transform.position = spawnPos + gameBoardPos.GetValue();
-            circlePriority.text = priority.ToString();
+            circlePriority.text = (priority + 1).ToString();
             mPlayerId = playerId;
             mCircleId = indexTranslator.PlotToIndex(spawnPos);
             mPriority = priority;

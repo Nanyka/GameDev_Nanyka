@@ -81,7 +81,7 @@ namespace TheAiAlchemist
             else if (plotValue == null)
             {
                 _playerBehavior.GetInventory().Withdraw(action[1]);
-                _playerBehavior.InTurnPlay(indexTranslator.IndexToPlot(action[0]), action[1] + 1);
+                _playerBehavior.InTurnPlay(indexTranslator.IndexToPlot(action[0]), action[1]);
             }
             else if (plotValue.GetPlayerId() == _playerBehavior.GetPlayerId())
             {
@@ -101,7 +101,7 @@ namespace TheAiAlchemist
                 // Add score for this one
                 combatChannel.ExecuteChannel(_playerBehavior.GetPlayerId(),true);
                 _playerBehavior.GetInventory().Withdraw(action[1]);
-                _playerBehavior.InTurnPlay(indexTranslator.IndexToPlot(action[0]), action[1] + 1);
+                _playerBehavior.InTurnPlay(indexTranslator.IndexToPlot(action[0]), action[1]);
                 // Debug.Log("Higher priority");
             }
         }
@@ -118,7 +118,7 @@ namespace TheAiAlchemist
 
         #endregion
 
-        private void OnPlayATurn()
+        protected virtual void OnPlayATurn()
         {
             if (_playerBehavior.GetPlayerId() == currentPlayer.GetValue())
                 AskForAction();
@@ -137,7 +137,7 @@ namespace TheAiAlchemist
 
         #region AGENT INTERACTION
 
-        private void AskForAction()
+        public void AskForAction()
         {
             if (_playerBehavior.GetPlayerId() != currentPlayer.GetValue())
                 return;

@@ -126,29 +126,31 @@ namespace TheAiAlchemist
             // --> If true, return true
             // Return false
 
-            // var circles = gameBoard.GetValue();
-            // for (int i = 0; i < circles.Count; i++)
-            // {
-            //     if (circles[i] == null)
-            //         return true;
-            //
-            // }
-
             // Compute total priority of the current player. If it is larger than 10, then the game draw
-            var currentPlayerCircles = gameBoard.GetValue().FindAll(t => t != null);
-            currentPlayerCircles = currentPlayerCircles.FindAll(t => t.GetPlayerId() == currentPlayer.GetValue());
-            // Debug.Log($"Player {currentPlayer.GetValue()} priority: {currentPlayerCircles.Sum(t => t.GetPriority())}");
-            var totalPriority = currentPlayerCircles.Sum(t => t.GetPriority());
-            var isEmptyInventory = players[currentPlayerIndex].GetValue().GetInventory().IsEmpty();
-            return (totalPriority >= 9 && gameBoard.GetValue().Count(t => t == null) == 0) ||
-                   totalPriority >= 11 || isEmptyInventory;
+            var opponentId = (currentPlayerIndex + 1) % players.Count;
+            var maxOpponentPriority = players[opponentId].GetValue().GetInventory().GetHighestPriority();
+            var occupiedPlots = gameBoard.GetValue().FindAll(t => t != null);
+            var playerCircles = occupiedPlots.FindAll(t => t.GetPlayerId() == currentPlayer.GetValue());
+
+            var isNextTurnFull = false;
+            if (playerCircles.Count > 0)
+            {
+                isNextTurnFull = maxOpponentPriority <= playerCircles.Min(t => t.GetPriority());
+                isNextTurnFull = isNextTurnFull && occupiedPlots.Count == 9;
+            }
+
+            var isEmptyInventory = players[currentPlayerIndex].GetValue().GetInventory().IsEmpty() &&
+                                   players[opponentId].GetValue().GetInventory().IsEmpty();
+
+            return isNextTurnFull || isEmptyInventory;
         }
 
         private void ResetCurrentPlayer()
         {
             // circleAmount = 0;
             gameBoard.ResetList();
-            currentPlayer.SetValue(players[currentPlayerIndex].GetValue().GetPlayerId());
+            SetCurrentPlayer();
+            // currentPlayer.SetValue(players[currentPlayerIndex].GetValue().GetPlayerId());
 
             // Ask current player to play
             newGameChannel.ExecuteChannel();

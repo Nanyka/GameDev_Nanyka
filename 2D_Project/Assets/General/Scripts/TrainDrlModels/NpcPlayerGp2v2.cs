@@ -4,7 +4,6 @@ using UnityEngine;
 namespace TheAiAlchemist
 {
     // Use 1 branch action instead of 2 branches action 
-    
     public class NpcPlayerGp2v2 : NpcPlayerGpTwo
     {
         public override void TakeAction(ActionSegment<int> action)
@@ -15,36 +14,35 @@ namespace TheAiAlchemist
             var plotSelecting = action[0] / 3;
             var prioritySelecting = action[0] % 3;
             var plotValue = gameBoard.GetValue()[plotSelecting];
-            // Debug.Log($"Player {_playerBehavior.GetPlayerId()}: Plot {plotSelecting}, priority {prioritySelecting}");
+            // Debug.Log($"Player {_playerBehavior.GetPlayerId()} action {action[0]}: Plot {plotSelecting}, priority {prioritySelecting}");
             if (_playerBehavior.GetInventory().IsProductAvailable(prioritySelecting) == false)
             {
                 interruptGameChannel.ExecuteChannel();
-                // Debug.Log($"Run out of circle: {prioritySelecting + 1}");
+                // Debug.Log($"Run out of circle: {prioritySelecting}");
             }
             else if (plotValue == null)
             {
                 _playerBehavior.GetInventory().Withdraw(prioritySelecting);
-                _playerBehavior.InTurnPlay(indexTranslator.IndexToPlot(plotSelecting), prioritySelecting + 1);
+                _playerBehavior.InTurnPlay(indexTranslator.IndexToPlot(plotSelecting), prioritySelecting);
             }
             else if (plotValue.GetPlayerId() == _playerBehavior.GetPlayerId())
             {
                 interruptGameChannel.ExecuteChannel();
                 // Debug.Log("Same player");
             }
-            else if (prioritySelecting + 1 <= plotValue.GetPriority())
+            else if (prioritySelecting <= plotValue.GetPriority())
             {
                 // Minus score for this one
                 combatChannel.ExecuteChannel(_playerBehavior.GetPlayerId(),false);
                 interruptGameChannel.ExecuteChannel();
-
-                // Debug.Log($"Unavailable priority. Current: {plotValue.GetPriority()}, New: {prioritySelecting+1}");
+                // Debug.Log($"Unavailable priority. Current: {plotValue.GetPriority()}, New: {prioritySelecting}");
             }
             else
             {
                 // Add score for this one
                 combatChannel.ExecuteChannel(_playerBehavior.GetPlayerId(),true);
                 _playerBehavior.GetInventory().Withdraw(prioritySelecting);
-                _playerBehavior.InTurnPlay(indexTranslator.IndexToPlot(plotSelecting), prioritySelecting + 1);
+                _playerBehavior.InTurnPlay(indexTranslator.IndexToPlot(plotSelecting), prioritySelecting);
                 // Debug.Log("Higher priority");
             }
         }

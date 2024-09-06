@@ -7,5 +7,6 @@ namespace TheAiAlchemist
         public void TakeAction(ActionSegment<int> action);
         public int GetCurrentAction();
         public int GetCurrentPriority();
+        public void AskForAction();
     }
 }

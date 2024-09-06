@@ -115,21 +115,5 @@ namespace TheAiAlchemist
         }
 
         #endregion
-
-        // private bool CheckCircleExist(Vector3 clickPoint)
-        // {
-        //     bool isCircleExisted = false;
-        //
-        //     foreach (var checkedCircle in _circles)
-        //     {
-        //         if (checkedCircle.DetectTouchPoint(clickPoint))
-        //         {
-        //             isCircleExisted = true;
-        //             break;
-        //         }
-        //     }
-        //
-        //     return isCircleExisted;
-        // }
     }
 }
