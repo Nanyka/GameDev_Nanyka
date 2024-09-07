@@ -14,6 +14,7 @@ namespace V_TicTacToe
 
         [Header("Ingame")]
         [SerializeField] private GameObject ingameObject;
+        [SerializeField] private TextMeshProUGUI player1ScoreText;
 
         [Header("Win")]
         [SerializeField] private GameObject winObject;
@@ -33,6 +34,7 @@ namespace V_TicTacToe
         [SerializeField] private V_VoidChannel endTurnChannel;
         [SerializeField] private V_VoidChannel showIngameMenuChannel;
         [SerializeField] private V_VoidChannel resetLevelChannel;
+        [SerializeField] private V_IntegerChannel updatePlayer1ScoreChannel;
 
         [Header("Storage")]
         [SerializeField] private V_IntegerStorage currentPlayerId;
@@ -52,6 +54,8 @@ namespace V_TicTacToe
             showIngameMenuChannel.AddListener(ShowIngame);
             showWinChannel.AddListener(ShowWin);
             showDrawChannel.AddListener(ShowDraw);
+
+            updatePlayer1ScoreChannel.AddListener(OnUpdatePlayer1Score);
         }
 
         private void OnDisable()
@@ -60,17 +64,19 @@ namespace V_TicTacToe
             showIngameMenuChannel.RemoveListener(ShowIngame);
             showWinChannel.RemoveListener(ShowWin);
             showDrawChannel.RemoveListener(ShowDraw);
+
+            updatePlayer1ScoreChannel.RemoveListener(OnUpdatePlayer1Score);
         }
 
         private void OnChangePlayer()
         {
-            if (currentPlayerId.GetValue().Equals(0))
+            if (currentPlayerId.Value.Equals(0))
             {
-                currentPlayerId.SetValue(1);
+                currentPlayerId.Value = 1;
             }
-            else if (currentPlayerId.GetValue().Equals(1))
+            else if (currentPlayerId.Value.Equals(1))
             {
-                currentPlayerId.SetValue(0);
+                currentPlayerId.Value = 0;
             }
 
             UpdatePlayerText();
@@ -84,11 +90,11 @@ namespace V_TicTacToe
 
         private void UpdatePlayerText()
         {
-            if (currentPlayerId.GetValue().Equals(0))
+            if (currentPlayerId.Value.Equals(0))
             {
                 _playerText.SetText("Player1");
             }
-            else if (currentPlayerId.GetValue().Equals(1))
+            else if (currentPlayerId.Value.Equals(1))
             {
                 _playerText.SetText("Player2");
             }
@@ -128,11 +134,11 @@ namespace V_TicTacToe
 
             resetButton.gameObject.SetActive(true);
 
-            if(currentPlayerId.GetValue().Equals(0))
+            if (currentPlayerId.Value.Equals(0))
             {
                 winText.SetText("Player1 Win");
             }
-            else if(currentPlayerId.GetValue().Equals(1))
+            else if (currentPlayerId.Value.Equals(1))
             {
                 winText.SetText("Player2 Win");
             }
@@ -147,6 +153,12 @@ namespace V_TicTacToe
             drawObject.SetActive(true);
 
             resetButton.gameObject.SetActive(true);
+        }
+
+        private void OnUpdatePlayer1Score(int currentScore)
+        {
+            string scoreString = $"Player1 Score: {currentScore}";
+            player1ScoreText.SetText(scoreString);
         }
     }
 }

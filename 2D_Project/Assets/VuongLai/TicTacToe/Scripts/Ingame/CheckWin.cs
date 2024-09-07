@@ -34,19 +34,19 @@ namespace V_TicTacToe
         public void CheckPlayerWin(Vector2 matrixPosition)
         {
             bool isWin = false;
-            if (!matrixPositions.ContainsKey(currentPlayerId.GetValue()))
+            if (!matrixPositions.ContainsKey(currentPlayerId.Value))
             {
-                matrixPositions.Add(currentPlayerId.GetValue(), new List<Vector2>() { matrixPosition });
+                matrixPositions.Add(currentPlayerId.Value, new List<Vector2>() { matrixPosition });
             }
             else
             {
-                if (!matrixPositions[currentPlayerId.GetValue()].Contains(matrixPosition))
+                if (!matrixPositions[currentPlayerId.Value].Contains(matrixPosition))
                 {
-                    matrixPositions[currentPlayerId.GetValue()].Add(matrixPosition);
+                    matrixPositions[currentPlayerId.Value].Add(matrixPosition);
                 }
             }
 
-            List<Vector2> currentMatrixPositions = matrixPositions[currentPlayerId.GetValue()];
+            List<Vector2> currentMatrixPositions = matrixPositions[currentPlayerId.Value];
 
             List<int> horizontalIndexs = new List<int>();
             List<int> verticalIndexs = new List<int>();

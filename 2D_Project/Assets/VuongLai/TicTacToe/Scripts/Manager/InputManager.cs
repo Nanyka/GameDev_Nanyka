@@ -11,6 +11,7 @@ namespace V_TicTacToe
         [SerializeField] private V_Vector2Storage currentMatrixPosition;
         [SerializeField] private V_VoidChannel endTurnChannel;
         [SerializeField] private V_VoidChannel resetLevelChannel;
+        [SerializeField] private V_IntegerStorage currentNumber;
 
         [Header("Config")]
         [SerializeField] private Vector2 matrixNumber;
@@ -38,6 +39,8 @@ namespace V_TicTacToe
 
         private Vector3? GetItemPosition(Vector3 touchPosition)
         {
+            int currentNumber = -1;
+
             float halfStepVertical = Mathf.Abs(stepVertical) / 2;
             float halfStepHorizontal = Mathf.Abs(stepHorizontal) / 2;
 
@@ -46,12 +49,17 @@ namespace V_TicTacToe
             {
                 matrixPosition = new Vector2(-1, -1);
                 currentMatrixPosition.Value = matrixPosition;
+
+                this.currentNumber.Value = currentNumber;
+
                 Debug.Log("Out Space");
+                Debug.Log($"CurrentNumber: {currentNumber}");
                 return null;
             }
 
             float positionX = 0;
             float matrixPositionX = 0;
+            int xIndex = 0;
             if (touchPosition.x < minPivot.x)
             {
                 positionX = minPivot.x;
@@ -61,6 +69,8 @@ namespace V_TicTacToe
             {
                 positionX = maxPivot.x;
                 matrixPositionX = matrixNumber.x - 1;
+
+                xIndex = (int)(matrixNumber.x - 1);
             }
             else
             {
@@ -74,11 +84,14 @@ namespace V_TicTacToe
 
                 matrixPositionX = indexX;
 
+                xIndex = indexX;
+
                 positionX = (indexX * stepHorizontal) + minPivot.x;
             }
 
             float positionY = 0;
             float matrixPositionY = 0;
+            int yIndex = 0;
             if (touchPosition.y < minPivot.y)
             {
                 positionY = minPivot.y;
@@ -87,6 +100,8 @@ namespace V_TicTacToe
             else if (touchPosition.y > maxPivot.y)
             {
                 positionY = maxPivot.y;
+
+                yIndex = (int)(matrixNumber.y - 1);
             }
             else
             {
@@ -99,12 +114,17 @@ namespace V_TicTacToe
                 }
 
                 matrixPositionY = matrixNumber.y - (indexY) - 1;
+                yIndex = indexY;
+
                 positionY = (indexY * stepVertical) + minPivot.y;
             }
 
             Vector2 itemPosition = new Vector2(positionX, positionY);
             matrixPosition = new Vector2(matrixPositionX, matrixPositionY);
             currentMatrixPosition.Value = matrixPosition;
+
+            currentNumber = xIndex + (yIndex * (int)matrixNumber.x);
+            this.currentNumber.Value = currentNumber;
 
             if(HasItem(matrixPosition))
             {

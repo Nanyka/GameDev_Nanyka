@@ -7,16 +7,15 @@ namespace V_TicTacToe
     [CreateAssetMenu(fileName ="V_IntegerStorage",menuName ="ScriptableObject/Storage/V_IntegerStorage")]
     public class V_IntegerStorage : ScriptableObject
     {
-        [SerializeField] private int value;
+        [SerializeField] private int _value;
 
-        public void SetValue(int setValue)
+        public int Value
         {
-            value = setValue;
-        }
-
-        public int GetValue()
-        {
-            return value;
+            get => _value;
+            set
+            {
+                _value = value;
+            }
         }
     }
 }

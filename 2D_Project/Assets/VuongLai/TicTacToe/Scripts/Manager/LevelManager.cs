@@ -45,25 +45,25 @@ namespace V_TicTacToe
 
         private void StartGame()
         {
-            currentPlayerId.SetValue(0);
+            currentPlayerId.Value = 0;
             showIngameMenuChannel.RunVoidChannel();
         }
 
         private void OnResetLevel()
         {
-            currentPlayerId.SetValue(0);
+            currentPlayerId.Value = 0;
             showIngameMenuChannel.RunVoidChannel();
         }
 
         public void ChangePlayer()
         {
-            if(currentPlayerId.GetValue().Equals(0))
+            if (currentPlayerId.Value.Equals(0))
             {
-                Debug.Log("turn of Player1");
+                Debug.Log("Turn of Player1");
             }
-            else if(currentPlayerId.GetValue().Equals(1))
+            else if (currentPlayerId.Value.Equals(1))
             {
-                Debug.Log("turn of Player2");
+                Debug.Log("Turn of Player2");
             }
         }
 

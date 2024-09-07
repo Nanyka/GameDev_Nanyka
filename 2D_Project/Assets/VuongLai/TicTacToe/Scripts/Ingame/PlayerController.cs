@@ -15,9 +15,11 @@ namespace V_TicTacToe
         [Header("Channel")]
         [SerializeField] private V_Vector2Channel checkWinChannel;
         [SerializeField] private V_VoidChannel resetLevelChannel;
+        [SerializeField] private V_IntegerChannel checkWinNumberChannel;
 
         [Header("Storage")]
         [SerializeField] private V_Vector2Storage currentMatrixPosition;
+        [SerializeField] private V_IntegerStorage currentNumber;
 
         private ObjectPool _objectPool;
 
@@ -41,7 +43,7 @@ namespace V_TicTacToe
 
         public void PlayerTalk()
         {
-            Debug.Log($"Is Turn Player have playerId {currentPlayerId.GetValue()}");
+            Debug.Log($"Is Turn Player have playerId {currentPlayerId.Value}");
         }
 
         private void TouchItem(Vector3 touchPosition)
@@ -51,7 +53,7 @@ namespace V_TicTacToe
                 return;
             }
 
-            if (currentPlayerId.GetValue().Equals(playerId))
+            if (currentPlayerId.Value.Equals(playerId))
             {
                 isPlayed.SetValue(true);
 
@@ -65,7 +67,8 @@ namespace V_TicTacToe
 
                     itemObject.SetActive(true);
 
-                    checkWinChannel.RunVector2Channel(currentMatrixPosition.Value);
+                    //checkWinChannel.RunVector2Channel(currentMatrixPosition.Value);
+                    checkWinNumberChannel.RunIntegerChannel(currentNumber.Value);
                 }
             }
         }
