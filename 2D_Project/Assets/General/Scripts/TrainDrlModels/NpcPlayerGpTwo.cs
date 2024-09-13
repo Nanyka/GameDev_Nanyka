@@ -25,8 +25,7 @@ namespace TheAiAlchemist
         private Agent _agent;
         private BehaviorType behaviorType;
         protected IPlayerBehavior _playerBehavior;
-        // protected IInventoryComp _inventoryComp;
-        private float combatReward = 0.1f;
+        private float combatReward = 0f;
         private float winReward = 1f;
 
         public void Awake()

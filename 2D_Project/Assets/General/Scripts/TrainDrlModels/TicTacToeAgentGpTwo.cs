@@ -36,7 +36,7 @@ namespace TheAiAlchemist
                 }
 
                 sensor.AddOneHotObservation(addPlayerId, 3); // 3x9 =27
-                sensor.AddObservation(addPriority); // 1x9 = 9
+                sensor.AddOneHotObservation(addPriority,3); // 3x9 = 27
             }
             // Debug.Log(observation);
 

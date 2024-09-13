@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/General/Scenes/Initialization.unity
     guid: e41e469004bf0494a841311810868684
   - enabled: 1
-    path: Assets/General/Scenes/TrainDrlModels/TrainDrlModelsGp2_v2.unity
+    path: Assets/General/Scenes/TrainDrlModels/TrainDrlModelsGp2_v4.unity
     guid: 47dbda0522a8f45ce970cee0e24156fe
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: e28e16b431fc448d1bf573d6a1832428, type: 2}

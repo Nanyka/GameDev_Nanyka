@@ -1,0 +1,66 @@
+{
+    "NpcPlayerGp2": {
+        "checkpoints": [
+            {
+                "steps": 8499998,
+                "file_path": "results/TicTacToe_Gp2_v4_1/NpcPlayerGp2/NpcPlayerGp2-8499998.onnx",
+                "reward": 1.0,
+                "creation_time": 1725939973.409507,
+                "auxillary_file_paths": [
+                    "results/TicTacToe_Gp2_v4_1/NpcPlayerGp2/NpcPlayerGp2-8499998.pt"
+                ]
+            },
+            {
+                "steps": 8999997,
+                "file_path": "results/TicTacToe_Gp2_v4_1/NpcPlayerGp2/NpcPlayerGp2-8999997.onnx",
+                "reward": 0.7789473684210526,
+                "creation_time": 1725943177.404333,
+                "auxillary_file_paths": [
+                    "results/TicTacToe_Gp2_v4_1/NpcPlayerGp2/NpcPlayerGp2-8999997.pt"
+                ]
+            },
+            {
+                "steps": 9499997,
+                "file_path": "results/TicTacToe_Gp2_v4_1/NpcPlayerGp2/NpcPlayerGp2-9499997.onnx",
+                "reward": 0.4,
+                "creation_time": 1725946484.3700511,
+                "auxillary_file_paths": [
+                    "results/TicTacToe_Gp2_v4_1/NpcPlayerGp2/NpcPlayerGp2-9499997.pt"
+                ]
+            },
+            {
+                "steps": 9999995,
+                "file_path": "results/TicTacToe_Gp2_v4_1/NpcPlayerGp2/NpcPlayerGp2-9999995.onnx",
+                "reward": 0.006944444444444444,
+                "creation_time": 1725949728.3226821,
+                "auxillary_file_paths": [
+                    "results/TicTacToe_Gp2_v4_1/NpcPlayerGp2/NpcPlayerGp2-9999995.pt"
+                ]
+            },
+            {
+                "steps": 10000007,
+                "file_path": "results/TicTacToe_Gp2_v4_1/NpcPlayerGp2/NpcPlayerGp2-10000007.onnx",
+                "reward": 0.013605442176870748,
+                "creation_time": 1725949728.392024,
+                "auxillary_file_paths": [
+                    "results/TicTacToe_Gp2_v4_1/NpcPlayerGp2/NpcPlayerGp2-10000007.pt"
+                ]
+            }
+        ],
+        "elo": 72680.07523514016,
+        "final_checkpoint": {
+            "steps": 10000007,
+            "file_path": "results/TicTacToe_Gp2_v4_1/NpcPlayerGp2.onnx",
+            "reward": 0.013605442176870748,
+            "creation_time": 1725949728.392024,
+            "auxillary_file_paths": [
+                "results/TicTacToe_Gp2_v4_1/NpcPlayerGp2/NpcPlayerGp2-10000007.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.0.0",
+        "torch_version": "2.2.2"
+    }
+}
