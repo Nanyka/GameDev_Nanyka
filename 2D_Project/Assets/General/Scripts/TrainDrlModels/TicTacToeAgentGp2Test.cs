@@ -11,14 +11,14 @@ namespace TheAiAlchemist
 
         public override void WriteDiscreteActionMask(IDiscreteActionMask actionMask)
         {
+            var playerBehavior = playerInfoStorage.GetValue().GetPlayerInfo(PlayerId).GetValue();
             resetMask.ExecuteChannel();
-
             for (int i = 0; i < gameBoard.GetValue().Count; i++)
             {
                 if (gameBoard.GetValue()[i] == null)
                     continue;
 
-                if (gameBoard.GetValue()[i].GetPlayerId() == _playerBehavior.GetPlayerId())
+                if (gameBoard.GetValue()[i].GetPlayerId() == PlayerId)
                 {
                     for (int j = 0; j < 3; j++)
                     {
@@ -36,7 +36,7 @@ namespace TheAiAlchemist
                         // Debug.Log($"Player {_playerBehavior.GetPlayerId()}, action {i * 3 + j} is False");
                         var maskIndex = i * 3 + j;
                         actionMask.SetActionEnabled(0, maskIndex, false);
-                        if (_playerBehavior.GetInventory().IsProductAvailable(selectedPlot.GetPriority() + 1) == false)
+                        if (playerBehavior.GetInventory().IsProductAvailable(selectedPlot.GetPriority() + 1) == false)
                             visualizeMask.ExecuteChannel(maskIndex);
                         // maskOpponent += $"{maskIndex}, ";
                     }
@@ -48,7 +48,7 @@ namespace TheAiAlchemist
             // Lock priority left out of the inventory
             for (int j = 0; j < 3; j++)
             {
-                if (_playerBehavior.GetInventory().IsProductAvailable(j) == false)
+                if (playerBehavior.GetInventory().IsProductAvailable(j) == false)
                 {
                     for (int i = 0; i < 9; i++)
                     {

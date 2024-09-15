@@ -25,7 +25,8 @@ namespace TheAiAlchemist
         private Agent _agent;
         private BehaviorType behaviorType;
         protected IPlayerBehavior _playerBehavior;
-        private float combatReward = 0f;
+        // private float combatReward = 0f;
+        private float survivalReward = 0.1f;
         private float winReward = 1f;
 
         public void Awake()
@@ -120,7 +121,10 @@ namespace TheAiAlchemist
         protected virtual void OnPlayATurn()
         {
             if (_playerBehavior.GetPlayerId() == currentPlayer.GetValue())
+            {
+                _agent.AddReward(survivalReward);
                 AskForAction();
+            }
         }
 
         private void OnEpisodeEnd(bool hasWinner)
@@ -159,8 +163,8 @@ namespace TheAiAlchemist
         
         private void InACombat(int attacker, bool isAttack)
         {
-            var reward = isAttack ? combatReward : -combatReward;
-            _agent.AddReward(attacker == _playerBehavior.GetPlayerId()? reward: -reward);
+            // var reward = isAttack ? combatReward : -combatReward;
+            // _agent.AddReward(attacker == _playerBehavior.GetPlayerId()? reward: -reward);
         }
 
         #endregion

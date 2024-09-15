@@ -227,6 +227,10 @@ PrefabInstance:
       propertyPath: gameBoard
       value: 
       objectReference: {fileID: 11400000, guid: 8ae4bcba7899f4b699c6220a4f267114, type: 2}
+    - target: {fileID: 3530095710114363627, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
+      propertyPath: playerInfoStorage
+      value: 
+      objectReference: {fileID: 11400000, guid: 49a3861165b96477084e3bfa5f12a92a, type: 2}
     - target: {fileID: 3706203402002242548, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
       propertyPath: currentPlayer
       value: 
@@ -295,6 +299,10 @@ PrefabInstance:
       propertyPath: gameBoard
       value: 
       objectReference: {fileID: 11400000, guid: 8ae4bcba7899f4b699c6220a4f267114, type: 2}
+    - target: {fileID: 5952906734296565287, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
+      propertyPath: playerInfoStorage
+      value: 
+      objectReference: {fileID: 11400000, guid: 49a3861165b96477084e3bfa5f12a92a, type: 2}
     - target: {fileID: 6259526017391635456, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
       propertyPath: m_Name
       value: Board (4)
@@ -371,6 +379,10 @@ PrefabInstance:
       propertyPath: resetGameChannel
       value: 
       objectReference: {fileID: 11400000, guid: 88ce00057becd49acbfef1a088069f43, type: 2}
+    - target: {fileID: 8050361690456094978, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
+      propertyPath: playerInfoStorage
+      value: 
+      objectReference: {fileID: 11400000, guid: 49a3861165b96477084e3bfa5f12a92a, type: 2}
     - target: {fileID: 8050361690456094978, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
       propertyPath: changePlayerChannel
       value: 
@@ -505,6 +517,10 @@ PrefabInstance:
       propertyPath: gameBoard
       value: 
       objectReference: {fileID: 11400000, guid: a29a1524d51f84190b18edd396ab8f06, type: 2}
+    - target: {fileID: 3530095710114363627, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
+      propertyPath: playerInfoStorage
+      value: 
+      objectReference: {fileID: 11400000, guid: b9fca61b1e4cf4d6586a2fec166659f3, type: 2}
     - target: {fileID: 3706203402002242548, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
       propertyPath: currentPlayer
       value: 
@@ -573,6 +589,10 @@ PrefabInstance:
       propertyPath: gameBoard
       value: 
       objectReference: {fileID: 11400000, guid: a29a1524d51f84190b18edd396ab8f06, type: 2}
+    - target: {fileID: 5952906734296565287, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
+      propertyPath: playerInfoStorage
+      value: 
+      objectReference: {fileID: 11400000, guid: b9fca61b1e4cf4d6586a2fec166659f3, type: 2}
     - target: {fileID: 6259526017391635456, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
       propertyPath: m_Name
       value: Board (3)
@@ -649,6 +669,10 @@ PrefabInstance:
       propertyPath: resetGameChannel
       value: 
       objectReference: {fileID: 11400000, guid: 710fb798e58824b46a9774969cd6c7ce, type: 2}
+    - target: {fileID: 8050361690456094978, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
+      propertyPath: playerInfoStorage
+      value: 
+      objectReference: {fileID: 11400000, guid: b9fca61b1e4cf4d6586a2fec166659f3, type: 2}
     - target: {fileID: 8050361690456094978, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
       propertyPath: changePlayerChannel
       value: 
@@ -820,6 +844,10 @@ PrefabInstance:
       propertyPath: gameBoard
       value: 
       objectReference: {fileID: 11400000, guid: 8a4ccc49be67e4a87b977740ff091470, type: 2}
+    - target: {fileID: 3530095710114363627, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
+      propertyPath: playerInfoStorage
+      value: 
+      objectReference: {fileID: 11400000, guid: b48ef262efc93475d9f43f3aa37df4b8, type: 2}
     - target: {fileID: 3706203402002242548, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
       propertyPath: currentPlayer
       value: 
@@ -888,6 +916,10 @@ PrefabInstance:
       propertyPath: gameBoard
       value: 
       objectReference: {fileID: 11400000, guid: 8a4ccc49be67e4a87b977740ff091470, type: 2}
+    - target: {fileID: 5952906734296565287, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
+      propertyPath: playerInfoStorage
+      value: 
+      objectReference: {fileID: 11400000, guid: b48ef262efc93475d9f43f3aa37df4b8, type: 2}
     - target: {fileID: 6259526017391635456, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
       propertyPath: m_Name
       value: Board (1)
@@ -964,6 +996,10 @@ PrefabInstance:
       propertyPath: resetGameChannel
       value: 
       objectReference: {fileID: 11400000, guid: 0ab42b26ba3f247a4a616afcbff8603c, type: 2}
+    - target: {fileID: 8050361690456094978, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
+      propertyPath: playerInfoStorage
+      value: 
+      objectReference: {fileID: 11400000, guid: b48ef262efc93475d9f43f3aa37df4b8, type: 2}
     - target: {fileID: 8050361690456094978, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
       propertyPath: changePlayerChannel
       value: 
@@ -1190,6 +1226,10 @@ PrefabInstance:
       propertyPath: gameBoard
       value: 
       objectReference: {fileID: 11400000, guid: 62fe06f4e2e8a4baeb357277a0a7455b, type: 2}
+    - target: {fileID: 3530095710114363627, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
+      propertyPath: playerInfoStorage
+      value: 
+      objectReference: {fileID: 11400000, guid: 178fdaa1de6b64aa1ab5c0afa79dbfdd, type: 2}
     - target: {fileID: 3706203402002242548, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
       propertyPath: currentPlayer
       value: 
@@ -1258,6 +1298,10 @@ PrefabInstance:
       propertyPath: gameBoard
       value: 
       objectReference: {fileID: 11400000, guid: 62fe06f4e2e8a4baeb357277a0a7455b, type: 2}
+    - target: {fileID: 5952906734296565287, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
+      propertyPath: playerInfoStorage
+      value: 
+      objectReference: {fileID: 11400000, guid: 178fdaa1de6b64aa1ab5c0afa79dbfdd, type: 2}
     - target: {fileID: 6259526017391635456, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
       propertyPath: m_Name
       value: Board (2)
@@ -1334,6 +1378,10 @@ PrefabInstance:
       propertyPath: resetGameChannel
       value: 
       objectReference: {fileID: 11400000, guid: 27ba90ee226af453db4402f9b3d5eee3, type: 2}
+    - target: {fileID: 8050361690456094978, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
+      propertyPath: playerInfoStorage
+      value: 
+      objectReference: {fileID: 11400000, guid: 178fdaa1de6b64aa1ab5c0afa79dbfdd, type: 2}
     - target: {fileID: 8050361690456094978, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
       propertyPath: changePlayerChannel
       value: 
@@ -1546,6 +1594,10 @@ PrefabInstance:
       propertyPath: gameBoard
       value: 
       objectReference: {fileID: 11400000, guid: f88ec82221f594bffae4f2a6732eabf1, type: 2}
+    - target: {fileID: 3530095710114363627, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
+      propertyPath: playerInfoStorage
+      value: 
+      objectReference: {fileID: 11400000, guid: 6848642519c534b5f9de7a257739b408, type: 2}
     - target: {fileID: 3706203402002242548, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
       propertyPath: currentPlayer
       value: 
@@ -1614,6 +1666,10 @@ PrefabInstance:
       propertyPath: gameBoard
       value: 
       objectReference: {fileID: 11400000, guid: f88ec82221f594bffae4f2a6732eabf1, type: 2}
+    - target: {fileID: 5952906734296565287, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
+      propertyPath: playerInfoStorage
+      value: 
+      objectReference: {fileID: 11400000, guid: 6848642519c534b5f9de7a257739b408, type: 2}
     - target: {fileID: 6259526017391635456, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
       propertyPath: m_Name
       value: Board (5)
@@ -1690,6 +1746,10 @@ PrefabInstance:
       propertyPath: resetGameChannel
       value: 
       objectReference: {fileID: 11400000, guid: 974f03af98f744f7b9af0ea230e99a19, type: 2}
+    - target: {fileID: 8050361690456094978, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
+      propertyPath: playerInfoStorage
+      value: 
+      objectReference: {fileID: 11400000, guid: 6848642519c534b5f9de7a257739b408, type: 2}
     - target: {fileID: 8050361690456094978, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
       propertyPath: changePlayerChannel
       value: 
@@ -1813,6 +1873,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3530095710114363627, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
+      propertyPath: playerInfoStorage
+      value: 
+      objectReference: {fileID: 11400000, guid: 0ab690a995dc34ccbb5415fe220fd80d, type: 2}
     - target: {fileID: 3882006156158934272, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
       propertyPath: m_Model
       value: 
@@ -1821,10 +1885,18 @@ PrefabInstance:
       propertyPath: m_BehaviorType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5952906734296565287, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
+      propertyPath: playerInfoStorage
+      value: 
+      objectReference: {fileID: 11400000, guid: 0ab690a995dc34ccbb5415fe220fd80d, type: 2}
     - target: {fileID: 6259526017391635456, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
       propertyPath: m_Name
       value: Board (0)
       objectReference: {fileID: 0}
+    - target: {fileID: 8050361690456094978, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
+      propertyPath: playerInfoStorage
+      value: 
+      objectReference: {fileID: 11400000, guid: 0ab690a995dc34ccbb5415fe220fd80d, type: 2}
     - target: {fileID: 8353341060314989576, guid: bbf84ac4a469f45a28a9a9d3f3ab788f, type: 3}
       propertyPath: m_IsActive
       value: 1

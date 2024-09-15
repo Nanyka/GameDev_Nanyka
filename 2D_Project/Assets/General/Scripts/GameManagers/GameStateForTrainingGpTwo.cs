@@ -4,7 +4,9 @@ using UnityEngine;
 
 namespace TheAiAlchemist
 {
-    public class GameStateForTrainingGpTwo : MonoBehaviour
+    
+    
+    public class GameStateForTrainingGpTwo : MonoBehaviour, IPlayerInfoProvider
     {
         [SerializeField] private VoidChannel resetGameChannel;
         [SerializeField] private VoidChannel changePlayerChannel;
@@ -15,12 +17,11 @@ namespace TheAiAlchemist
         [SerializeField] private IntStorage currentPlayer;
         [SerializeField] private ListCircleStorage gameBoard;
         [SerializeField] private Vector3Storage gameBoardPos;
+        [SerializeField] private IPlayerInfoStorage playerInfoStorage;
         [SerializeField] private IndexAndPlotTranslator winRuler;
         [SerializeField] private List<IPlayerBehaviorStorage> players;
 
-        [SerializeField] private int currentPlayerIndex;
-
-        // private int circleAmount;
+        private int currentPlayerIndex;
         private bool isNewStep;
 
         private void OnEnable()
@@ -40,6 +41,7 @@ namespace TheAiAlchemist
         private void Start()
         {
             gameBoardPos.SetValue(transform.position);
+            playerInfoStorage.SetValue(this);
             ResetCurrentPlayer();
         }
 
@@ -68,6 +70,7 @@ namespace TheAiAlchemist
         private void MoveToNextStep()
         {
             var isWin = CheckWinCondition();
+            
             if (isWin)
             {
                 endGameChannel.ExecuteChannel(true);
@@ -160,6 +163,16 @@ namespace TheAiAlchemist
         {
             endGameChannel.ExecuteChannel(false);
             resetGameChannel.ExecuteChannel();
+        }
+
+        public IPlayerBehaviorStorage GetPlayerInfo(int playerId)
+        {
+            return players.Find(t => t.GetValue().GetPlayerId() == playerId);
+        }
+
+        public IPlayerBehaviorStorage GetOpponentInfo(int playerId)
+        {
+            return players.Find(t => t.GetValue().GetPlayerId() != playerId);
         }
     }
 }

@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 57
+    VectorObservationSize: 60
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 0
@@ -304,6 +304,7 @@ MonoBehaviour:
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
   gameBoard: {fileID: 11400000, guid: 77ea84869dd6e4a6f8616368a1e4c690, type: 2}
+  playerInfoStorage: {fileID: 11400000, guid: 0ab690a995dc34ccbb5415fe220fd80d, type: 2}
   playerController: {fileID: 7970091729453120675}
 --- !u!114 &3940232140795158968
 MonoBehaviour:
@@ -376,7 +377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 57
+    VectorObservationSize: 60
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 0
@@ -411,6 +412,7 @@ MonoBehaviour:
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
   gameBoard: {fileID: 11400000, guid: 77ea84869dd6e4a6f8616368a1e4c690, type: 2}
+  playerInfoStorage: {fileID: 11400000, guid: 0ab690a995dc34ccbb5415fe220fd80d, type: 2}
   playerController: {fileID: 4538141751729149322}
 --- !u!114 &2716356346755392724
 MonoBehaviour:
@@ -657,11 +659,11 @@ MonoBehaviour:
   currentPlayer: {fileID: 11400000, guid: 44712aa94874e4d16a0c27be1eaa0ef3, type: 2}
   gameBoard: {fileID: 11400000, guid: 77ea84869dd6e4a6f8616368a1e4c690, type: 2}
   gameBoardPos: {fileID: 11400000, guid: a69a33f31767943758adac873d2073b8, type: 2}
+  playerInfoStorage: {fileID: 11400000, guid: 0ab690a995dc34ccbb5415fe220fd80d, type: 2}
   winRuler: {fileID: 11400000, guid: 6b53ed37cad3a4e84a465054dcbab969, type: 2}
   players:
   - {fileID: 11400000, guid: 2c2d8cfcfd66d47bfad40951799fb925, type: 2}
   - {fileID: 11400000, guid: 47e390baa55e841cebfaca7eb5b873f5, type: 2}
-  currentPlayerIndex: 0
 --- !u!1 &6259526017391635456
 GameObject:
   m_ObjectHideFlags: 0

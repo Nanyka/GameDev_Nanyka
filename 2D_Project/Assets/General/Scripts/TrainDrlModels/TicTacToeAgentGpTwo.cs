@@ -8,16 +8,22 @@ namespace TheAiAlchemist
     public class TicTacToeAgentGpTwo : Agent
     {
         [SerializeField] protected ListCircleStorage gameBoard;
+        [SerializeField] protected IPlayerInfoStorage playerInfoStorage;
         [SerializeField] private GameObject playerController;
 
-        protected INpcPlayer _controller;
-        // protected IInventoryComp _inventory;
-        protected IPlayerBehavior _playerBehavior;
+        protected INpcPlayer Controller;
+        // protected IPlayerBehavior PlayerBehavior;
+        // private IPlayerBehavior _opponentBehavior;
+        protected int PlayerId;
 
         public override void Initialize()
         {
-            _controller = GetComponent<INpcPlayer>();
-            _playerBehavior = playerController.GetComponent<IPlayerBehavior>();
+            Controller = GetComponent<INpcPlayer>();
+            PlayerId = playerController.GetComponent<IPlayerBehavior>().GetPlayerId();
+            // var playerId = playerController.GetComponent<IPlayerBehavior>().GetPlayerId();
+            // PlayerBehavior = playerInfoStorage.GetValue().GetPlayerInfo(playerId).GetValue();
+            // _opponentBehavior = playerInfoStorage.GetValue().GetOpponentInfo(playerId).GetValue();
+            // _playerBehavior = playerController.GetComponent<IPlayerBehavior>();
         }
 
         // Collect current player state as an array of existing circles in conjunction with unoccupied slots
@@ -41,33 +47,37 @@ namespace TheAiAlchemist
             // Debug.Log(observation);
 
             // Collect inventory state
-            // _inventory = _playerBehavior.GetInventory();
-            var inventory = _playerBehavior.GetInventory().GetItems();
-            foreach (var item in inventory)
+            var playerInventory = playerInfoStorage.GetValue().GetPlayerInfo(PlayerId).GetValue().GetInventory().GetItems();
+            var opponentInventory = playerInfoStorage.GetValue().GetOpponentInfo(PlayerId).GetValue().GetInventory().GetItems();
+            foreach (var item in playerInventory)
+                sensor.AddObservation(item); // 3x1 = 3
+            
+            foreach (var item in opponentInventory)
                 sensor.AddObservation(item); // 3x1 = 3
         }
-
+        
         public override void OnActionReceived(ActionBuffers actions)
         {
             // Debug.Log($"Player action: {actions.DiscreteActions[0]}, {actions.DiscreteActions[1]}");
-            _controller.TakeAction(actions.DiscreteActions);
+            Controller.TakeAction(actions.DiscreteActions);
         }
 
         public override void Heuristic(in ActionBuffers actionsOut)
         {
             var discreteActionOut = actionsOut.DiscreteActions;
-            discreteActionOut[0] = _controller.GetCurrentAction();
-            discreteActionOut[1] = _controller.GetCurrentPriority();
+            discreteActionOut[0] = Controller.GetCurrentAction();
+            discreteActionOut[1] = Controller.GetCurrentPriority();
         }
 
         public override void WriteDiscreteActionMask(IDiscreteActionMask actionMask)
         {
+            // var playerBehavior = playerInfoStorage.GetValue().GetPlayerInfo(_playerId).GetValue();
             for (int i = 0; i < gameBoard.GetValue().Count; i++)
             {
                 if (gameBoard.GetValue()[i] != null)
                 {
                     actionMask.SetActionEnabled(0, i,
-                        gameBoard.GetValue()[i].GetPlayerId() != _playerBehavior.GetPlayerId());
+                        gameBoard.GetValue()[i].GetPlayerId() != PlayerId);
                     // actionDisable += $"{i},";
                 }
             }
