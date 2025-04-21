@@ -67,7 +67,8 @@ namespace TheAiAlchemist
             }
 
             if (currentPlayer.GetValue() == playerId)
-                InTurnPlay(mousePos, 0);
+                Debug.Log($"Mouse position: {mousePos}");
+                // InTurnPlay(mousePos, 0);
         }
 
         public void InTurnPlay(Vector3 clickPoint, int priority)
@@ -79,11 +80,8 @@ namespace TheAiAlchemist
                 spawnObject.SetActive(true);
                 circle.Init(clickPoint, playerId, priority);
                 _isPlayed = true;
-                // Debug.Log($"Player {playerId} places at {circle.GetId()}");
                 enableEndButtonChannel.ExecuteChannel();
                 announceStateChanged.ExecuteChannel(circle);
-
-                // Disable the opponent's circle if possible
                 disableCircleChannel.ExecuteChannel(circle);
             }
         }

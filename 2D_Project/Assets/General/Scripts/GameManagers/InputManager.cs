@@ -42,14 +42,12 @@ namespace TheAiAlchemist
             if (mainCamera == null)
                 return;
 
-            // Check out of range
-            // Check game board is available
             if (PointingChecker.IsPointerOverUIObject() == false)
             {
                 var wordPosition = mainCamera.ScreenToWorldPoint(clickPoint);
                 wordPosition -= gameBoardPos.GetValue();
                 wordPosition = new Vector3(Mathf.RoundToInt(wordPosition.x), Mathf.RoundToInt(wordPosition.y), 0f);
-                if (Mathf.Abs(wordPosition.x) + Mathf.Abs(wordPosition.y) < 2 &&
+                if (Mathf.Abs(wordPosition.x) + Mathf.Abs(wordPosition.y) < 2.5 &&
                     gameBoard.GetValue()[translator.PlotToIndex(wordPosition)] == null)
                 {
                     mousePosChannel.ExecuteChannel(wordPosition);

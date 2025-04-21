@@ -41,7 +41,6 @@ public class StartGame : MonoBehaviour
     private void StartNewGame()
     {
         _hasSaveData = false;
-
         // _saveSystem.WriteEmptySaveFile();
         // _saveSystem.SetNewGameData();
         _loadLocation.RaiseEvent(_locationsToLoad, _showLoadScreen);

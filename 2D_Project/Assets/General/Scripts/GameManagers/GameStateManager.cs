@@ -71,6 +71,9 @@ namespace TheAiAlchemist
             var positionList = new List<int>();
             for (int i = 0; i < gameBoard.GetValue().Count; i++)
             {
+                if (gameBoard.GetValue()[i] == null)
+                    continue;
+                
                 if (currentPlayer.GetValue() == gameBoard.GetValue()[i].GetPlayerId())
                     positionList.Add(i);
             }

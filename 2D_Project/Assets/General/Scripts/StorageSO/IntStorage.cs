@@ -22,5 +22,7 @@ namespace TheAiAlchemist
         {
             return value;
         }
+        
+        // public void SetConstruct()
     }
 }
