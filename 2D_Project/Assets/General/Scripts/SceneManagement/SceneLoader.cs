@@ -34,7 +34,7 @@ public class SceneLoader : MonoBehaviour
 	private bool _showLoadingScreen;
 
 	private SceneInstance _gameplayManagerSceneInstance = new SceneInstance();
-	private float _fadeDuration = .5f;
+	private float _fadeDuration = 1f;
 	private bool _isLoading = false; //To prevent a new loading request while already loading a new scene
 
 	private void OnEnable()
@@ -89,8 +89,7 @@ public class SceneLoader : MonoBehaviour
 		_isLoading = true;
 
 		//In case we are coming from the main menu, we need to load the Gameplay manager scene first
-		if (_gameplayManagerSceneInstance.Scene == null
-			|| !_gameplayManagerSceneInstance.Scene.isLoaded)
+		if (!_gameplayManagerSceneInstance.Scene.isLoaded)
 		{
 			_gameplayManagerLoadingOpHandle = _gameplayScene.sceneReference.LoadSceneAsync(LoadSceneMode.Additive, true);
 			_gameplayManagerLoadingOpHandle.Completed += OnGameplayManagersLoaded;
@@ -122,8 +121,7 @@ public class SceneLoader : MonoBehaviour
 		_isLoading = true;
 
 		//In case we are coming from a Location back to the main menu, we need to get rid of the persistent Gameplay manager scene
-		if (_gameplayManagerSceneInstance.Scene != null
-			&& _gameplayManagerSceneInstance.Scene.isLoaded)
+		if (_gameplayManagerSceneInstance.Scene.isLoaded)
 			Addressables.UnloadSceneAsync(_gameplayManagerLoadingOpHandle, true);
 
 		StartCoroutine(UnloadPreviousScene());
@@ -135,7 +133,7 @@ public class SceneLoader : MonoBehaviour
 	private IEnumerator UnloadPreviousScene()
 	{
 		// _inputReader.DisableAllInput();
-		_fadeRequestChannel.FadeOut(_fadeDuration);
+		_fadeRequestChannel.FadeOut(_fadeDuration/2);
 
 		yield return new WaitForSeconds(_fadeDuration);
 
