@@ -47,8 +47,6 @@ namespace TheAiAlchemist
             _agent = GetComponent<Agent>();
             behaviorType = GetComponent<BehaviorParameters>().BehaviorType;
             _playerBehavior = playerController.GetComponent<IPlayerBehavior>();
-            // _inventoryComp = _playerBehavior.GetInventory();
-            // _inventoryComp.ResetInventory();
 
             endGameChannel.AddListener(OnEpisodeEnd);
             newGameChannel.AddListener(OnPlayATurn);

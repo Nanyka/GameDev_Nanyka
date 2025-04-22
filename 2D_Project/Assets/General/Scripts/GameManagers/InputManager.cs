@@ -47,11 +47,15 @@ namespace TheAiAlchemist
                 var wordPosition = mainCamera.ScreenToWorldPoint(clickPoint);
                 wordPosition -= gameBoardPos.GetValue();
                 wordPosition = new Vector3(Mathf.RoundToInt(wordPosition.x), Mathf.RoundToInt(wordPosition.y), 0f);
-                if (Mathf.Abs(wordPosition.x) + Mathf.Abs(wordPosition.y) < 2.5 &&
-                    gameBoard.GetValue()[translator.PlotToIndex(wordPosition)] == null)
-                {
+                
+                if (Mathf.Abs(wordPosition.x) + Mathf.Abs(wordPosition.y) < 2.5)
                     mousePosChannel.ExecuteChannel(wordPosition);
-                }
+                
+                // if (Mathf.Abs(wordPosition.x) + Mathf.Abs(wordPosition.y) < 2.5 &&
+                //     gameBoard.GetValue()[translator.PlotToIndex(wordPosition)] == null)
+                // {
+                //     mousePosChannel.ExecuteChannel(wordPosition);
+                // }
             }
         }
     }

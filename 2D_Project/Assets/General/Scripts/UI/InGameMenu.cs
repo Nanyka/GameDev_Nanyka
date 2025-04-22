@@ -12,12 +12,12 @@ namespace TheAiAlchemist
         [SerializeField] private VoidChannel enableButtonChannel;
         [SerializeField] private VoidChannel resetGameChannel;
         [SerializeField] private IntStorage currentPlayer;
-        [SerializeField] Button _changePlayerButton;
-        [SerializeField] TextMeshProUGUI _playerText;
+        [SerializeField] Button changePlayerButton;
+        [SerializeField] TextMeshProUGUI playerText;
 
         private void Awake()
         {
-            _changePlayerButton.onClick.AddListener(OnChangePlayer);
+            changePlayerButton.onClick.AddListener(OnChangePlayer);
         }
 
         private void OnEnable()
@@ -34,22 +34,20 @@ namespace TheAiAlchemist
 
         private void EnableButton()
         {
-            _changePlayerButton.interactable = true;
+            changePlayerButton.interactable = true;
         }
 
         private void OnChangePlayer()
         {
-            // currentPlayer.SetValue((currentPlayer.GetValue() + 1) % 2);
-            _playerText.SetText($"Player {currentPlayer.GetValue()}");
-
             changePlayerChannel.ExecuteChannel();
-            _changePlayerButton.interactable = false;
+            changePlayerButton.interactable = false;
+            playerText.SetText($"Player {currentPlayer.GetValue()}");
         }
         
         private void ResetUI()
         {
-            _playerText.SetText($"Player {currentPlayer.GetValue()}");
-            _changePlayerButton.interactable = false;
+            playerText.SetText($"Player {currentPlayer.GetValue()}");
+            changePlayerButton.interactable = false;
         }
     }
 }

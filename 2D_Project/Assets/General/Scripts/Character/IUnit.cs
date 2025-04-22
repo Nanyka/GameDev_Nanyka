@@ -2,7 +2,8 @@ namespace TheAiAlchemist
 {
     public interface IUnit
     {
-        public int WhichUnit();
-        public void WithdrawOneItem();
+        public void WhichUnit();
+        public void WithdrawOneItem(ICircleTrait circle);
+
     }
 }

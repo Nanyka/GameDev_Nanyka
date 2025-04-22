@@ -5,22 +5,293 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/IUnit.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/IUnit.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/Unit.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/Unit.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/IUnitPlacer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/IUnitPlacer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/PlayerUnitPlacer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/PlayerUnitPlacer.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/BasicPlayer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/BasicPlayer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/Circle1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/Circle1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/Circle2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/Circle2.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/TrainDrlModels/TrainDrlModelsGp2_v4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/TrainDrlModels/TrainDrlModelsGp2_v4.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/AnnounceStateChangeChannel 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/AnnounceStateChangeChannel 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/ChangePlayer 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/ChangePlayer 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/CombatChannel 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/CombatChannel 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/CurrentPlayer 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/CurrentPlayer 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/DisableCircleChannel 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/DisableCircleChannel 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/EnableEndButton 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/EnableEndButton 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/EndGameChannel 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/EndGameChannel 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/GameBoard 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/GameBoard 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/GameBoardPos 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/GameBoardPos 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/IndexAndPositionTranslator 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/IndexAndPositionTranslator 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/InterruptGameChannel 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/InterruptGameChannel 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/MousePos 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/MousePos 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/NewGameChannel 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/NewGameChannel 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/Player1 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/Player1 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/Player2 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/Player2 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/PlayerInfoStorage 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/PlayerInfoStorage 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/ResetGameChannel 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board2/ResetGameChannel 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/AnnounceStateChangeChannel 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/AnnounceStateChangeChannel 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/ChangePlayer 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/ChangePlayer 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/CombatChannel 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/CombatChannel 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/CurrentPlayer 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/CurrentPlayer 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/DisableCircleChannel 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/DisableCircleChannel 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/EnableEndButton 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/EnableEndButton 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/EndGameChannel 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/EndGameChannel 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/GameBoard 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/GameBoard 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/GameBoardPos 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/GameBoardPos 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/IndexAndPositionTranslator 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/IndexAndPositionTranslator 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/InterruptGameChannel 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/InterruptGameChannel 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/MousePos 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/MousePos 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/NewGameChannel 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/NewGameChannel 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/Player1 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/Player1 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/Player2 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/Player2 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/PlayerInfoStorage 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/PlayerInfoStorage 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/ResetGameChannel 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board3/ResetGameChannel 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/AnnounceStateChangeChannel 4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/AnnounceStateChangeChannel 4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/ChangePlayer 4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/ChangePlayer 4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/CombatChannel 4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/CombatChannel 4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/CurrentPlayer 4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/CurrentPlayer 4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/DisableCircleChannel 4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/DisableCircleChannel 4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/EnableEndButton 4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/EnableEndButton 4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/EndGameChannel 4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/EndGameChannel 4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/GameBoard 4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/GameBoard 4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/GameBoardPos 4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/GameBoardPos 4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/IndexAndPositionTranslator 4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/IndexAndPositionTranslator 4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/InterruptGameChannel 4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/InterruptGameChannel 4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/MousePos 4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/MousePos 4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/NewGameChannel 4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/NewGameChannel 4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/Player1 4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/Player1 4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/Player2 4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/Player2 4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/PlayerInfoStorage 4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/PlayerInfoStorage 4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/ResetGameChannel 4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board4/ResetGameChannel 4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/AnnounceStateChangeChannel 5.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/AnnounceStateChangeChannel 5.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/ChangePlayer 5.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/ChangePlayer 5.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/CombatChannel 5.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/CombatChannel 5.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/CurrentPlayer 5.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/CurrentPlayer 5.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/DisableCircleChannel 5.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/DisableCircleChannel 5.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/EnableEndButton 5.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/EnableEndButton 5.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/EndGameChannel 5.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/EndGameChannel 5.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/GameBoard 5.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/GameBoard 5.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/GameBoardPos 5.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/GameBoardPos 5.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/IndexAndPositionTranslator 5.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/IndexAndPositionTranslator 5.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/InterruptGameChannel 5.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/InterruptGameChannel 5.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/MousePos 5.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/MousePos 5.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/NewGameChannel 5.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/NewGameChannel 5.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/Player1 5.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/Player1 5.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/Player2 5.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/Player2 5.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/PlayerInfoStorage 5.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/PlayerInfoStorage 5.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/ResetGameChannel 5.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Board5/ResetGameChannel 5.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Testing.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Testing/ResetMask.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Testing/ResetMask.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Testing/VisualMask.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Testing/VisualMask.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Testing/WaitForAction.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/TrainDrlModels/Testing/WaitForAction.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Character/IUnit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/IUnit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Character/Unit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/Unit.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameStateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameStateManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/IPlayerBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/IPlayerBehavior.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/InputManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/SceneManagement/StartGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/SceneManagement/StartGame.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/StorageSO/IntStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/StorageSO/IntStorage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayerGpTwo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/NpcPlayerGpTwo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UI/InGameMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/InGameMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nana.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nana/Challenge1.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nana/Challenge1/Material.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nana/Challenge1/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nana/Challenge1/Prefabs/Circle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nana/Challenge1/Prefabs/Circle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nana/Challenge1/Scene.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nana/Challenge1/Scene/Challenge1_Nana.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nana/Challenge1/Scene/Challenge1_Nana.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nana/Challenge1/Scene/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nana/Challenge1/Scene/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nana/Challenge1/ScriptableObjects.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nana/Challenge1/ScriptableObjects/MousePosition.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nana/Challenge1/ScriptableObjects/MousePosition.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nana/Challenge1/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nana/Challenge1/Scripts/BooleanStorage.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nana/Challenge1/Scripts/BooleanStorage.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nana/Challenge1/Scripts/Circle.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nana/Challenge1/Scripts/Circle.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nana/Challenge1/Scripts/InputManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nana/Challenge1/Scripts/InputManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nana/Challenge1/Scripts/Vector3Channel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nana/Challenge1/Scripts/Vector3Channel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nana/Challenge1/Scripts/VoidChannel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nana/Challenge1/Scripts/VoidChannel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/Setting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/Setting/MyInput.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/Setting/MyInput.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/Setting/MyInput.inputactions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/Setting/MyInput.inputactions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/GameDesign.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/GameDesign/GameDesign_TicTacToe.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/GameDesign/GameDesign_TicTacToe.docx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Prefabs/FirstPlayerCheckItem.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Prefabs/FirstPlayerCheckItem.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Prefabs/SecondPlayerCheckItem.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Prefabs/SecondPlayerCheckItem.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scene.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scene/TicTacToe_Vuong.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scene/TicTacToe_Vuong.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/ScriptableObject.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/ScriptableObject/Channels.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/ScriptableObject/Channels/ChangePlayerChannel.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/ScriptableObject/Channels/ChangePlayerChannel.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/ScriptableObject/Channels/TouchItem.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/ScriptableObject/Channels/TouchItem.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/ScriptableObject/EventScriptableObject.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/ScriptableObject/EventScriptableObject.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/ScriptableObject/InputSystem.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/ScriptableObject/InputSystem.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/ScriptableObject/MouseEvent.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/ScriptableObject/MouseEvent.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/ScriptableObject/PlayerEvent.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/ScriptableObject/PlayerEvent.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/ScriptableObject/PlayerInfor.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/ScriptableObject/PlayerInfor.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/ScriptableObject/Storages.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/ScriptableObject/Storages/FirstPlayer.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/ScriptableObject/Storages/FirstPlayer.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/ScriptableObject/Storages/IsFirstPlayer.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/ScriptableObject/Storages/IsFirstPlayer.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/ScriptableObject/Storages/SecondPlayer.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/ScriptableObject/Storages/SecondPlayer.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Ingame.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Ingame/CheckItem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Ingame/CheckItem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Ingame/FirstPlayerController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Ingame/FirstPlayerController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Ingame/SecondPlayerController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Ingame/SecondPlayerController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Input.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Input/InputTester.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Input/InputTester.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Input/MouseInput.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Input/MouseInput.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Interface.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Interface/Ingame.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Interface/Ingame/IPlayerBehavior.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Interface/Ingame/IPlayerBehavior.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Manager.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Manager/CanvasManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Manager/CanvasManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Manager/GameManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Manager/GameManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Manager/LevelManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/Manager/LevelManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/ScriptableObject.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/ScriptableObject/Channels.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/ScriptableObject/Channels/V_VoidChannel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/ScriptableObject/Channels/V_VoidChannel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/ScriptableObject/EventScriptableObject.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/ScriptableObject/EventScriptableObject.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/ScriptableObject/MouseEvent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/ScriptableObject/MouseEvent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/ScriptableObject/PlayerEvent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/ScriptableObject/PlayerEvent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/ScriptableObject/PlayerInfor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/ScriptableObject/PlayerInfor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/ScriptableObject/Storages.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/ScriptableObject/Storages/V_BooleanStorage.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/ScriptableObject/Storages/V_BooleanStorage.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/ScriptableObject/Storages/V_IPlayerBehaviorStorage.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/ScriptableObject/Storages/V_IPlayerBehaviorStorage.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/ScriptableObject/Systems.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/ScriptableObject/Systems/InputSystem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/ScriptableObject/Systems/InputSystem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/UI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/UI/IngameMenu.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/UI/IngameMenu.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/UI/UIBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Scripts/UI/UIBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Sprites/Background.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Sprites/Background/Background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Sprites/Background/Background.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Sprites/Ingame.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Sprites/Ingame/Check_XO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VuongLai/TicTacToe/Sprites/Ingame/Check_XO.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,6 +442,7 @@
       <workItem from="1726217059928" duration="523000" />
       <workItem from="1726368447309" duration="2428000" />
       <workItem from="1745251847777" duration="6171000" />
+      <workItem from="1745291559292" duration="4913000" />
     </task>
     <servers />
   </component>

@@ -15,13 +15,17 @@ namespace TheAiAlchemist
         [SerializeField] private BoolChannel endGameChannel;
         [SerializeField] private CircleChannel announceStateChanged;
         [SerializeField] private IntStorage currentPlayer;
+        [SerializeField] private IntStorage unitIndex;
         [SerializeField] private ListCircleStorage gameBoard;
         [SerializeField] private List<IPlayerBehaviorStorage> players;
 
         private int currentPlayerIndex;
+
         private int circleAmount;
+
         // [SerializeField] private List<int> gameBoard = new(new int[9]);
-        private (int, int, int)[] winningCombinations = {
+        private (int, int, int)[] winningCombinations =
+        {
             (0, 1, 2), (3, 4, 5), (6, 7, 8), // Horizontal
             (0, 3, 6), (1, 4, 7), (2, 5, 8), // Vertical
             (0, 4, 8), (2, 4, 6) // Diagonal
@@ -33,7 +37,7 @@ namespace TheAiAlchemist
             announceStateChanged.AddListener(StateChanged);
             changePlayerChannel.AddListener(SetCurrentPlayer);
         }
-        
+
         private void OnDisable()
         {
             resetGameChannel.RemoveListener(ResetCurrentPlayer);
@@ -51,13 +55,14 @@ namespace TheAiAlchemist
         {
             currentPlayerIndex = (currentPlayerIndex + 1) % players.Count;
             currentPlayer.SetValue(players[currentPlayerIndex].GetValue().GetPlayerId());
+            unitIndex.SetValue(-1);
         }
 
         private void StateChanged(ICircleTrait circleTrait)
         {
             // Record environment state
             gameBoard.GetValue()[circleTrait.GetId()] = circleTrait;
-            
+
             var isWin = CheckWinCondition();
             if (isWin)
                 endGameChannel.ExecuteChannel(true);
@@ -73,7 +78,7 @@ namespace TheAiAlchemist
             {
                 if (gameBoard.GetValue()[i] == null)
                     continue;
-                
+
                 if (currentPlayer.GetValue() == gameBoard.GetValue()[i].GetPlayerId())
                     positionList.Add(i);
             }
@@ -104,13 +109,8 @@ namespace TheAiAlchemist
             circleAmount = 0;
             currentPlayerIndex = 0;
             currentPlayer.SetValue(players[currentPlayerIndex].GetValue().GetPlayerId());
-            
-            // Reset gameBoard
             gameBoard.ResetList();
-            // if (gameBoard.GetValue().Count < 9)
-            //     gameBoard.SetValue(new(new int[9]));
-            // for (int i = 0; i < gameBoard.GetValue().Count; i++)
-            //     gameBoard.GetValue()[i] = 0;
+            unitIndex.SetValue(-1);
         }
     }
 }

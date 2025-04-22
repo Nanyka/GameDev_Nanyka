@@ -12,20 +12,22 @@ namespace TheAiAlchemist
 {
     public class PlayerController : MonoBehaviour, IPlayerBehavior
     {
+        // public bool IsPlayed { get; private set; }
+
         [SerializeField] private IPlayerBehaviorStorage m_PlayerBehavior;
-        [SerializeField] private Vector3Channel mousePosChannel;
         [SerializeField] private VoidChannel changePlayerChannel;
         [SerializeField] private VoidChannel enableEndButtonChannel;
         [SerializeField] private VoidChannel resetGameChannel;
         [SerializeField] private CircleChannel announceStateChanged;
         [SerializeField] private CircleChannel disableCircleChannel;
-        [SerializeField] private IntStorage currentPlayer;
+        [SerializeField] private ListCircleStorage gameBoard;
+        [SerializeField] protected IndexAndPlotTranslator indexTranslator;
         [SerializeField] private int playerId;
 
         private IObjectPool _objectPool;
         private List<ICircleTrait> _circles = new();
         private IInventoryComp _inventoryComp;
-        private bool _isPlayed;
+        private IUnitPlacer _unitPlacer;
 
         private void Awake()
         {
@@ -33,11 +35,12 @@ namespace TheAiAlchemist
             _objectPool = GetComponent<IObjectPool>();
             _inventoryComp = GetComponent<IInventoryComp>();
             _inventoryComp.ResetInventory();
+            _unitPlacer = GetComponent<IUnitPlacer>();
+            _unitPlacer.Init(this);
         }
 
         private void OnEnable()
         {
-            mousePosChannel.AddListener(ListenMousePos);
             changePlayerChannel.AddListener(OnChangePlayer);
             resetGameChannel.AddListener(ResetPlayer);
             disableCircleChannel.AddListener(DisableCircle);
@@ -45,7 +48,6 @@ namespace TheAiAlchemist
 
         private void OnDisable()
         {
-            mousePosChannel.RemoveListener(ListenMousePos);
             changePlayerChannel.RemoveListener(OnChangePlayer);
             resetGameChannel.RemoveListener(ResetPlayer);
             disableCircleChannel.RemoveListener(DisableCircle);
@@ -53,23 +55,12 @@ namespace TheAiAlchemist
 
         private void OnChangePlayer()
         {
-            _isPlayed = false;
+            IsPlayed = false;
         }
 
         #region INTERFACE FUNCTIONS
 
-        private void ListenMousePos(Vector3 mousePos)
-        {
-            if (_isPlayed)
-            {
-                Debug.Log("You played this turn already");
-                return;
-            }
-
-            if (currentPlayer.GetValue() == playerId)
-                Debug.Log($"Mouse position: {mousePos}");
-                // InTurnPlay(mousePos, 0);
-        }
+        public bool IsPlayed { get; set; }
 
         public void InTurnPlay(Vector3 clickPoint, int priority)
         {
@@ -79,7 +70,7 @@ namespace TheAiAlchemist
                 _circles.Add(circle);
                 spawnObject.SetActive(true);
                 circle.Init(clickPoint, playerId, priority);
-                _isPlayed = true;
+                IsPlayed = true;
                 enableEndButtonChannel.ExecuteChannel();
                 announceStateChanged.ExecuteChannel(circle);
                 disableCircleChannel.ExecuteChannel(circle);
@@ -90,7 +81,7 @@ namespace TheAiAlchemist
         {
             _objectPool.ResetPool();
             _circles.Clear();
-            _isPlayed = false;
+            IsPlayed = false;
         }
 
         public int GetPlayerId()
