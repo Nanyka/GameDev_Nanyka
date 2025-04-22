@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameEncoder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameEncoder.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Test/TestAiModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Test/TestAiModel.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Character/Circle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/Circle.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,6 +164,8 @@
       <workItem from="1745291559292" duration="4913000" />
       <workItem from="1745305096573" duration="1206000" />
       <workItem from="1745306810928" duration="1763000" />
+      <workItem from="1745321146892" duration="7622000" />
+      <workItem from="1745338835663" duration="4164000" />
     </task>
     <servers />
   </component>

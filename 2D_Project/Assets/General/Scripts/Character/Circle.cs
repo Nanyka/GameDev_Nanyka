@@ -24,7 +24,7 @@ namespace TheAiAlchemist
         private int mCircleId;
         private int mPriority;
 
-        public void Init(Vector3 spawnPos, int playerId,int priority)
+        public void Init(Vector3 spawnPos, int playerId, int priority)
         {
             mState = GetComponent<ICheckState>();
             mRenderer = GetComponent<IRender>();
@@ -61,13 +61,5 @@ namespace TheAiAlchemist
         {
             gameObject.SetActive(false);
         }
-
-        // public void ChangeState()
-        // {
-        //     // change state component of the circle
-        //     // update circle's render component
-        //     mState.ChangeState();
-        //     mRenderer.ActivateRenderer(mState.IsActivated());
-        // }
     }
 }
