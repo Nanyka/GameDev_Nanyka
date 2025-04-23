@@ -28,9 +28,9 @@ namespace TheAiAlchemist
             _worker?.Dispose();
         }
 
-        private void Start()
+        private async void Start()
         {
-            Init();
+            await Init();
         }
 
         private async Task Init()
