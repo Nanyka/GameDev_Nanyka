@@ -18,7 +18,7 @@ namespace TheAiAlchemist
         [SerializeField] private ModelAsset modelAsset;
         
         private IAgent _humanAgent;
-        private BotAgent _botAgent;
+        private AlphaZeroAgent _botAgent;
         private GameState _currentGameState;
         private Dictionary<Player, IAgent> _players;
 
@@ -30,15 +30,18 @@ namespace TheAiAlchemist
         private async Task Init()
         {
             _humanAgent = new AlphaZeroAlgorithm.Human();
-            _botAgent = new BotAgent(modelAsset);
+            _botAgent = new AlphaZeroAgent(modelAsset,384);
             _players = new Dictionary<Player, IAgent>
             {
                 { Player.X, _humanAgent },
                 { Player.O, _botAgent }
             };
+            _currentGameState = GameSetup.SetupNewGame();
+
+            // var selectedMove = await _botAgent.SelectMove(_currentGameState);
+            // Debug.Log(selectedMove);
 
             Debug.Log("Human vs Human Console Test Game started!");
-            _currentGameState = GameSetup.SetupNewGame();
             await StartNextTurn();
         }
 
@@ -46,7 +49,6 @@ namespace TheAiAlchemist
         {
             if (inputField != null)
             {
-                Debug.Log("Input: " + inputField.text);
                 var move = _humanAgent.GetMoveFromInput(inputField.text);
                 await ApplySelectedMove(move);
                 inputField.text = "";
@@ -79,7 +81,6 @@ namespace TheAiAlchemist
 
         private async Task ApplySelectedMove(Move move)
         {
-            Debug.Log($"Apply move: {move}");
             if (_currentGameState.IsOver())
             {
                 Debug.LogWarning("Attempted to apply move to a game that is already over.");
@@ -90,7 +91,6 @@ namespace TheAiAlchemist
             try
             {
                 _currentGameState = _currentGameState.ApplyMove(move);
-                Debug.Log($"Move applied successfully: {move}");
                 await StartNextTurn();
             }
             catch (IllegalMoveError ex)
@@ -114,7 +114,6 @@ namespace TheAiAlchemist
 
         private void EndGame()
         {
-            Debug.Log("--- Game Over ---");
             if (gameStateText != null) gameStateText.text = _currentGameState.ToString();
             // Debug.Log(_currentGameState.ToString()); // Console log
             
@@ -122,12 +121,10 @@ namespace TheAiAlchemist
             if (winner.HasValue)
             {
                 if (gameStateText != null) gameStateText.text += $"\nWinner: {winner.Value}";
-                Debug.Log($"Winner: {winner.Value}");
             }
             else
             {
                 if (gameStateText != null) gameStateText.text += "\nIt's a draw.";
-                Debug.Log("It's a draw.");
             }
         }
     }

@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/BotAgent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/BotAgent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/Branch.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/Branch.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/ZeroTreeNode.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/ZeroTreeNode.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Test/TestAIModel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Test/TestAIModel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/Board.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/Board.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/Human.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/Human.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/IAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/IAgent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/TTTRelativeEncoder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/Encoder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/TTTRelativeEncoder.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/Encoder.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Test/TestAiModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Test/TestAiModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Test/TestAlphaZero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Test/TestAlphaZero.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/TTTNZeroAgent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/FadeChannel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/VoidChannel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/GameManagers/IPlayerBehavior.cs" root0="FORCE_HIGHLIGHTING" />
@@ -171,7 +167,8 @@
       <workItem from="1745306810928" duration="1763000" />
       <workItem from="1745321146892" duration="7622000" />
       <workItem from="1745338835663" duration="6265000" />
-      <workItem from="1745385118549" duration="8750000" />
+      <workItem from="1745385118549" duration="9662000" />
+      <workItem from="1745405361259" duration="5246000" />
     </task>
     <servers />
   </component>
