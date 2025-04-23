@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace AlphaZeroAlgorithm
 {
-    public class TTTRelativeEncoder
+    public class Encoder
     {
         // Constants matching the Python encoder
         public const int BoardSize = 3;
@@ -20,7 +20,7 @@ namespace AlphaZeroAlgorithm
         public const int NumInventoryFeatures = 6; // 3 counts/player * 2 players
 
         // Constructor
-        public TTTRelativeEncoder()
+        public Encoder()
         {
             // No specific initialization needed for this static-like class
         }

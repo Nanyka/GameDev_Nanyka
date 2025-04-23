@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace AlphaZeroAlgorithm
@@ -89,51 +90,12 @@ namespace AlphaZeroAlgorithm
 
 
         // Implementation of the IAgent interface method
-        public Move SelectMove(GameState gameState)
+        public async Task<Move> SelectMove(GameState gameState)
         {
-            // --- Console Input Approach (for direct translation, not for Unity WebGL) ---
-            Debug.Log($"-- {gameState.NextPlayer}'s turn. Enter move (e.g., A11, B23) or 'Resign':");
-
-            // In a real console app:
-            // string humanInput = Console.ReadLine();
-
-            // In Unity WebGL, you cannot use Console.ReadLine().
-            // This part would need to be replaced by a UI input mechanism.
-            // For now, we'll simulate or assume input is available.
-            // You would typically trigger a UI element here and wait for a button click.
-
-            // --- REPLACE THIS SECTION WITH YOUR UNITY UI INPUT LOGIC ---
-            // Example placeholder for simulation (you'd remove this)
-            string humanInput = "A11"; // Simulated input for demonstration
-            // In your Unity game, this input would come from a UI InputField
-            // You would likely have a button whose click handler calls PointFromCoords
-            // and then passes the resulting Move back to your game state manager.
-            // The SelectMove method might instead trigger the UI, and the UI
-            // event handles the move selection and returns the move asynchronously
-            // or via a callback.
-            // ----------------------------------------------------------
-
-
-            Point? point = PointFromCoords(humanInput.Trim()); // Parse the input
-
-            if (point.HasValue)
-            {
-                // Input was a valid coordinate, return a play move
-                return new Move(point.Value); // Create Move with the Point struct
-            }
-            else
-            {
-                // Input was "Resign" or invalid parse, return the Resign move
-                // PointFromCoords returns null for Resign and invalid formats.
-                // We'll treat any non-play input as Resign for simplicity here,
-                // matching the Python where non-Point input results in move(None, True).
-                Debug.Log("Returning Resign move."); // Log if it's Resign
-                return Move.Resign; // Use the static Resign property
-            }
+            Debug.Log("Human wait move from input");
+            return null;
         }
 
-        // In a Unity UI scenario, you might remove the SelectMove method and instead
-        // have a method like this that gets called when the player confirms input:
         public Move GetMoveFromInput(string inputString)
         {
              Point? point = PointFromCoords(inputString.Trim());

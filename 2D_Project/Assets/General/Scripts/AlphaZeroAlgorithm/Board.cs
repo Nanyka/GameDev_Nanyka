@@ -119,7 +119,7 @@ namespace AlphaZeroAlgorithm
 
         public override string ToString()
         {
-            var outputLines = new List<string> { "   A   B   C" };
+            var outputLines = new List<string> { "    A     B    C" };
 
             for (int row = 1; row <= GameConstants.BoardSize; row++)
             {
@@ -134,11 +134,11 @@ namespace AlphaZeroAlgorithm
                     }
                     else
                     {
-                        piecesInRow.Add("   ");
+                        piecesInRow.Add("    ");
                     }
                 }
 
-                outputLines.Add($"{row}  {string.Join("|", piecesInRow)}");
+                outputLines.Add($"{row}  {string.Join("| ", piecesInRow)}");
             }
 
             return string.Join("\n", outputLines);

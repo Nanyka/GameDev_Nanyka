@@ -1,7 +1,10 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using AlphaZeroAlgorithm;
 using TMPro;
+using Unity.Sentis;
 using UnityEngine;
 using UnityEngine.UI;
 using Human = AlphaZeroAlgorithm.Human;
@@ -12,125 +15,109 @@ namespace TheAiAlchemist
     {
         [SerializeField] private TMP_InputField inputField;
         [SerializeField] private TextMeshProUGUI gameStateText;
-        private IAgent _playerXAgent;
-        private IAgent _playerOAgent;
+        [SerializeField] private ModelAsset modelAsset;
+        
+        private IAgent _humanAgent;
+        private BotAgent _botAgent;
         private GameState _currentGameState;
+        private Dictionary<Player, IAgent> _players;
 
-        private void Start()
+        private async void Start()
         {
-            Init();
+            await Init();
         }
 
-        private void Init()
+        private async Task Init()
         {
-            _playerXAgent = new AlphaZeroAlgorithm.Human();
-            _playerOAgent = new AlphaZeroAlgorithm.Human();
-            _currentGameState = GameSetup.SetupNewGame();
-            
+            _humanAgent = new AlphaZeroAlgorithm.Human();
+            _botAgent = new BotAgent(modelAsset);
+            _players = new Dictionary<Player, IAgent>
+            {
+                { Player.X, _humanAgent },
+                { Player.O, _botAgent }
+            };
+
             Debug.Log("Human vs Human Console Test Game started!");
-            Debug.Log(_currentGameState.IsOver());
-            StartNextTurn();
+            _currentGameState = GameSetup.SetupNewGame();
+            await StartNextTurn();
         }
 
-        public void LogInput()
+        public async void LogInput()
         {
-            // Check which type of InputField is assigned and log its text
             if (inputField != null)
             {
-                Debug.Log("Standard Input: " + inputField.text);
-                var move = _playerXAgent.GetMoveFromInput(inputField.text);
-                ApplySelectedMove(move);
+                Debug.Log("Input: " + inputField.text);
+                var move = _humanAgent.GetMoveFromInput(inputField.text);
+                await ApplySelectedMove(move);
+                inputField.text = "";
             }
             else
             {
                 Debug.LogWarning("No InputField assigned to the InputLogger script.");
             }
         }
-        
-        private void StartNextTurn()
+
+        private async Task StartNextTurn()
         {
-            // Check if the game ended from the previous move
             if (_currentGameState.IsOver())
             {
                 EndGame();
                 return;
             }
-
-            // --- Display Current Game State ---
-            // Update the UI Text element to show the board and game info.
+            
             if (gameStateText != null)
-            {
                 gameStateText.text = _currentGameState.ToString();
-            }
-            Debug.Log("--- Current Game State ---");
-            Debug.Log(_currentGameState.ToString()); 
-            Debug.Log("--------------------------");
 
-
-            // Determine whose turn it is
-            if (_currentGameState.NextPlayer == Player.X) // Assuming Player.X is the UI-controlled human player
+            var nextMove = await _players[_currentGameState.NextPlayer].SelectMove(_currentGameState);
+            if (nextMove == null)
             {
-                 Debug.Log("Human player's turn (Player X). Please enter your move in the UI.");
+                Debug.Log("Waiting for human playing...");
             }
-            else // Assuming Player.O is the bot (or another agent)
-            {
-                Debug.Log($"Agent's turn ({_currentGameState.NextPlayer}). Calculating move...");
-            }
+            else
+                await ApplySelectedMove(nextMove);
         }
-        
-        private void ApplySelectedMove(Move move)
+
+        private async Task ApplySelectedMove(Move move)
         {
-            // Check if the game ended before applying the move (should be caught by StartNextTurn)
-             if (_currentGameState.IsOver())
+            Debug.Log($"Apply move: {move}");
+            if (_currentGameState.IsOver())
             {
                 Debug.LogWarning("Attempted to apply move to a game that is already over.");
-                EndGame(); // Ensure game ends properly
+                EndGame();
                 return;
             }
 
             try
             {
-                // Apply the move using GameState's ApplyMove (which returns a new state)
-                // This method throws IllegalMoveError if the move is invalid according to GameState rules.
                 _currentGameState = _currentGameState.ApplyMove(move);
                 Debug.Log($"Move applied successfully: {move}");
-
-                // If move was applied successfully, proceed to the next turn
-                StartNextTurn(); // This will determine the next player and enable UI or start bot coroutine
+                await StartNextTurn();
             }
             catch (IllegalMoveError ex)
             {
-                Debug.LogError($"Illegal move applied by {_currentGameState.NextPlayer}: {ex.Message}. Game state remains unchanged.");
-                // If it was the human's turn, StartNextTurn (which is called next) will
-                // correctly re-enable the human input UI, allowing them to try again.
-                // If it was the bot's turn, this indicates a bug in the bot's legal move generation/selection.
-                 if (_currentGameState.NextPlayer != Player.X) // It was bot's turn (assuming Player X is human)
-                 {
-                     Debug.LogError("Bot attempted an illegal move. Game halted due to bot error.");
-                     EndGame(); // Or handle bot errors differently
-                 }
-                 else
-                 {
-                     // It was human's turn, illegal move message already logged.
-                     // StartNextTurn is called, which will reactive the human input UI.
-                 }
+                Debug.LogError($"Illegal move applied by {_currentGameState.NextPlayer}: {ex.Message}. " +
+                               $"Game state remains unchanged.");
+                if (_currentGameState.NextPlayer != Player.X)
+                {
+                    Debug.LogError("Bot attempted an illegal move. Game halted due to bot error.");
+                    EndGame(); 
+                }
             }
             catch (Exception ex)
             {
-                 // Handle other unexpected errors during move application
-                 Debug.LogError($"An unexpected error occurred while applying move {move} for player {_currentGameState.NextPlayer}: {ex.Message}");
-                 EndGame(); // Halt game on unexpected errors
+                Debug.LogError(
+                    $"An unexpected error occurred while applying move {move} for player " +
+                    $"{_currentGameState.NextPlayer}: {ex.Message}");
+                EndGame(); 
             }
         }
-        
+
         private void EndGame()
         {
             Debug.Log("--- Game Over ---");
-            // Display final game state again
             if (gameStateText != null) gameStateText.text = _currentGameState.ToString();
-            Debug.Log(_currentGameState.ToString()); // Console log
-
-            // Determine and display the winner
+            // Debug.Log(_currentGameState.ToString()); // Console log
+            
             Player? winner = _currentGameState.Winner();
             if (winner.HasValue)
             {

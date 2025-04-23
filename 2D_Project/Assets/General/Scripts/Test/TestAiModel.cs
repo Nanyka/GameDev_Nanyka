@@ -18,13 +18,9 @@ namespace TheAiAlchemist
         
         static BackendType backendType = BackendType.GPUCompute;
         private IWorker _worker;
-        // private TensorFloat _inputTensor;
-        // private TensorFloat _outputTensor;
         
         private void OnDisable()
         {
-            // _inputTensor?.Dispose();
-            // _outputTensor?.Dispose();
             _worker?.Dispose();
         }
 
@@ -66,7 +62,6 @@ namespace TheAiAlchemist
             }
             Debug.Log(printState);
             
-            // TODO: Generate input and check output from the model
             player1Inventory.ResetInventory();
             player2Inventory.ResetInventory();
             player2Inventory.Withdraw(1);
