@@ -1,44 +1,39 @@
 using AlphaZeroAlgorithm;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace TheAiAlchemist
 {
-    public class HumanInteract : MonoBehaviour, IUnitPlacer
+    public class HumanInteract : MonoBehaviour
     {
-        [SerializeField] private Vector3Channel mousePosChannel;
-        [SerializeField] private IntStorage askUnitIndex;
+        [SerializeField] private PointChannel selectPointChannel;
         [SerializeField] private MoveChannel humanMoveChannel;
 
         private void OnEnable()
         {
-            mousePosChannel.AddListener(ListenMousePos);
+            selectPointChannel.AddListener(ListenPoint);
         }
 
         private void OnDisable()
         {
-            mousePosChannel.RemoveListener(ListenMousePos);
+            selectPointChannel.RemoveListener(ListenPoint);
         }
 
-        public void Init(IPlayerBehavior player)
+        private void ListenPoint(Point selectedPoint)
         {
-            throw new System.NotImplementedException();
-        }
-
-        public void ListenMousePos(Vector3 mousePos)
-        {
-            if (askUnitIndex.GetValue() < 0)
-            {
-                Debug.Log("Need to select a unit");
-            }
-            else
-            {
-                // TODO: Check coordinators of pieces
-                var humanMove = new Move(new Point( Mathf.RoundToInt(mousePos.x) + 2, 
-                    Mathf.RoundToInt(mousePos.y) + 2,
-                    askUnitIndex.GetValue()));
-                humanMoveChannel.ExecuteChannel(humanMove);
-                // Debug.Log($"Point to {humanMove}");
-            }
+            var humanMove = new Move(selectedPoint);
+            humanMoveChannel.ExecuteChannel(humanMove);
+            
+            // if (askUnitIndex.GetValue() < 0)
+            // {
+            //     Debug.Log("Need to select a unit");
+            // }
+            // else
+            // {
+            //     var humanMove = new Move(selectedPoint);
+            //     humanMoveChannel.ExecuteChannel(humanMove);
+            //     // Debug.Log($"Point to {humanMove}");
+            // }
         }
     }
 }

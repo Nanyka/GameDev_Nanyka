@@ -28,8 +28,6 @@ namespace AlphaZeroAlgorithm
             return new Board(_grid); // Use the copy constructor
         }
 
-        // ... (rest of the Board class code remains the same: Place, Remove, IsOnGrid, GetGrid, Get, GetPlayerAtCoord,
-        // GetStrengthAtCoord, GetPointAtCoord, ToString)
         /// <summary>
         /// Places a player's piece (defined by the Point, including strength) on the board.
         /// Assumes the move is valid (checked externally).

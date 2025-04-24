@@ -5,26 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/MoveChannel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/MoveChannel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/IPiece.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/IPiece.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/SimpleUnit.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/SimpleUnit.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GamePresenter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GamePresenter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/HumanInteract.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/HumanInteract.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/StorageSO/GameStateStorage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/StorageSO/GameStateStorage.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/InGameAnnouncer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/InGameAnnouncer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/PointChannel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/PointChannel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/Plot.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/Plot.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/UnitVisualize.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/UnitVisualize.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/SceneData/Managers/GamePlayScene.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/ScriptableObjects/SceneData/Managers/GamePlayScene.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/Human.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/Human.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Locations/BasicLocation.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Locations/BasicLocation.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/Board.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/Board.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Character/Circle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/Circle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Character/IRender.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/IRender.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Character/RenderComp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/RenderComp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/HumanInteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/HumanInteract.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,6 +180,8 @@
       <workItem from="1745405361259" duration="5246000" />
       <workItem from="1745416062802" duration="396000" />
       <workItem from="1745425550231" duration="6801000" />
+      <workItem from="1745463529220" duration="4053000" />
+      <workItem from="1745478481779" duration="1670000" />
     </task>
     <servers />
   </component>

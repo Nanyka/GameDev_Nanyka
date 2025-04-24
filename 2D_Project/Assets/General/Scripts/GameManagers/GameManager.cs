@@ -18,6 +18,7 @@ namespace TheAiAlchemist
         [SerializeField] private VoidChannel changePlayerChannel;
         [SerializeField] private BoolChannel endGameChannel;
         [SerializeField] private MoveChannel humanMoveChannel;
+        [SerializeField] private VoidChannel resetChannel;
 
         private IAgent _humanAgent;
         private AlphaZeroAgent _botAgent;
@@ -27,19 +28,21 @@ namespace TheAiAlchemist
         private void OnEnable()
         {
             humanMoveChannel.AddListener(HumanPlayAMove);
+            resetChannel.AddListener(ResetGame);
         }
-        
+
         private void OnDisable()
         {
             humanMoveChannel.RemoveListener(HumanPlayAMove);
+            resetChannel.RemoveListener(ResetGame);
         }
 
-        private async void Start()
+        private void Start()
         {
-            await Init();
+            Init();
         }
 
-        private async Task Init()
+        private void Init()
         {
             _humanAgent = new AlphaZeroAlgorithm.Human();
             _botAgent = new AlphaZeroAgent(modelAsset,384);
@@ -48,10 +51,8 @@ namespace TheAiAlchemist
                 { Player.X, _humanAgent },
                 { Player.O, _botAgent }
             };
-            _currentGameState = GameSetup.SetupNewGame();
-
-            Debug.Log("Human vs Human Console Test Game started!");
-            await StartNextTurn();
+            
+            resetChannel.ExecuteChannel();
         }
 
         private async void HumanPlayAMove(Move humanMove)
@@ -111,7 +112,14 @@ namespace TheAiAlchemist
         private void EndGame()
         {
             gameStateStorage.SetValue(_currentGameState);
+            changePlayerChannel.ExecuteChannel();
             endGameChannel.ExecuteChannel(true);
+        }
+
+        private async void ResetGame()
+        {
+            _currentGameState = GameSetup.SetupNewGame();
+            await StartNextTurn();
         }
     }
 }

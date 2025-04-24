@@ -1,15 +1,21 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace TheAiAlchemist
 {
     public class RenderComp : MonoBehaviour,IRender
     {
-        [SerializeField] private SpriteRenderer m_Renderer;
+        [SerializeField] private SpriteRenderer mRenderer;
 
         public void ActivateRenderer(bool isActive)
         {
-            m_Renderer.enabled = isActive;
+            mRenderer.enabled = isActive;
+        }
+
+        public void ChangeColor(Color color)
+        {
+            mRenderer.color = color;
         }
     }
 }

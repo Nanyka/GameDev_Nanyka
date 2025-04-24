@@ -173,56 +173,7 @@ MonoBehaviour:
   changePlayerChannel: {fileID: 11400000, guid: f28658ecf3d9946e59e23c3659afaea8, type: 2}
   endGameChannel: {fileID: 11400000, guid: d1a037fe1d9e9452996bdbc29f4afccd, type: 2}
   humanMoveChannel: {fileID: 11400000, guid: 09fd83887c8134a6fbbb08efccd82cc3, type: 2}
---- !u!1 &242697135
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 242697136}
-  - component: {fileID: 242697137}
-  m_Layer: 0
-  m_Name: InputManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &242697136
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 242697135}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 252316316}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &242697137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 242697135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b262511e80d94d4ca58fe05259969bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputReaderSo: {fileID: 11400000, guid: 35f2875548c8844219198c09fbc26756, type: 2}
-  mousePosChannel: {fileID: 11400000, guid: 58b3b6a9ebc6845158660d8982537965, type: 2}
-  activateInput: {fileID: 11400000, guid: e3771b2e4ce834baa8b5aee9b097b476, type: 2}
-  translator: {fileID: 11400000, guid: 6b53ed37cad3a4e84a465054dcbab969, type: 2}
-  gameBoard: {fileID: 11400000, guid: 77ea84869dd6e4a6f8616368a1e4c690, type: 2}
-  gameBoardPos: {fileID: 11400000, guid: a69a33f31767943758adac873d2073b8, type: 2}
+  resetChannel: {fileID: 11400000, guid: c4ab14a3f61c34cc297c58192f1e27e3, type: 2}
 --- !u!1 &252316315
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,7 +203,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 242697136}
   - {fileID: 57310360}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1026,8 +976,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - prefab: {fileID: 5564855977137456209, guid: fb0b582ff88c148b689a49330f2859c7, type: 3}
-    prefCollector: {fileID: 0}
+  - prefab: {fileID: 5564855977137456209, guid: 6e56664003c1e40d7b3bd90e43a67b2b, type: 3}
+    prefCollector: {fileID: 1410752683}
     amount: 0
     expandable: 1
   pooledItems: []
@@ -1359,8 +1309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e04b3537c71441c1bfb61d7f3c5cde58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mousePosChannel: {fileID: 11400000, guid: 58b3b6a9ebc6845158660d8982537965, type: 2}
-  askUnitIndex: {fileID: 11400000, guid: 123bae78151b34f83ad2d49766ac0c22, type: 2}
+  selectPointChannel: {fileID: 11400000, guid: d3f1c7ab9bce54dd59ea54cf31168dc9, type: 2}
   humanMoveChannel: {fileID: 11400000, guid: 09fd83887c8134a6fbbb08efccd82cc3, type: 2}
 --- !u!224 &1557432310127680152
 RectTransform:

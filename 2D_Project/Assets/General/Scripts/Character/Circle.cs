@@ -18,7 +18,6 @@ namespace TheAiAlchemist
         [SerializeField] private Vector3Storage gameBoardPos;
         [SerializeField] private TextMeshProUGUI circlePriority;
         
-        private ICheckState mState;
         private IRender mRenderer;
         [SerializeField] private int mPlayerId;
         private int mCircleId;
@@ -26,7 +25,6 @@ namespace TheAiAlchemist
 
         public void Init(Vector3 spawnPos, int playerId, int priority)
         {
-            mState = GetComponent<ICheckState>();
             mRenderer = GetComponent<IRender>();
             transform.position = spawnPos + gameBoardPos.GetValue();
             circlePriority.text = (priority + 1).ToString();
