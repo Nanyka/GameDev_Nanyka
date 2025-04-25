@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using UnityEngine;
+
 namespace AlphaZeroAlgorithm
 {
     public static class GameConstants
@@ -15,11 +18,10 @@ namespace AlphaZeroAlgorithm
         public static readonly Point[] Diag2 = { new Point(1, 3, 1), new Point(2, 2, 1), 
             new Point(3, 1, 1) };
 
-        // Note: The strength (1) in the diagonal Point definitions in Python's DIAG_1/DIAG_2
-        // might just be a placeholder, as winning only depends on having *any* piece
-        // of the same player in a line, not a specific strength. Our C# Player class
-        // stores just the player, so the strength in the Point used as a key in the Board grid
-        // will determine which piece is there. The win condition check (_has_3_in_a_row)
-        // should only check the player, ignoring strength.
+        public static readonly Dictionary<Player, Color> ColorTank = new Dictionary<Player, Color>
+        {
+            { Player.X, new Color32(187,255,18,255) },
+            { Player.O, new Color32(254,27,67,255) }
+        };
     }
 }
