@@ -4,17 +4,20 @@
     <type fullname="LoadingInterfaceController" preserve="all" />
     <type fullname="SceneLoader" preserve="all" />
     <type fullname="TheAiAlchemist.BoolChannel" preserve="all" />
+    <type fullname="TheAiAlchemist.BotSelectHighlighter" preserve="all" />
     <type fullname="TheAiAlchemist.FadeChannel" preserve="all" />
     <type fullname="TheAiAlchemist.GameManager" preserve="all" />
     <type fullname="TheAiAlchemist.GameplaySO" preserve="all" />
     <type fullname="TheAiAlchemist.GameStateStorage" preserve="all" />
     <type fullname="TheAiAlchemist.HumanInteract" preserve="all" />
     <type fullname="TheAiAlchemist.InGameAnnouncer" preserve="all" />
+    <type fullname="TheAiAlchemist.IntChannel" preserve="all" />
     <type fullname="TheAiAlchemist.IntStorage" preserve="all" />
     <type fullname="TheAiAlchemist.LoadEventChannel" preserve="all" />
     <type fullname="TheAiAlchemist.LocationSO" preserve="all" />
     <type fullname="TheAiAlchemist.MainMenuManager" preserve="all" />
     <type fullname="TheAiAlchemist.MoveChannel" preserve="all" />
+    <type fullname="TheAiAlchemist.PlayerSelectHighlighter" preserve="all" />
     <type fullname="TheAiAlchemist.Plot" preserve="all" />
     <type fullname="TheAiAlchemist.PointChannel" preserve="all" />
     <type fullname="TheAiAlchemist.RenderComp" preserve="all" />
