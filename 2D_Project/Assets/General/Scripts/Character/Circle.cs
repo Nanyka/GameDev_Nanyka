@@ -18,15 +18,13 @@ namespace TheAiAlchemist
         [SerializeField] private Vector3Storage gameBoardPos;
         [SerializeField] private TextMeshProUGUI circlePriority;
         
-        private ICheckState mState;
         private IRender mRenderer;
         [SerializeField] private int mPlayerId;
         private int mCircleId;
         private int mPriority;
 
-        public void Init(Vector3 spawnPos, int playerId,int priority)
+        public void Init(Vector3 spawnPos, int playerId, int priority)
         {
-            mState = GetComponent<ICheckState>();
             mRenderer = GetComponent<IRender>();
             transform.position = spawnPos + gameBoardPos.GetValue();
             circlePriority.text = (priority + 1).ToString();
@@ -61,13 +59,5 @@ namespace TheAiAlchemist
         {
             gameObject.SetActive(false);
         }
-
-        // public void ChangeState()
-        // {
-        //     // change state component of the circle
-        //     // update circle's render component
-        //     mState.ChangeState();
-        //     mRenderer.ActivateRenderer(mState.IsActivated());
-        // }
     }
 }
