@@ -17,33 +17,33 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 1909daa32556b491187c47d482d7b09f
   m_SerializeEntries:
-  - m_GUID: d54e411deca6b40e4952d345ea6e942d
-    m_Address: Scenes/Managers/GamePlay.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 969b7f174e8c76843aa3fcdbade0487b
-    m_Address: Scenes/Managers/PersistentManagers.unity
+  - m_GUID: 15a05c2c1d40540bebcb684d25374e08
+    m_Address: Assets/General/ScriptableObjects/SceneData/SceneEvents/LoadLocationChannel.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 202aa3967ce7d43dfb3b9cc7700c9f53
-    m_Address: SceneEvents/LoadMenuChannel.asset
+    m_Address: Assets/General/ScriptableObjects/SceneData/SceneEvents/LoadMenuChannel.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 80c0801af1bf94bce821b53db3b3aae6
-    m_Address: Scenes/Menus/MainMenu.unity
+    m_Address: Assets/General/Scenes/Menus/MainMenu.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f4b4289d4a9344b59b6c165ea9f38bd3
-    m_Address: Scenes/Locations/BasicLocation.unity
+  - m_GUID: 969b7f174e8c76843aa3fcdbade0487b
+    m_Address: Assets/General/Scenes/Managers/PersistentManagers.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3136fd38e98444aa8b5a912e2a005bf0
-    m_Address: Assets/General/Scenes/Managers/GamePlay2.unity
+    m_Address: Assets/General/Scenes/Managers/GamePlayWithState.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f4b4289d4a9344b59b6c165ea9f38bd3
+    m_Address: Assets/General/Scenes/Locations/BasicLocation.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
