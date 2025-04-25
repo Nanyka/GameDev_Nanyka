@@ -13,14 +13,14 @@ namespace TheAiAlchemist
         [SerializeField] private GameStateStorage currentState;
         [SerializeField] private VoidChannel changePlayerChannel;
         [SerializeField] private VoidChannel resetGameChannel;
+        [SerializeField] private IntChannel selectIndexChannel;
 
         [SerializeField] private Button mButton;
-        [SerializeField] private TextMeshProUGUI indexText;
-        
         [SerializeField] private Player forPlayer;
         [SerializeField] private int mUnitIndex;
         [SerializeField] private int amountOfItem;
 
+        private ISelectionInteract interact;
         private int remainAmount;
 
         private void OnEnable()
@@ -28,6 +28,7 @@ namespace TheAiAlchemist
             changePlayerChannel.AddListener(UpdateRemainAmount);
             resetGameChannel.AddListener(ResetUnitButton);
             mButton.onClick.AddListener(WhichUnit);
+            selectIndexChannel.AddListener(HighlightSelection);
         }
 
         private void OnDisable()
@@ -35,8 +36,14 @@ namespace TheAiAlchemist
             changePlayerChannel.RemoveListener(UpdateRemainAmount);
             resetGameChannel.RemoveListener(ResetUnitButton);
             mButton.onClick.RemoveListener(WhichUnit);
+            selectIndexChannel.RemoveListener(HighlightSelection);
         }
-        
+
+        private void Awake()
+        {
+            interact = GetComponent<ISelectionInteract>();
+        }
+
         private void Start()
         {
             ResetUnitButton();
@@ -44,8 +51,8 @@ namespace TheAiAlchemist
 
         private void ResetUnitButton()
         {
-            remainAmount = amountOfItem;
-            indexText.text = $"{mUnitIndex} ({remainAmount})";
+            remainAmount = amountOfItem; 
+            interact.OnUpdateText($"{mUnitIndex} ({remainAmount})");
             mButton.interactable = true;
         }
 
@@ -54,6 +61,7 @@ namespace TheAiAlchemist
             if (currentState.GetValue().NextPlayer == forPlayer)
             {
                 askUnitIndex.SetValue(mUnitIndex);
+                selectIndexChannel.ExecuteChannel(mUnitIndex);
             }
         }
 
@@ -61,11 +69,19 @@ namespace TheAiAlchemist
         {
             var inventory = currentState.GetValue().PlayerInventories[forPlayer];
             remainAmount = inventory.GetInventoryDictionary()[mUnitIndex];
-            indexText.text = $"{mUnitIndex} ({remainAmount})";
+            interact.OnUpdateText($"{mUnitIndex} ({remainAmount})");
             if (remainAmount <= 0)
             {
                 mButton.interactable = false;
             }
+        }
+        
+        private void HighlightSelection(int selectedIndex)
+        {
+            if (selectedIndex == mUnitIndex)
+                interact.OnActivate();
+            else
+                interact.OnDeactivate();
         }
     }
 }

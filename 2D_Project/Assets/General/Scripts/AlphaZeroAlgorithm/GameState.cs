@@ -242,7 +242,7 @@ namespace AlphaZeroAlgorithm
             
             if (strEnoughCount == 0)
             {
-                Debug.Log("Game Over: No legal moves possible for the current player."); // Optional debug
+                // Debug.Log("Game Over: No legal moves possible for the current player."); // Optional debug
                 return true;
             }
 

@@ -1,11 +1,8 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using AlphaZeroAlgorithm;
 using Unity.Sentis;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace TheAiAlchemist
 {
@@ -15,7 +12,7 @@ namespace TheAiAlchemist
 
         
         static BackendType backendType = BackendType.GPUCompute;
-        private IWorker _worker;
+        private Worker _worker;
         
         private void OnDisable()
         {
@@ -24,6 +21,7 @@ namespace TheAiAlchemist
 
         private async void Start()
         {
+            // SaveSentisModel();
             await Init();
         }
 
@@ -35,7 +33,6 @@ namespace TheAiAlchemist
             // await CheckModel(model);
             await CheckEncoder(model);
 
-            // TODO: Check model prediction: B11 --> C12
             CheckMCTSAlgorithm();
         }
 
@@ -61,25 +58,29 @@ namespace TheAiAlchemist
             Debug.Log(gameState.ToString());
 
             var (stateInput, inventoryInput) = encoder.Encode(gameState);
-            
-            _worker = WorkerFactory.CreateWorker(backendType, model);
-            Debug.Log($"Created engine with backend: {_worker.GetBackend()}");
+
+            _worker = new Worker(model, backendType);
+            // Debug.Log($"Created engine with backend: {_worker.GetBackend()}");
         
             // Execute the Model
             string input1Name = model.inputs[0].name; 
             string input2Name = model.inputs[1].name; 
-            var inputs = new Dictionary<string, Tensor>()
-            {
-                { input1Name, stateInput },
-                { input2Name, inventoryInput }
-            };
-            _worker.Execute(inputs);
+            // var inputs = new Dictionary<string, Tensor>()
+            // {
+            //     { input1Name, stateInput },
+            //     { input2Name, inventoryInput }
+            // };
             
-            string output1Name = model.outputs[0]; 
-            string output2Name = model.outputs[1];
+            _worker.SetInput(input1Name,stateInput);
+            _worker.SetInput(input2Name,inventoryInput);
             
-            TensorFloat output1 = _worker.PeekOutput() as TensorFloat; // Gets the first output by default
-            TensorFloat output2 = _worker.PeekOutput(output2Name) as TensorFloat; // Get by name for clarity/safety
+            _worker.Schedule();
+            
+            string output1Name = model.outputs[0].name; 
+            string output2Name = model.outputs[1].name;
+            
+            Tensor<float> output1 = _worker.PeekOutput() as Tensor<float>; // Gets the first output by default
+            Tensor<float> output2 = _worker.PeekOutput(output2Name) as Tensor<float>; // Get by name for clarity/safety
         
             Debug.Log($"\nOutput 1 Name: {output1Name}, Shape: {output1.shape}");
             
@@ -129,7 +130,7 @@ namespace TheAiAlchemist
                     }
                 }
             }
-            var input1 = new TensorFloat(shape1, currentState);
+            var input1 = new Tensor<float>(shape1, currentState);
             
             // For input 2 (1, 6)
             var currentInventory = new float[6];
@@ -141,26 +142,28 @@ namespace TheAiAlchemist
                     currentInventory[b + i] = (float)((b * 6) + i);
                 }
             }
-            var input2 = new TensorFloat(shape2, currentInventory);
+            var input2 = new Tensor<float>(shape2, currentInventory);
             
             // 3. Create an Inference Engine
-            _worker = WorkerFactory.CreateWorker(backendType, model);
-            Debug.Log($"Created engine with backend: {_worker.GetBackend()}");
+            _worker = new Worker(model, backendType);
+            // Debug.Log($"Created engine with backend: {_worker.GetBackend()}");
         
             // 4. Execute the Model
-            var inputs = new Dictionary<string, Tensor>()
-            {
-                { input1Name, input1 },
-                { input2Name, input2 }
-            };
-            _worker.Execute(inputs);
+            // var inputs = new Dictionary<string, Tensor>()
+            // {
+            //     { input1Name, input1 },
+            //     { input2Name, input2 }
+            // };
+            _worker.SetInput(input1Name,input1);
+            _worker.SetInput(input2Name,input2);
+            _worker.Schedule();
         
             // 5. Read Output Tensors
-            string output1Name = model.outputs[0]; 
-            string output2Name = model.outputs[1]; 
+            string output1Name = model.outputs[0].name; 
+            string output2Name = model.outputs[1].name; 
             
-            TensorFloat output1 = _worker.PeekOutput() as TensorFloat; // Gets the first output by default
-            TensorFloat output2 = _worker.PeekOutput(output2Name) as TensorFloat; // Get by name for clarity/safety
+            Tensor<float> output1 = _worker.PeekOutput() as Tensor<float>; // Gets the first output by default
+            Tensor<float> output2 = _worker.PeekOutput(output2Name) as Tensor<float>; // Get by name for clarity/safety
         
             Debug.Log($"\nOutput 1 Name: {output1Name}, Shape: {output1.shape}");
             
@@ -178,34 +181,40 @@ namespace TheAiAlchemist
             Debug.Log("\nInference complete and resources disposed.");
         }
 
-        private static async Task ReadPolicyOutput(TensorFloat output1)
+        private static async Task ReadPolicyOutput(Tensor<float> output1)
         {
-            var returnAction = await output1.ReadbackRequestAsync();
+            var returnAction = await output1.ReadbackAndCloneAsync();
 
-            if (returnAction)
+            if (returnAction != null)
             {
-                output1.MakeReadable();
+                // output1.MakeReadable();
 
-                int output1Size = output1.shape[1]; // Size is the second dimension for (1, N) shape
+                int output1Size = returnAction.shape[1]; // Size is the second dimension for (1, N) shape
                 string printPrior = $"Output 1 Data (first 5 values): ";
                 for (int i = 0; i < Mathf.Min(5, output1Size); i++)
                 {
-                    printPrior += $"[{i}] {output1[i]}; ";
+                    printPrior += $"[{i}] {returnAction[i]}; ";
                 }
 
                 Debug.Log(printPrior);
             }
         }
         
-        private static async Task ReadValueOutput(TensorFloat output2)
+        private async Task ReadValueOutput(Tensor<float> output2)
         {
-            var returnValue = await output2.ReadbackRequestAsync();
+            var returnValue = await output2.ReadbackAndCloneAsync();
 
-            if (returnValue)
+            if (returnValue != null)
             {
-                output2.MakeReadable();
-                Debug.Log($"Value output: {output2[0]}");
+                // output2.MakeReadable();
+                Debug.Log($"Value output: {returnValue[0]}");
             }
+        }
+
+        private void SaveSentisModel()
+        {
+            Model model = ModelLoader.Load(runtimeModel);
+            ModelWriter.Save("modelSentis.sentis",model);
         }
     }
 }

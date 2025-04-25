@@ -37,7 +37,7 @@ namespace TheAiAlchemist
         /// <param name="circlesOnBoard">List of Circle objects currently on the board.</param>
         /// <param name="currentPlayerId">The ID of the player whose turn it is (1 or 2).</param>
         /// <returns>A TensorFloat with shape (1, 7, 3, 3).</returns>
-        public static TensorFloat EncodeBoardState(List<ICircleTrait> circlesOnBoard, int currentPlayerId)
+        public static Tensor<float> EncodeBoardState(List<ICircleTrait> circlesOnBoard, int currentPlayerId)
         {
             int batchSize = 1;
             int flatSize = batchSize * NumBoardPlanes * BoardSize * BoardSize;
@@ -97,7 +97,7 @@ namespace TheAiAlchemist
             }
 
             // Create the TensorFloat from the NativeArray
-            TensorFloat boardTensor = new TensorFloat(new TensorShape(batchSize, NumBoardPlanes, BoardSize, BoardSize), boardData);
+            Tensor<float> boardTensor = new Tensor<float>(new TensorShape(batchSize, NumBoardPlanes, BoardSize, BoardSize), boardData);
 
             boardData.Dispose(); // Dispose the NativeArray as it's no longer needed
 
@@ -113,7 +113,7 @@ namespace TheAiAlchemist
         /// <param name="currentPlayerInventory">The InventoryComp instance for the current player.</param>
         /// <param name="opponentPlayerInventory">The InventoryComp instance for the opponent player.</param>
         /// <returns>A TensorFloat with shape (1, 6).</returns>
-        public static TensorFloat EncodeInventoryState(IInventoryComp currentPlayerInventory, IInventoryComp opponentPlayerInventory)
+        public static Tensor<float> EncodeInventoryState(IInventoryComp currentPlayerInventory, IInventoryComp opponentPlayerInventory)
         {
             int batchSize = 1;
             var inventoryData = new NativeArray<float>(batchSize * NumInventoryFeatures, Allocator.Temp);
@@ -149,7 +149,7 @@ namespace TheAiAlchemist
                  inventoryData[strengthIndex + NumStrengths] = count / MaxInventoryCount; // Add 3 to the index
             }
 
-            TensorFloat inventoryTensor = new TensorFloat(new TensorShape(batchSize, NumInventoryFeatures), inventoryData);
+            Tensor<float> inventoryTensor = new Tensor<float>(new TensorShape(batchSize, NumInventoryFeatures), inventoryData);
             inventoryData.Dispose();
             return inventoryTensor;
         }

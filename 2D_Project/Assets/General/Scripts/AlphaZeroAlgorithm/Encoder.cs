@@ -30,7 +30,7 @@ namespace AlphaZeroAlgorithm
         /// </summary>
         /// <param name="gameState">The current GameState object.</param>
         /// <returns>A tuple containing the board TensorFloat (1, 7, 3, 3) and the inventory TensorFloat (1, 6).</returns>
-        public (TensorFloat boardTensor, TensorFloat inventoryTensor) Encode(GameState gameState)
+        public (Tensor<float> boardTensor, Tensor<float> inventoryTensor) Encode(GameState gameState)
         {
             int batchSize = 1; // Assuming batch size 1 for a single game state
 
@@ -98,7 +98,7 @@ namespace AlphaZeroAlgorithm
             }
 
             // Create the board TensorFloat
-            TensorFloat boardTensor = new TensorFloat(new TensorShape(batchSize, NumBoardPlanes, BoardSize, BoardSize), boardData);
+            Tensor<float> boardTensor = new Tensor<float>(new TensorShape(batchSize, NumBoardPlanes, BoardSize, BoardSize), boardData);
             boardData.Dispose(); // Dispose the NativeArray
 
             // --- Encode Inventory Tensor (1, 6) ---
@@ -126,7 +126,7 @@ namespace AlphaZeroAlgorithm
             }
 
             // Create the inventory TensorFloat
-            TensorFloat inventoryTensor = new TensorFloat(new TensorShape(batchSize, NumInventoryFeatures), inventoryData);
+            Tensor<float> inventoryTensor = new Tensor<float>(new TensorShape(batchSize, NumInventoryFeatures), inventoryData);
             inventoryData.Dispose(); // Dispose the NativeArray
 
             return (boardTensor, inventoryTensor);
@@ -206,7 +206,7 @@ namespace AlphaZeroAlgorithm
         /// <param name="inventoryTensor">The inventory TensorFloat (1, 6).</param>
         /// <returns>A reconstructed GameState object.</returns>
         /// <exception cref="ArgumentException">Thrown if tensor shapes are incorrect.</exception>
-        public GameState Decode(TensorFloat boardTensor, TensorFloat inventoryTensor)
+        public GameState Decode(Tensor<float> boardTensor, Tensor<float> inventoryTensor)
         {
             // Validate tensor shapes
             if (boardTensor.shape.length != 4 || boardTensor.shape[1] != NumBoardPlanes || boardTensor.shape[2] != BoardSize || boardTensor.shape[3] != BoardSize)
@@ -221,12 +221,12 @@ namespace AlphaZeroAlgorithm
             // Ensure tensors are readable if they were on the GPU
             // In a real async scenario, you'd need to await ReadbackRequestAsync() and call MakeReadable()
             // before accessing the data via ToNativeArray(). Assuming they are readable here for demonstration.
-            boardTensor.MakeReadable();
-            inventoryTensor.MakeReadable();
+            // boardTensor.MakeReadable();
+            // inventoryTensor.MakeReadable();
 
             // Get data as NativeArrays
-            float[] boardData = boardTensor.ToReadOnlyArray();
-            float[] inventoryData = inventoryTensor.ToReadOnlyArray();
+            float[] boardData = boardTensor.DownloadToArray();
+            float[] inventoryData = inventoryTensor.DownloadToArray();
 
 
             // 1. Determine Next Player from Plane 6 (Replicating Python's potential logic inconsistency)

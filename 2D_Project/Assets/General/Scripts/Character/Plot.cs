@@ -1,9 +1,6 @@
-using System;
 using System.Collections.Generic;
 using AlphaZeroAlgorithm;
-using UnityEditor.Localization;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace TheAiAlchemist
 {
@@ -18,10 +15,6 @@ namespace TheAiAlchemist
         [SerializeField] private int col;
         [SerializeField] private IntStorage askUnitIndex;
         [SerializeField] private UnitVisualize unitVisualize;
-        [SerializeField] private Color playerXColor;
-        [SerializeField] private Color playerOColor;
-
-        private Dictionary<Player, Color> colorTank; // TODO: use a unifying game configuration
 
         private int currentStrength;
 
@@ -35,15 +28,6 @@ namespace TheAiAlchemist
         {
             changePlayerChannel.RemoveListener(VisualizeState);
             resetChannel.RemoveListener(ResetPlot);
-        }
-
-        private void Start()
-        {
-            colorTank = new Dictionary<Player, Color>
-            {
-                { Player.X, playerXColor },
-                { Player.O, playerOColor }
-            };
         }
 
         private void OnMouseUpAsButton()
@@ -71,7 +55,7 @@ namespace TheAiAlchemist
                 var checkPoint = plot.Key;
                 if (checkPoint.Row == row && checkPoint.Col == col)
                 {
-                    unitVisualize.Visualize(checkPoint.Strength, colorTank[plot.Value]);
+                    unitVisualize.Visualize(checkPoint.Strength, GameConstants.ColorTank[plot.Value]);
                 }
             }
         }

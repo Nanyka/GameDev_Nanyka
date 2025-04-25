@@ -5,13 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/BotSelectHighlighter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/BotSelectHighlighter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/ISelectionInteract.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/ISelectionInteract.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/PlayerSelectHighlighter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/PlayerSelectHighlighter.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/AlphaZeroAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/AlphaZeroAgent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/Human.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/Human.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/ZeroTreeNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/ZeroTreeNode.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Character/SimpleUnit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/SimpleUnit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Test/TestAiModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Test/TestAiModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.data" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.framework.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.framework.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.loader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.wasm" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.wasm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/AddressablesLink/link.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/AddressablesLink/link.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/WebGL/b2e9fa3584736cb69902f3783b7621c6_monoscripts_181f9cc8c01cdfb91c62d9ff55d84f7b.bundle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/WebGL/defaultlocalgroup_scenes_all_4bee720e250e6012df35874965d9f4e7.bundle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/catalog.bin" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/catalog.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/catalog.hash" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/catalog.hash" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +31,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/TTTNZeroAgent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/FadeChannel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/VoidChannel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/GameManagers/IPlayerBehavior.cs" root0="FORCE_HIGHLIGHTING" />
@@ -32,13 +43,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/UI/AskActionButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/UI/EndGameMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/Utils/Combination.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ml-agents@a66ffbf062/Runtime/Academy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ml-agents@a66ffbf062/Runtime/Actuators/ActuatorDiscreteActionMask.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ml-agents@a66ffbf062/Runtime/Actuators/ActuatorManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ml-agents@a66ffbf062/Runtime/Actuators/IDiscreteActionMask.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ml-agents@a66ffbf062/Runtime/Agent.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ml-agents@a66ffbf062/Runtime/Sensors/VectorSensor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_InputField.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ml-agents/Runtime/Inference/ApplierImpl.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.sentis/Runtime/Core/Internals/Debug.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Learn--ScriptableObjects/UOP1_Project/Assets/Scripts/Events/ScriptableObjects/VoidEventChannelSO.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../TestMLAgents/Assets/MAIN_LOT_Turnbase/Managers/Scripts/Utils/PointingChecker.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -76,7 +82,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../Game Unity/UnityEditor/2022.3.17f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../Game Unity/UnityEditor/6000.0.0f1/Unity.app/Contents/MacOS/Unity" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath $PROJECT_DIR$ -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -84,7 +90,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../Game Unity/UnityEditor/2022.3.17f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../Game Unity/UnityEditor/6000.0.0f1/Unity.app/Contents/MacOS/Unity" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath $PROJECT_DIR$ -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -176,6 +182,7 @@
       <workItem from="1745478481779" duration="2547000" />
       <workItem from="1745508937706" duration="9097000" />
       <workItem from="1745556721420" duration="3951000" />
+      <workItem from="1745598564035" duration="3744000" />
     </task>
     <servers />
   </component>
