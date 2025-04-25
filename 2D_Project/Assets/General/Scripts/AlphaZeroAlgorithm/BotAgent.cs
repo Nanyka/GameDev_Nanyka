@@ -8,15 +8,15 @@ namespace AlphaZeroAlgorithm
     public class BotAgent : IAgent
     {
         private Model _runtimeModel;
-        private IWorker _worker;
+        private Worker _worker;
         private Encoder _encoder;
 
         public BotAgent(ModelAsset model)
         {
             _encoder = new Encoder();
             _runtimeModel = ModelLoader.Load(model);
-            _worker = WorkerFactory.CreateWorker(BackendType.CPU, _runtimeModel);
-            
+            _worker = new Worker(_runtimeModel, BackendType.CPU);
+
         }
 
         public async Task<Move> SelectMove(GameState gameState)
@@ -25,22 +25,23 @@ namespace AlphaZeroAlgorithm
             string input2Name = _runtimeModel.inputs[1].name;
             var encodedInputs = _encoder.Encode(gameState);
             
-            var inputs = new Dictionary<string, Tensor>()
-            {
-                { input1Name, encodedInputs.boardTensor },
-                { input2Name, encodedInputs.inventoryTensor }
-            };
-            _worker.Execute(inputs);
+            // var inputs = new Dictionary<string, Tensor>()
+            // {
+            //     { input1Name, encodedInputs.boardTensor },
+            //     { input2Name, encodedInputs.inventoryTensor }
+            // };
+            var inputs = new[] { encodedInputs.boardTensor, encodedInputs.inventoryTensor };
+            _worker.Schedule(inputs);
             
-            string output2Name = _runtimeModel.outputs[1]; 
+            string output2Name = _runtimeModel.outputs[1].name; 
             
-            TensorFloat output1 = _worker.PeekOutput() as TensorFloat;
-            TensorFloat output2 = _worker.PeekOutput(output2Name) as TensorFloat;
+            Tensor<float> output1 = _worker.PeekOutput() as Tensor<float>;
+            Tensor<float> output2 = _worker.PeekOutput(output2Name) as Tensor<float>;
 
             var nextMove = Move.Resign;
             if (output1 != null)
             {
-                var maxMoveIndex = ArgMax(output1.ToReadOnlyArray());
+                var maxMoveIndex = ArgMax(output1.DownloadToArray());
                 nextMove = _encoder.DecodeMoveIndex(maxMoveIndex);
             }
             
@@ -65,22 +66,24 @@ namespace AlphaZeroAlgorithm
             string input2Name = _runtimeModel.inputs[1].name;
             var encodedInputs = _encoder.Encode(gameState);
             
-            var inputs = new Dictionary<string, Tensor>()
-            {
-                { input1Name, encodedInputs.boardTensor },
-                { input2Name, encodedInputs.inventoryTensor }
-            };
-            _worker.Execute(inputs);
+            // var inputs = new Dictionary<string, Tensor>()
+            // {
+            //     { input1Name, encodedInputs.boardTensor },
+            //     { input2Name, encodedInputs.inventoryTensor }
+            // };
+            var inputs = new[] { encodedInputs.boardTensor, encodedInputs.inventoryTensor };
+
+            _worker.Schedule(inputs);
             
-            string output2Name = _runtimeModel.outputs[1]; 
+            string output2Name = _runtimeModel.outputs[1].name; 
             
-            TensorFloat output1 = _worker.PeekOutput() as TensorFloat; // Gets the first output by default
-            TensorFloat output2 = _worker.PeekOutput(output2Name) as TensorFloat; // Get by name for clarity/safety
+            Tensor<float> output1 = _worker.PeekOutput() as Tensor<float>; // Gets the first output by default
+            Tensor<float> output2 = _worker.PeekOutput(output2Name) as Tensor<float>; // Get by name for clarity/safety
             
             await ReadPolicyOutput(output1);
             await ReadValueOutput(output2);
 
-            var maxMoveIndex = ArgMax(output1.ToReadOnlyArray());
+            var maxMoveIndex = ArgMax(output1.DownloadToArray());
             var nextMove = _encoder.DecodeMoveIndex(maxMoveIndex);
             Debug.Log($"Max prior move: {nextMove}");
 
@@ -94,13 +97,13 @@ namespace AlphaZeroAlgorithm
             Debug.Log("Inference complete and resources disposed.");
         }
         
-        private async Task ReadPolicyOutput(TensorFloat output1)
+        private static async Task ReadPolicyOutput(Tensor<float> output1)
         {
-            var returnAction = await output1.ReadbackRequestAsync();
+            var returnAction = await output1.ReadbackAndCloneAsync();
 
-            if (returnAction)
+            if (returnAction != null)
             {
-                output1.MakeReadable();
+                // output1.MakeReadable();
 
                 int output1Size = output1.shape[1]; // Size is the second dimension for (1, N) shape
                 string printPrior = $"Output 1 Data (first 5 values): ";
@@ -113,13 +116,13 @@ namespace AlphaZeroAlgorithm
             }
         }
         
-        private async Task ReadValueOutput(TensorFloat output2)
+        private async Task ReadValueOutput(Tensor<float> output2)
         {
-            var returnValue = await output2.ReadbackRequestAsync();
+            var returnValue = await output2.ReadbackAndCloneAsync();
 
-            if (returnValue)
+            if (returnValue != null)
             {
-                output2.MakeReadable();
+                // output2.MakeReadable();
                 Debug.Log($"Value output: {output2[0]}");
             }
         }

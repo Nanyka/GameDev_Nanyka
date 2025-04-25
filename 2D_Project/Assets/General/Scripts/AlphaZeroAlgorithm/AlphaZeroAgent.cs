@@ -11,7 +11,7 @@ namespace AlphaZeroAlgorithm
     public class AlphaZeroAgent : IAgent
     {
         private Model _model;
-        private IWorker _worker; 
+        private Worker _worker; 
         private Encoder _encoder; 
         private int _numRounds; 
         private float _c;
@@ -36,7 +36,7 @@ namespace AlphaZeroAlgorithm
 
             _encoder = new Encoder();
             _model = ModelLoader.Load(model);
-            _worker = WorkerFactory.CreateWorker(BackendType.CPU, _model);
+            _worker = new Worker(_model, BackendType.CPU);
             _numRounds = roundsPerMove;
             _c = c;
             _printOut = printOut;
@@ -61,7 +61,7 @@ namespace AlphaZeroAlgorithm
                 Debug.Log($"Agent ({gameState.NextPlayer}) thinking... Running MCTS for {_numRounds} rounds.");
 
             // 1. Create the root node for the current game state.
-            ZeroTreeNode root = CreateNode(gameState);
+            ZeroTreeNode root = await CreateNode(gameState);
 
             // 2. Run MCTS simulation rounds
             for (int i = 0; i < _numRounds; i++)
@@ -106,7 +106,7 @@ namespace AlphaZeroAlgorithm
                 }
                 else
                 {
-                    ZeroTreeNode childNode = CreateNode(nextState, move: selectedMove, parent: node);
+                    ZeroTreeNode childNode = await CreateNode(nextState, move: selectedMove, parent: node);
                     value = -1.0f * childNode.Value;
                 }
 
@@ -176,7 +176,7 @@ namespace AlphaZeroAlgorithm
             }
         }
 
-        private ZeroTreeNode CreateNode(GameState gameState, Move move = null, ZeroTreeNode parent = null)
+        private async Task<ZeroTreeNode> CreateNode(GameState gameState, Move move = null, ZeroTreeNode parent = null)
         {
             if (gameState.IsOver())
             {
@@ -204,23 +204,18 @@ namespace AlphaZeroAlgorithm
             string input2Name = _model.inputs[1].name;
             var (stateTensor, invTensor) = _encoder.Encode(gameState);
 
-            TensorFloat modelInputBoard = stateTensor; 
-            TensorFloat modelInputInv = invTensor; 
-
-            var inputs = new Dictionary<string, Tensor>()
-            {
-                { input1Name, modelInputBoard },
-                { input2Name, modelInputInv }
-            };
-
-            _worker.Execute(inputs); 
+            _worker.SetInput(input1Name,stateTensor);
+            _worker.SetInput(input2Name,invTensor);
+            _worker.Schedule(); 
             
-            string output2Name = _model.outputs[1];
-            TensorFloat policyOutput =_worker.PeekOutput() as TensorFloat; 
-            TensorFloat valueOutput = _worker.PeekOutput(output2Name) as TensorFloat;
+            string output2Name = _model.outputs[1].name;
+            Tensor<float> policyOutput =_worker.PeekOutput() as Tensor<float>; 
+            Tensor<float> valueOutput = _worker.PeekOutput(output2Name) as Tensor<float>;
 
-            float[] priorsArray = policyOutput.ToReadOnlyArray();
-            valueOutput.MakeReadable();
+            policyOutput = await policyOutput.ReadbackAndCloneAsync();
+            valueOutput = await valueOutput.ReadbackAndCloneAsync();
+            
+            float[] priorsArray = policyOutput.DownloadToArray();
             float valuePrediction = valueOutput[0];
             
             Dictionary<Move, float> movePriors = new Dictionary<Move, float>();
@@ -230,8 +225,8 @@ namespace AlphaZeroAlgorithm
                 movePriors[decodedMove] = priorsArray[idx];
             }
             
-            modelInputBoard.Dispose();
-            modelInputInv.Dispose();
+            stateTensor.Dispose();
+            invTensor.Dispose();
             policyOutput.Dispose();
             valueOutput.Dispose();
             
