@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AlphaZeroAlgorithm;
 using Unity.Sentis;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -11,9 +12,6 @@ namespace TheAiAlchemist
     public class TestAiModel : MonoBehaviour
     {
         [SerializeField] private ModelAsset runtimeModel;
-        [SerializeField] private GameObject circleObj;
-        [SerializeField] private InventoryComp player1Inventory;
-        [SerializeField] private InventoryComp player2Inventory;
 
         
         static BackendType backendType = BackendType.GPUCompute;
@@ -35,44 +33,34 @@ namespace TheAiAlchemist
             // _worker = WorkerFactory.CreateWorker(backendType, model);
             
             // await CheckModel(model);
-
             await CheckEncoder(model);
+
+            // TODO: Check model prediction: B11 --> C12
+            CheckMCTSAlgorithm();
+        }
+
+        private async Task CheckMCTSAlgorithm()
+        {
+            var botAgent = new AlphaZeroAgent(runtimeModel,51, printOut:true);
+            var gameState = GameSetup.SetupNewGame();
+            gameState = gameState.ApplyMove(new Move(new Point(1,2,1)));
+            gameState = gameState.ApplyMove(new Move(new Point(2,2,3)));
+            gameState = gameState.ApplyMove(new Move(new Point(1,3,2)));
+
+            var selectedMove = await botAgent.SelectMove(gameState);
+            print($"Selected move: {selectedMove}");
         }
 
         private async Task CheckEncoder(Model model)
         {
-            List<ICircleTrait> circlesOnBoard = new List<ICircleTrait>();
-            int currentPlayerId = 2;
-            GameObject obj = Instantiate(circleObj);
+            var encoder = new Encoder();
+            var gameState = GameSetup.SetupNewGame();
+            gameState = gameState.ApplyMove(new Move(new Point(1,2,1)));
+            gameState = gameState.ApplyMove(new Move(new Point(2,2,3)));
+            gameState = gameState.ApplyMove(new Move(new Point(1,3,2)));
+            Debug.Log(gameState.ToString());
 
-            if (obj.TryGetComponent(out ICircleTrait circle))
-            {
-                circlesOnBoard.Add(circle);
-                circle.Init(new Vector3(0,0,0), 1, 1);
-            }
-
-            var stateInput = GameEncoder.EncodeBoardState(circlesOnBoard, currentPlayerId);
-            var printState = "State: \n";
-            for (int i = 0; i < stateInput.ToReadOnlyArray().Length; i++)
-            {
-                if (i % 3 == 0)
-                    printState += $"\n{stateInput.ToReadOnlyArray()[i]} ";
-                else
-                    printState += $"{stateInput.ToReadOnlyArray()[i]} ";
-            }
-            Debug.Log(printState);
-            
-            player1Inventory.ResetInventory();
-            player2Inventory.ResetInventory();
-            player2Inventory.Withdraw(1);
-            
-            var inventoryInput = GameEncoder.EncodeInventoryState(player1Inventory, 
-                player2Inventory);
-
-            var printInv = "Inventory: ";
-            foreach (var item in inventoryInput.ToReadOnlyArray())
-                printInv += $"{item}, ";
-            Debug.Log(printInv);
+            var (stateInput, inventoryInput) = encoder.Encode(gameState);
             
             _worker = WorkerFactory.CreateWorker(backendType, model);
             Debug.Log($"Created engine with backend: {_worker.GetBackend()}");
@@ -88,7 +76,7 @@ namespace TheAiAlchemist
             _worker.Execute(inputs);
             
             string output1Name = model.outputs[0]; 
-            string output2Name = model.outputs[1]; 
+            string output2Name = model.outputs[1];
             
             TensorFloat output1 = _worker.PeekOutput() as TensorFloat; // Gets the first output by default
             TensorFloat output2 = _worker.PeekOutput(output2Name) as TensorFloat; // Get by name for clarity/safety

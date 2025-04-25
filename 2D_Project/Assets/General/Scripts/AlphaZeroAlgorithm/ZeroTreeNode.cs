@@ -44,23 +44,16 @@ namespace AlphaZeroAlgorithm
 
             foreach (var legalMove in legalMoves)
             {
-                // Find the prior probability for this legal move from the network's output priors
-                // The 'priors' dictionary contains probabilities for *all* possible moves (27),
-                // but we only create branches for the legal ones from the current state.
                 if (priors.TryGetValue(legalMove, out float priorProbability))
                 {
                     Branches[legalMove] = new Branch(priorProbability);
                 }
                 else
                 {
-                    // This shouldn't happen if the model outputs cover all possible moves (27)
-                    // and LegalMoves correctly identifies valid moves from those possibilities.
                     Debug.LogWarning($"ZeroTreeNode: No prior probability found for legal move {legalMove}. Using prior 0.");
                     Branches[legalMove] = new Branch(0f); // Use 0 prior as fallback
                 }
             }
-
-            // Debug.Log($"Node init from {(lastMove.HasValue ? lastMove.Value.ToString() : "Root")}, branches: {Branches.Count}");
         }
 
         /// <summary>
@@ -120,33 +113,14 @@ namespace AlphaZeroAlgorithm
         /// <param name="value">The value to backpropagate (from the perspective of the player *whose turn it was at this node*).</param>
         public void RecordVisit(Move move, float value)
         {
-            TotalVisitCount++; // Increment total visits to this node
-
-            // Find the branch corresponding to the move that led *to* this node from the parent.
-            // NOTE: The Python code record_visit(self, move, value) seems to update
-            // the branch *from* this node that was just selected.
-            // The standard AlphaGo Zero backpropagation updates the edge *leading into* the current node.
-            // Let's adjust the C# record_visit to update the branch *leading into* this node,
-            // which is represented by self.LastMove in the parent node's branches.
-
-            // To backpropagate correctly up the tree, record_visit is typically called on the *parent* node,
-            // updating the branch corresponding to the move that leads *to* the current node.
-
-            // Let's rename this method or clarify its usage.
-            // A more standard MCTS implementation would call record_visit on the parent.
-            // The Python code's record_visit(self, move, value) implies updating a branch *from* self.
-            // This seems inconsistent with standard backpropagation.
-
-            // Let's follow the Python logic as closely as possible, assuming record_visit(move, value)
-            // is called on the node that was just *visited* and 'move' is the move *taken from* that node
-            // during the Selection step that led further down. This seems strange for value propagation.
-
-            // Let's assume the Python record_visit(move, value) intends to update the branch *move* originating *from* this node.
-            // The value is from the perspective of the player whose turn it was *at the node where move was selected*.
+            TotalVisitCount++;
             if (Branches.TryGetValue(move, out Branch branch))
             {
                 branch.VisitCount++;
                 branch.TotalValue += value;
+                
+                if (move.Point.Row == 3 && move.Point.Col == 1 && move.Point.Strength == 1)
+                    Debug.Log($"Update value of {move}: {value}");
             }
             else
             {
@@ -189,7 +163,7 @@ namespace AlphaZeroAlgorithm
         /// <returns>The expected value.</returns>
         public float GetExpectedValue(Move move)
         {
-            if (!Branches.TryGetValue(move, out Branch branch)) return 0.0f; // Should not happen
+            if (!Branches.TryGetValue(move, out Branch branch)) return 0.0f;
             if (branch.VisitCount == 0) return 0.0f;
             return branch.TotalValue / branch.VisitCount;
         }

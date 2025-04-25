@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using Unity.Sentis; 
 using UnityEngine; 
 using System.Threading.Tasks; 
@@ -65,18 +66,26 @@ namespace AlphaZeroAlgorithm
             // 2. Run MCTS simulation rounds
             for (int i = 0; i < _numRounds; i++)
             {
+                Debug.Log($"----- ROUND ({i}) -----");
+
                 ZeroTreeNode node = root;
                 Move selectedMove = SelectBranch(node);
 
-                // List<(ZeroTreeNode node, Move move)> path = new List<(ZeroTreeNode node, Move move)>();
-                // path.Add((node, selectedMove));
 
+                int printPeriod = 0;
                 while (node.HasChild(selectedMove)) // While we can move down the tree (branch is expanded)
                 {
+                    printPeriod++;
                     node = node.GetChild(selectedMove);
+
+
+                    if (printPeriod == 1)
+                        PrintNode(node);
+                    
+                    
                     if (node.State.IsOver()) break;
+                    // Debug.Log($"Travel {selectedMove}: branch length {node.Branches.Count}");
                     selectedMove = SelectBranch(node);
-                    // path.Add((node, selectedMove)); // Add this step to the path
                 }
 
                 GameState currentState = node.State;
@@ -87,9 +96,9 @@ namespace AlphaZeroAlgorithm
                 {
                     var winner = nextState.Winner();
                     if (winner.HasValue && winner.Value == gameState.NextPlayer)
-                        value = 1.0f;
-                    else if (winner.HasValue && winner.Value != gameState.NextPlayer)
                         value = -1.0f;
+                    else if (winner.HasValue && winner.Value != gameState.NextPlayer)
+                        value = 1.0f;
                     else
                         value = 0.0f;
                 }
@@ -113,11 +122,9 @@ namespace AlphaZeroAlgorithm
                     System.Random random = new System.Random();
                     return legalMovesFallback[random.Next(legalMovesFallback.Count)];
                 }
-                else
-                {
-                    Debug.LogWarning("No legal moves available. Resigning.");
-                    return Move.Resign; // If no legal moves, resign
-                }
+
+                Debug.LogWarning("No legal moves available. Resigning.");
+                return Move.Resign; // If no legal moves, resign
             }
 
             var bestBranch = visitedBranches.Aggregate(
@@ -126,8 +133,17 @@ namespace AlphaZeroAlgorithm
             Move finalMove = bestBranch.Key; // The move with the highest visit count
 
             if (_printOut)
+            {
                 Debug.Log($"Agent ({gameState.NextPlayer}) selected move: {finalMove} " +
                           $"(Visits: {bestBranch.Value.VisitCount})");
+                Debug.Log($"Total visit count: {root.TotalVisitCount}");
+            }
+            
+            // foreach (var move in root.GetMoves())
+            // {
+            //     Debug.Log($"{move}: {root.GetPrior(move)}, {root.GetVisitCount(move)}, " +
+            //               $"{root.GetExpectedValue(move)}, {root.GetUctScore(move,_c)}");
+            // }
 
             return finalMove;
         }
@@ -136,8 +152,7 @@ namespace AlphaZeroAlgorithm
         {
             throw new NotImplementedException();
         }
-
-
+        
         /// <summary>
         /// Selects a branch (move) from a node based on the UCT score.
         /// </summary>
@@ -223,11 +238,73 @@ namespace AlphaZeroAlgorithm
             valueOutput.Dispose();
             
             ZeroTreeNode newNode = new ZeroTreeNode(gameState, valuePrediction, movePriors, parent, move);
+            
+            // foreach (var pair in newNode.Branches)
+            // {
+            //     Debug.Log($"Check legal move: {pair.Key}");
+            // }
 
             if (parent != null)
                 parent.AddChild(move, newNode); 
 
             return newNode;
+        }
+        
+        private void PrintNode(ZeroTreeNode nodeToVisualize)
+        {
+            // Use a StringBuilder to build the complete output string
+            StringBuilder outputStringBuilder = new StringBuilder();
+
+            outputStringBuilder.AppendLine("--- MCTS Root Node Statistics (by Strength and Position) ---");
+
+            // Iterate through each possible strength (1, 2, 3)
+            for (int strength = 1; strength <= GameConstants.NumStrengths; strength++)
+            {
+                outputStringBuilder.AppendLine($"\nStr {strength}:"); // Append strength header
+                outputStringBuilder.AppendLine("  A      B      C"); // Append column headers
+
+                // Iterate through rows (1, 2, 3)
+                for (int row = 1; row <= GameConstants.BoardSize; row++)
+                {
+                    string rowPrefix = $"{row} "; // Start the row output with the row number
+                    List<string> cells = new List<string>(); // To hold the formatted strings for each column
+
+                    // Iterate through columns (1, 2, 3)
+                    for (int col = 1; col <= GameConstants.BoardSize; col++)
+                    {
+                        // Construct the Move object for this specific strength and position
+                        Point possiblePoint = new Point(row, col, strength);
+                        Move possibleMove = new Move(possiblePoint); // Move constructor takes Point
+
+                        // Check if this move exists as a branch in the node's legal moves
+                        // Using TryGetValue is efficient as it avoids throwing an exception if the key doesn't exist
+                        if (nodeToVisualize.Branches.TryGetValue(possibleMove, out Branch branch))
+                        {
+                            // If the branch exists, get its statistics
+                            float expectedValue = nodeToVisualize.GetExpectedValue(possibleMove);
+                            int visitCount = nodeToVisualize.GetVisitCount(possibleMove);
+                            float prior = nodeToVisualize.GetPrior(possibleMove); // Prior is in Branch directly
+                            float uctScore = nodeToVisualize.GetUctScore(possibleMove, _c); // Calculate UCT if needed
+
+                            // Format the cell string similar to (ExpectedValue), (VisitCount)
+                            // Using F4 for 4 decimal places for float values
+                            cells.Add($"({prior:F4}),({visitCount}),({expectedValue:F4}),({uctScore:F4})");
+                        }
+                        else
+                        {
+                            // If the move is not a legal move from this node (no branch), print zeros
+                            cells.Add($"(0.0000),(00),(0.0000),(0.0000)");
+                        }
+                    }
+
+                    // Join the formatted cell strings with a separator and append to the row output
+                    rowPrefix += string.Join("|", cells);
+                    outputStringBuilder.AppendLine(rowPrefix); // Append the completed row string
+                }
+            }
+
+            outputStringBuilder.AppendLine("---------------------------------------------------");
+            Debug.Log(outputStringBuilder.ToString());
         }
     }
 }

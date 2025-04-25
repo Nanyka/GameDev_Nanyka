@@ -819,7 +819,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &928522267
 Transform:
   m_ObjectHideFlags: 0
@@ -850,9 +850,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runtimeModel: {fileID: 5022602860645237092, guid: 981ff0cf849e74e0fab665562df144c3, type: 3}
-  circleObj: {fileID: 5564855977137456209, guid: fb0b582ff88c148b689a49330f2859c7, type: 3}
-  player1Inventory: {fileID: 1536077013}
-  player2Inventory: {fileID: 412320191}
 --- !u!1 &1536077011
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,7 +1199,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2087213095
 Transform:
   m_ObjectHideFlags: 0
