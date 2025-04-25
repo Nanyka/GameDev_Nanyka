@@ -92,7 +92,7 @@ namespace AlphaZeroAlgorithm
         // Implementation of the IAgent interface method
         public async Task<Move> SelectMove(GameState gameState)
         {
-            Debug.Log("Wait for human playing from input...");
+            // Debug.Log("Wait for human playing from input...");
             return null;
         }
 

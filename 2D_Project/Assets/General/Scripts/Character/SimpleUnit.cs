@@ -39,13 +39,13 @@ namespace TheAiAlchemist
         
         private void Start()
         {
-            indexText.text = (mUnitIndex).ToString();
             ResetUnitButton();
         }
 
         private void ResetUnitButton()
         {
             remainAmount = amountOfItem;
+            indexText.text = $"{mUnitIndex} ({remainAmount})";
             mButton.interactable = true;
         }
 
@@ -61,6 +61,7 @@ namespace TheAiAlchemist
         {
             var inventory = currentState.GetValue().PlayerInventories[forPlayer];
             remainAmount = inventory.GetInventoryDictionary()[mUnitIndex];
+            indexText.text = $"{mUnitIndex} ({remainAmount})";
             if (remainAmount <= 0)
             {
                 mButton.interactable = false;

@@ -41,7 +41,7 @@ namespace TheAiAlchemist
 
         private async Task CheckMCTSAlgorithm()
         {
-            var botAgent = new AlphaZeroAgent(runtimeModel,51, printOut:true);
+            var botAgent = new AlphaZeroAgent(runtimeModel,52, printOut:true);
             var gameState = GameSetup.SetupNewGame();
             gameState = gameState.ApplyMove(new Move(new Point(1,2,1)));
             gameState = gameState.ApplyMove(new Move(new Point(2,2,3)));

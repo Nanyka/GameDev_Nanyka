@@ -7,9 +7,10 @@
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Test/TestAIModel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Test/TestAIModel.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/AlphaZeroAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/AlphaZeroAgent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/Human.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/Human.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/ZeroTreeNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/ZeroTreeNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Character/SimpleUnit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/SimpleUnit.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Test/TestAiModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Test/TestAiModel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -174,7 +175,7 @@
       <workItem from="1745463529220" duration="4053000" />
       <workItem from="1745478481779" duration="2547000" />
       <workItem from="1745508937706" duration="9097000" />
-      <workItem from="1745556721420" duration="1598000" />
+      <workItem from="1745556721420" duration="3951000" />
     </task>
     <servers />
   </component>

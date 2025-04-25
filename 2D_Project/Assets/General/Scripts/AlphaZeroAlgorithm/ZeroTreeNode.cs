@@ -119,8 +119,10 @@ namespace AlphaZeroAlgorithm
                 branch.VisitCount++;
                 branch.TotalValue += value;
                 
-                if (move.Point.Row == 3 && move.Point.Col == 1 && move.Point.Strength == 1)
-                    Debug.Log($"Update value of {move}: {value}");
+                // if (move.Point.Row == 1 && move.Point.Col == 3 && move.Point.Strength == 3)
+                //     Debug.Log($"Update value of {move}: {value}/{branch.TotalValue} , " +
+                //               $"visit count {branch.VisitCount}" +
+                //               $"--> expected value: {branch.TotalValue/branch.VisitCount}");
             }
             else
             {

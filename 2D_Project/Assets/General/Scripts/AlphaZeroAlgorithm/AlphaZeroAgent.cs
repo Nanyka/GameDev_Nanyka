@@ -66,7 +66,7 @@ namespace AlphaZeroAlgorithm
             // 2. Run MCTS simulation rounds
             for (int i = 0; i < _numRounds; i++)
             {
-                Debug.Log($"----- ROUND ({i}) -----");
+                // Debug.Log($"----- ROUND ({i}) -----");
 
                 ZeroTreeNode node = root;
                 Move selectedMove = SelectBranch(node);
@@ -79,8 +79,8 @@ namespace AlphaZeroAlgorithm
                     node = node.GetChild(selectedMove);
 
 
-                    if (printPeriod == 1)
-                        PrintNode(node);
+                    // if (printPeriod == 1)
+                    //     PrintNode(node);
                     
                     
                     if (node.State.IsOver()) break;
@@ -95,12 +95,14 @@ namespace AlphaZeroAlgorithm
                 if (nextState.IsOver())
                 {
                     var winner = nextState.Winner();
-                    if (winner.HasValue && winner.Value == gameState.NextPlayer)
-                        value = -1.0f;
-                    else if (winner.HasValue && winner.Value != gameState.NextPlayer)
-                        value = 1.0f;
-                    else
-                        value = 0.0f;
+                    value = winner.HasValue? 1 : 0;
+                    
+                    // if (winner.HasValue && winner.Value == gameState.NextPlayer)
+                    //     value = -1.0f;
+                    // else if (winner.HasValue && winner.Value != gameState.NextPlayer)
+                    //     value = 1.0f;
+                    // else
+                    //     value = 0.0f;
                 }
                 else
                 {
@@ -139,11 +141,7 @@ namespace AlphaZeroAlgorithm
                 Debug.Log($"Total visit count: {root.TotalVisitCount}");
             }
             
-            // foreach (var move in root.GetMoves())
-            // {
-            //     Debug.Log($"{move}: {root.GetPrior(move)}, {root.GetVisitCount(move)}, " +
-            //               $"{root.GetExpectedValue(move)}, {root.GetUctScore(move,_c)}");
-            // }
+            // PrintNode(root);
 
             return finalMove;
         }
