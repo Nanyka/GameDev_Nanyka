@@ -12,6 +12,8 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
 	[SerializeField] private GameSceneSO _gameplayScene = default;
+	[SerializeField] private GameSceneSO _tutorialScene = default;
+
 	// [SerializeField] private InputReaderSO _inputReader = default;
 
 	[Header("Listening to")]
@@ -115,7 +117,7 @@ public class SceneLoader : MonoBehaviour
 		//In case we are coming from the main menu, we need to load the Gameplay manager scene first
 		if (!_gameplayManagerSceneInstance.Scene.isLoaded)
 		{
-			_gameplayManagerLoadingOpHandle = _gameplayScene.sceneReference.LoadSceneAsync(LoadSceneMode.Additive, true);
+			_gameplayManagerLoadingOpHandle = _tutorialScene.sceneReference.LoadSceneAsync(LoadSceneMode.Additive, true);
 			_gameplayManagerLoadingOpHandle.Completed += OnGameplayManagersLoaded;
 		}
 		else
@@ -217,7 +219,7 @@ public class SceneLoader : MonoBehaviour
 
 	private void StartGameplay()
 	{
-		_onSceneReady.ExecuteChannel(); //Spawn system will spawn the PigChef in a gameplay scene
+		_onSceneReady.ExecuteChannel(); //Spawn system will spawn a gameplay scene
 		_activateInputReader.ExecuteChannel(); // Assign main camera on InputManager and enable InputReader
 	}
 
