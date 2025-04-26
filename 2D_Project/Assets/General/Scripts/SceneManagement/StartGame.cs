@@ -12,31 +12,35 @@ namespace TheAiAlchemist
 /// </summary>
 public class StartGame : MonoBehaviour
 {
-    [SerializeField] private GameSceneSO _locationsToLoad;
+    [SerializeField] private GameSceneSO locationsToLoad;
+    [SerializeField] private GameSceneSO tutorialToLoad;
     // [SerializeField] private SaveSystem _saveSystem = default;
-    [SerializeField] private bool _showLoadScreen = default;
+    [SerializeField] private bool showLoadScreen = default;
 
-    [Header("Broadcasting on")] [SerializeField]
-    private LoadEventChannel _loadLocation = default;
+    [Header("Broadcasting on")] 
+    [SerializeField] private LoadEventChannel loadLocation = default;
+    [SerializeField] private LoadEventChannel loadTutorial = default;
 
-    [Header("Listening to")] [SerializeField]
-    private VoidChannel _onNewGameButton = default;
-
-    [SerializeField] private VoidChannel _onContinueButton = default;
+    [Header("Listening to")] 
+    [SerializeField] private VoidChannel onNewGameButton = default;
+    [SerializeField] private VoidChannel onContinueButton = default;
+    [SerializeField] private VoidChannel onTutorialButton = default;
 
     // [SerializeField] private bool hasSaveData;
 
     private void Start()
     {
         // _hasSaveData = _saveSystem.LoadSaveDataFromDisk();
-        _onNewGameButton.AddListener(StartNewGame);
-        _onContinueButton.AddListener(ContinuePreviousGame);
+        onNewGameButton.AddListener(StartNewGame);
+        onContinueButton.AddListener(ContinuePreviousGame);
+        onTutorialButton.AddListener(TutorialGame);
     }
 
     private void OnDestroy()
     {
-        _onNewGameButton.RemoveListener(StartNewGame);
-        _onContinueButton.RemoveListener(ContinuePreviousGame);
+        onNewGameButton.RemoveListener(StartNewGame);
+        onContinueButton.RemoveListener(ContinuePreviousGame);
+        onTutorialButton.RemoveListener(TutorialGame);
     }
 
     private void StartNewGame()
@@ -44,17 +48,22 @@ public class StartGame : MonoBehaviour
         // hasSaveData = false;
         // _saveSystem.WriteEmptySaveFile();
         // _saveSystem.SetNewGameData();
-        _loadLocation.RaiseEvent(_locationsToLoad, _showLoadScreen);
+        loadLocation.RaiseEvent(locationsToLoad, showLoadScreen);
     }
-
-    private void ContinuePreviousGame()
+    
+    private void TutorialGame()
     {
-        // StartCoroutine(LoadSaveGame());
+        loadTutorial.RaiseEvent(tutorialToLoad, showLoadScreen);
     }
 
     private void OnResetSaveDataPress()
     {
         // hasSaveData = false;
+    }
+
+    private void ContinuePreviousGame()
+    {
+        // StartCoroutine(LoadSaveGame());
     }
 
     // private IEnumerator LoadSaveGame()

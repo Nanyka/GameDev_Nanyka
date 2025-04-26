@@ -691,6 +691,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameplayScene: {fileID: 11400000, guid: 43d4f69764e414fb7b0720adfd6f0d33, type: 2}
   _loadLocation: {fileID: 11400000, guid: 15a05c2c1d40540bebcb684d25374e08, type: 2}
+  _loadTutorial: {fileID: 11400000, guid: ff4f1ea0fc5504770ae449f6e446b338, type: 2}
   _loadMenu: {fileID: 11400000, guid: 202aa3967ce7d43dfb3b9cc7700c9f53, type: 2}
   _coldStartupLocation: {fileID: 11400000, guid: b0f1398eb1d6a428daee31f0e0fbe9c2, type: 2}
   _toggleLoadingScreen: {fileID: 11400000, guid: d07f5a3a1285343f2858668d333b644d, type: 2}
