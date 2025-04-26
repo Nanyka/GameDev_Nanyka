@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 10
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -44,7 +44,6 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 12
-  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -67,9 +66,6 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
-    m_FinalGather: 0
-    m_FinalGatherFiltering: 1
-    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 1
@@ -210,20 +206,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 610459580}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dcf69f82f8783049ab749ba8f527f89, type: 3}
+  m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pool: {fileID: 11400000, guid: 4b2ed98efabac4446a90c61932acf933, type: 2}
-  _initialSize: 10
-  _SFXEventChannel: {fileID: 11400000, guid: c3c796b7c31ad3647a3fbae42e74764e, type: 2}
-  _musicEventChannel: {fileID: 11400000, guid: 51854f522e1d88442a90b878b27ea839, type: 2}
-  _SFXVolumeEventChannel: {fileID: 11400000, guid: 4f26356559fe2254fb6d1f23601bd896, type: 2}
-  _musicVolumeEventChannel: {fileID: 11400000, guid: 13e4f5dfe966e1447ba01306e125c0c0, type: 2}
-  _masterVolumeEventChannel: {fileID: 11400000, guid: ac033eaf5f8c5154e8df7c10fe3755ad, type: 2}
-  audioMixer: {fileID: 24100000, guid: 548a7f001ca6d3d4cb67c8edf84f62a3, type: 2}
-  _masterVolume: 1
-  _musicVolume: 0.8
-  _sfxVolume: 1
 --- !u!114 &610459583
 MonoBehaviour:
   m_ObjectHideFlags: 0

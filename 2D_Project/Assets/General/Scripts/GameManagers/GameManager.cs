@@ -11,14 +11,15 @@ namespace TheAiAlchemist
 {
     public class GameManager : MonoBehaviour
     {
-        // [SerializeField] private TMP_InputField inputField;
-        [SerializeField] private ModelAsset modelAsset;
         [SerializeField] private GameStateStorage gameStateStorage;
         [SerializeField] private IntStorage askUnitIndex;
         [SerializeField] private VoidChannel changePlayerChannel;
         [SerializeField] private BoolChannel endGameChannel;
         [SerializeField] private MoveChannel humanMoveChannel;
         [SerializeField] private VoidChannel resetChannel;
+        [SerializeField] private AddressableManagerSO addressableManager;
+        [FormerlySerializedAs("modelName")] [SerializeField] private string modelAddress;
+
 
         private IAgent _humanAgent;
         private AlphaZeroAgent _botAgent;
@@ -35,17 +36,26 @@ namespace TheAiAlchemist
         {
             humanMoveChannel.RemoveListener(HumanPlayAMove);
             resetChannel.RemoveListener(ResetGame);
+            _botAgent.DisableAiElements();
         }
 
-        private void Start()
+        private async void Start()
         {
-            Init();
+            await Init();
         }
 
-        private void Init()
+        private async Task Init()
         {
             _humanAgent = new AlphaZeroAlgorithm.Human();
+            
+            var modelAsset = await addressableManager.GetModel(modelAddress);
+            if (modelAsset == null)
+            {
+                Debug.Log("The game fail to load model!!!");
+                return;
+            }
             _botAgent = new AlphaZeroAgent(modelAsset,384);
+            
             _players = new Dictionary<Player, IAgent>
             {
                 { Player.X, _humanAgent },

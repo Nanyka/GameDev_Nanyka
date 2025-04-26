@@ -1234,7 +1234,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputField: {fileID: 422763798}
   gameStateText: {fileID: 1900695048}
-  modelAsset: {fileID: 5022602860645237092, guid: 981ff0cf849e74e0fab665562df144c3, type: 3}
+  addressableManager: {fileID: 11400000, guid: 0c0284765747c49f8874c5e989378ca7, type: 2}
+  modelAddress: Assets/General/AiModels/tttn_model_dataset_training_v5_9.onnx
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

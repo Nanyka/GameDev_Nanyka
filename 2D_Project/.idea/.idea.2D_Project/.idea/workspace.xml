@@ -5,9 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/General/AiModels/SentisModel_v5_9.sentis" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/AiModels/SentisModel_v5_9.sentis.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Model Assets.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Model Assets.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/ProfileDataSourceSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/ProfileDataSourceSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/PersistentManagers.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/PersistentManagers.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Test/TestAIModel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Test/TestAIModel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/AlphaZeroAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/AlphaZeroAgent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/LoadEventChannel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/LoadEventChannel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Test/TestAlphaZero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Test/TestAlphaZero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.data" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.framework.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.framework.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.loader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.wasm" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.wasm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/AddressablesLink/link.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/AddressablesLink/link.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/WebGL/b2e9fa3584736cb69902f3783b7621c6_monoscripts_46a274bf0214b1abfe12beeb858838be.bundle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/WebGL/defaultlocalgroup_scenes_all_355989f6e2c240a6328a7125978f1e4b.bundle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/catalog.bin" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/catalog.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/catalog.hash" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/catalog.hash" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebGL Builds/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +37,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/BackendSO/AddressableManagerSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/FadeChannel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/VoidChannel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/GameManagers/IPlayerBehavior.cs" root0="FORCE_HIGHLIGHTING" />
@@ -27,6 +50,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/UI/AskActionButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/UI/EndGameMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/Utils/Combination.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables/Runtime/AssetReference.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ml-agents/Runtime/Inference/ApplierImpl.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.sentis/Runtime/Core/Internals/Debug.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Learn--ScriptableObjects/UOP1_Project/Assets/Scripts/Events/ScriptableObjects/VoidEventChannelSO.cs" root0="SKIP_HIGHLIGHTING" />
@@ -167,7 +191,7 @@
       <workItem from="1745508937706" duration="9097000" />
       <workItem from="1745556721420" duration="3951000" />
       <workItem from="1745598564035" duration="3744000" />
-      <workItem from="1745636746812" duration="1079000" />
+      <workItem from="1745636746812" duration="5049000" />
     </task>
     <servers />
   </component>

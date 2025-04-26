@@ -163,13 +163,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29f5c1b28e964066a4ea18923667a5d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modelAsset: {fileID: 5022602860645237092, guid: 981ff0cf849e74e0fab665562df144c3, type: 3}
   gameStateStorage: {fileID: 11400000, guid: ed2e312f50fbd4ff5a218f51fc91f438, type: 2}
   askUnitIndex: {fileID: 11400000, guid: 123bae78151b34f83ad2d49766ac0c22, type: 2}
   changePlayerChannel: {fileID: 11400000, guid: f28658ecf3d9946e59e23c3659afaea8, type: 2}
   endGameChannel: {fileID: 11400000, guid: d1a037fe1d9e9452996bdbc29f4afccd, type: 2}
   humanMoveChannel: {fileID: 11400000, guid: 09fd83887c8134a6fbbb08efccd82cc3, type: 2}
   resetChannel: {fileID: 11400000, guid: c4ab14a3f61c34cc297c58192f1e27e3, type: 2}
+  addressableManager: {fileID: 11400000, guid: 0c0284765747c49f8874c5e989378ca7, type: 2}
+  modelAddress: Assets/General/AiModels/tttn_model_dataset_training_v5_9.onnx
 --- !u!1 &252316315
 GameObject:
   m_ObjectHideFlags: 0

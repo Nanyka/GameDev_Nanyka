@@ -15,7 +15,9 @@ namespace TheAiAlchemist
     {
         [SerializeField] private TMP_InputField inputField;
         [SerializeField] private TextMeshProUGUI gameStateText;
-        [SerializeField] private ModelAsset modelAsset;
+        // [SerializeField] private ModelAsset modelAsset;
+        [SerializeField] private AddressableManagerSO addressableManager;
+        [SerializeField] private string modelAddress;
         
         private IAgent _humanAgent;
         private AlphaZeroAgent _botAgent;
@@ -30,7 +32,16 @@ namespace TheAiAlchemist
         private async Task Init()
         {
             _humanAgent = new AlphaZeroAlgorithm.Human();
+
+            var modelAsset = await addressableManager.GetModel(modelAddress);
+            if (modelAsset == null)
+            {
+                Debug.Log("The game fail to load model!!!");
+                return;
+            }
+            
             _botAgent = new AlphaZeroAgent(modelAsset,384);
+            
             _players = new Dictionary<Player, IAgent>
             {
                 { Player.X, _humanAgent },

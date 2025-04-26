@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 1909daa32556b491187c47d482d7b09f
   m_currentHash:
     serializedVersion: 2
-    Hash: 00000000000000000000000000000000
+    Hash: ea344ac1d5f84b7a74cbcf14ce158be2
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_CatalogRequestsTimeout: 0
@@ -82,6 +82,8 @@ MonoBehaviour:
         m_Value: 'ServerData/[BuildTarget]'
       - m_Id: 57500b53df48d44c6875d67692efa9c0
         m_Value: 'http://[PrivateIpAddress]:[HostingServicePort]'
+      - m_Id: 1c7c3c032eb4d44a2a88a7c96bcf8e44
+        m_Value: 
     - m_InheritedParent: 
       m_Id: 838ae74351a3148bc8e39eb7bb708b91
       m_ProfileName: TestProfile
@@ -93,9 +95,11 @@ MonoBehaviour:
       - m_Id: ab7139160f8a3408e8da46de3a710c48
         m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
       - m_Id: 6b51f5982d2dd4e5d9bffd5161aa0507
-        m_Value: 'ServerData/[BuildTarget]'
+        m_Value: CCDBuildData/ManagedEnvironment/ManagedBucket/ManagedBadge
       - m_Id: 57500b53df48d44c6875d67692efa9c0
-        m_Value: 'http://[PrivateIpAddress]:[HostingServicePort]'
+        m_Value: https://bc1d770f-a7c9-4505-bcd8-1e781643e202.client-api.unity3dusercontent.com/client_api/v1/environments/{CcdManager.EnvironmentName}/buckets/{CcdManager.BucketId}/release_by_badge/{CcdManager.Badge}/entry_by_path/content/?path=
+      - m_Id: 1c7c3c032eb4d44a2a88a7c96bcf8e44
+        m_Value: production
     m_ProfileEntryNames:
     - m_Id: 92c386f01c9c04bb79cb5ad1a246de5b
       m_Name: BuildTarget
@@ -112,10 +116,14 @@ MonoBehaviour:
     - m_Id: 57500b53df48d44c6875d67692efa9c0
       m_Name: Remote.LoadPath
       m_InlineUsage: 0
+    - m_Id: 1c7c3c032eb4d44a2a88a7c96bcf8e44
+      m_Name: EnvironmentName
+      m_InlineUsage: 0
     m_ProfileVersion: 1
   m_LabelTable:
     m_LabelNames:
     - default
+    - ai_model
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 6498717bd2fa14371b1d310b8385c905, type: 2}
@@ -128,10 +136,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c0752a2156848407fb02cc0de2077649, type: 2}
   - {fileID: 11400000, guid: c11ac34a9d2fc497ea052838bc854a38, type: 2}
   - {fileID: 11400000, guid: cc960736798164a8a92933c385dbaf70, type: 2}
-  m_ActiveProfileId: 1177661160a754ab29333ca391e0ea7e
+  m_ActiveProfileId: 838ae74351a3148bc8e39eb7bb708b91
   m_CcdManagedData:
     EnvironmentId: 
     EnvironmentName: 
     BucketId: 
     Badge: 
-    State: 0
+    State: 1
