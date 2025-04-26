@@ -5,25 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/BotSelectHighlighter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/BotSelectHighlighter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/ISelectionInteract.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/ISelectionInteract.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/PlayerSelectHighlighter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/PlayerSelectHighlighter.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Character/SimpleUnit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/SimpleUnit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.data" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.framework.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.framework.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.loader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.wasm" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.wasm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/AddressablesLink/link.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/AddressablesLink/link.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/WebGL/b2e9fa3584736cb69902f3783b7621c6_monoscripts_181f9cc8c01cdfb91c62d9ff55d84f7b.bundle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/WebGL/defaultlocalgroup_scenes_all_4bee720e250e6012df35874965d9f4e7.bundle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/catalog.bin" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/catalog.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/catalog.hash" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/catalog.hash" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/BotAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/BotAgent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/GameState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/Human.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/Human.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/ZeroTreeNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/ZeroTreeNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Test/TestAiModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Test/TestAiModel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,6 +172,7 @@
       <workItem from="1745508937706" duration="9097000" />
       <workItem from="1745556721420" duration="3951000" />
       <workItem from="1745598564035" duration="3744000" />
+      <workItem from="1745636746812" duration="725000" />
     </task>
     <servers />
   </component>

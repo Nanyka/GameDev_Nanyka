@@ -3,6 +3,7 @@ using TheAiAlchemist;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.Serialization;
 
 namespace TheAiAlchemist
 {
@@ -23,7 +24,7 @@ public class StartGame : MonoBehaviour
 
     [SerializeField] private VoidChannel _onContinueButton = default;
 
-    private bool _hasSaveData;
+    // [SerializeField] private bool hasSaveData;
 
     private void Start()
     {
@@ -40,7 +41,7 @@ public class StartGame : MonoBehaviour
 
     private void StartNewGame()
     {
-        _hasSaveData = false;
+        // hasSaveData = false;
         // _saveSystem.WriteEmptySaveFile();
         // _saveSystem.SetNewGameData();
         _loadLocation.RaiseEvent(_locationsToLoad, _showLoadScreen);
@@ -53,7 +54,7 @@ public class StartGame : MonoBehaviour
 
     private void OnResetSaveDataPress()
     {
-        _hasSaveData = false;
+        // hasSaveData = false;
     }
 
     // private IEnumerator LoadSaveGame()

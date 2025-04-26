@@ -33,10 +33,10 @@ namespace TheAiAlchemist
             // await CheckModel(model);
             await CheckEncoder(model);
 
-            CheckMCTSAlgorithm();
+            await CheckTreeSearchAlgorithm();
         }
 
-        private async Task CheckMCTSAlgorithm()
+        private async Task CheckTreeSearchAlgorithm()
         {
             var botAgent = new AlphaZeroAgent(runtimeModel,52, printOut:true);
             var gameState = GameSetup.SetupNewGame();
@@ -63,8 +63,8 @@ namespace TheAiAlchemist
             // Debug.Log($"Created engine with backend: {_worker.GetBackend()}");
         
             // Execute the Model
-            string input1Name = model.inputs[0].name; 
-            string input2Name = model.inputs[1].name; 
+            var input1Name = model.inputs[0].name; 
+            var input2Name = model.inputs[1].name; 
             // var inputs = new Dictionary<string, Tensor>()
             // {
             //     { input1Name, stateInput },
@@ -76,13 +76,13 @@ namespace TheAiAlchemist
             
             _worker.Schedule();
             
-            string output1Name = model.outputs[0].name; 
-            string output2Name = model.outputs[1].name;
+            var output1Name = model.outputs[0].name; 
+            var output2Name = model.outputs[1].name;
             
-            Tensor<float> output1 = _worker.PeekOutput() as Tensor<float>; // Gets the first output by default
-            Tensor<float> output2 = _worker.PeekOutput(output2Name) as Tensor<float>; // Get by name for clarity/safety
+            var output1 = _worker.PeekOutput() as Tensor<float>; // Gets the first output by default
+            var output2 = _worker.PeekOutput(output2Name) as Tensor<float>; // Get by name for clarity/safety
         
-            Debug.Log($"\nOutput 1 Name: {output1Name}, Shape: {output1.shape}");
+            // Debug.Log($"\nOutput 1 Name: {output1Name}, Shape: {output1.shape}");
             
             await ReadPolicyOutput(output1);
 
@@ -92,8 +92,8 @@ namespace TheAiAlchemist
             // 6. Dispose of Tensors and the Engine
             stateInput.Dispose();
             inventoryInput.Dispose();
-            output1.Dispose();
-            output2.Dispose();
+            output1?.Dispose();
+            output2?.Dispose();
             _worker.Dispose();
             Debug.Log("\nInference complete and resources disposed.");
         }
@@ -106,23 +106,23 @@ namespace TheAiAlchemist
             print($"{model.outputs[1]}");
             
             // 1. Create Input Tensors
-            string input1Name = model.inputs[0].name; 
-            string input2Name = model.inputs[1].name; 
+            var input1Name = model.inputs[0].name; 
+            var input2Name = model.inputs[1].name; 
             
-            int batchSize = 1;
-            TensorShape shape1 = new TensorShape(batchSize, 7, 3, 3);
-            TensorShape shape2 = new TensorShape(batchSize, 6);
+            var batchSize = 1;
+            var shape1 = new TensorShape(batchSize, 7, 3, 3);
+            var shape2 = new TensorShape(batchSize, 6);
         
             // 2. Create dummy input data for demonstration
             // For input 1 (1, 7, 3, 3)
             var currentState = new float[7*3*3];
-            for (int b = 0; b < batchSize; b++)
+            for (var b = 0; b < batchSize; b++)
             {
-                for (int c = 0; c < 7; c++)
+                for (var c = 0; c < 7; c++)
                 {
-                    for (int h = 0; h < 3; h++)
+                    for (var h = 0; h < 3; h++)
                     {
-                        for (int w = 0; w < 3; w++)
+                        for (var w = 0; w < 3; w++)
                         {
                             // Example: assign sequential value
                             currentState[b*c*h + w] = (float)((b * 7 * 3 * 3) + (c * 3 * 3) + (h * 3) + w);
