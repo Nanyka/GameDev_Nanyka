@@ -113,7 +113,7 @@ namespace TheAiAlchemist
         {
             gameStateStorage.SetValue(_currentGameState);
             changePlayerChannel.ExecuteChannel();
-            endGameChannel.ExecuteChannel(true);
+            endGameChannel.ExecuteChannel(_currentGameState.Winner()!=null);
         }
 
         private async void ResetGame()

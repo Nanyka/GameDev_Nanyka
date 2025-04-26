@@ -66,19 +66,14 @@ namespace AlphaZeroAlgorithm
             var input2Name = _runtimeModel.inputs[1].name;
             var encodedInputs = _encoder.Encode(gameState);
             
-            // var inputs = new Dictionary<string, Tensor>()
-            // {
-            //     { input1Name, encodedInputs.boardTensor },
-            //     { input2Name, encodedInputs.inventoryTensor }
-            // };
             Tensor[] inputs = { encodedInputs.boardTensor, encodedInputs.inventoryTensor };
 
             _worker.Schedule(inputs);
             
             var output2Name = _runtimeModel.outputs[1].name; 
             
-            var output1 = _worker.PeekOutput() as Tensor<float>; // Gets the first output by default
-            var output2 = _worker.PeekOutput(output2Name) as Tensor<float>; // Get by name for clarity/safety
+            var output1 = _worker.PeekOutput() as Tensor<float>; 
+            var output2 = _worker.PeekOutput(output2Name) as Tensor<float>;
             
             await ReadPolicyOutput(output1);
             await ReadValueOutput(output2);

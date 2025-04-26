@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: Default Local Group
   m_EditorClassIdentifier: 
   m_GroupName: Default Local Group
-  m_Data:
-    m_SerializedData: []
   m_GUID: 1909daa32556b491187c47d482d7b09f
   m_SerializeEntries:
   - m_GUID: 15a05c2c1d40540bebcb684d25374e08
@@ -44,6 +42,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f4b4289d4a9344b59b6c165ea9f38bd3
     m_Address: Assets/General/Scenes/Locations/BasicLocation.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 981ff0cf849e74e0fab665562df144c3
+    m_Address: Assets/General/AiModels/tttn_model_dataset_training_v5_9.onnx
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

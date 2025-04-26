@@ -302,7 +302,8 @@ namespace AlphaZeroAlgorithm
             return false;
         }
 
-        public Player? Winner()
+        public Player? 
+            Winner()
         {
             if (Has3InARow(Player.X)) return Player.X;
             if (Has3InARow(Player.O)) return Player.O;
