@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/DialogUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/DialogUI.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UI/InGameAnnouncer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/InGameAnnouncer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +172,8 @@
       <workItem from="1745556721420" duration="3951000" />
       <workItem from="1745598564035" duration="3744000" />
       <workItem from="1745636746812" duration="5049000" />
-      <workItem from="1745649071364" duration="591000" />
+      <workItem from="1745649071364" duration="2500000" />
+      <workItem from="1745674433349" duration="1948000" />
     </task>
     <servers />
   </component>

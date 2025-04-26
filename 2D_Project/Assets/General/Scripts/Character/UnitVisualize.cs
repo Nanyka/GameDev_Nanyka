@@ -10,7 +10,7 @@ namespace TheAiAlchemist
 
         private IRender mRenderer;
 
-        private void Start()
+        private void Awake()
         {
             mRenderer = GetComponent<IRender>();
         }

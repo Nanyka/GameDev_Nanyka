@@ -6,17 +6,17 @@ namespace TheAiAlchemist
 {
     public class Plot : MonoBehaviour
     {
-        [SerializeField] private PointChannel selectPointChannel;
+        [SerializeField] protected PointChannel selectPointChannel;
         [SerializeField] private VoidChannel changePlayerChannel;
         [SerializeField] private GameStateStorage gameStateStorage;
         [SerializeField] private VoidChannel resetChannel;
 
-        [SerializeField] private int row;
-        [SerializeField] private int col;
-        [SerializeField] private IntStorage askUnitIndex;
+        [SerializeField] protected int row;
+        [SerializeField] protected int col;
+        [SerializeField] protected IntStorage askUnitIndex;
         [SerializeField] private UnitVisualize unitVisualize;
 
-        private int currentStrength;
+        protected int currentStrength;
 
         private void OnEnable()
         {
@@ -30,7 +30,7 @@ namespace TheAiAlchemist
             resetChannel.RemoveListener(ResetPlot);
         }
 
-        private void OnMouseUpAsButton()
+        protected virtual void OnMouseUpAsButton()
         {
             if (askUnitIndex.GetValue() < 0)
             {
@@ -49,6 +49,7 @@ namespace TheAiAlchemist
 
         private void VisualizeState()
         {
+            Debug.Log($"Visual {row}:{col}");
             var currentState = gameStateStorage.GetValue();
             foreach (var plot in currentState.Board.GetGrid())
             {
