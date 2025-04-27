@@ -1,9 +1,10 @@
+using System;
 using AlphaZeroAlgorithm;
 using UnityEngine;
 
 namespace TheAiAlchemist
 {
-    public class TutorialPlot : Plot
+    public class TutorialPlot : Plot, IClickable
     {
         [SerializeField] private TimelineClicker timelineClicker;
 
@@ -24,6 +25,10 @@ namespace TheAiAlchemist
                 timelineClicker.OnClick();
             }
         }
-
+        
+        public void OnListenClick()
+        {
+            OnMouseUpAsButton();
+        }
     }
 }

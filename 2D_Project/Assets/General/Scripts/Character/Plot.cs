@@ -49,7 +49,7 @@ namespace TheAiAlchemist
 
         private void VisualizeState()
         {
-            Debug.Log($"Visual {row}:{col}");
+            // Debug.Log($"Visual {row}:{col}");
             var currentState = gameStateStorage.GetValue();
             foreach (var plot in currentState.Board.GetGrid())
             {

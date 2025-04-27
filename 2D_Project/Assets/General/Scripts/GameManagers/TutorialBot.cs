@@ -13,7 +13,7 @@ namespace TheAiAlchemist
 
         public void Init()
         {
-            moves = new[] { new Move(new Point(2, 2, 1)), new Move(new Point(1, 3, 3)) };
+            moves = new[] { new Move(new Point(2, 2, 1)), new Move(new Point(1, 3, 1)) };
         }
         
         public Task<Move> SelectMove(GameState gameState)
