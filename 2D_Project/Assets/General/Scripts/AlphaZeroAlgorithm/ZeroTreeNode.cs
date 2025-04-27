@@ -1,3 +1,4 @@
+#nullable enable
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,7 +18,7 @@ namespace AlphaZeroAlgorithm
         public Dictionary<Move, Branch> Branches { get; }
 
         // Dictionary mapping moves that have been explored and expanded to their child nodes
-        public Dictionary<Move, ZeroTreeNode> Children { get; }
+        private Dictionary<Move, ZeroTreeNode> Children { get; }
 
 
         /// <summary>

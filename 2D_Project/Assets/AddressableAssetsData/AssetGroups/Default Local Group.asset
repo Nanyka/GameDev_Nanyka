@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: Default Local Group
   m_EditorClassIdentifier: 
   m_GroupName: Default Local Group
-  m_Data:
-    m_SerializedData: []
   m_GUID: 1909daa32556b491187c47d482d7b09f
   m_SerializeEntries:
   - m_GUID: 15a05c2c1d40540bebcb684d25374e08
@@ -44,6 +42,16 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f4b4289d4a9344b59b6c165ea9f38bd3
     m_Address: Assets/General/Scenes/Locations/BasicLocation.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1298c027baa604192868daa85f5a4434
+    m_Address: Assets/General/Scenes/Locations/TutorialLocation.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0b3a143fd688746e7b6e4b2e93f8d5e2
+    m_Address: Assets/General/Scenes/Managers/TutorialPlay.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

@@ -23,10 +23,11 @@ public static class FileManager
 	public static bool LoadFromFile(string fileName, out string result)
 	{
 		var fullPath = Path.Combine(Application.persistentDataPath, fileName);
-		if(!File.Exists(fullPath))
-		{
-			File.WriteAllText(fullPath, ""); 
-		}
+		// if(!File.Exists(fullPath))
+		// {
+		// 	// File.WriteAllText(fullPath, ""); 
+		// 	Debug.Log("File name does not exist");
+		// }
 		try
 		{
 			result = File.ReadAllText(fullPath);
@@ -34,7 +35,7 @@ public static class FileManager
 		}
 		catch (Exception e)
 		{
-			Debug.LogError($"Failed to read from {fullPath} with exception {e}");
+			Debug.LogWarning($"Failed to read from {fullPath} with exception {e}");
 			result = "";
 			return false;
 		}

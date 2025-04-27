@@ -5,7 +5,8 @@ namespace TheAiAlchemist
 {
 	/// <summary>
 	/// This class is used for scene-loading events.
-	/// Takes a GameSceneSO of the location or menu that needs to be loaded, and a bool to specify if a loading screen needs to display.
+	/// Takes a GameSceneSO of the location or menu that needs to be loaded, and a bool to specify
+	/// if a loading screen needs to display.
 	/// </summary>
 	[CreateAssetMenu(fileName = "LoadEventChannel", menuName = "TheAiAlchemist/Channels/LoadEventChannel")]
 	public class LoadEventChannel : DescriptionBaseSO

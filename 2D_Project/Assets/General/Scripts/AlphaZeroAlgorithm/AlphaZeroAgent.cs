@@ -96,13 +96,6 @@ namespace AlphaZeroAlgorithm
                 {
                     var winner = nextState.Winner();
                     value = winner.HasValue? 1 : 0;
-                    
-                    // if (winner.HasValue && winner.Value == gameState.NextPlayer)
-                    //     value = -1.0f;
-                    // else if (winner.HasValue && winner.Value != gameState.NextPlayer)
-                    //     value = 1.0f;
-                    // else
-                    //     value = 0.0f;
                 }
                 else
                 {
@@ -200,28 +193,28 @@ namespace AlphaZeroAlgorithm
                 return new ZeroTreeNode(gameState, terminalValue, new Dictionary<Move, float>(), parent, move);
             }
             
-            string input1Name = _model.inputs[0].name; 
-            string input2Name = _model.inputs[1].name;
+            var input1Name = _model.inputs[0].name; 
+            var input2Name = _model.inputs[1].name;
             var (stateTensor, invTensor) = _encoder.Encode(gameState);
 
             _worker.SetInput(input1Name,stateTensor);
             _worker.SetInput(input2Name,invTensor);
             _worker.Schedule(); 
             
-            string output2Name = _model.outputs[1].name;
-            Tensor<float> policyOutput =_worker.PeekOutput() as Tensor<float>; 
-            Tensor<float> valueOutput = _worker.PeekOutput(output2Name) as Tensor<float>;
+            var output2Name = _model.outputs[1].name;
+            var policyOutput =_worker.PeekOutput() as Tensor<float>; 
+            var valueOutput = _worker.PeekOutput(output2Name) as Tensor<float>;
 
             policyOutput = await policyOutput.ReadbackAndCloneAsync();
             valueOutput = await valueOutput.ReadbackAndCloneAsync();
             
-            float[] priorsArray = policyOutput.DownloadToArray();
-            float valuePrediction = valueOutput[0];
+            var priorsArray = policyOutput.DownloadToArray();
+            var valuePrediction = valueOutput[0];
             
             Dictionary<Move, float> movePriors = new Dictionary<Move, float>();
             for (int idx = 0; idx < priorsArray.Length; idx++) 
             {
-                Move decodedMove = _encoder.DecodeMoveIndex(idx); 
+                var decodedMove = _encoder.DecodeMoveIndex(idx); 
                 movePriors[decodedMove] = priorsArray[idx];
             }
             
@@ -231,16 +224,15 @@ namespace AlphaZeroAlgorithm
             valueOutput.Dispose();
             
             ZeroTreeNode newNode = new ZeroTreeNode(gameState, valuePrediction, movePriors, parent, move);
-            
-            // foreach (var pair in newNode.Branches)
-            // {
-            //     Debug.Log($"Check legal move: {pair.Key}");
-            // }
 
-            if (parent != null)
-                parent.AddChild(move, newNode); 
+            if (move != null) parent.AddChild(move, newNode);
 
             return newNode;
+        }
+
+        public void DisableAiElements()
+        {
+            _worker.Dispose();
         }
         
         private void PrintNode(ZeroTreeNode nodeToVisualize)

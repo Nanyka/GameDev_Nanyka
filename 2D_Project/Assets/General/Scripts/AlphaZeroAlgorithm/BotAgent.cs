@@ -7,9 +7,9 @@ namespace AlphaZeroAlgorithm
 {
     public class BotAgent : IAgent
     {
-        private Model _runtimeModel;
-        private Worker _worker;
-        private Encoder _encoder;
+        private readonly Model _runtimeModel;
+        private readonly Worker _worker;
+        private readonly Encoder _encoder;
 
         public BotAgent(ModelAsset model)
         {
@@ -19,10 +19,10 @@ namespace AlphaZeroAlgorithm
 
         }
 
-        public async Task<Move> SelectMove(GameState gameState)
+        public Task<Move> SelectMove(GameState gameState)
         {
-            string input1Name = _runtimeModel.inputs[0].name; 
-            string input2Name = _runtimeModel.inputs[1].name;
+            var input1Name = _runtimeModel.inputs[0].name; 
+            var input2Name = _runtimeModel.inputs[1].name;
             var encodedInputs = _encoder.Encode(gameState);
             
             // var inputs = new Dictionary<string, Tensor>()
@@ -30,13 +30,13 @@ namespace AlphaZeroAlgorithm
             //     { input1Name, encodedInputs.boardTensor },
             //     { input2Name, encodedInputs.inventoryTensor }
             // };
-            var inputs = new[] { encodedInputs.boardTensor, encodedInputs.inventoryTensor };
+            Tensor[] inputs = { encodedInputs.boardTensor, encodedInputs.inventoryTensor };
             _worker.Schedule(inputs);
             
-            string output2Name = _runtimeModel.outputs[1].name; 
+            var output2Name = _runtimeModel.outputs[1].name; 
             
-            Tensor<float> output1 = _worker.PeekOutput() as Tensor<float>;
-            Tensor<float> output2 = _worker.PeekOutput(output2Name) as Tensor<float>;
+            var output1 = _worker.PeekOutput() as Tensor<float>;
+            var output2 = _worker.PeekOutput(output2Name) as Tensor<float>;
 
             var nextMove = Move.Resign;
             if (output1 != null)
@@ -47,11 +47,11 @@ namespace AlphaZeroAlgorithm
             
             encodedInputs.boardTensor.Dispose();
             encodedInputs.inventoryTensor.Dispose();
-            if (output1 != null) output1.Dispose();
-            if (output2 != null) output2.Dispose();
+            output1?.Dispose();
+            output2?.Dispose();
             _worker.Dispose();
 
-            return nextMove;
+            return Task.FromResult(nextMove);
         }
 
         public Move GetMoveFromInput(string inputString)
@@ -62,37 +62,35 @@ namespace AlphaZeroAlgorithm
 
         public async Task TestBot(GameState gameState)
         {
-            string input1Name = _runtimeModel.inputs[0].name; 
-            string input2Name = _runtimeModel.inputs[1].name;
+            var input1Name = _runtimeModel.inputs[0].name; 
+            var input2Name = _runtimeModel.inputs[1].name;
             var encodedInputs = _encoder.Encode(gameState);
             
-            // var inputs = new Dictionary<string, Tensor>()
-            // {
-            //     { input1Name, encodedInputs.boardTensor },
-            //     { input2Name, encodedInputs.inventoryTensor }
-            // };
-            var inputs = new[] { encodedInputs.boardTensor, encodedInputs.inventoryTensor };
+            Tensor[] inputs = { encodedInputs.boardTensor, encodedInputs.inventoryTensor };
 
             _worker.Schedule(inputs);
             
-            string output2Name = _runtimeModel.outputs[1].name; 
+            var output2Name = _runtimeModel.outputs[1].name; 
             
-            Tensor<float> output1 = _worker.PeekOutput() as Tensor<float>; // Gets the first output by default
-            Tensor<float> output2 = _worker.PeekOutput(output2Name) as Tensor<float>; // Get by name for clarity/safety
+            var output1 = _worker.PeekOutput() as Tensor<float>; 
+            var output2 = _worker.PeekOutput(output2Name) as Tensor<float>;
             
             await ReadPolicyOutput(output1);
             await ReadValueOutput(output2);
 
-            var maxMoveIndex = ArgMax(output1.DownloadToArray());
-            var nextMove = _encoder.DecodeMoveIndex(maxMoveIndex);
-            Debug.Log($"Max prior move: {nextMove}");
+            if (output1 != null)
+            {
+                var maxMoveIndex = ArgMax(output1.DownloadToArray());
+                var nextMove = _encoder.DecodeMoveIndex(maxMoveIndex);
+                Debug.Log($"Max prior move: {nextMove}");
+            }
 
             // --- Cleanup ---
             // 6. Dispose of Tensors and the Engine
             encodedInputs.boardTensor.Dispose();
             encodedInputs.inventoryTensor.Dispose();
-            if (output1 != null) output1.Dispose();
-            if (output2 != null) output2.Dispose();
+            output1?.Dispose();
+            output2?.Dispose();
             _worker.Dispose();
             Debug.Log("Inference complete and resources disposed.");
         }
@@ -126,20 +124,20 @@ namespace AlphaZeroAlgorithm
                 Debug.Log($"Value output: {output2[0]}");
             }
         }
-        
-        public static int ArgMax(float[] array)
+
+        private static int ArgMax(IReadOnlyList<float> array)
         {
             // Check for null or empty array
-            if (array == null || array.Length == 0)
+            if (array == null || array.Count == 0)
             {
                 return -1; // Return -1 to indicate no valid index found
             }
 
-            int maxIndex = 0; // Start with the first element's index
-            float maxValue = array[0]; // Start with the first element's value
+            var maxIndex = 0; // Start with the first element's index
+            var maxValue = array[0]; // Start with the first element's value
 
             // Iterate through the array starting from the second element
-            for (int i = 1; i < array.Length; i++)
+            for (int i = 1; i < array.Count; i++)
             {
                 // If the current element's value is greater than the current max value
                 if (array[i] > maxValue)

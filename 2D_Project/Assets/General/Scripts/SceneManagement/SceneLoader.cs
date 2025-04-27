@@ -12,10 +12,11 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
 	[SerializeField] private GameSceneSO _gameplayScene = default;
-	// [SerializeField] private InputReaderSO _inputReader = default;
-
+	[SerializeField] private GameSceneSO _tutorialScene = default;
+	
 	[Header("Listening to")]
 	[SerializeField] private LoadEventChannel _loadLocation = default;
+	[SerializeField] private LoadEventChannel _loadTutorial = default;
 	[SerializeField] private LoadEventChannel _loadMenu = default;
 	[SerializeField] private LoadEventChannel _coldStartupLocation = default;
 
@@ -40,6 +41,7 @@ public class SceneLoader : MonoBehaviour
 	private void OnEnable()
 	{
 		_loadLocation.OnLoadingRequested += LoadLocation;
+		_loadTutorial.OnLoadingRequested += LoadTutorial;
 		_loadMenu.OnLoadingRequested += LoadMenu;
 #if UNITY_EDITOR
 		_coldStartupLocation.OnLoadingRequested += LocationColdStartup;
@@ -49,6 +51,7 @@ public class SceneLoader : MonoBehaviour
 	private void OnDisable()
 	{
 		_loadLocation.OnLoadingRequested -= LoadLocation;
+		_loadTutorial.OnLoadingRequested -= LoadTutorial;
 		_loadMenu.OnLoadingRequested -= LoadMenu;
 #if UNITY_EDITOR
 		_coldStartupLocation.OnLoadingRequested -= LocationColdStartup;
@@ -92,6 +95,27 @@ public class SceneLoader : MonoBehaviour
 		if (!_gameplayManagerSceneInstance.Scene.isLoaded)
 		{
 			_gameplayManagerLoadingOpHandle = _gameplayScene.sceneReference.LoadSceneAsync(LoadSceneMode.Additive, true);
+			_gameplayManagerLoadingOpHandle.Completed += OnGameplayManagersLoaded;
+		}
+		else
+		{
+			StartCoroutine(UnloadPreviousScene());
+		}
+	}
+
+	private void LoadTutorial(GameSceneSO tutorialToLoad, bool showLoadingScreen, bool fadeScreen)
+	{
+		if (_isLoading)
+			return;
+
+		_sceneToLoad = tutorialToLoad;
+		_showLoadingScreen = showLoadingScreen;
+		_isLoading = true;
+
+		//In case we are coming from the main menu, we need to load the Gameplay manager scene first
+		if (!_gameplayManagerSceneInstance.Scene.isLoaded)
+		{
+			_gameplayManagerLoadingOpHandle = _tutorialScene.sceneReference.LoadSceneAsync(LoadSceneMode.Additive, true);
 			_gameplayManagerLoadingOpHandle.Completed += OnGameplayManagersLoaded;
 		}
 		else
@@ -193,7 +217,7 @@ public class SceneLoader : MonoBehaviour
 
 	private void StartGameplay()
 	{
-		_onSceneReady.ExecuteChannel(); //Spawn system will spawn the PigChef in a gameplay scene
+		_onSceneReady.ExecuteChannel(); //Spawn system will spawn a gameplay scene
 		_activateInputReader.ExecuteChannel(); // Assign main camera on InputManager and enable InputReader
 	}
 

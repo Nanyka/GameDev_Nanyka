@@ -1,3 +1,4 @@
+#nullable enable
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +11,8 @@ namespace AlphaZeroAlgorithm
         public Board Board { get; }
         public Player NextPlayer { get; }
 
-        public Move? LastMove { get; }
+        private Move? LastMove { get; }
 
-        // Using the translated C# Inventory class with 1-based keys
-        // Store ICloneable references, knowing they are Inventory objects
         public Dictionary<Player, Inventory> PlayerInventories { get; }
 
 
@@ -22,7 +21,6 @@ namespace AlphaZeroAlgorithm
         public GameState(Board board, Player nextPlayer, Move? lastMove,
             Dictionary<Player, Inventory> playerInventories)
         {
-            if (board == null) throw new ArgumentNullException(nameof(board));
             if (playerInventories == null) throw new ArgumentNullException(nameof(playerInventories));
             if (!playerInventories.ContainsKey(Player.X) || !playerInventories.ContainsKey(Player.O))
                 throw new ArgumentException("PlayerInventories must contain entries for both Player.X and Player.O");
@@ -31,7 +29,7 @@ namespace AlphaZeroAlgorithm
             // if (!(board is ICloneable)) throw new ArgumentException("Board must implement ICloneable");
 
 
-            Board = board; // Store the provided board (assumed to be a new or cloned instance)
+            Board = board ?? throw new ArgumentNullException(nameof(board)); // Store the provided board (assumed to be a new or cloned instance)
             NextPlayer = nextPlayer;
             LastMove = lastMove;
 
@@ -39,7 +37,7 @@ namespace AlphaZeroAlgorithm
             PlayerInventories = new Dictionary<Player, Inventory>();
             foreach (var entry in playerInventories)
             {
-                if (!(entry.Value is ICloneable))
+                if (entry.Value == null)
                 {
                     throw new ArgumentException(
                         $"Inventory object for Player {entry.Key} does not implement ICloneable.");
@@ -102,18 +100,14 @@ namespace AlphaZeroAlgorithm
             int targetRow = pieceToPlay.Row;
             int targetCol = pieceToPlay.Col;
 
-            Point? oldPointKeyToRemove = null;
-            int strengthToReturn = 0;
             Player? occupantPlayer = Board.GetPlayerAtCoord(targetRow, targetCol); // Check original board
 
             if (occupantPlayer.HasValue && occupantPlayer.Value != NextPlayer)
             {
-                oldPointKeyToRemove = Board.GetPointAtCoord(targetRow, targetCol);
+                var oldPointKeyToRemove = Board.GetPointAtCoord(targetRow, targetCol);
 
                 if (oldPointKeyToRemove.HasValue)
                 {
-                    strengthToReturn = oldPointKeyToRemove.Value.Strength;
-
                     // Remove the old piece from the *copied* board's grid
                     nextBoard.Remove(oldPointKeyToRemove.Value);
 
@@ -308,7 +302,8 @@ namespace AlphaZeroAlgorithm
             return false;
         }
 
-        public Player? Winner()
+        public Player? 
+            Winner()
         {
             if (Has3InARow(Player.X)) return Player.X;
             if (Has3InARow(Player.O)) return Player.O;

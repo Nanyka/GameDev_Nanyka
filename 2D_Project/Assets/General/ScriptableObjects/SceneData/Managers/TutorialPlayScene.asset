@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4a9aff793e557d4790d9a834c6560bc, type: 3}
+  m_Name: TutorialPlayScene
+  m_EditorClassIdentifier: 
+  _guid: 74286ea4bd829487da63e60497f9a76c
+  description: 
+  sceneType: 4
+  sceneReference:
+    m_AssetGUID: 0b3a143fd688746e7b6e4b2e93f8d5e2
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  musicTrack: {fileID: 0}
