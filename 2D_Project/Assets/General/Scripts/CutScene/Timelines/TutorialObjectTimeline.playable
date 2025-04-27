@@ -191,7 +191,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   template:
     characterIcon: {fileID: 0}
-    dialogueLine: And place it anywhere you want, for example, at Row 1 Col 1
+    dialogueLine: When the opponent occupied a plot, we can play on top of it with
+      a stronger unit.
     dialogueWidth: 800
     dialogueHeight: 200
     buttonRequire: 2
@@ -2562,7 +2563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   template:
     characterIcon: {fileID: 0}
-    dialogueLine: When it run out of any unit, the button would be diisable liike
+    dialogueLine: When it run out of any unit, the button would be disable liike
       this.
     dialogueWidth: 800
     dialogueHeight: 200
@@ -2950,7 +2951,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   template:
     characterIcon: {fileID: 0}
-    dialogueLine: And place it anywhere you want, for example, at Row 1 Col 1
+    dialogueLine: And the same logic for any higher strength unit.
     dialogueWidth: 800
     dialogueHeight: 200
     buttonRequire: 2
@@ -3164,7 +3165,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   template:
     characterIcon: {fileID: 0}
-    dialogueLine: And place it anywhere you want, for example, at Row 1 Col 1
+    dialogueLine: For example, with this Unit 2 we can conquer the Unit 1 at Row
+      2 Col 2
     dialogueWidth: 800
     dialogueHeight: 200
     buttonRequire: 2
@@ -3207,7 +3209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   template:
     characterIcon: {fileID: 0}
-    dialogueLine: And place it anywhere you want, for example, at Row 1 Col 1
+    dialogueLine: Now, let try it yourself and beat the opponent.
     dialogueWidth: 800
     dialogueHeight: 200
     buttonRequire: 2
