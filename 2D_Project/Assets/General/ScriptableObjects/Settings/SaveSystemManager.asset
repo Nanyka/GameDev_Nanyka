@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 428b35af66b1ab44c9cca9bb53864745, type: 3}
   m_Name: SaveSystemManager
   m_EditorClassIdentifier: 
-  saveFilename: save.chop
-  backupSaveFilename: save.chop.bak
+  saveFilename: save.nttt
+  backupSaveFilename: save.nttt.bak
   saveData:
     level: 0
     _itemStacks: []

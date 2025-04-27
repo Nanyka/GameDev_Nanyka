@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 57310360}
   - component: {fileID: 57310362}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: TutorialManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -947,7 +947,7 @@ MonoBehaviour:
   playerText: {fileID: 1822928180}
   endGamePanel: {fileID: 1990457655}
   winPlayerText: {fileID: 1013703406}
-  resetButton: {fileID: 597193251}
+  playAgainButton: {fileID: 597193251}
   homeButton: {fileID: 1774457853}
 --- !u!1 &344286395
 GameObject:
@@ -4993,7 +4993,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1990457656
 RectTransform:
   m_ObjectHideFlags: 0

@@ -17,14 +17,14 @@ namespace TheAiAlchemist
         [SerializeField] TextMeshProUGUI playerText;
         [SerializeField] private GameObject endGamePanel;
         [SerializeField] private TextMeshProUGUI winPlayerText;
-        [SerializeField] Button resetButton;
+        [SerializeField] Button playAgainButton;
         [SerializeField] Button homeButton;
 
         private void OnEnable()
         {
             changePlayerChannel.AddListener(OnChangePlayer);
             endGameChannel.AddListener(ShowPanel);
-            resetButton.onClick.AddListener(OnClickReset);
+            playAgainButton.onClick.AddListener(OnClickReset);
             homeButton.onClick.AddListener(OnBackToHome);
         }
 
@@ -32,7 +32,7 @@ namespace TheAiAlchemist
         {
             changePlayerChannel.RemoveListener(OnChangePlayer);
             endGameChannel.RemoveListener(ShowPanel);
-            resetButton.onClick.RemoveListener(OnClickReset);
+            playAgainButton.onClick.RemoveListener(OnClickReset);
             homeButton.onClick.AddListener(OnBackToHome);
         }
 

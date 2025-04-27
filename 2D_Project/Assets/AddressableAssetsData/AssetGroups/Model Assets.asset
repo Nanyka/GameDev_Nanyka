@@ -21,6 +21,11 @@ MonoBehaviour:
     m_SerializedLabels:
     - ai_model
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 97ff637f154874a2bb2b7c801e17ae07
+    m_Address: Assets/General/AiModels/tttn_model_dataset_training_v5_11.onnx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 67236932078454d7a84a4de4c3e3ced4, type: 2}
   m_SchemaSet:

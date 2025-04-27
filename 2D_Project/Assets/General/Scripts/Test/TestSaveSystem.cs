@@ -11,8 +11,8 @@ namespace TheAiAlchemist
         [SerializeField] private SaveSystemManager saveSystemManager;
         
         [SerializeField] private bool hasSaveData;
-        public string saveFilename = "save.chop";
-        public string backupSaveFilename = "save.chop.bak";
+        public string saveFilename = "save.nttt";
+        public string backupSaveFilename = "save.nttt.bak";
         
         private void Awake()
         {
@@ -21,15 +21,15 @@ namespace TheAiAlchemist
 
         private void Start()
         {
-            
-            // saveSystemManager.WriteEmptySaveFile();
-            // saveSystemManager.SetNewGameData();
-            
-            // saveLevelChannel.ExecuteChannel(123);
-            // saveSystemManager.SaveDataToDisk();
-            
             hasSaveData = saveSystemManager.LoadSaveDataFromDisk();
-
+            if (hasSaveData == false)
+            {
+                saveSystemManager.WriteEmptySaveFile();
+                saveSystemManager.SetNewGameData();
+            }
+            
+            saveLevelChannel.ExecuteChannel(456);
+            saveSystemManager.SaveDataToDisk();
         }
     }
 }

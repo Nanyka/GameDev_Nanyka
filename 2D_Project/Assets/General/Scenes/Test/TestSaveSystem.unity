@@ -166,8 +166,8 @@ MonoBehaviour:
   saveLevelChannel: {fileID: 11400000, guid: 84e69dcf609904b94b88b1dda8dad968, type: 2}
   saveSystemManager: {fileID: 11400000, guid: cdd36171f065b461da7e56c89a4bdc16, type: 2}
   hasSaveData: 0
-  saveFilename: save.chop
-  backupSaveFilename: save.chop.bak
+  saveFilename: save.nttt
+  backupSaveFilename: save.nttt.bak
 --- !u!1 &282055320
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,17 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Test/TestSaveSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Test/TestSaveSystem.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Test/TutorialScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Test/TutorialScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/SaveSystem/Save.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/SaveSystem/Save.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/SaveSystem/SaveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/SaveSystem/SaveSystemManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/SaveSystem/SaveSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/SaveSystem/SaveSystemManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/SceneManagement/SceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/SceneManagement/SceneLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Model Assets.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Model Assets.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/TutorialPlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/TutorialPlay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Menus/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Menus/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Test/TestSaveSystem.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Test/TestSaveSystem.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Settings/SaveSystemManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Settings/SaveSystemManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/SaveSystem/FileManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/SaveSystem/FileManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/SaveSystem/SaveSystemManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/SaveSystem/SaveSystemManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/SceneManagement/StartGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/SceneManagement/StartGame.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Test/TestSaveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Test/TestSaveSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UI/InGameAnnouncer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/InGameAnnouncer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UI/MainMenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/MainMenuManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +185,7 @@
       <workItem from="1745636746812" duration="5049000" />
       <workItem from="1745649071364" duration="2500000" />
       <workItem from="1745674433349" duration="7091000" />
-      <workItem from="1745722216310" duration="4428000" />
+      <workItem from="1745722216310" duration="8386000" />
     </task>
     <servers />
   </component>

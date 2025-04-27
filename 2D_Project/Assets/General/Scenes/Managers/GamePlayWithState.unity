@@ -170,7 +170,10 @@ MonoBehaviour:
   humanMoveChannel: {fileID: 11400000, guid: 09fd83887c8134a6fbbb08efccd82cc3, type: 2}
   resetChannel: {fileID: 11400000, guid: c4ab14a3f61c34cc297c58192f1e27e3, type: 2}
   addressableManager: {fileID: 11400000, guid: 0c0284765747c49f8874c5e989378ca7, type: 2}
-  modelAddress: Assets/General/AiModels/tttn_model_dataset_training_v5_9.onnx
+  saveSystemManager: {fileID: 11400000, guid: cdd36171f065b461da7e56c89a4bdc16, type: 2}
+  modelAddress:
+  - Assets/General/AiModels/tttn_model_dataset_training_v5_9.onnx
+  - Assets/General/AiModels/tttn_model_dataset_training_v5_11.onnx
 --- !u!1 &252316315
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,7 +265,7 @@ MonoBehaviour:
   playerText: {fileID: 1822928180}
   endGamePanel: {fileID: 1990457655}
   winPlayerText: {fileID: 1013703406}
-  resetButton: {fileID: 597193251}
+  playAgainButton: {fileID: 597193251}
   homeButton: {fileID: 1774457853}
 --- !u!1 &344286395
 GameObject:
@@ -417,7 +420,7 @@ GameObject:
   - component: {fileID: 597193252}
   - component: {fileID: 597193251}
   m_Layer: 0
-  m_Name: Reset_Btn
+  m_Name: PlayAgain_Btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1004,7 +1007,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: RESET
+  m_text: Play Again
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

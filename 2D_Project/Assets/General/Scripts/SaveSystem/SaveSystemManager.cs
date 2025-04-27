@@ -16,8 +16,8 @@ public class SaveSystemManager : ScriptableObject
 	// [SerializeField] private SettingsSO _currentSettings = default;
 	// [SerializeField] private QuestManagerSO _questManagerSO = default;
 
-	public string saveFilename = "save.chop";
-	public string backupSaveFilename = "save.chop.bak";
+	public string saveFilename = "save.nttt";
+	public string backupSaveFilename = "save.nttt.bak";
 	public Save saveData = new();
 	
 	private IntChannel saveLevel;

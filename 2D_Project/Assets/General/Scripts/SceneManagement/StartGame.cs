@@ -8,79 +8,86 @@ using UnityEngine.Serialization;
 namespace TheAiAlchemist
 {
     /// <summary>
-/// This class contains the function to call when play button is pressed
-/// </summary>
-public class StartGame : MonoBehaviour
-{
-    [SerializeField] private GameSceneSO locationsToLoad;
-    [SerializeField] private GameSceneSO tutorialToLoad;
-    // [SerializeField] private SaveSystem _saveSystem = default;
-    [SerializeField] private bool showLoadScreen = default;
-
-    [Header("Broadcasting on")] 
-    [SerializeField] private LoadEventChannel loadLocation = default;
-    [SerializeField] private LoadEventChannel loadTutorial = default;
-
-    [Header("Listening to")] 
-    [SerializeField] private VoidChannel onNewGameButton = default;
-    [SerializeField] private VoidChannel onContinueButton = default;
-    [SerializeField] private VoidChannel onTutorialButton = default;
-
-    // [SerializeField] private bool hasSaveData;
-
-    private void Start()
+    /// This class contains the function to call when play button is pressed
+    /// </summary>
+    public class StartGame : MonoBehaviour
     {
-        // _hasSaveData = _saveSystem.LoadSaveDataFromDisk();
-        onNewGameButton.AddListener(StartNewGame);
-        onContinueButton.AddListener(ContinuePreviousGame);
-        onTutorialButton.AddListener(TutorialGame);
-    }
+        [SerializeField] private GameSceneSO locationsToLoad;
+        [SerializeField] private GameSceneSO tutorialToLoad;
+        [SerializeField] private SaveSystemManager saveSystem;
+        [SerializeField] private bool showLoadScreen;
 
-    private void OnDestroy()
-    {
-        onNewGameButton.RemoveListener(StartNewGame);
-        onContinueButton.RemoveListener(ContinuePreviousGame);
-        onTutorialButton.RemoveListener(TutorialGame);
-    }
+        [Header("Broadcasting on")] [SerializeField]
+        private LoadEventChannel loadLocation;
 
-    private void StartNewGame()
-    {
-        // hasSaveData = false;
-        // _saveSystem.WriteEmptySaveFile();
-        // _saveSystem.SetNewGameData();
-        loadLocation.RaiseEvent(locationsToLoad, showLoadScreen);
-    }
-    
-    private void TutorialGame()
-    {
-        loadTutorial.RaiseEvent(tutorialToLoad, showLoadScreen);
-    }
+        [SerializeField] private LoadEventChannel loadTutorial;
 
-    private void OnResetSaveDataPress()
-    {
-        // hasSaveData = false;
-    }
+        [Header("Listening to")] 
+        [SerializeField] private VoidChannel onNewGameButton;
+        [SerializeField] private VoidChannel onTutorialButton;
+        [SerializeField] private VoidChannel onResetButton;
+        [SerializeField] private bool hasSaveData;
 
-    private void ContinuePreviousGame()
-    {
-        // StartCoroutine(LoadSaveGame());
-    }
+        private void Start()
+        {
+            // hasSaveData = saveSystem.LoadSaveDataFromDisk();
+            onNewGameButton.AddListener(StartNewGame);
+            onTutorialButton.AddListener(TutorialGame);
+            onResetButton.AddListener(OnResetSaveDataPress);
+        }
 
-    // private IEnumerator LoadSaveGame()
-    // {
-    //     yield return StartCoroutine(_saveSystem.LoadSavedInventory());
-    //
-    //     _saveSystem.LoadSavedQuestlineStatus();
-    //     var locationGuid = _saveSystem.saveData._locationId;
-    //     var asyncOperationHandle = Addressables.LoadAssetAsync<LocationSO>(locationGuid);
-    //
-    //     yield return asyncOperationHandle;
-    //
-    //     if (asyncOperationHandle.Status == AsyncOperationStatus.Succeeded)
-    //     {
-    //         LocationSO locationSO = asyncOperationHandle.Result;
-    //         _loadLocation.RaiseEvent(locationSO, _showLoadScreen);
-    //     }
-    // }
-}
+        private void OnDestroy()
+        {
+            onNewGameButton.RemoveListener(StartNewGame);
+            onTutorialButton.RemoveListener(TutorialGame);
+            onResetButton.RemoveListener(OnResetSaveDataPress);
+        }
+
+        private void StartNewGame()
+        {
+            hasSaveData = saveSystem.LoadSaveDataFromDisk();
+            if (hasSaveData == false)
+            {
+                saveSystem.WriteEmptySaveFile();
+                saveSystem.SetNewGameData();
+            }
+
+            loadLocation.RaiseEvent(locationsToLoad, showLoadScreen);
+        }
+
+        private void TutorialGame()
+        {
+            loadTutorial.RaiseEvent(tutorialToLoad, showLoadScreen);
+        }
+
+        private void OnResetSaveDataPress()
+        {
+            saveSystem.saveData.level = 0;
+            saveSystem.SaveDataToDisk();
+            
+            loadLocation.RaiseEvent(locationsToLoad, showLoadScreen);
+        }
+
+        // private void ContinuePreviousGame()
+        // {
+        //     // StartCoroutine(LoadSaveGame());
+        // }
+
+        // private IEnumerator LoadSaveGame()
+        // {
+        //     yield return StartCoroutine(_saveSystem.LoadSavedInventory());
+        //
+        //     _saveSystem.LoadSavedQuestlineStatus();
+        //     var locationGuid = _saveSystem.saveData._locationId;
+        //     var asyncOperationHandle = Addressables.LoadAssetAsync<LocationSO>(locationGuid);
+        //
+        //     yield return asyncOperationHandle;
+        //
+        //     if (asyncOperationHandle.Status == AsyncOperationStatus.Succeeded)
+        //     {
+        //         LocationSO locationSO = asyncOperationHandle.Result;
+        //         _loadLocation.RaiseEvent(locationSO, _showLoadScreen);
+        //     }
+        // }
+    }
 }
