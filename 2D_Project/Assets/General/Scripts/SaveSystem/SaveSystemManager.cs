@@ -5,28 +5,43 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
-public class SaveSystem : ScriptableObject
+[CreateAssetMenu(fileName = "SaveSystemManager", menuName = "TheAiAlchemist/BackEnd/SaveSystemManager")]
+
+public class SaveSystemManager : ScriptableObject
 {
-	[SerializeField] private VoidChannel _saveSettingsEvent = default;
-	[SerializeField] private LoadEventChannel _loadLocation = default;
+	// [SerializeField] private IntChannel saveLevel;
+	// [SerializeField] private VoidChannel _saveSettingsEvent = default;
+	// [SerializeField] private LoadEventChannel _loadLocation = default;
 	// [SerializeField] private InventorySO _playerInventory = default;
 	// [SerializeField] private SettingsSO _currentSettings = default;
 	// [SerializeField] private QuestManagerSO _questManagerSO = default;
 
 	public string saveFilename = "save.chop";
 	public string backupSaveFilename = "save.chop.bak";
-	public Save saveData = new Save();
+	public Save saveData = new();
+	
+	private IntChannel saveLevel;
 
-	void OnEnable()
+	public void Init(IntChannel levelChannel)
 	{
-		_saveSettingsEvent.AddListener(SaveSettings);
-		_loadLocation.OnLoadingRequested += CacheLoadLocations;
+		DiscardAllDescriptions();
+		saveLevel = levelChannel;
+		saveLevel.AddListener(SaveLevel);
+		// _saveSettingsEvent.AddListener(SaveSettings);
+		// _loadLocation.OnLoadingRequested += CacheLoadLocations;
 	}
 
-	void OnDisable()
+	private void DiscardAllDescriptions()
 	{
-		_saveSettingsEvent.RemoveListener(SaveSettings);
-		_loadLocation.OnLoadingRequested -= CacheLoadLocations;
+		if (saveLevel != null)
+			saveLevel.RemoveAllListener();
+		// _saveSettingsEvent.RemoveListener(SaveSettings);
+		// _loadLocation.OnLoadingRequested -= CacheLoadLocations;
+	}
+
+	private void SaveLevel(int currentLevel)
+	{
+		saveData.SaveLevel(currentLevel);
 	}
 
 	private void CacheLoadLocations(GameSceneSO locationToLoad, bool showLoadingScreen, bool fadeScreen)
@@ -73,12 +88,12 @@ public class SaveSystem : ScriptableObject
 
 	public void SaveDataToDisk()
 	{
-		saveData._itemStacks.Clear();
+		// saveData._itemStacks.Clear();
 		// foreach (var itemStack in _playerInventory.Items)
 		// {
 		// 	saveData._itemStacks.Add(new SerializedItemStack(itemStack.Item.Guid, itemStack.Amount));
 		// }
-		saveData._finishedQuestlineItemsGUIds.Clear();
+		// saveData._finishedQuestlineItemsGUIds.Clear();
 
 		// foreach (var item in _questManagerSO.GetFinishedQuestlineItemsGUIds())
 		// {
@@ -97,7 +112,6 @@ public class SaveSystem : ScriptableObject
 	public void WriteEmptySaveFile()
 	{
 		FileManager.WriteToFile(saveFilename, "");
-
 	}
 	public void SetNewGameData()
 	{

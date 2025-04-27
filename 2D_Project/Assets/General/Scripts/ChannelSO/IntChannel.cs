@@ -18,6 +18,11 @@ namespace TheAiAlchemist
             channel.RemoveListener(action);
         }
 
+        public void RemoveAllListener()
+        {
+            channel.RemoveAllListeners();
+        }
+
         public void ExecuteChannel(int value)
         {
             channel?.Invoke(value);

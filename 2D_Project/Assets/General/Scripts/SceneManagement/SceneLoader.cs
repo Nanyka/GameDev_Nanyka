@@ -13,9 +13,7 @@ public class SceneLoader : MonoBehaviour
 {
 	[SerializeField] private GameSceneSO _gameplayScene = default;
 	[SerializeField] private GameSceneSO _tutorialScene = default;
-
-	// [SerializeField] private InputReaderSO _inputReader = default;
-
+	
 	[Header("Listening to")]
 	[SerializeField] private LoadEventChannel _loadLocation = default;
 	[SerializeField] private LoadEventChannel _loadTutorial = default;

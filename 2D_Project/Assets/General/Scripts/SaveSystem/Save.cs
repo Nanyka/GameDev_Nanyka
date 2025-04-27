@@ -15,9 +15,9 @@ public class Save
 	// This will change according to whatever data that needs to be stored
 
 	// The variables need to be public, else we would have to write trivial getter/setter functions.
-	public string _locationId;
-	public List<SerializedItemStack> _itemStacks = new List<SerializedItemStack>();
-	public List<string> _finishedQuestlineItemsGUIds = new List<string>();
+	public int level;
+	public List<SerializedItemStack> _itemStacks = new();
+	public List<string> _finishedQuestlineItemsGUIds = new();
 
 	public float _masterVolume = default;
 	public float _musicVolume = default;
@@ -39,6 +39,12 @@ public class Save
 		_isFullscreen = settings.IsFullscreen;
 		_currentLocale = settings.CurrentLocale;
 	}
+
+	public void SaveLevel(int currentLevel)
+	{
+		level = currentLevel;
+	}
+	
 	public string ToJson()
 	{
 		return JsonUtility.ToJson(this);
