@@ -56,7 +56,7 @@ namespace TheAiAlchemist
             
             if (handle.Status == AsyncOperationStatus.Succeeded)
             {
-                Debug.Log("AI model loaded successfully!");
+                // Debug.Log("AI model loaded successfully!");
                 return handle.Result;
             }
 

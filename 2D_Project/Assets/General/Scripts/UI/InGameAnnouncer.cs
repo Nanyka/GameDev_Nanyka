@@ -1,3 +1,4 @@
+using AlphaZeroAlgorithm;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -25,6 +26,7 @@ namespace TheAiAlchemist
             changePlayerChannel.AddListener(OnChangePlayer);
             endGameChannel.AddListener(ShowPanel);
             playAgainButton.onClick.AddListener(OnClickReset);
+            // nextChallengeButton.onClick.AddListener(OnClickNext);
             homeButton.onClick.AddListener(OnBackToHome);
         }
 
@@ -33,6 +35,7 @@ namespace TheAiAlchemist
             changePlayerChannel.RemoveListener(OnChangePlayer);
             endGameChannel.RemoveListener(ShowPanel);
             playAgainButton.onClick.RemoveListener(OnClickReset);
+            // nextChallengeButton.onClick.AddListener(OnClickNext);
             homeButton.onClick.AddListener(OnBackToHome);
         }
 
@@ -40,6 +43,14 @@ namespace TheAiAlchemist
         {
             endGamePanel.SetActive(true);
             winPlayerText.text = hasWinner ? $"PLAYER {gameStateStorage.GetValue().Winner()} WIN!" : "DRAW GAME";
+            var buttonText = playAgainButton.GetComponentInChildren<TextMeshProUGUI>();
+            
+            if (hasWinner && gameStateStorage.GetValue().Winner() == Player.X)
+            {
+                buttonText.text = "Next Challenge";
+            }
+            else
+                buttonText.text = "Play again";
         }
         
         private void OnChangePlayer()

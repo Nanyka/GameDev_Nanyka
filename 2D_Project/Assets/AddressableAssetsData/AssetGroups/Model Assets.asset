@@ -21,10 +21,53 @@ MonoBehaviour:
     m_SerializedLabels:
     - ai_model
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 97ff637f154874a2bb2b7c801e17ae07
-    m_Address: Assets/General/AiModels/tttn_model_dataset_training_v5_11.onnx
+  - m_GUID: b19842e36338d496c9d9824276e1dde2
+    m_Address: Assets/General/AiModels/tttn_model_dataset_training_v5_1.onnx
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - ai_model
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e0cf436fd9e00426cbbce9c0fa1effe1
+    m_Address: Assets/General/AiModels/tttn_model_dataset_training_v5_2.onnx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ai_model
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b62cb50418eb4421f9016a3dbc4ff054
+    m_Address: Assets/General/AiModels/tttn_model_dataset_training_v5_3.onnx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ai_model
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2fd2dca94da0e4253b8daa165a585024
+    m_Address: Assets/General/AiModels/tttn_model_dataset_training_v5_4.onnx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ai_model
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 49d4ee1f4e4db47989419f7aa361e241
+    m_Address: Assets/General/AiModels/tttn_model_dataset_training_v5_5.onnx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ai_model
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4a93ae18b29f3449fb09473ea6349687
+    m_Address: Assets/General/AiModels/tttn_model_dataset_training_v5_6.onnx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ai_model
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 148a4c16cee4a45bdb96d5d65f1f7491
+    m_Address: Assets/General/AiModels/tttn_model_dataset_training_v5_7.onnx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ai_model
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 065c0cd02e65a4ef89196833bd9ea617
+    m_Address: Assets/General/AiModels/tttn_model_dataset_training_v5_8.onnx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ai_model
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 67236932078454d7a84a4de4c3e3ced4, type: 2}

@@ -6,6 +6,7 @@
     <type fullname="SaveSystemManager" preserve="all" />
     <type fullname="SceneLoader" preserve="all" />
     <type fullname="TheAiAlchemist.AddressableManagerSO" preserve="all" />
+    <type fullname="TheAiAlchemist.AiInfo" preserve="all" />
     <type fullname="TheAiAlchemist.BoolChannel" preserve="all" />
     <type fullname="TheAiAlchemist.BotSelectHighlighter" preserve="all" />
     <type fullname="TheAiAlchemist.CutSceneManager" preserve="all" />

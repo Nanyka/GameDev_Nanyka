@@ -16,19 +16,18 @@ namespace TheAiAlchemist
         [SerializeField] private VoidChannel changePlayerChannel;
         [SerializeField] private BoolChannel endGameChannel;
         [SerializeField] private MoveChannel humanMoveChannel;
-
         [SerializeField] private VoidChannel resetChannel;
         // [SerializeField] private IntChannel saveLevelChannel;
 
         [SerializeField] private AddressableManagerSO addressableManager;
         [SerializeField] private SaveSystemManager saveSystemManager;
         [SerializeField] private string[] modelAddress;
-
-
+        
         private IAgent _humanAgent;
         private AlphaZeroAgent _botAgent;
         private GameState _currentGameState;
         private Dictionary<Player, IAgent> _players;
+        private bool isEndGame;
 
         private void OnEnable()
         {
@@ -40,7 +39,7 @@ namespace TheAiAlchemist
         {
             humanMoveChannel.RemoveListener(HumanPlayAMove);
             resetChannel.RemoveListener(ResetGame);
-            _botAgent.DisableAiElements();
+            _botAgent?.DisableAiElements();
         }
 
         private async void Start()
@@ -50,25 +49,35 @@ namespace TheAiAlchemist
 
         private async Task Init()
         {
+            var loadPlayers = await LoadDecisionMakers();
+            if (loadPlayers == false)
+                return;
+
+            resetChannel.ExecuteChannel();
+        }
+        
+        private async Task<bool> LoadDecisionMakers()
+        {
+            var loadResult = true;
             _humanAgent = new AlphaZeroAlgorithm.Human();
 
-            Debug.Log($"Loading model {modelAddress[saveSystemManager.saveData.level]}");
+            // Debug.Log($"Loading model {modelAddress[saveSystemManager.saveData.level]}");
             var modelAsset = await addressableManager.GetModel(modelAddress[saveSystemManager.saveData.level]);
             if (modelAsset == null)
             {
                 Debug.Log("The game fail to load model!!!");
-                return;
+                loadResult = false;
             }
-            
+            _botAgent?.DisableAiElements();
             _botAgent = new AlphaZeroAgent(modelAsset, 384);
-
+            
             _players = new Dictionary<Player, IAgent>
             {
                 { Player.X, _humanAgent },
                 { Player.O, _botAgent }
             };
 
-            resetChannel.ExecuteChannel();
+            return loadResult;
         }
 
         private async void HumanPlayAMove(Move humanMove)
@@ -125,17 +134,25 @@ namespace TheAiAlchemist
             }
         }
 
-        private void EndGame()
+        private async void EndGame()
         {
+            if (isEndGame)
+                return;
+            isEndGame = true;
+            
             gameStateStorage.SetValue(_currentGameState);
             changePlayerChannel.ExecuteChannel();
-
+            
             // Level up if human (play X) win
             if (_currentGameState.Winner() != null && _currentGameState.Winner() == Player.X)
             {
                 saveSystemManager.saveData.level +=
                     Mathf.Min(1, modelAddress.Length - saveSystemManager.saveData.level - 1);
                 saveSystemManager.SaveDataToDisk();
+                
+                var loadPlayers = await LoadDecisionMakers();
+                if (loadPlayers == false)
+                    return;
             }
 
             endGameChannel.ExecuteChannel(_currentGameState.Winner() != null);
@@ -143,6 +160,7 @@ namespace TheAiAlchemist
 
         private async void ResetGame()
         {
+            isEndGame = false;
             _currentGameState = GameSetup.SetupNewGame();
             await StartNextTurn();
         }
