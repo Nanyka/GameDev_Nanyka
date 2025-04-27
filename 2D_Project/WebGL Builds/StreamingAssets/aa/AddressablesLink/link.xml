@@ -3,6 +3,7 @@
     <type fullname="DefaultPlayables.TransformTweenTrack" preserve="all" />
     <type fullname="FadeController" preserve="all" />
     <type fullname="LoadingInterfaceController" preserve="all" />
+    <type fullname="SaveSystemManager" preserve="all" />
     <type fullname="SceneLoader" preserve="all" />
     <type fullname="TheAiAlchemist.AddressableManagerSO" preserve="all" />
     <type fullname="TheAiAlchemist.BoolChannel" preserve="all" />
@@ -39,6 +40,7 @@
     <type fullname="TheAiAlchemist.UnitVisualize" preserve="all" />
     <type fullname="TheAiAlchemist.VoidChannel" preserve="all" />
     <type fullname="TransformTweenClip" preserve="all" />
+    <type fullname=".Save" preserve="nothing" serialized="true" />
     <type fullname=".TransformTweenBehaviour" preserve="nothing" serialized="true" />
     <type fullname="TheAiAlchemist.ButtonRequire" preserve="nothing" serialized="true" />
     <type fullname="TheAiAlchemist.DialogueBehaviour" preserve="nothing" serialized="true" />
