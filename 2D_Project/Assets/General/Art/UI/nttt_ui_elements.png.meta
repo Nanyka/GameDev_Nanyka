@@ -1,0 +1,908 @@
+fileFormatVersion: 2
+guid: 3af783eb3e386494b9c0934dc04409e3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1535469188513145188
+    second: nttt_ui_elements_0
+  - first:
+      213: 8241897897714106080
+    second: nttt_ui_elements_1
+  - first:
+      213: 7959975756101880706
+    second: nttt_ui_elements_2
+  - first:
+      213: 2852728085523482489
+    second: nttt_ui_elements_3
+  - first:
+      213: 6278931455660632800
+    second: nttt_ui_elements_4
+  - first:
+      213: 268479859568926244
+    second: nttt_ui_elements_5
+  - first:
+      213: 6629964727756996202
+    second: nttt_ui_elements_6
+  - first:
+      213: -1392002694991831478
+    second: nttt_ui_elements_7
+  - first:
+      213: -4762215627464871556
+    second: nttt_ui_elements_8
+  - first:
+      213: -6064911780363817126
+    second: nttt_ui_elements_9
+  - first:
+      213: -1743762360009901034
+    second: nttt_ui_elements_10
+  - first:
+      213: -8874903555339999524
+    second: nttt_ui_elements_11
+  - first:
+      213: 8059826484442860300
+    second: nttt_ui_elements_12
+  - first:
+      213: -3333517609851499488
+    second: nttt_ui_elements_13
+  - first:
+      213: 5182146028672254900
+    second: nttt_ui_elements_14
+  - first:
+      213: -1807519596047100289
+    second: nttt_ui_elements_15
+  - first:
+      213: -7929780945727589718
+    second: nttt_ui_elements_16
+  - first:
+      213: -5507983931036849532
+    second: nttt_ui_elements_17
+  - first:
+      213: 5783852420714209544
+    second: nttt_ui_elements_18
+  - first:
+      213: 7967062904411519158
+    second: nttt_ui_elements_19
+  - first:
+      213: -1014944575341722905
+    second: nttt_ui_elements_20
+  - first:
+      213: 8988877407709820433
+    second: nttt_ui_elements_21
+  - first:
+      213: 3501908860503907913
+    second: nttt_ui_elements_22
+  - first:
+      213: -1053594041081430484
+    second: nttt_ui_elements_23
+  - first:
+      213: 7310210434533711004
+    second: nttt_ui_elements_24
+  - first:
+      213: -8962845919886864234
+    second: nttt_ui_elements_25
+  - first:
+      213: -5841224448791639429
+    second: nttt_ui_elements_26
+  - first:
+      213: -5225029810152339494
+    second: nttt_ui_elements_27
+  - first:
+      213: -7596811525732089057
+    second: nttt_ui_elements_28
+  - first:
+      213: 498811233235272848
+    second: nttt_ui_elements_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: nttt_ui_elements_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 768
+        width: 238
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9edd1788eae0bae0800000000000000
+      internalID: -1535469188513145188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nttt_ui_elements_1
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 790
+        width: 213
+        height: 224
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eeb944787a116270800000000000000
+      internalID: 8241897897714106080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nttt_ui_elements_2
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 769
+        width: 235
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28b8c23c6c3877e60800000000000000
+      internalID: 7959975756101880706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nttt_ui_elements_3
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 769
+        width: 208
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9774862541de69720800000000000000
+      internalID: 2852728085523482489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nttt_ui_elements_4
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 771
+        width: 203
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eaada744ee332750800000000000000
+      internalID: 6278931455660632800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nttt_ui_elements_5
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 791
+        width: 268
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 47, y: 42, z: 48, w: 41}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42ed3f28205d9b300800000000000000
+      internalID: 268479859568926244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nttt_ui_elements_6
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 533
+        width: 237
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6e3357facd520c50800000000000000
+      internalID: 6629964727756996202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nttt_ui_elements_7
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 561
+        width: 216
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4e10ae8cec9eace0800000000000000
+      internalID: -1392002694991831478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nttt_ui_elements_8
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 565
+        width: 214
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c71742d3e1639edb0800000000000000
+      internalID: -4762215627464871556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nttt_ui_elements_9
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 545
+        width: 206
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5f25597eda15dba0800000000000000
+      internalID: -6064911780363817126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nttt_ui_elements_10
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 215
+        width: 209
+        height: 545
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61cb9e65f59ecc7e0800000000000000
+      internalID: -1743762360009901034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nttt_ui_elements_11
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 723
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd6ab18dc3206d480800000000000000
+      internalID: -8874903555339999524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nttt_ui_elements_12
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 568
+        width: 266
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 45, y: 46, z: 54, w: 44}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0b808c1c714adf60800000000000000
+      internalID: 8059826484442860300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nttt_ui_elements_13
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 192
+        width: 287
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02cca444567fcb1d0800000000000000
+      internalID: -3333517609851499488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nttt_ui_elements_14
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 158
+        width: 373
+        height: 373
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b3063d5b5eaae740800000000000000
+      internalID: 5182146028672254900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nttt_ui_elements_15
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 235
+        width: 250
+        height: 305
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f761e0901866ae6e0800000000000000
+      internalID: -1807519596047100289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nttt_ui_elements_16
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 307
+        width: 165
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa2fe3f5e32c3f190800000000000000
+      internalID: -7929780945727589718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nttt_ui_elements_17
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 415
+        width: 106
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48a2df91cc5bf83b0800000000000000
+      internalID: -5507983931036849532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nttt_ui_elements_18
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 415
+        width: 128
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80124f9e12f544050800000000000000
+      internalID: 5783852420714209544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nttt_ui_elements_19
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 274
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b8f3a01081b09e60800000000000000
+      internalID: 7967062904411519158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nttt_ui_elements_20
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 279
+        width: 115
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e20c0049413ae1f0800000000000000
+      internalID: -1014944575341722905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nttt_ui_elements_21
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 279
+        width: 129
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 116f3109068eebc70800000000000000
+      internalID: 8988877407709820433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nttt_ui_elements_22
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 0
+        width: 150
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94ed0220e87499030800000000000000
+      internalID: 3501908860503907913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nttt_ui_elements_23
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 63
+        width: 125
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2e7fd34dc1e061f0800000000000000
+      internalID: -1053594041081430484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nttt_ui_elements_24
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 47
+        width: 163
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9c5cb7b8a5137560800000000000000
+      internalID: 7310210434533711004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nttt_ui_elements_25
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 3
+        width: 95
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69095908f139d9380800000000000000
+      internalID: -8962845919886864234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nttt_ui_elements_26
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 131
+        width: 95
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7a827cdf4dcfeea0800000000000000
+      internalID: -5841224448791639429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nttt_ui_elements_27
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 127
+        width: 105
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad70b013217fc77b0800000000000000
+      internalID: -5225029810152339494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nttt_ui_elements_28
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 7
+        width: 104
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f13452fba24b29690800000000000000
+      internalID: -7596811525732089057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nttt_ui_elements_29
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 11
+        width: 266
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09486fe7c222ce600800000000000000
+      internalID: 498811233235272848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6b963586b50804b879388d73671a3e1e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      nttt_ui_elements_0: -1535469188513145188
+      nttt_ui_elements_1: 8241897897714106080
+      nttt_ui_elements_10: -1743762360009901034
+      nttt_ui_elements_11: -8874903555339999524
+      nttt_ui_elements_12: 8059826484442860300
+      nttt_ui_elements_13: -3333517609851499488
+      nttt_ui_elements_14: 5182146028672254900
+      nttt_ui_elements_15: -1807519596047100289
+      nttt_ui_elements_16: -7929780945727589718
+      nttt_ui_elements_17: -5507983931036849532
+      nttt_ui_elements_18: 5783852420714209544
+      nttt_ui_elements_19: 7967062904411519158
+      nttt_ui_elements_2: 7959975756101880706
+      nttt_ui_elements_20: -1014944575341722905
+      nttt_ui_elements_21: 8988877407709820433
+      nttt_ui_elements_22: 3501908860503907913
+      nttt_ui_elements_23: -1053594041081430484
+      nttt_ui_elements_24: 7310210434533711004
+      nttt_ui_elements_25: -8962845919886864234
+      nttt_ui_elements_26: -5841224448791639429
+      nttt_ui_elements_27: -5225029810152339494
+      nttt_ui_elements_28: -7596811525732089057
+      nttt_ui_elements_29: 498811233235272848
+      nttt_ui_elements_3: 2852728085523482489
+      nttt_ui_elements_4: 6278931455660632800
+      nttt_ui_elements_5: 268479859568926244
+      nttt_ui_elements_6: 6629964727756996202
+      nttt_ui_elements_7: -1392002694991831478
+      nttt_ui_elements_8: -4762215627464871556
+      nttt_ui_elements_9: -6064911780363817126
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

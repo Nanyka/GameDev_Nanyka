@@ -17,5 +17,10 @@ namespace TheAiAlchemist
         {
             mRenderer.color = color;
         }
+
+        public void SetSprite(Sprite sprite)
+        {
+            mRenderer.sprite = sprite;
+        }
     }
 }

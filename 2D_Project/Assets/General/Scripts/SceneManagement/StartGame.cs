@@ -1,4 +1,6 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using TheAiAlchemist;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -15,6 +17,8 @@ namespace TheAiAlchemist
         [SerializeField] private GameSceneSO locationsToLoad;
         [SerializeField] private GameSceneSO tutorialToLoad;
         [SerializeField] private SaveSystemManager saveSystem;
+        [SerializeField] private AddressableManagerSO addressableManagerSo;
+        [SerializeField] private GeneralAssetLoader generalAssetLoader;
         [SerializeField] private bool showLoadScreen;
 
         [Header("Broadcasting on")] [SerializeField]
@@ -43,7 +47,7 @@ namespace TheAiAlchemist
             onResetButton.RemoveListener(OnResetSaveDataPress);
         }
 
-        private void StartNewGame()
+        private async void StartNewGame()
         {
             hasSaveData = saveSystem.LoadSaveDataFromDisk();
             if (hasSaveData == false)
@@ -52,11 +56,14 @@ namespace TheAiAlchemist
                 saveSystem.SetNewGameData();
             }
 
+            await LoadGeneralElements();
+
             loadLocation.RaiseEvent(locationsToLoad, showLoadScreen);
         }
 
-        private void TutorialGame()
+        private async void TutorialGame()
         {
+            await LoadGeneralElements();
             loadTutorial.RaiseEvent(tutorialToLoad, showLoadScreen);
         }
 
@@ -66,6 +73,33 @@ namespace TheAiAlchemist
             saveSystem.SaveDataToDisk();
             
             loadLocation.RaiseEvent(locationsToLoad, showLoadScreen);
+        }
+        
+        private async Task LoadGeneralElements()
+        {
+            var blueUnitSprites = new List<Sprite>(3);
+            foreach (var unitAddress in generalAssetLoader.blueUnitAddress)
+            {
+                var sprite = await addressableManagerSo.GetSprite(unitAddress);
+                blueUnitSprites.Add(sprite);
+            }
+            generalAssetLoader.ResetBlueSprites(blueUnitSprites);
+            
+            var redUnitSprites = new List<Sprite>(3);
+            foreach (var unitAddress in generalAssetLoader.redUnitAddress)
+            {
+                var sprite = await addressableManagerSo.GetSprite(unitAddress);
+                redUnitSprites.Add(sprite);
+            }
+            generalAssetLoader.ResetRedSprites(redUnitSprites);
+            
+            var remainSprites = new List<Sprite>(3);
+            foreach (var remainAddress in generalAssetLoader.remainAmountAddress)
+            {
+                var sprite = await addressableManagerSo.GetSprite(remainAddress);
+                remainSprites.Add(sprite);
+            }
+            generalAssetLoader.ResetRemainSprites(remainSprites);
         }
 
         // private void ContinuePreviousGame()

@@ -55,7 +55,7 @@ namespace TheAiAlchemist
         
         private void OnChangePlayer()
         {
-            playerText.SetText($"Player {gameStateStorage.GetValue().NextPlayer}");
+            playerText.SetText($"In turn of <b>Player {gameStateStorage.GetValue().NextPlayer}</b>");
         }
         
         private void OnClickReset()

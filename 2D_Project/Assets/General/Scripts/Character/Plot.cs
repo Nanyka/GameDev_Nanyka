@@ -56,7 +56,7 @@ namespace TheAiAlchemist
                 var checkPoint = plot.Key;
                 if (checkPoint.Row == row && checkPoint.Col == col)
                 {
-                    unitVisualize.Visualize(checkPoint.Strength, GameConstants.ColorTank[plot.Value]);
+                    unitVisualize.Visualize(checkPoint.Strength, plot.Value);
                 }
             }
         }
