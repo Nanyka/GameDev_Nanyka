@@ -26,7 +26,6 @@ namespace TheAiAlchemist
             changePlayerChannel.AddListener(OnChangePlayer);
             endGameChannel.AddListener(ShowPanel);
             playAgainButton.onClick.AddListener(OnClickReset);
-            // nextChallengeButton.onClick.AddListener(OnClickNext);
             homeButton.onClick.AddListener(OnBackToHome);
         }
 
@@ -35,7 +34,6 @@ namespace TheAiAlchemist
             changePlayerChannel.RemoveListener(OnChangePlayer);
             endGameChannel.RemoveListener(ShowPanel);
             playAgainButton.onClick.RemoveListener(OnClickReset);
-            // nextChallengeButton.onClick.AddListener(OnClickNext);
             homeButton.onClick.AddListener(OnBackToHome);
         }
 

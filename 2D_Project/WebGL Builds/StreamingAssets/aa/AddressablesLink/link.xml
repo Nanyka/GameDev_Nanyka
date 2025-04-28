@@ -17,6 +17,7 @@
     <type fullname="TheAiAlchemist.GameManager" preserve="all" />
     <type fullname="TheAiAlchemist.GameplaySO" preserve="all" />
     <type fullname="TheAiAlchemist.GameStateStorage" preserve="all" />
+    <type fullname="TheAiAlchemist.GeneralAssetLoader" preserve="all" />
     <type fullname="TheAiAlchemist.HumanInteract" preserve="all" />
     <type fullname="TheAiAlchemist.InGameAnnouncer" preserve="all" />
     <type fullname="TheAiAlchemist.IntChannel" preserve="all" />
@@ -127,12 +128,6 @@
   <assembly fullname="UnityEngine.Physics2DModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="UnityEngine.BoxCollider2D" preserve="all" />
   </assembly>
-  <assembly fullname="UnityEngine.SpriteMaskModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-    <type fullname="UnityEngine.SpriteMask" preserve="all" />
-  </assembly>
-  <assembly fullname="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-    <type fullname="UnityEngine.Font" preserve="all" />
-  </assembly>
   <assembly fullname="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="UnityEngine.EventSystems.EventSystem" preserve="all" />
     <type fullname="UnityEngine.UI.Button" preserve="all" />
@@ -162,8 +157,5 @@
     <type fullname="UnityEngine.TextCore.Glyph" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.TextCore.GlyphMetrics" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.TextCore.GlyphRect" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.TextCore.LowLevel.GlyphValueRecord" preserve="nothing" serialized="true" />
   </assembly>
 </linker>
