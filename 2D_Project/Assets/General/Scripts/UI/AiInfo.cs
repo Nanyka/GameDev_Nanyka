@@ -10,17 +10,22 @@ namespace TheAiAlchemist
     {
         [SerializeField] private VoidChannel resetChannel;
         [SerializeField] private SaveSystemManager saveSystemManager;
+        [SerializeField] private BoolChannel botThinkingChannel;
+        
         [SerializeField] private Slider progressSlider;
         [SerializeField] private TextMeshProUGUI[] aiLevelTexts;
+        [SerializeField] private GameObject sandClock;
 
         private void OnEnable()
         {
             resetChannel.AddListener(UpdateAiInfo);
+            botThinkingChannel.AddListener(ShowSandClock);
         }
 
         private void OnDisable()
         {
-            resetChannel.AddListener(UpdateAiInfo);
+            resetChannel.RemoveListener(UpdateAiInfo);
+            botThinkingChannel.RemoveListener(ShowSandClock);
         }
 
         private void UpdateAiInfo()
@@ -30,6 +35,12 @@ namespace TheAiAlchemist
             for (var i = 0; i < aiLevelTexts.Length; i++)
                 aiLevelTexts[i].color = i <= level ? GameConstants.ColorTank[ColorPalate.LightYellow] : 
                     GameConstants.ColorTank[ColorPalate.DarkGreen];
+        }
+        
+        private void ShowSandClock(bool show)
+        {
+            // Debug.Log($"Show clock: {show}");
+            sandClock.SetActive(show);
         }
     }
 }

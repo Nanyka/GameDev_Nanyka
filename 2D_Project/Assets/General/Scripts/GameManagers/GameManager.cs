@@ -18,6 +18,7 @@ namespace TheAiAlchemist
         [SerializeField] private MoveChannel humanMoveChannel;
         [SerializeField] private VoidChannel resetChannel;
         [SerializeField] private IntChannel audioPlayIndex;
+        [SerializeField] private BoolChannel botThinkingChannel;
         // [SerializeField] private IntChannel saveLevelChannel;
 
         [SerializeField] private AddressableManagerSO addressableManager;
@@ -95,9 +96,7 @@ namespace TheAiAlchemist
                 return;
             }
 
-            gameStateStorage.SetValue(_currentGameState);
-            changePlayerChannel.ExecuteChannel();
-            askUnitIndex.SetValue(-1);
+            EndTurnSetup();
 
             var nextMove = await _players[_currentGameState.NextPlayer].SelectMove(_currentGameState);
             if (nextMove != null) await ApplySelectedMove(nextMove);
@@ -118,6 +117,7 @@ namespace TheAiAlchemist
                 var player = _currentGameState.Board.GetPlayerAtCoord(point.Row, point.Col);
                 _currentGameState = _currentGameState.ApplyMove(move);
                 audioPlayIndex.ExecuteChannel(player.HasValue ? 1 : 0);
+
                 await StartNextTurn();
             }
             catch (IllegalMoveError ex)
@@ -137,6 +137,14 @@ namespace TheAiAlchemist
                     $"{_currentGameState.NextPlayer}: {ex.Message}");
                 EndGame();
             }
+        }
+        
+        private void EndTurnSetup()
+        {
+            gameStateStorage.SetValue(_currentGameState);
+            changePlayerChannel.ExecuteChannel();
+            botThinkingChannel.ExecuteChannel(_currentGameState.NextPlayer == Player.O);
+            askUnitIndex.SetValue(-1);
         }
 
         private async void EndGame()
@@ -167,6 +175,7 @@ namespace TheAiAlchemist
         {
             isEndGame = false;
             _currentGameState = GameSetup.SetupNewGame();
+            // EndTurnSetup();
             await StartNextTurn();
         }
     }

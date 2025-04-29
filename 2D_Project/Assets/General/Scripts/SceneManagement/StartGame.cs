@@ -24,7 +24,6 @@ namespace TheAiAlchemist
         [Header("Broadcasting on")] 
         [SerializeField] private LoadEventChannel loadLocation;
         [SerializeField] private LoadEventChannel loadTutorial;
-        [SerializeField] private VoidChannel finishSetUp;
 
         [Header("Listening to")] 
         [SerializeField] private VoidChannel onNewGameButton;
@@ -50,21 +49,11 @@ namespace TheAiAlchemist
         
         private void StartNewGame()
         {
-            // hasSaveData = saveSystem.LoadSaveDataFromDisk();
-            // if (hasSaveData == false)
-            // {
-            //     saveSystem.WriteEmptySaveFile();
-            //     saveSystem.SetNewGameData();
-            // }
-
-            // await LoadGeneralElements();
-
             loadLocation.RaiseEvent(locationsToLoad, showLoadScreen);
         }
 
         private void TutorialGame()
         {
-            // await LoadGeneralElements();
             loadTutorial.RaiseEvent(tutorialToLoad, showLoadScreen);
         }
 
@@ -102,27 +91,5 @@ namespace TheAiAlchemist
             }
             generalAssetLoader.ResetRemainSprites(remainSprites);
         }
-
-        // private void ContinuePreviousGame()
-        // {
-        //     // StartCoroutine(LoadSaveGame());
-        // }
-
-        // private IEnumerator LoadSaveGame()
-        // {
-        //     yield return StartCoroutine(_saveSystem.LoadSavedInventory());
-        //
-        //     _saveSystem.LoadSavedQuestlineStatus();
-        //     var locationGuid = _saveSystem.saveData._locationId;
-        //     var asyncOperationHandle = Addressables.LoadAssetAsync<LocationSO>(locationGuid);
-        //
-        //     yield return asyncOperationHandle;
-        //
-        //     if (asyncOperationHandle.Status == AsyncOperationStatus.Succeeded)
-        //     {
-        //         LocationSO locationSO = asyncOperationHandle.Result;
-        //         _loadLocation.RaiseEvent(locationSO, _showLoadScreen);
-        //     }
-        // }
     }
 }

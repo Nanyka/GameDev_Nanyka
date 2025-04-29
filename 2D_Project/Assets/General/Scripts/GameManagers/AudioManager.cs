@@ -1,43 +1,45 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace TheAiAlchemist
 {
     public class AudioManager : MonoBehaviour
     {
-        [SerializeField] private FloatChannel changeSfxVolumeChannel;
+        [SerializeField] private VoidChannel changeSettingsChannel;
+        [SerializeField] private SettingsSO settingsSo;
         [SerializeField] private IntChannel audioPlayIndex;
         [SerializeField] private AudioClip[] soundClips;
-
-        private AudioSource audioSource;
-
-        private void Awake()
-        {
-            audioSource = GetComponent<AudioSource>();
-        }
+        [SerializeField] private AudioSource sfxSource;
+        [SerializeField] private AudioSource musicSource;
 
         private void OnEnable()
         {
-            audioPlayIndex.AddListener(PlaySound);
-            changeSfxVolumeChannel.AddListener(ChangeSfx);
+            audioPlayIndex.AddListener(PlaySfx);
+            changeSettingsChannel.AddListener(ChangeSfx);
         }
 
         private void OnDisable()
         {
-            audioPlayIndex.RemoveListener(PlaySound);
-            changeSfxVolumeChannel.RemoveListener(ChangeSfx);
+            audioPlayIndex.RemoveListener(PlaySfx);
+            changeSettingsChannel.RemoveListener(ChangeSfx);
         }
 
-        private void PlaySound(int soundIndex)
+        private void Start()
         {
-            // Debug.Log($"Play sound {soundIndex}");
-            audioSource.resource = soundClips[soundIndex];
-            audioSource.Play();
+            musicSource.Play();
         }
 
-        private void ChangeSfx(float sfxVolume)
+        private void PlaySfx(int soundIndex)
         {
-            audioSource.volume = sfxVolume;
+            sfxSource.resource = soundClips[soundIndex];
+            sfxSource.Play();
+        }
+
+        private void ChangeSfx()
+        {
+            sfxSource.volume = settingsSo.SfxVolume;
+            musicSource.volume = settingsSo.MusicVolume;
         }
     }
 }

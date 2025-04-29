@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TheAiAlchemist;
 using UnityEngine;
 using UnityEngine.Localization;
+using UnityEngine.Serialization;
 
 /// <summary>
 /// This class contains all the variables that will be serialized and saved to a file.<br/>
@@ -16,11 +17,14 @@ public class Save
 
 	// The variables need to be public, else we would have to write trivial getter/setter functions.
 	public int level;
-	public float _sfxVolume;
+	public float sfxVolume;
+	public float musicVolume;
+
 
 	public void SaveSettings(SettingsSO settings)
 	{
-		_sfxVolume = settings.SfxVolume;;
+		sfxVolume = settings.SfxVolume;;
+		musicVolume = settings.MusicVolume;
 	}
 
 	public void SaveLevel(int currentLevel)

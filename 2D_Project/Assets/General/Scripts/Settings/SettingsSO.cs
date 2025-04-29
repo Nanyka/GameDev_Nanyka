@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Localization;
+using UnityEngine.Serialization;
 
 
 namespace TheAiAlchemist
@@ -8,17 +9,22 @@ namespace TheAiAlchemist
 
 	public class SettingsSO : ScriptableObject
 	{
-		[SerializeField] private float _sfxVolume;
-		public float SfxVolume => _sfxVolume;
-		
-		public void SaveAudioSettings(float newSfxVolume)
+		[SerializeField] private float sfxVolume;
+		[SerializeField] private float musicVolume;
+
+		public float SfxVolume => sfxVolume;
+		public float MusicVolume => musicVolume;
+
+		public void SaveAudioSettings(float newSfxVolume, float songVolume)
 		{
-			_sfxVolume = newSfxVolume;
+			sfxVolume = newSfxVolume;
+			musicVolume = songVolume;
 		}
 
 		public void LoadSavedSettings(Save savedFile)
 		{
-			_sfxVolume = savedFile._sfxVolume;
+			sfxVolume = savedFile.sfxVolume;
+			musicVolume = savedFile.musicVolume;
 		}
 	}
 }

@@ -1,5 +1,6 @@
 ﻿using TheAiAlchemist;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 // using UnityEngine.Localization;
 // using UnityEngine.Localization.Settings;
@@ -9,16 +10,9 @@ namespace TheAiAlchemist
     public class SettingsSystem : MonoBehaviour
     {
         [SerializeField] private VoidChannel SaveSettingsEvent = default;
-
         [SerializeField] private SettingsSO _currentSettings = default;
-
-        // [SerializeField] private UniversalRenderPipelineAsset _urpAsset = default;
         [SerializeField] private SaveSystemManager _saveSystem = default;
-
-        //
-        // [SerializeField] private FloatEventChannelSO _changeMasterVolumeEventChannel = default;
-        [SerializeField] private FloatChannel _changeSFXVolumeEventChannel;
-        // [SerializeField] private FloatEventChannelSO _changeMusicVolumeEventChannel = default;
+        [SerializeField] private VoidChannel changeSettingsChannel;
 
         private void Awake()
         {
@@ -48,17 +42,7 @@ namespace TheAiAlchemist
         /// </summary>
         void SetCurrentSettings()
         {
-            // _changeMusicVolumeEventChannel.RaiseEvent(_currentSettings.MusicVolume);//raise event for volume change
-            _changeSFXVolumeEventChannel.ExecuteChannel(_currentSettings.SfxVolume); //raise event for volume change
-            // _changeMasterVolumeEventChannel.RaiseEvent(_currentSettings.MasterVolume); //raise event for volume change
-            // Resolution currentResolution = Screen.currentResolution; // get a default resolution in case saved resolution doesn't exist in the resolution List
-            // if (_currentSettings.ResolutionsIndex < Screen.resolutions.Length)
-            // 	currentResolution = Screen.resolutions[_currentSettings.ResolutionsIndex];
-            // Screen.SetResolution(currentResolution.width, currentResolution.height, _currentSettings.IsFullscreen);
-            // _urpAsset.shadowDistance = _currentSettings.ShadowDistance;
-            // _urpAsset.msaaSampleCount = _currentSettings.AntiAliasingIndex;
-            //
-            // LocalizationSettings.SelectedLocale = _currentSettings.CurrentLocale;
+            changeSettingsChannel.ExecuteChannel(); 
         }
 
         void SaveSettings()
