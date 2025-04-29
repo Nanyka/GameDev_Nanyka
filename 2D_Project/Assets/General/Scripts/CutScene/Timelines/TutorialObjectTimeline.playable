@@ -26,8 +26,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   template:
     characterIcon: {fileID: 0}
-    dialogueLine: The way to win the game is exactly the same how the original Tic
-      Tac Toe work.
+    dialogueLine: "You win the same way as classic Tic Tac Toe \n--> Get three in
+      a line."
     dialogueWidth: 800
     dialogueHeight: 200
     buttonRequire: 1
@@ -93,8 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   template:
     characterIcon: {fileID: 0}
-    dialogueLine: The game look quite the same as original Tic Tac Toe, with just
-      a small but interesting tweak.
+    dialogueLine: This game look like classic Tic Tac Toe - with one fun twist!
     dialogueWidth: 800
     dialogueHeight: 200
     buttonRequire: 1
@@ -172,7 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   template:
     characterIcon: {fileID: 0}
-    dialogueLine: And place it anywhere you want, for example, at Row 1 Col 1
+    dialogueLine: You can place it anywhere - like Row 1 Col 1.
     dialogueWidth: 800
     dialogueHeight: 200
     buttonRequire: 2
@@ -191,8 +190,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   template:
     characterIcon: {fileID: 0}
-    dialogueLine: When the opponent occupied a plot, we can play on top of it with
-      a stronger unit.
+    dialogueLine: If your opponent takes a splot, you can play a stronger unit on
+      top of it.
     dialogueWidth: 800
     dialogueHeight: 200
     buttonRequire: 2
@@ -1608,7 +1607,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   template:
     characterIcon: {fileID: 0}
-    dialogueLine: Let start with the lowest unit!
+    dialogueLine: Start by placing your weakest unit on the board.
     dialogueWidth: 800
     dialogueHeight: 200
     buttonRequire: 2
@@ -1698,10 +1697,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   template:
     characterIcon: {fileID: 0}
-    dialogueLine: 'It all we need for this game.
+    dialogueLine: 'That''s all you need to know.
 
-      Let jump back for a real
-      game.'
+      Let''s jump into a real match!!!'
     dialogueWidth: 800
     dialogueHeight: 200
     buttonRequire: 2
@@ -2494,8 +2492,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   template:
     characterIcon: {fileID: 0}
-    dialogueLine: When it run out of any unit, the button would be disable liike
-      this.
+    dialogueLine: Once one player runs out of a unit type, its button will be disable
+      like this.
     dialogueWidth: 800
     dialogueHeight: 200
     buttonRequire: 1
@@ -2882,7 +2880,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   template:
     characterIcon: {fileID: 0}
-    dialogueLine: And the same logic for any higher strength unit.
+    dialogueLine: Stronger unit can always conquer weaker ones - simple as that!
     dialogueWidth: 800
     dialogueHeight: 200
     buttonRequire: 2
@@ -3076,8 +3074,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   template:
     characterIcon: {fileID: 0}
-    dialogueLine: For example, with this Unit 2 we can conquer the Unit 1 at Row
-      2 Col 2
+    dialogueLine: For example, use unit 2 to take over their unit 1 in Row 2 Col
+      2.
     dialogueWidth: 800
     dialogueHeight: 200
     buttonRequire: 2
@@ -3120,7 +3118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   template:
     characterIcon: {fileID: 0}
-    dialogueLine: Now, let try it yourself and beat the opponent.
+    dialogueLine: Now it's your turn. Give it a try and outsmart your opponent!
     dialogueWidth: 800
     dialogueHeight: 200
     buttonRequire: 2

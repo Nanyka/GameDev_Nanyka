@@ -34,11 +34,11 @@ namespace TheAiAlchemist
         {
             if (askUnitIndex.GetValue() < 0)
             {
-                Debug.Log("Need to select a unit");
+                // Debug.Log("Need to select a unit");
             }
             else if (askUnitIndex.GetValue() <= currentStrength)
             {
-                Debug.Log("Invalid move with strength lower than current strength");
+                // Debug.Log("Invalid move with strength lower than current strength");
             }
             else
             {
