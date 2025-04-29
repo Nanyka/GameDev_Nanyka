@@ -9,13 +9,6 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class SaveSystemManager : ScriptableObject
 {
-	// [SerializeField] private IntChannel saveLevel;
-	// [SerializeField] private VoidChannel _saveSettingsEvent = default;
-	// [SerializeField] private LoadEventChannel _loadLocation = default;
-	// [SerializeField] private InventorySO _playerInventory = default;
-	// [SerializeField] private SettingsSO _currentSettings = default;
-	// [SerializeField] private QuestManagerSO _questManagerSO = default;
-
 	public string saveFilename = "save.nttt";
 	public string backupSaveFilename = "save.nttt.bak";
 	public Save saveData = new();
@@ -27,16 +20,12 @@ public class SaveSystemManager : ScriptableObject
 		DiscardAllDescriptions();
 		saveLevel = levelChannel;
 		saveLevel.AddListener(SaveLevel);
-		// _saveSettingsEvent.AddListener(SaveSettings);
-		// _loadLocation.OnLoadingRequested += CacheLoadLocations;
 	}
 
 	private void DiscardAllDescriptions()
 	{
 		if (saveLevel != null)
 			saveLevel.RemoveAllListener();
-		// _saveSettingsEvent.RemoveListener(SaveSettings);
-		// _loadLocation.OnLoadingRequested -= CacheLoadLocations;
 	}
 
 	private void SaveLevel(int currentLevel)
@@ -66,40 +55,8 @@ public class SaveSystemManager : ScriptableObject
 		return false;
 	}
 
-	// public IEnumerator LoadSavedInventory()
-	// {
-	// 	_playerInventory.Items.Clear();
-	// 	foreach (var serializedItemStack in saveData._itemStacks)
-	// 	{
-	// 		var loadItemOperationHandle = Addressables.LoadAssetAsync<ItemSO>(serializedItemStack.itemGuid);
-	// 		yield return loadItemOperationHandle;
-	// 		if (loadItemOperationHandle.Status == AsyncOperationStatus.Succeeded)
-	// 		{
-	// 			var itemSO = loadItemOperationHandle.Result;
-	// 			_playerInventory.Add(itemSO, serializedItemStack.amount);
-	// 		}
-	// 	}
-	// }
-	public void LoadSavedQuestlineStatus()
-	{
-		// _questManagerSO.SetFinishedQuestlineItemsFromSave(saveData._finishedQuestlineItemsGUIds);
-
-	}
-
 	public void SaveDataToDisk()
 	{
-		// saveData._itemStacks.Clear();
-		// foreach (var itemStack in _playerInventory.Items)
-		// {
-		// 	saveData._itemStacks.Add(new SerializedItemStack(itemStack.Item.Guid, itemStack.Amount));
-		// }
-		// saveData._finishedQuestlineItemsGUIds.Clear();
-
-		// foreach (var item in _questManagerSO.GetFinishedQuestlineItemsGUIds())
-		// {
-		// 	saveData._finishedQuestlineItemsGUIds.Add(item);
-		//
-		// }
 		if (FileManager.MoveFile(saveFilename, backupSaveFilename))
 		{
 			if (FileManager.WriteToFile(saveFilename, saveData.ToJson()))
@@ -116,15 +73,13 @@ public class SaveSystemManager : ScriptableObject
 	public void SetNewGameData()
 	{
 		FileManager.WriteToFile(saveFilename, "");
-		// _playerInventory.Init();
-		// _questManagerSO.ResetQuestlines();
 
 		SaveDataToDisk();
 
 	}
-	void SaveSettings()
+	public void SaveSettings(SettingsSO settings)
 	{
-		// saveData.SaveSettings(_currentSettings);
-
+		saveData.SaveSettings(settings);
+		SaveDataToDisk();
 	}
 }

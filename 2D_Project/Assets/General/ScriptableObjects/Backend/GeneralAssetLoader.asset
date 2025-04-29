@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e038bfb2e8346bc96d27ac5b1981bea, type: 3}
+  m_Name: GeneralAssetLoader
+  m_EditorClassIdentifier: 
+  blueUnitAddress:
+  - Assets/General/Art/UI/blue_unit_1.asset
+  - Assets/General/Art/UI/blue_unit_2.asset
+  - Assets/General/Art/UI/blue_unit_3.asset
+  redUnitAddress:
+  - Assets/General/Art/UI/red_unit_1.asset
+  - Assets/General/Art/UI/red_unit_2.asset
+  - Assets/General/Art/UI/red_unit_3.asset
+  remainAmountAddress:
+  - Assets/General/Art/UI/remain_0.asset
+  - Assets/General/Art/UI/remain_1.asset
+  - Assets/General/Art/UI/remain_2.asset
+  blueUnitSprites: []
+  redUnitSprites: []
+  remainAmountSprites: []

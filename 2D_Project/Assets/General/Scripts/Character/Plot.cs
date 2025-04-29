@@ -34,11 +34,11 @@ namespace TheAiAlchemist
         {
             if (askUnitIndex.GetValue() < 0)
             {
-                Debug.Log("Need to select a unit");
+                // Debug.Log("Need to select a unit");
             }
             else if (askUnitIndex.GetValue() <= currentStrength)
             {
-                Debug.Log("Invalid move with strength lower than current strength");
+                // Debug.Log("Invalid move with strength lower than current strength");
             }
             else
             {
@@ -56,7 +56,7 @@ namespace TheAiAlchemist
                 var checkPoint = plot.Key;
                 if (checkPoint.Row == row && checkPoint.Col == col)
                 {
-                    unitVisualize.Visualize(checkPoint.Strength, GameConstants.ColorTank[plot.Value]);
+                    unitVisualize.Visualize(checkPoint.Strength, plot.Value);
                 }
             }
         }

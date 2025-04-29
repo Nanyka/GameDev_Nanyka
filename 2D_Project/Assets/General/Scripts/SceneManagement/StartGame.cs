@@ -1,4 +1,6 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using TheAiAlchemist;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -15,22 +17,24 @@ namespace TheAiAlchemist
         [SerializeField] private GameSceneSO locationsToLoad;
         [SerializeField] private GameSceneSO tutorialToLoad;
         [SerializeField] private SaveSystemManager saveSystem;
+        [SerializeField] private AddressableManagerSO addressableManagerSo;
+        [SerializeField] private GeneralAssetLoader generalAssetLoader;
         [SerializeField] private bool showLoadScreen;
 
-        [Header("Broadcasting on")] [SerializeField]
-        private LoadEventChannel loadLocation;
-
+        [Header("Broadcasting on")] 
+        [SerializeField] private LoadEventChannel loadLocation;
         [SerializeField] private LoadEventChannel loadTutorial;
 
         [Header("Listening to")] 
         [SerializeField] private VoidChannel onNewGameButton;
         [SerializeField] private VoidChannel onTutorialButton;
         [SerializeField] private VoidChannel onResetButton;
-        [SerializeField] private bool hasSaveData;
+        // [SerializeField] private bool hasSaveData;
 
-        private void Start()
+        private async void Start()
         {
             // hasSaveData = saveSystem.LoadSaveDataFromDisk();
+            await LoadGeneralElements();
             onNewGameButton.AddListener(StartNewGame);
             onTutorialButton.AddListener(TutorialGame);
             onResetButton.AddListener(OnResetSaveDataPress);
@@ -42,16 +46,9 @@ namespace TheAiAlchemist
             onTutorialButton.RemoveListener(TutorialGame);
             onResetButton.RemoveListener(OnResetSaveDataPress);
         }
-
+        
         private void StartNewGame()
         {
-            hasSaveData = saveSystem.LoadSaveDataFromDisk();
-            if (hasSaveData == false)
-            {
-                saveSystem.WriteEmptySaveFile();
-                saveSystem.SetNewGameData();
-            }
-
             loadLocation.RaiseEvent(locationsToLoad, showLoadScreen);
         }
 
@@ -67,27 +64,32 @@ namespace TheAiAlchemist
             
             loadLocation.RaiseEvent(locationsToLoad, showLoadScreen);
         }
-
-        // private void ContinuePreviousGame()
-        // {
-        //     // StartCoroutine(LoadSaveGame());
-        // }
-
-        // private IEnumerator LoadSaveGame()
-        // {
-        //     yield return StartCoroutine(_saveSystem.LoadSavedInventory());
-        //
-        //     _saveSystem.LoadSavedQuestlineStatus();
-        //     var locationGuid = _saveSystem.saveData._locationId;
-        //     var asyncOperationHandle = Addressables.LoadAssetAsync<LocationSO>(locationGuid);
-        //
-        //     yield return asyncOperationHandle;
-        //
-        //     if (asyncOperationHandle.Status == AsyncOperationStatus.Succeeded)
-        //     {
-        //         LocationSO locationSO = asyncOperationHandle.Result;
-        //         _loadLocation.RaiseEvent(locationSO, _showLoadScreen);
-        //     }
-        // }
+        
+        private async Task LoadGeneralElements()
+        {
+            var blueUnitSprites = new List<Sprite>(3);
+            foreach (var unitAddress in generalAssetLoader.blueUnitAddress)
+            {
+                var sprite = await addressableManagerSo.GetSprite(unitAddress);
+                blueUnitSprites.Add(sprite);
+            }
+            generalAssetLoader.ResetBlueSprites(blueUnitSprites);
+            
+            var redUnitSprites = new List<Sprite>(3);
+            foreach (var unitAddress in generalAssetLoader.redUnitAddress)
+            {
+                var sprite = await addressableManagerSo.GetSprite(unitAddress);
+                redUnitSprites.Add(sprite);
+            }
+            generalAssetLoader.ResetRedSprites(redUnitSprites);
+            
+            var remainSprites = new List<Sprite>(3);
+            foreach (var remainAddress in generalAssetLoader.remainAmountAddress)
+            {
+                var sprite = await addressableManagerSo.GetSprite(remainAddress);
+                remainSprites.Add(sprite);
+            }
+            generalAssetLoader.ResetRemainSprites(remainSprites);
+        }
     }
 }

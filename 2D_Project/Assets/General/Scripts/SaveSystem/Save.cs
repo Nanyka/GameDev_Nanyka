@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TheAiAlchemist;
 using UnityEngine;
 using UnityEngine.Localization;
+using UnityEngine.Serialization;
 
 /// <summary>
 /// This class contains all the variables that will be serialized and saved to a file.<br/>
@@ -16,28 +17,14 @@ public class Save
 
 	// The variables need to be public, else we would have to write trivial getter/setter functions.
 	public int level;
-	public List<SerializedItemStack> _itemStacks = new();
-	public List<string> _finishedQuestlineItemsGUIds = new();
+	public float sfxVolume;
+	public float musicVolume;
 
-	public float _masterVolume = default;
-	public float _musicVolume = default;
-	public float _sfxVolume = default;
-	public int _resolutionsIndex = default;
-	public int _antiAliasingIndex = default;
-	public float _shadowDistance = default;
-	public bool _isFullscreen = default;
-	public Locale _currentLocale = default;
 
 	public void SaveSettings(SettingsSO settings)
 	{
-		_masterVolume = settings.MasterVolume;
-		_musicVolume = settings.MusicVolume;
-		_sfxVolume = settings.SfxVolume;
-		_resolutionsIndex = settings.ResolutionsIndex;
-		_antiAliasingIndex = settings.AntiAliasingIndex;
-		_shadowDistance = settings.ShadowDistance;
-		_isFullscreen = settings.IsFullscreen;
-		_currentLocale = settings.CurrentLocale;
+		sfxVolume = settings.SfxVolume;;
+		musicVolume = settings.MusicVolume;
 	}
 
 	public void SaveLevel(int currentLevel)

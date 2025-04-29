@@ -11,7 +11,6 @@ namespace TheAiAlchemist
 	{
 		public GameSceneType sceneType;
 		public AssetReference sceneReference; //Used at runtime to load the scene from the right AssetBundle
-		public AudioCueSO musicTrack;
 
 		/// <summary>
 		/// Used by the SceneSelector tool to discern what type of scene it needs to load

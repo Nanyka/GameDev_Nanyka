@@ -21,7 +21,7 @@ namespace TheAiAlchemist
             
             if (handle.Status == AsyncOperationStatus.Succeeded)
             {
-                Debug.Log("Sprite loaded successfully!");
+                // Debug.Log("Sprite loaded successfully!");
                 return handle.Result;
             }
 

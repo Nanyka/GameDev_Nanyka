@@ -17,12 +17,14 @@ namespace TheAiAlchemist
         [SerializeField] private BoolChannel endGameChannel;
         [SerializeField] private MoveChannel humanMoveChannel;
         [SerializeField] private VoidChannel resetChannel;
+        [SerializeField] private IntChannel audioPlayIndex;
+        [SerializeField] private BoolChannel botThinkingChannel;
         // [SerializeField] private IntChannel saveLevelChannel;
 
         [SerializeField] private AddressableManagerSO addressableManager;
         [SerializeField] private SaveSystemManager saveSystemManager;
         [SerializeField] private string[] modelAddress;
-        
+
         private IAgent _humanAgent;
         private AlphaZeroAgent _botAgent;
         private GameState _currentGameState;
@@ -55,7 +57,7 @@ namespace TheAiAlchemist
 
             resetChannel.ExecuteChannel();
         }
-        
+
         private async Task<bool> LoadDecisionMakers()
         {
             var loadResult = true;
@@ -68,9 +70,10 @@ namespace TheAiAlchemist
                 Debug.Log("The game fail to load model!!!");
                 loadResult = false;
             }
+
             _botAgent?.DisableAiElements();
             _botAgent = new AlphaZeroAgent(modelAsset, 384);
-            
+
             _players = new Dictionary<Player, IAgent>
             {
                 { Player.X, _humanAgent },
@@ -93,9 +96,7 @@ namespace TheAiAlchemist
                 return;
             }
 
-            gameStateStorage.SetValue(_currentGameState);
-            changePlayerChannel.ExecuteChannel();
-            askUnitIndex.SetValue(-1);
+            EndTurnSetup();
 
             var nextMove = await _players[_currentGameState.NextPlayer].SelectMove(_currentGameState);
             if (nextMove != null) await ApplySelectedMove(nextMove);
@@ -112,7 +113,11 @@ namespace TheAiAlchemist
 
             try
             {
+                var point = move.Point;
+                var player = _currentGameState.Board.GetPlayerAtCoord(point.Row, point.Col);
                 _currentGameState = _currentGameState.ApplyMove(move);
+                audioPlayIndex.ExecuteChannel(player.HasValue ? 1 : 0);
+
                 await StartNextTurn();
             }
             catch (IllegalMoveError ex)
@@ -133,23 +138,31 @@ namespace TheAiAlchemist
                 EndGame();
             }
         }
+        
+        private void EndTurnSetup()
+        {
+            gameStateStorage.SetValue(_currentGameState);
+            changePlayerChannel.ExecuteChannel();
+            botThinkingChannel.ExecuteChannel(_currentGameState.NextPlayer == Player.O);
+            askUnitIndex.SetValue(-1);
+        }
 
         private async void EndGame()
         {
             if (isEndGame)
                 return;
             isEndGame = true;
-            
+
             gameStateStorage.SetValue(_currentGameState);
             changePlayerChannel.ExecuteChannel();
-            
+
             // Level up if human (play X) win
             if (_currentGameState.Winner() != null && _currentGameState.Winner() == Player.X)
             {
                 saveSystemManager.saveData.level +=
                     Mathf.Min(1, modelAddress.Length - saveSystemManager.saveData.level - 1);
                 saveSystemManager.SaveDataToDisk();
-                
+
                 var loadPlayers = await LoadDecisionMakers();
                 if (loadPlayers == false)
                     return;
@@ -162,6 +175,7 @@ namespace TheAiAlchemist
         {
             isEndGame = false;
             _currentGameState = GameSetup.SetupNewGame();
+            // EndTurnSetup();
             await StartNextTurn();
         }
     }

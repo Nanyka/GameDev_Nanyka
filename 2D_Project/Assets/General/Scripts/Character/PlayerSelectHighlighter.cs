@@ -1,14 +1,15 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace TheAiAlchemist
 {
     public class PlayerSelectHighlighter : MonoBehaviour, ISelectionInteract
     {
         [SerializeField] private VoidChannel changePlayerChannel;
-        
-        [SerializeField] private TextMeshProUGUI indexText;
+        [SerializeField] private GeneralAssetLoader generalAssetLoader;
+        [SerializeField] private Image remainAmountImage;
         [SerializeField] private GameObject highlighter;
 
         private void OnEnable()
@@ -21,9 +22,9 @@ namespace TheAiAlchemist
             changePlayerChannel.RemoveListener(OnDeactivate);
         }
 
-        public void OnUpdateText(string text)
+        public void OnUpdateRemainAmount(int remain)
         {
-            indexText.text = text;
+            remainAmountImage.sprite = generalAssetLoader.remainAmountSprites[remain];
         }
 
         public void OnActivate()

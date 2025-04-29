@@ -51,8 +51,9 @@ namespace TheAiAlchemist
 
         private void ResetUnitButton()
         {
-            remainAmount = amountOfItem; 
-            interact.OnUpdateText($"{mUnitIndex} ({remainAmount})");
+            remainAmount = amountOfItem;
+            interact.OnUpdateRemainAmount(remainAmount);
+            // interact.OnUpdateText($"{mUnitIndex} ({remainAmount})");
             mButton.interactable = true;
         }
 
@@ -69,7 +70,8 @@ namespace TheAiAlchemist
         {
             var inventory = currentState.GetValue().PlayerInventories[forPlayer];
             remainAmount = inventory.GetInventoryDictionary()[mUnitIndex];
-            interact.OnUpdateText($"{mUnitIndex} ({remainAmount})");
+            interact.OnUpdateRemainAmount(remainAmount);
+            // interact.OnUpdateText($"{mUnitIndex} ({remainAmount})");
             if (remainAmount <= 0)
             {
                 mButton.interactable = false;
