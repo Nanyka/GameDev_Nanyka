@@ -353,10 +353,10 @@ MonoBehaviour:
   showLoadScreen: 1
   loadLocation: {fileID: 11400000, guid: 15a05c2c1d40540bebcb684d25374e08, type: 2}
   loadTutorial: {fileID: 11400000, guid: ff4f1ea0fc5504770ae449f6e446b338, type: 2}
+  finishSetUp: {fileID: 0}
   onNewGameButton: {fileID: 11400000, guid: e3ecec33502e8437084f56edad8e1bef, type: 2}
   onTutorialButton: {fileID: 11400000, guid: 2389f93dbcdde4c6d93648fb7758e0db, type: 2}
   onResetButton: {fileID: 11400000, guid: 118ff08c520b3489c958d54351b924e5, type: 2}
-  hasSaveData: 0
 --- !u!1 &807402756
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,7 +1026,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 300}
+  m_AnchoredPosition: {x: 0, y: 400}
   m_SizeDelta: {x: 1022, y: 434}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1820171898

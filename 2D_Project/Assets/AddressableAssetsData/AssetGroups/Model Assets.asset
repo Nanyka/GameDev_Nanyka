@@ -16,7 +16,7 @@ MonoBehaviour:
   m_GUID: 452c3f20712ca4d76b4da4becaf54238
   m_SerializeEntries:
   - m_GUID: 981ff0cf849e74e0fab665562df144c3
-    m_Address: Assets/General/AiModels/tttn_model_dataset_training_v5_9.onnx
+    m_Address: Assets/General/AiModels/tttn_model_dataset_training_v5_6.onnx
     m_ReadOnly: 0
     m_SerializedLabels:
     - ai_model
@@ -51,20 +51,8 @@ MonoBehaviour:
     m_SerializedLabels:
     - ai_model
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4a93ae18b29f3449fb09473ea6349687
-    m_Address: Assets/General/AiModels/tttn_model_dataset_training_v5_6.onnx
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - ai_model
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 148a4c16cee4a45bdb96d5d65f1f7491
-    m_Address: Assets/General/AiModels/tttn_model_dataset_training_v5_7.onnx
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - ai_model
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 065c0cd02e65a4ef89196833bd9ea617
-    m_Address: Assets/General/AiModels/tttn_model_dataset_training_v5_8.onnx
+  - m_GUID: 5c64cb32beed144a7813ff69d21c9507
+    m_Address: Assets/General/AiModels/blank_model.onnx
     m_ReadOnly: 0
     m_SerializedLabels:
     - ai_model

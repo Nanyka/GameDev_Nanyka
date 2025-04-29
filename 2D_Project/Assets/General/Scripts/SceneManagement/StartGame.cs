@@ -21,20 +21,20 @@ namespace TheAiAlchemist
         [SerializeField] private GeneralAssetLoader generalAssetLoader;
         [SerializeField] private bool showLoadScreen;
 
-        [Header("Broadcasting on")] [SerializeField]
-        private LoadEventChannel loadLocation;
-
+        [Header("Broadcasting on")] 
+        [SerializeField] private LoadEventChannel loadLocation;
         [SerializeField] private LoadEventChannel loadTutorial;
+        [SerializeField] private VoidChannel finishSetUp;
 
         [Header("Listening to")] 
         [SerializeField] private VoidChannel onNewGameButton;
         [SerializeField] private VoidChannel onTutorialButton;
         [SerializeField] private VoidChannel onResetButton;
-        [SerializeField] private bool hasSaveData;
+        // [SerializeField] private bool hasSaveData;
 
         private async void Start()
         {
-            hasSaveData = saveSystem.LoadSaveDataFromDisk();
+            // hasSaveData = saveSystem.LoadSaveDataFromDisk();
             await LoadGeneralElements();
             onNewGameButton.AddListener(StartNewGame);
             onTutorialButton.AddListener(TutorialGame);
@@ -51,11 +51,11 @@ namespace TheAiAlchemist
         private void StartNewGame()
         {
             // hasSaveData = saveSystem.LoadSaveDataFromDisk();
-            if (hasSaveData == false)
-            {
-                saveSystem.WriteEmptySaveFile();
-                saveSystem.SetNewGameData();
-            }
+            // if (hasSaveData == false)
+            // {
+            //     saveSystem.WriteEmptySaveFile();
+            //     saveSystem.SetNewGameData();
+            // }
 
             // await LoadGeneralElements();
 

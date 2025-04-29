@@ -164,81 +164,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 363619424}
   m_CullTransparentMesh: 0
---- !u!1 &610459580
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 610459581}
-  - component: {fileID: 610459582}
-  - component: {fileID: 610459583}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: AudioManager
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &610459581
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 610459580}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &610459582
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 610459580}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &610459583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 610459580}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Events:
-    m_Signals:
-    - {fileID: 11400000, guid: 1f9a68c0bcf1f18458e7e0603049c589, type: 2}
-    m_Events:
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 610459582}
-          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-          m_MethodName: TimelineInterruptsMusic
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &740063860
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,7 +655,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1424775817
 Transform:
   m_ObjectHideFlags: 0
@@ -740,7 +665,7 @@ Transform:
   m_GameObject: {fileID: 1424775816}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 703.64465, y: 417.34354, z: -589.82983}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -755,16 +680,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1424775816}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f22d7dd090554473dafb70b86d96e108, type: 3}
+  m_Script: {fileID: 11500000, guid: 725a9da42432e411eb6e7a16b1798f61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SaveSettingsEvent: {fileID: 11400000, guid: e6ff8a48cab21e046a6cdb61bab35111, type: 2}
-  _currentSettings: {fileID: 11400000, guid: 10a9cfb7ceadb294da93b9773e89074b, type: 2}
-  _urpAsset: {fileID: 11400000, guid: 19ba41d7c0026c3459d37c2fe90c55a0, type: 2}
-  _saveSystem: {fileID: 11400000, guid: edc355c4a7d5028408d322b90814e19e, type: 2}
-  _changeMasterVolumeEventChannel: {fileID: 11400000, guid: ac033eaf5f8c5154e8df7c10fe3755ad, type: 2}
-  _changeSFXVolumeEventChannel: {fileID: 11400000, guid: 4f26356559fe2254fb6d1f23601bd896, type: 2}
-  _changeMusicVolumeEventChannel: {fileID: 11400000, guid: 13e4f5dfe966e1447ba01306e125c0c0, type: 2}
+  SaveSettingsEvent: {fileID: 11400000, guid: d1919395e5e194c0d885a9a07ea13d4d, type: 2}
+  _currentSettings: {fileID: 11400000, guid: 81f50747a96bd4932b682d58664706f5, type: 2}
+  _saveSystem: {fileID: 11400000, guid: cdd36171f065b461da7e56c89a4bdc16, type: 2}
+  _changeSFXVolumeEventChannel: {fileID: 11400000, guid: eb2c17fc680ab4d6b972a3b3413c9c09, type: 2}
 --- !u!1 &1492261400
 GameObject:
   m_ObjectHideFlags: 0
@@ -921,7 +843,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 1387982343}
   - {fileID: 1416216799}
-  - {fileID: 610459581}
   - {fileID: 1424775817}
   - {fileID: 740063862}
   - {fileID: 1122701838}
