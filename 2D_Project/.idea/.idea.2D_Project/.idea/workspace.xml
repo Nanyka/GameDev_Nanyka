@@ -6,14 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/setting_elements.png 19-28-12-927.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/UI/setting_elements.png 19-28-12-927.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/TutorialPlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/TutorialPlay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/GameConstants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/GameConstants.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Character/Plot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/Plot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/CutScene/Timelines/TutorialObjectTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/CutScene/Timelines/TutorialObjectTimeline.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UI/AiInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/AiInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/SceneManagement/SceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/SceneManagement/SceneLoader.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +177,7 @@
       <workItem from="1745820142398" duration="4542000" />
       <workItem from="1745864070732" duration="1344000" />
       <workItem from="1745892730549" duration="5401000" />
-      <workItem from="1745903549003" duration="1134000" />
+      <workItem from="1745903549003" duration="1636000" />
     </task>
     <servers />
   </component>
