@@ -6,39 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/ChatGPT Image Apr 28, 2025, 05_26_16 PM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/ChatGPT Image Apr 28, 2025, 05_26_16 PM.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/clock.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/UI/clock.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Locations/BasicLocation.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Locations/BasicLocation.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Locations/TutorialLocation.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Locations/TutorialLocation.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/PersistentManagers.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/PersistentManagers.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/TutorialPlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/TutorialPlay.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Menus/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Menus/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Channels/ChangeSfxChannel.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Channels/ChangeSfxChannel.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Settings/SettingsSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Settings/SettingsSO.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/AudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/SaveSystem/Save.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/SaveSystem/Save.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/SceneManagement/StartGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/SceneManagement/StartGame.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Settings/SettingsSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Settings/SettingsSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Settings/SettingsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Settings/SettingsSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UI/AiInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/AiInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UI/InGameSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/InGameSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.data" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.data" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.framework.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.framework.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.loader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.wasm" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.wasm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/AddressablesLink/link.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/AddressablesLink/link.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/WebGL/b2e9fa3584736cb69902f3783b7621c6_monoscripts_fe706490648f5a09782409f06cb476d2.bundle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/WebGL/b2e9fa3584736cb69902f3783b7621c6_unitybuiltinassets_c50ba009a0030467d5dafe6224e492ac.bundle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/WebGL/defaultlocalgroup_scenes_all_e9f750ce8d1784522f67d2ce13bba125.bundle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/WebGL/modelassets_assets_all_fd01dfb086426f0ba1aabf4ee2aa6082.bundle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/WebGL/b2e9fa3584736cb69902f3783b7621c6_monoscripts_bebaf99262d827eb351188f21df78fe2.bundle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/WebGL/defaultlocalgroup_scenes_all_b4a955b26d3edbbd7353b5cfe2d296f5.bundle" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/catalog.bin" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/catalog.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/catalog.hash" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/catalog.hash" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +191,7 @@
       <workItem from="1745864070732" duration="1344000" />
       <workItem from="1745892730549" duration="5401000" />
       <workItem from="1745903549003" duration="3335000" />
-      <workItem from="1745927724198" duration="3161000" />
+      <workItem from="1745927724198" duration="3574000" />
     </task>
     <servers />
   </component>
