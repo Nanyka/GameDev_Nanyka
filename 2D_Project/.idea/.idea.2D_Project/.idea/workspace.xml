@@ -5,31 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/WinLineDrawer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/WinLineDrawer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Locations/BasicLocation.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Locations/BasicLocation.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Locations/TutorialLocation.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Locations/TutorialLocation.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/PersistentManagers.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/PersistentManagers.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/TutorialPlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/TutorialPlay.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Menus/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Menus/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.data" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.framework.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.framework.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.loader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.wasm" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/Build/WebGL Builds.wasm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/AddressablesLink/link.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/AddressablesLink/link.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/WebGL/b2e9fa3584736cb69902f3783b7621c6_monoscripts_bebaf99262d827eb351188f21df78fe2.bundle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/WebGL/defaultlocalgroup_scenes_all_b4a955b26d3edbbd7353b5cfe2d296f5.bundle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/catalog.bin" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/catalog.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/catalog.hash" beforeDir="false" afterPath="$PROJECT_DIR$/WebGL Builds/StreamingAssets/aa/catalog.hash" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/GameState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/CutScene/Timelines/TutorialObjectTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/CutScene/Timelines/TutorialObjectTimeline.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/HumanInteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/HumanInteract.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/SceneManagement/SceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/SceneManagement/SceneLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Settings/SettingsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Settings/SettingsSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UI/InGameAnnouncer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/InGameAnnouncer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Settings/GameInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Settings/GameInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.services.core/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.services.core/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/BackendSO/AddressableManagerSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/FadeChannel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/ChannelSO/VoidChannel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/GameManagers/IPlayerBehavior.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/Settings/SettingsSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/Test/TestButton.cs" root0="FORCE_HIGHLIGHTING" />
@@ -40,38 +50,43 @@
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/TrainDrlModels/TrainingResult.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/UI/AskActionButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/UI/EndGameMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/UI/InGameAnnouncer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/Utils/Combination.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables/Runtime/AssetReference.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ml-agents/Runtime/Inference/ApplierImpl.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.sentis/Runtime/Core/Internals/Debug.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Learn--ScriptableObjects/UOP1_Project/Assets/Scripts/Events/ScriptableObjects/VoidEventChannelSO.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../TestMLAgents/Assets/MAIN_LOT_Turnbase/CutScene/Scripts/TimelineController/TimelineClicker.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../TestMLAgents/Assets/MAIN_LOT_Turnbase/Managers/Scripts/Utils/PointingChecker.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="Toolset" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2jotvLMJZAJ3m7yvzLm2PeDQDg1" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;/Users/admin/Library/Application Support/JetBrains/Rider2023.1/resharper-host/DecompilerCache&quot;,
-      &quot;/Users/admin/Library/Application Support/JetBrains/Rider2023.1/resharper-host/SourcesCache&quot;,
-      &quot;/Users/admin/.local/share/Symbols/src&quot;
-    ]
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "do_not_show_solution_notification": "true",
+    "git-widget-placeholder": "NewGameplay",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.environmentSetup",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="QodanaReportsService">
+    <option name="descriptions">
+      <ReportDescription localRun="true" path="/private/var/folders/ns/ty2gl9fs4lzg91dbkh3wyfzh0000gn/T/qodana_output/qodana.sarif.json" reportGuid="b48811c2-7614-46a1-af3e-3b895d06a3a2" reportId="2D_Project/qodana/2025-04-30" />
+    </option>
+  </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../../../TicTacToe_TrainGp2_v5.app/Contents/MacOS/GameDev_Nanyka_2D" />
@@ -79,22 +94,31 @@
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../TicTacToe_TrainGp2.app/Contents/MacOS" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="PTY_MODE" value="Auto" />
       <method v="2" />
     </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../Game Unity/UnityEditor/6000.0.0f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/6000.1.0f1/Unity.app/Contents/MacOS/Unity" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath $PROJECT_DIR$ -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="PTY_MODE" value="Auto" />
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../Game Unity/UnityEditor/6000.0.0f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/6000.1.0f1/Unity.app/Contents/MacOS/Unity" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath $PROJECT_DIR$ -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="PTY_MODE" value="Auto" />
       <method v="2" />
     </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -102,9 +126,13 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
       <option name="selectedOptions">
         <list />
       </option>
+      <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
     <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -112,9 +140,13 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
       <option name="selectedOptions">
         <list />
       </option>
+      <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
   </component>
@@ -192,15 +224,41 @@
       <workItem from="1745892730549" duration="5401000" />
       <workItem from="1745903549003" duration="3335000" />
       <workItem from="1745927724198" duration="3574000" />
+      <workItem from="1746022778762" duration="1192000" />
+      <workItem from="1746024079627" duration="7189000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityProjectDiscoverer">
+    <option name="hasUnityReference" value="true" />
+    <option name="unityProject" value="true" />
+    <option name="unityProjectFolder" value="true" />
+  </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

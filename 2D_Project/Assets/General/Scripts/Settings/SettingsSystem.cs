@@ -13,6 +13,7 @@ namespace TheAiAlchemist
         [SerializeField] private SettingsSO _currentSettings = default;
         [SerializeField] private SaveSystemManager _saveSystem = default;
         [SerializeField] private VoidChannel changeSettingsChannel;
+        [SerializeField] private SettingsSO settingsSo = default;
 
         private void Awake()
         {
@@ -20,6 +21,8 @@ namespace TheAiAlchemist
             if (hasSaveData == false)
             {
                 _saveSystem.WriteEmptySaveFile();
+                _saveSystem.saveData.musicVolume = 0.5f;
+                _saveSystem.saveData.sfxVolume = 0.5f;
                 _saveSystem.SetNewGameData();
             }
             
