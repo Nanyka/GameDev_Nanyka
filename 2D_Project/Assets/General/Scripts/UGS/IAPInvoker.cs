@@ -32,7 +32,6 @@ namespace TheAiAlchemist
             // Check saveData, if available, return true
             if (saveSystem.saveData.playerId != "")
             {
-                Debug.Log($"Player id:{saveSystem.saveData.playerId}");
                 ListenIapFeedback(true);
                 return;
             }

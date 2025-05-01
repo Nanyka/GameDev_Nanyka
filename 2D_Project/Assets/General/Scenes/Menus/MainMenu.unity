@@ -643,6 +643,7 @@ MonoBehaviour:
   onClickNewGameButton: {fileID: 11400000, guid: e3ecec33502e8437084f56edad8e1bef, type: 2}
   onClickTutorialButton: {fileID: 11400000, guid: 2389f93dbcdde4c6d93648fb7758e0db, type: 2}
   onClickResetButton: {fileID: 11400000, guid: 118ff08c520b3489c958d54351b924e5, type: 2}
+  sfxPlayIndex: {fileID: 11400000, guid: d750ba0a012f34d5a9995cb2ff4e81d9, type: 2}
   newGameButton: {fileID: 2107191686}
   tutorialButton: {fileID: 1293884065}
   resetButton: {fileID: 176691303}
@@ -2269,6 +2270,7 @@ MonoBehaviour:
   currentSettings: {fileID: 11400000, guid: 81f50747a96bd4932b682d58664706f5, type: 2}
   changeSettingsChannel: {fileID: 11400000, guid: f64a77ff1cfee49a6ac7b843f226adb3, type: 2}
   saveSystem: {fileID: 11400000, guid: cdd36171f065b461da7e56c89a4bdc16, type: 2}
+  sfxPlayIndex: {fileID: 11400000, guid: d750ba0a012f34d5a9995cb2ff4e81d9, type: 2}
   resumeButton: {fileID: 1006128475}
   homeButton: {fileID: 107477187}
   soundSlider: {fileID: 184067652}

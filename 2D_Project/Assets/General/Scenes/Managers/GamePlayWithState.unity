@@ -941,7 +941,7 @@ MonoBehaviour:
   winPlayerText: {fileID: 1013703406}
   playAgainButton: {fileID: 597193251}
   homeButton: {fileID: 1774457853}
-  waitToShowWin: 1
+  waitToShowWin: 1.5
 --- !u!1 &334989194
 GameObject:
   m_ObjectHideFlags: 0
@@ -3857,7 +3857,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   saveSystem: {fileID: 11400000, guid: cdd36171f065b461da7e56c89a4bdc16, type: 2}
   checkIapState: {fileID: 11400000, guid: 16bbdc9c2d06e491c9a5b735d54b486e, type: 2}
-  comparePlayerId: {fileID: 11400000, guid: f25b14ebfe125496e86a02e829c44c49, type: 2}
   iapStateChannel: {fileID: 11400000, guid: ea0e68b820cb54d90b5e5f1debd7f5ca, type: 2}
   iapPanel: {fileID: 986733410}
   internetText: {fileID: 1787614944}
@@ -4987,6 +4986,7 @@ MonoBehaviour:
   currentSettings: {fileID: 11400000, guid: 81f50747a96bd4932b682d58664706f5, type: 2}
   changeSettingsChannel: {fileID: 11400000, guid: f64a77ff1cfee49a6ac7b843f226adb3, type: 2}
   saveSystem: {fileID: 11400000, guid: cdd36171f065b461da7e56c89a4bdc16, type: 2}
+  sfxPlayIndex: {fileID: 11400000, guid: d750ba0a012f34d5a9995cb2ff4e81d9, type: 2}
   resumeButton: {fileID: 408408156}
   homeButton: {fileID: 185656537}
   soundSlider: {fileID: 307194612}
@@ -5183,10 +5183,10 @@ LineRenderer:
   m_SortingOrder: 1
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  - {x: 0, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.2
+    widthMultiplier: 0.1
     widthCurve:
       serializedVersion: 2
       m_Curve:

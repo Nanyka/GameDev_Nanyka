@@ -6,8 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Settings/SettingsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Settings/SettingsSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/Audio/TakeDamage1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/Audio/TakeDamage1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/PersistentManagers.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/PersistentManagers.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/TutorialPlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/TutorialPlay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Menus/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Menus/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UGS/IAPInvoker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UGS/IAPInvoker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UI/InGameSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/InGameSettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UI/MainMenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/MainMenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UI/WinLineDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/WinLineDrawer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,6 +219,7 @@
       <workItem from="1746024079627" duration="10542000" />
       <workItem from="1746069343860" duration="8136000" />
       <workItem from="1746079790194" duration="1848000" />
+      <workItem from="1746104296759" duration="3946000" />
     </task>
     <servers />
   </component>
