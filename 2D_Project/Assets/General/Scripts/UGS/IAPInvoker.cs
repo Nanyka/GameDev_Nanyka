@@ -12,7 +12,7 @@ namespace TheAiAlchemist
     {
         [SerializeField] private SaveSystemManager saveSystem;
         [SerializeField] private VoidChannel checkIapState;
-        [SerializeField] private VoidChannel comparePlayerId;
+
         [SerializeField] private BoolChannel iapStateChannel;
         [SerializeField] private GameObject iapPanel;
         [SerializeField] private GameObject internetText;
@@ -20,13 +20,11 @@ namespace TheAiAlchemist
         private void OnEnable()
         {
             checkIapState.AddListener(CheckIAPState);
-            comparePlayerId.AddListener(ComparePlayerId);
         }
 
         private void OnDisable()
         {
             checkIapState.RemoveListener(CheckIAPState);
-            comparePlayerId.RemoveListener(ComparePlayerId);
         }
 
         private void CheckIAPState()
@@ -59,22 +57,6 @@ namespace TheAiAlchemist
         {
             iapPanel.SetActive(false);
             iapStateChannel.ExecuteChannel(isPurchased);
-        }
-
-        private void ComparePlayerId()
-        {
-            var checkId = saveSystem.saveData.playerId;
-            if (checkId == "") return;
-            
-            // Check internet availability
-            if (Application.internetReachability == NetworkReachability.NotReachable) return;
-            Debug.Log("Network reachability is reachable");
-            
-            // If available, check playerId. If playerId is matched, return true
-            if (AuthenticationService.Instance.PlayerId.Equals(checkId)) return;
-            
-            // If playerId is not match, save playerId in saveData as string.Empty and return false
-            saveSystem.SavePlayerId("");
         }
     }
 }
