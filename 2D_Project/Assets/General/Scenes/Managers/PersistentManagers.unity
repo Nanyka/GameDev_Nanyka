@@ -964,6 +964,7 @@ MonoBehaviour:
   _saveSystem: {fileID: 11400000, guid: cdd36171f065b461da7e56c89a4bdc16, type: 2}
   changeSettingsChannel: {fileID: 11400000, guid: f64a77ff1cfee49a6ac7b843f226adb3, type: 2}
   settingsSo: {fileID: 11400000, guid: 81f50747a96bd4932b682d58664706f5, type: 2}
+  comparePlayerId: {fileID: 11400000, guid: f25b14ebfe125496e86a02e829c44c49, type: 2}
 --- !u!1 &1492261400
 GameObject:
   m_ObjectHideFlags: 0

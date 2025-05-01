@@ -14,6 +14,7 @@ namespace TheAiAlchemist
         [SerializeField] private SaveSystemManager _saveSystem = default;
         [SerializeField] private VoidChannel changeSettingsChannel;
         [SerializeField] private SettingsSO settingsSo = default;
+        [SerializeField] private VoidChannel comparePlayerId;
 
         private void Awake()
         {
@@ -23,11 +24,11 @@ namespace TheAiAlchemist
                 _saveSystem.WriteEmptySaveFile();
                 _saveSystem.saveData.musicVolume = 0.5f;
                 _saveSystem.saveData.sfxVolume = 0.5f;
-                //TODO load from cloud and check playerId here
                 _saveSystem.SetNewGameData();
             }
             
             _currentSettings.LoadSavedSettings(_saveSystem.saveData);
+            comparePlayerId.ExecuteChannel();
             SetCurrentSettings();
         }
 
