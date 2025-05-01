@@ -19,8 +19,8 @@ public class Save
 	public int level;
 	public float sfxVolume;
 	public float musicVolume;
-
-
+	public string playerId;
+	
 	public void SaveSettings(SettingsSO settings)
 	{
 		sfxVolume = settings.SfxVolume;;
@@ -30,6 +30,11 @@ public class Save
 	public void SaveLevel(int currentLevel)
 	{
 		level = currentLevel;
+	}
+
+	public void SavePlayerId(string saveId)
+	{
+		playerId = saveId;
 	}
 	
 	public string ToJson()

@@ -23,6 +23,7 @@ namespace TheAiAlchemist
                 _saveSystem.WriteEmptySaveFile();
                 _saveSystem.saveData.musicVolume = 0.5f;
                 _saveSystem.saveData.sfxVolume = 0.5f;
+                //TODO load from cloud and check playerId here
                 _saveSystem.SetNewGameData();
             }
             
@@ -40,9 +41,6 @@ namespace TheAiAlchemist
             SaveSettingsEvent.RemoveListener(SaveSettings);
         }
 
-        /// <summary>
-        /// Set current settings 
-        /// </summary>
         void SetCurrentSettings()
         {
             changeSettingsChannel.ExecuteChannel(); 

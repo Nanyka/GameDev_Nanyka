@@ -31,6 +31,14 @@ public class SaveSystemManager : ScriptableObject
 	private void SaveLevel(int currentLevel)
 	{
 		saveData.SaveLevel(currentLevel);
+		SaveDataToDisk();
+	}
+
+	// TODO: Save playerId in real game
+	public void SavePlayerId(string playerId)
+	{
+		saveData.SavePlayerId(playerId);
+		SaveDataToDisk();
 	}
 
 	private void CacheLoadLocations(GameSceneSO locationToLoad, bool showLoadingScreen, bool fadeScreen)
