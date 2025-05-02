@@ -68,7 +68,7 @@ namespace TheAiAlchemist
                     if (!AuthenticationService.Instance.IsSignedIn)
                         await AuthenticationService.Instance.SignInAnonymouslyAsync();
 
-                    Debug.Log($"Player id when token exist:{AuthenticationService.Instance.PlayerId}");
+                    // Debug.Log($"Player id when token exist:{AuthenticationService.Instance.PlayerId}");
                     _saveSystem.SavePlayerId(AuthenticationService.Instance.PlayerId);
                 }
                 

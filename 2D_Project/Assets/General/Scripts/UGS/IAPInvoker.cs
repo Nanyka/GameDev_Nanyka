@@ -36,7 +36,7 @@ namespace TheAiAlchemist
                 return;
             }
             
-            Debug.LogWarning("No player ID specified");
+            // Debug.LogWarning("No player ID specified");
             
             // If not, check internet availability
 
@@ -46,7 +46,7 @@ namespace TheAiAlchemist
                 return;
             }
             internetText.SetActive(false);
-            Debug.Log("Network reachability is reachable");
+            // Debug.Log("Network reachability is reachable");
 
             // Show the IAP panel
             iapPanel.SetActive(true);
