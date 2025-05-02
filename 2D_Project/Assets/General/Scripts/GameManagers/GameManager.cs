@@ -19,8 +19,9 @@ namespace TheAiAlchemist
         [SerializeField] private VoidChannel resetChannel;
         [SerializeField] private IntChannel audioPlayIndex;
         [SerializeField] private BoolChannel botThinkingChannel;
-        // [SerializeField] private IntChannel saveLevelChannel;
-
+        [SerializeField] private VoidChannel checkIapState;
+        [SerializeField] private BoolChannel iapStateChannel;
+        
         [SerializeField] private AddressableManagerSO addressableManager;
         [SerializeField] private SaveSystemManager saveSystemManager;
         [SerializeField] private string[] modelAddress;
@@ -29,18 +30,22 @@ namespace TheAiAlchemist
         private AlphaZeroAgent _botAgent;
         private GameState _currentGameState;
         private Dictionary<Player, IAgent> _players;
+        private int _minFreeLevel = 2;
         private bool _isEndGame;
 
         private void OnEnable()
         {
             humanMoveChannel.AddListener(HumanPlayAMove);
             resetChannel.AddListener(ResetGame);
+            iapStateChannel.AddListener(StartGame);
         }
 
         private void OnDisable()
         {
             humanMoveChannel.RemoveListener(HumanPlayAMove);
             resetChannel.RemoveListener(ResetGame);
+            iapStateChannel.RemoveListener(StartGame);
+
             _botAgent?.DisableAiElements();
         }
 
@@ -172,12 +177,23 @@ namespace TheAiAlchemist
             endGameChannel.ExecuteChannel(_currentGameState.Winner() != null);
         }
 
-        private async void ResetGame()
+        private void ResetGame()
         {
-            _isEndGame = false;
-            _currentGameState = GameSetup.SetupNewGame();
-            // EndTurnSetup();
-            await StartNextTurn();
+            if (saveSystemManager.saveData.level <= _minFreeLevel) 
+                StartGame(true);
+            else
+                checkIapState.ExecuteChannel();
+        }
+        
+        private async void StartGame(bool iapState)
+        {
+            if (iapState)
+            {
+                _isEndGame = false;
+                _currentGameState = GameSetup.SetupNewGame();
+                await StartNextTurn();
+            }
+            else checkIapState.ExecuteChannel();
         }
     }
 }

@@ -13,6 +13,7 @@ namespace TheAiAlchemist
         [SerializeField] private SettingsSO currentSettings;
         [SerializeField] private VoidChannel changeSettingsChannel;
         [SerializeField] private SaveSystemManager saveSystem;
+        [SerializeField] private IntChannel sfxPlayIndex;
 
         [Header("UI elements")]
         [SerializeField] private Button resumeButton;
@@ -55,6 +56,7 @@ namespace TheAiAlchemist
 
         private void OnReturnGame()
         {
+            sfxPlayIndex.ExecuteChannel(2);
             currentSettings.SaveAudioSettings(soundVolume, musicVolume);
             saveSystem.SaveSettings(currentSettings);
             settingContainer.SetActive(false);
@@ -63,6 +65,7 @@ namespace TheAiAlchemist
 
         private void OnBackToHome()
         {
+            sfxPlayIndex.ExecuteChannel(2);
             loadMenu.RaiseEvent(menuToLoad,true,true);
         }
 
