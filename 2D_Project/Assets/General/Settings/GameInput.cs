@@ -29,19 +29,10 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
             ""id"": ""875ceff4-af2e-46b6-8112-457d03f3b8c6"",
             ""actions"": [
                 {
-                    ""name"": ""Jump"",
-                    ""type"": ""Button"",
-                    ""id"": ""cd5222ae-a8d9-418a-9387-2a8ceb5834d0"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Click"",
                     ""type"": ""Button"",
                     ""id"": ""ab102bf7-ce37-42e9-8719-5a2f09ae7020"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
@@ -50,19 +41,19 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""f69f4dd7-66a5-4c5e-8892-b1f62be4219e"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""id"": ""d7b6045c-b3bd-4fe9-8c68-18a95164099b"",
+                    ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Jump"",
+                    ""action"": ""Click"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""d7b6045c-b3bd-4fe9-8c68-18a95164099b"",
-                    ""path"": ""<Mouse>/leftButton"",
+                    ""id"": ""83b7d590-0c29-4cab-ac4b-c6ae605b9bc6"",
+                    ""path"": """",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -77,7 +68,6 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
 }");
         // GeneralInput
         m_GeneralInput = asset.FindActionMap("GeneralInput", throwIfNotFound: true);
-        m_GeneralInput_Jump = m_GeneralInput.FindAction("Jump", throwIfNotFound: true);
         m_GeneralInput_Click = m_GeneralInput.FindAction("Click", throwIfNotFound: true);
     }
 
@@ -145,13 +135,11 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
     // GeneralInput
     private readonly InputActionMap m_GeneralInput;
     private List<IGeneralInputActions> m_GeneralInputActionsCallbackInterfaces = new List<IGeneralInputActions>();
-    private readonly InputAction m_GeneralInput_Jump;
     private readonly InputAction m_GeneralInput_Click;
     public struct GeneralInputActions
     {
         private @GameInput m_Wrapper;
         public GeneralInputActions(@GameInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Jump => m_Wrapper.m_GeneralInput_Jump;
         public InputAction @Click => m_Wrapper.m_GeneralInput_Click;
         public InputActionMap Get() { return m_Wrapper.m_GeneralInput; }
         public void Enable() { Get().Enable(); }
@@ -162,9 +150,6 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_GeneralInputActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_GeneralInputActionsCallbackInterfaces.Add(instance);
-            @Jump.started += instance.OnJump;
-            @Jump.performed += instance.OnJump;
-            @Jump.canceled += instance.OnJump;
             @Click.started += instance.OnClick;
             @Click.performed += instance.OnClick;
             @Click.canceled += instance.OnClick;
@@ -172,9 +157,6 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
 
         private void UnregisterCallbacks(IGeneralInputActions instance)
         {
-            @Jump.started -= instance.OnJump;
-            @Jump.performed -= instance.OnJump;
-            @Jump.canceled -= instance.OnJump;
             @Click.started -= instance.OnClick;
             @Click.performed -= instance.OnClick;
             @Click.canceled -= instance.OnClick;
@@ -197,7 +179,6 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
     public GeneralInputActions @GeneralInput => new GeneralInputActions(this);
     public interface IGeneralInputActions
     {
-        void OnJump(InputAction.CallbackContext context);
         void OnClick(InputAction.CallbackContext context);
     }
 }
