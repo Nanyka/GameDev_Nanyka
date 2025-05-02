@@ -83,7 +83,6 @@ public class SceneLoader : MonoBehaviour
 	/// </summary>
 	private void LoadLocation(GameSceneSO locationToLoad, bool showLoadingScreen, bool fadeScreen)
 	{
-		Debug.Log("Loading location");
 		//Prevent a double-loading, for situations where the player falls in two Exit colliders in one frame
 		if (_isLoading)
 			return;

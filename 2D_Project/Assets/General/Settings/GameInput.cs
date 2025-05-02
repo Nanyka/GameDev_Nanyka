@@ -224,6 +224,9 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
         /// Construct a new instance of the input action map wrapper class.
         /// </summary>
         public GeneralInputActions(@GameInput wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "GeneralInput/Click".
+        /// </summary>
         public InputAction @Click => m_Wrapper.m_GeneralInput_Click;
         /// <summary>
         /// Provides access to the underlying input action map instance.
@@ -308,6 +311,12 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
     /// <seealso cref="GeneralInputActions.RemoveCallbacks(IGeneralInputActions)" />
     public interface IGeneralInputActions
     {
+        /// <summary>
+        /// Method invoked when associated input action "Click" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnClick(InputAction.CallbackContext context);
     }
 }
