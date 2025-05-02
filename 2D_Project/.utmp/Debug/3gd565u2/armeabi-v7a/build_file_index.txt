@@ -1,0 +1,2 @@
+/Users/admin/Desktop/GameProjects/GameDev_Nanyka/2D_Project/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/CMakeLists.txt
+/Users/admin/Desktop/GameProjects/GameDev_Nanyka/2D_Project/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/FramePacing/CMakeLists.txt

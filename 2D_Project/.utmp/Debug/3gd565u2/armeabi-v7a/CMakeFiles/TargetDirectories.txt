@@ -1,0 +1,5 @@
+/Users/admin/Desktop/GameProjects/GameDev_Nanyka/2D_Project/.utmp/Debug/3gd565u2/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/admin/Desktop/GameProjects/GameDev_Nanyka/2D_Project/.utmp/Debug/3gd565u2/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+/Users/admin/Desktop/GameProjects/GameDev_Nanyka/2D_Project/.utmp/Debug/3gd565u2/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir
+/Users/admin/Desktop/GameProjects/GameDev_Nanyka/2D_Project/.utmp/Debug/3gd565u2/armeabi-v7a/FramePacing/CMakeFiles/edit_cache.dir
+/Users/admin/Desktop/GameProjects/GameDev_Nanyka/2D_Project/.utmp/Debug/3gd565u2/armeabi-v7a/FramePacing/CMakeFiles/rebuild_cache.dir
