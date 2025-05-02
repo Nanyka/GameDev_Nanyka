@@ -1,3 +1,4 @@
+using System.Collections;
 using AlphaZeroAlgorithm;
 using TMPro;
 using UnityEngine;
@@ -6,6 +7,10 @@ using UnityEngine.UI;
 
 namespace TheAiAlchemist
 {
+    using UnityEngine;
+    using AlphaZeroAlgorithm;
+
+
     public class InGameAnnouncer : MonoBehaviour
     {
         [SerializeField] private VoidChannel changePlayerChannel;
@@ -20,6 +25,8 @@ namespace TheAiAlchemist
         [SerializeField] private TextMeshProUGUI winPlayerText;
         [SerializeField] Button playAgainButton;
         [SerializeField] Button homeButton;
+
+        [SerializeField] private float waitToShowWin = 0f;
 
         private void OnEnable()
         {
@@ -39,6 +46,24 @@ namespace TheAiAlchemist
 
         private void ShowPanel(bool hasWinner)
         {
+            // endGamePanel.SetActive(true);
+            // winPlayerText.text = hasWinner ? $"PLAYER {gameStateStorage.GetValue().Winner()} WIN!" : "DRAW GAME";
+            // var buttonText = playAgainButton.GetComponentInChildren<TextMeshProUGUI>();
+            //
+            // if (hasWinner && gameStateStorage.GetValue().Winner() == Player.X)
+            // {
+            //     buttonText.text = "Next Challenge";
+            // }
+            // else
+            //     buttonText.text = "Play again";
+            
+            StartCoroutine(WaitToShowWin(hasWinner));
+        }
+
+        private IEnumerator WaitToShowWin(bool hasWinner)
+        {
+            yield return new WaitForSeconds(waitToShowWin);
+            
             endGamePanel.SetActive(true);
             winPlayerText.text = hasWinner ? $"PLAYER {gameStateStorage.GetValue().Winner()} WIN!" : "DRAW GAME";
             var buttonText = playAgainButton.GetComponentInChildren<TextMeshProUGUI>();

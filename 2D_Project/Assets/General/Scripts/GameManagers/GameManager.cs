@@ -29,7 +29,7 @@ namespace TheAiAlchemist
         private AlphaZeroAgent _botAgent;
         private GameState _currentGameState;
         private Dictionary<Player, IAgent> _players;
-        private bool isEndGame;
+        private bool _isEndGame;
 
         private void OnEnable()
         {
@@ -72,7 +72,8 @@ namespace TheAiAlchemist
             }
 
             _botAgent?.DisableAiElements();
-            _botAgent = new AlphaZeroAgent(modelAsset, 384);
+            var roundPerMove = 128*Mathf.Min(3, saveSystemManager.saveData.level + 1);
+            _botAgent = new AlphaZeroAgent(modelAsset, roundPerMove);
 
             _players = new Dictionary<Player, IAgent>
             {
@@ -146,12 +147,12 @@ namespace TheAiAlchemist
             botThinkingChannel.ExecuteChannel(_currentGameState.NextPlayer == Player.O);
             askUnitIndex.SetValue(-1);
         }
-
+        
         private async void EndGame()
         {
-            if (isEndGame)
+            if (_isEndGame)
                 return;
-            isEndGame = true;
+            _isEndGame = true;
 
             gameStateStorage.SetValue(_currentGameState);
             changePlayerChannel.ExecuteChannel();
@@ -173,7 +174,7 @@ namespace TheAiAlchemist
 
         private async void ResetGame()
         {
-            isEndGame = false;
+            _isEndGame = false;
             _currentGameState = GameSetup.SetupNewGame();
             // EndTurnSetup();
             await StartNextTurn();

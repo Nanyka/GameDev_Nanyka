@@ -38,12 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 12
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -912,6 +912,7 @@ MonoBehaviour:
   winPlayerText: {fileID: 1013703406}
   playAgainButton: {fileID: 597193251}
   homeButton: {fileID: 1774457853}
+  waitToShowWin: 0
 --- !u!1 &344286395
 GameObject:
   m_ObjectHideFlags: 0
@@ -5149,6 +5150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectPointChannel: {fileID: 11400000, guid: d3f1c7ab9bce54dd59ea54cf31168dc9, type: 2}
   humanMoveChannel: {fileID: 11400000, guid: 09fd83887c8134a6fbbb08efccd82cc3, type: 2}
+  gameStateStorage: {fileID: 11400000, guid: ed2e312f50fbd4ff5a218f51fc91f438, type: 2}
 --- !u!1 &2141499272
 GameObject:
   m_ObjectHideFlags: 0

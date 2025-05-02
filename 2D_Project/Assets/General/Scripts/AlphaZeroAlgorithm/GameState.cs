@@ -301,6 +301,77 @@ namespace AlphaZeroAlgorithm
 
             return false;
         }
+        
+        public List<Point>? GetWinningLine()
+        {
+            Player? winner = Winner();
+            if (!winner.HasValue) return null;
+
+            Player player = winner.Value;
+
+            // Check rows
+            for (int row = 1; row <= GameConstants.BoardSize; row++)
+            {
+                var line = new List<Point>();
+                for (int col = 1; col <= GameConstants.BoardSize; col++)
+                {
+                    var point = Board.GetPointAtCoord(row, col);
+                    if (point.HasValue && Board.GetPlayerAtCoord(row, col) == player)
+                    {
+                        line.Add(point.Value);
+                    }
+                }
+                if (line.Count == GameConstants.BoardSize)
+                    return line;
+            }
+
+            // Check columns
+            for (int col = 1; col <= GameConstants.BoardSize; col++)
+            {
+                var line = new List<Point>();
+                for (int row = 1; row <= GameConstants.BoardSize; row++)
+                {
+                    var point = Board.GetPointAtCoord(row, col);
+                    if (point.HasValue && Board.GetPlayerAtCoord(row, col) == player)
+                    {
+                        line.Add(point.Value);
+                    }
+                }
+                if (line.Count == GameConstants.BoardSize)
+                    return line;
+            }
+
+            // Check diagonal (\)
+            var diag1 = new List<Point>();
+            foreach (var p in GameConstants.Diag1)
+            {
+                if (Board.GetPlayerAtCoord(p.Row, p.Col) == player)
+                {
+                    var point = Board.GetPointAtCoord(p.Row, p.Col);
+                    if (point.HasValue)
+                        diag1.Add(point.Value);
+                }
+            }
+            if (diag1.Count == GameConstants.BoardSize)
+                return diag1;
+
+            // Check diagonal (/)
+            var diag2 = new List<Point>();
+            foreach (var p in GameConstants.Diag2)
+            {
+                if (Board.GetPlayerAtCoord(p.Row, p.Col) == player)
+                {
+                    var point = Board.GetPointAtCoord(p.Row, p.Col);
+                    if (point.HasValue)
+                        diag2.Add(point.Value);
+                }
+            }
+            if (diag2.Count == GameConstants.BoardSize)
+                return diag2;
+
+            return null;
+        }
+
 
         public Player? 
             Winner()

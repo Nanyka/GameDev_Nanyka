@@ -34,7 +34,7 @@ public class SceneLoader : MonoBehaviour
 	private GameSceneSO _currentlyLoadedScene;
 	private bool _showLoadingScreen;
 
-	private SceneInstance _gameplayManagerSceneInstance = new SceneInstance();
+	private SceneInstance _gameplayManagerSceneInstance;
 	private float _fadeDuration = 0.5f;
 	private bool _isLoading = false; //To prevent a new loading request while already loading a new scene
 
