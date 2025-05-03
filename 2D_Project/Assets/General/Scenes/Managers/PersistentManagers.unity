@@ -1169,6 +1169,68 @@ Transform:
   m_Children: []
   m_Father: {fileID: 683030724}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2011603427
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2011603428}
+  - component: {fileID: 2011603429}
+  - component: {fileID: 2011603430}
+  m_Layer: 0
+  m_Name: UgsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2011603428
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011603427}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2011603429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011603427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c3a306351d124720a2938eecfd91b7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ugsInitialized: {fileID: 11400000, guid: 722d9a319161c41f5af22a703d2571dc, type: 2}
+--- !u!114 &2011603430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011603427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa7c0a1c15d04628b8053fa12971298d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ugsInitialized: {fileID: 11400000, guid: 722d9a319161c41f5af22a703d2571dc, type: 2}
+  gameStateStorage: {fileID: 11400000, guid: ed2e312f50fbd4ff5a218f51fc91f438, type: 2}
+  endGameChannel: {fileID: 11400000, guid: d1a037fe1d9e9452996bdbc29f4afccd, type: 2}
+  saveSystemManager: {fileID: 11400000, guid: cdd36171f065b461da7e56c89a4bdc16, type: 2}
 --- !u!222 &138035865882902116
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1254,5 +1316,6 @@ SceneRoots:
   - {fileID: 740063862}
   - {fileID: 1122701838}
   - {fileID: 683030724}
+  - {fileID: 2011603428}
   - {fileID: 421349910}
   - {fileID: 970175348}
