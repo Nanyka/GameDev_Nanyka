@@ -187,13 +187,17 @@ namespace TheAiAlchemist
         
         private async void StartGame(bool iapState)
         {
-            if (iapState)
-            {
-                _isEndGame = false;
-                _currentGameState = GameSetup.SetupNewGame();
-                await StartNextTurn();
-            }
-            else checkIapState.ExecuteChannel();
+            _isEndGame = false;
+            _currentGameState = GameSetup.SetupNewGame();
+            await StartNextTurn();
+            
+            // if (iapState)
+            // {
+            //     _isEndGame = false;
+            //     _currentGameState = GameSetup.SetupNewGame();
+            //     await StartNextTurn();
+            // }
+            // else checkIapState.ExecuteChannel();
         }
     }
 }
