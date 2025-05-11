@@ -10,7 +10,6 @@ Library: /Users/mac/Desktop/Projects/GameDev_Nanyka/2D_Project/Temp/BurstOutput/
 --float-mode=Fast
 --generate-link-xml=Temp/burst.link.xml
 --temp-folder=/Users/mac/Desktop/Projects/GameDev_Nanyka/2D_Project/Temp/Burst
---debug=Full
 --key-folder=/Applications/Unity/Hub/Editor/6000.1.0f1/PlaybackEngines/AndroidPlayer
 --decode-folder=/Users/mac/Desktop/Projects/GameDev_Nanyka/2D_Project/Library/Burst
 --output=/Users/mac/Desktop/Projects/GameDev_Nanyka/2D_Project/Temp/BurstOutput/tempburstlibs/armeabi-v7a/lib_burst_generated
@@ -28,7 +27,6 @@ Library: /Users/mac/Desktop/Projects/GameDev_Nanyka/2D_Project/Temp/BurstOutput/
 --float-mode=Fast
 --generate-link-xml=Temp/burst.link.xml
 --temp-folder=/Users/mac/Desktop/Projects/GameDev_Nanyka/2D_Project/Temp/Burst
---debug=Full
 --key-folder=/Applications/Unity/Hub/Editor/6000.1.0f1/PlaybackEngines/AndroidPlayer
 --decode-folder=/Users/mac/Desktop/Projects/GameDev_Nanyka/2D_Project/Library/Burst
 --output=/Users/mac/Desktop/Projects/GameDev_Nanyka/2D_Project/Temp/BurstOutput/tempburstlibs/armeabi-v7a/lib_burst_generated
@@ -96,7 +94,6 @@ Library: /Users/mac/Desktop/Projects/GameDev_Nanyka/2D_Project/Temp/BurstOutput/
 --target-framework=NetFramework
 --generate-link-xml=Temp/burst.link.xml
 --temp-folder=/Users/mac/Desktop/Projects/GameDev_Nanyka/2D_Project/Temp/Burst
---debug=Full
 --key-folder=/Applications/Unity/Hub/Editor/6000.1.0f1/PlaybackEngines/AndroidPlayer
 --decode-folder=/Users/mac/Desktop/Projects/GameDev_Nanyka/2D_Project/Library/Burst
 --output=/Users/mac/Desktop/Projects/GameDev_Nanyka/2D_Project/Temp/BurstOutput/tempburstlibs/armeabi-v7a/lib_burst_generated
@@ -187,7 +184,6 @@ Library: /Users/mac/Desktop/Projects/GameDev_Nanyka/2D_Project/Temp/BurstOutput/
 --target-framework=NetFramework
 --generate-link-xml=Temp/burst.link.xml
 --temp-folder=/Users/mac/Desktop/Projects/GameDev_Nanyka/2D_Project/Temp/Burst
---debug=Full
 --key-folder=/Applications/Unity/Hub/Editor/6000.1.0f1/PlaybackEngines/AndroidPlayer
 --decode-folder=/Users/mac/Desktop/Projects/GameDev_Nanyka/2D_Project/Library/Burst
 --output=/Users/mac/Desktop/Projects/GameDev_Nanyka/2D_Project/Temp/BurstOutput/tempburstlibs/armeabi-v7a/lib_burst_generated
@@ -303,7 +299,6 @@ Library: /Users/mac/Desktop/Projects/GameDev_Nanyka/2D_Project/Temp/BurstOutput/
 --target-framework=NetFramework
 --generate-link-xml=Temp/burst.link.xml
 --temp-folder=/Users/mac/Desktop/Projects/GameDev_Nanyka/2D_Project/Temp/Burst
---debug=Full
 --key-folder=/Applications/Unity/Hub/Editor/6000.1.0f1/PlaybackEngines/AndroidPlayer
 --decode-folder=/Users/mac/Desktop/Projects/GameDev_Nanyka/2D_Project/Library/Burst
 --output=/Users/mac/Desktop/Projects/GameDev_Nanyka/2D_Project/Temp/BurstOutput/tempburstlibs/armeabi-v7a/lib_burst_generated
