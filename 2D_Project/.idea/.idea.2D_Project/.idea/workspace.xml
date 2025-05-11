@@ -5,15 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/UIShrink.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/UIShrink.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/Boss.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/UI/Boss.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/Boss.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/UI/Boss.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithBoss.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithBoss.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Menus/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Menus/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameWithBossManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameWithBossManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Settings/SettingsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Settings/SettingsSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/.cmake/api/v1/reply/index-2025-05-02T08-56-42-0587.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/configure_fingerprint.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/configure_fingerprint.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Model Assets.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Model Assets.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/BossIdle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/BossIdle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/BossRoar.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/BossRoar.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/background2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/UI/background2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/bg_nttt.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/UI/bg_nttt.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/blue_unit_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/UI/blue_unit_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/blue_unit_1.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/UI/blue_unit_1.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/blue_unit_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/UI/blue_unit_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/blue_unit_2.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/UI/blue_unit_2.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/blue_unit_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/UI/blue_unit_3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/blue_unit_3.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/UI/blue_unit_3.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/logo-min.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/UI/logo-min.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/logo.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/UI/logo.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/nttt_ui_element_3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/UI/nttt_ui_element_3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/nttt_ui_elements.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/UI/nttt_ui_elements.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/nttt_ui_elements_10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/UI/nttt_ui_elements_10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/red_unit_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/UI/red_unit_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/red_unit_1.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/UI/red_unit_1.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/red_unit_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/UI/red_unit_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/red_unit_2.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/UI/red_unit_2.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/red_unit_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/UI/red_unit_3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/red_unit_3.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/UI/red_unit_3.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/setting_elements.png 19-28-12-927.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/UI/setting_elements.png 19-28-12-927.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +252,7 @@
       <workItem from="1746260467413" duration="3088000" />
       <workItem from="1746857519553" duration="649000" />
       <workItem from="1746889912759" duration="7130000" />
-      <workItem from="1746927312987" duration="6242000" />
+      <workItem from="1746927312987" duration="6886000" />
     </task>
     <servers />
   </component>
