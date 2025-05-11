@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using AlphaZeroAlgorithm;
 using UnityEngine;
@@ -30,8 +31,14 @@ namespace TheAiAlchemist
             resetChannel.RemoveListener(ResetPlot);
         }
 
+        private void Start()
+        {
+            VisualizeState();
+        }
+
         protected virtual void OnMouseUpAsButton()
         {
+            // Debug.Log($"Mouse Up at {row}, {col}");
             if (askUnitIndex.GetValue() < 0)
             {
                 // Debug.Log("Need to select a unit");
@@ -63,6 +70,7 @@ namespace TheAiAlchemist
 
         private void ResetPlot()
         {
+            // Debug.Log("Reset plot");
             currentStrength = 0;
             unitVisualize.Disable();
         }

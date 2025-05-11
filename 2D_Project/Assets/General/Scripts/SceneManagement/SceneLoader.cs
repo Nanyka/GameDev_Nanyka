@@ -14,11 +14,12 @@ namespace TheAiAlchemist
     {
         [SerializeField] private GameSceneSO _gameplayScene = default;
         [SerializeField] private GameSceneSO _tutorialScene = default;
+        [SerializeField] private GameSceneSO _bossPlayScene = default;
 
-        [Header("Listening to")] [SerializeField]
-        private LoadEventChannel _loadLocation = default;
-
+        [Header("Listening to")] 
+        [SerializeField] private LoadEventChannel _loadLocation = default;
         [SerializeField] private LoadEventChannel _loadTutorial = default;
+        [SerializeField] private LoadEventChannel _loadBossGame = default;
         [SerializeField] private LoadEventChannel _loadMenu = default;
         [SerializeField] private LoadEventChannel _coldStartupLocation = default;
 
@@ -45,6 +46,7 @@ namespace TheAiAlchemist
         {
             _loadLocation.OnLoadingRequested += LoadLocation;
             _loadTutorial.OnLoadingRequested += LoadTutorial;
+            _loadBossGame.OnLoadingRequested += LoadBossGame;
             _loadMenu.OnLoadingRequested += LoadMenu;
 #if UNITY_EDITOR
             _coldStartupLocation.OnLoadingRequested += LocationColdStartup;
@@ -55,6 +57,7 @@ namespace TheAiAlchemist
         {
             _loadLocation.OnLoadingRequested -= LoadLocation;
             _loadTutorial.OnLoadingRequested -= LoadTutorial;
+            _loadBossGame.OnLoadingRequested -= LoadBossGame;
             _loadMenu.OnLoadingRequested -= LoadMenu;
 #if UNITY_EDITOR
             _coldStartupLocation.OnLoadingRequested -= LocationColdStartup;
@@ -122,6 +125,32 @@ namespace TheAiAlchemist
             {
                 _gameplayManagerLoadingOpHandle =
                     _tutorialScene.sceneReference.LoadSceneAsync(LoadSceneMode.Additive, true);
+                _gameplayManagerLoadingOpHandle.Completed += OnGameplayManagersLoaded;
+            }
+            else
+            {
+                StartCoroutine(UnloadPreviousScene());
+            }
+        }
+        
+        /// <summary>
+        /// This function loads the location scenes passed as array parameter
+        /// </summary>
+        private void LoadBossGame(GameSceneSO locationToLoad, bool showLoadingScreen, bool fadeScreen)
+        {
+            //Prevent a double-loading, for situations where the player falls in two Exit colliders in one frame
+            if (_isLoading)
+                return;
+
+            _sceneToLoad = locationToLoad;
+            _showLoadingScreen = showLoadingScreen;
+            _isLoading = true;
+
+            //In case we are coming from the main menu, we need to load the Gameplay manager scene first
+            if (!_gameplayManagerSceneInstance.Scene.isLoaded)
+            {
+                _gameplayManagerLoadingOpHandle =
+                    _bossPlayScene.sceneReference.LoadSceneAsync(LoadSceneMode.Additive, true);
                 _gameplayManagerLoadingOpHandle.Completed += OnGameplayManagersLoaded;
             }
             else

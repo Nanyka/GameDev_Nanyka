@@ -5,9 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameWithBossManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameWithBossManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/BossInGameAnnouncer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/BossInGameAnnouncer.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Prefabs/Unit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Prefabs/Unit.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UGS/IAPInvoker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UGS/IAPInvoker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/PersistentManagers.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/PersistentManagers.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/TutorialPlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/TutorialPlay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Menus/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Menus/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Character/Plot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/Plot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Character/UnitVisualize.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/UnitVisualize.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/SceneManagement/SceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/SceneManagement/SceneLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/SceneManagement/StartGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/SceneManagement/StartGame.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UI/InGameAnnouncer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/InGameAnnouncer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UI/MainMenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/MainMenuManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,6 +234,9 @@
       <workItem from="1746178836710" duration="74000" />
       <workItem from="1746188065864" duration="79000" />
       <workItem from="1746260467413" duration="3088000" />
+      <workItem from="1746857519553" duration="649000" />
+      <workItem from="1746889912759" duration="7130000" />
+      <workItem from="1746927312987" duration="2546000" />
     </task>
     <servers />
   </component>

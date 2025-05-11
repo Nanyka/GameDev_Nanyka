@@ -913,6 +913,7 @@ MonoBehaviour:
   playAgainButton: {fileID: 597193251}
   homeButton: {fileID: 1774457853}
   waitToShowWin: 0
+  playerFaction: 1
 --- !u!1 &344286395
 GameObject:
   m_ObjectHideFlags: 0
@@ -1755,8 +1756,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 700}
-  m_SizeDelta: {x: 400, y: 200}
+  m_AnchoredPosition: {x: 0, y: 750}
+  m_SizeDelta: {x: 550, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &597193251
 MonoBehaviour:
@@ -2713,8 +2714,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 120
-  m_fontSizeBase: 120
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3347,7 +3348,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: RESET
+  m_text: Next Challenge
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b09bce2da8c354d7285e03b02ea31785, type: 2}
   m_sharedMaterial: {fileID: -6728463464290217896, guid: b09bce2da8c354d7285e03b02ea31785, type: 2}

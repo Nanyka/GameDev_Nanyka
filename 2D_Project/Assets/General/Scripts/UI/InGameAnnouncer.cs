@@ -2,31 +2,27 @@ using System.Collections;
 using AlphaZeroAlgorithm;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace TheAiAlchemist
 {
-    using UnityEngine;
-    using AlphaZeroAlgorithm;
-
-
     public class InGameAnnouncer : MonoBehaviour
     {
         [SerializeField] private VoidChannel changePlayerChannel;
         [SerializeField] private BoolChannel endGameChannel;
         [SerializeField] private VoidChannel resetGameChannel;
-        [SerializeField] private GameStateStorage gameStateStorage;
+        [SerializeField] protected GameStateStorage gameStateStorage;
         [SerializeField] private LoadEventChannel loadMenu;
         [SerializeField] private GameSceneSO menuToLoad;
 
         [SerializeField] TextMeshProUGUI playerText;
-        [SerializeField] private GameObject endGamePanel;
-        [SerializeField] private TextMeshProUGUI winPlayerText;
-        [SerializeField] Button playAgainButton;
+        [SerializeField] protected GameObject endGamePanel;
+        [SerializeField] protected TextMeshProUGUI winPlayerText;
+        [SerializeField] protected Button playAgainButton;
         [SerializeField] Button homeButton;
 
-        [SerializeField] private float waitToShowWin = 0f;
+        [SerializeField] protected float waitToShowWin = 0f;
+        [SerializeField] protected Player playerFaction;
 
         private void OnEnable()
         {
@@ -46,26 +42,23 @@ namespace TheAiAlchemist
 
         private void ShowPanel(bool hasWinner)
         {
-            // endGamePanel.SetActive(true);
-            // winPlayerText.text = hasWinner ? $"PLAYER {gameStateStorage.GetValue().Winner()} WIN!" : "DRAW GAME";
-            // var buttonText = playAgainButton.GetComponentInChildren<TextMeshProUGUI>();
-            //
-            // if (hasWinner && gameStateStorage.GetValue().Winner() == Player.X)
-            // {
-            //     buttonText.text = "Next Challenge";
-            // }
-            // else
-            //     buttonText.text = "Play again";
-            
             StartCoroutine(WaitToShowWin(hasWinner));
         }
 
-        private IEnumerator WaitToShowWin(bool hasWinner)
+        protected virtual IEnumerator WaitToShowWin(bool hasWinner)
         {
             yield return new WaitForSeconds(waitToShowWin);
             
             endGamePanel.SetActive(true);
-            winPlayerText.text = hasWinner ? $"PLAYER {gameStateStorage.GetValue().Winner()} WIN!" : "DRAW GAME";
+            
+            string winningText = "";
+            if (hasWinner)
+                winningText = gameStateStorage.GetValue().Winner() == playerFaction ? "Victory in yours !!!" : 
+                    "The bot triumphs this time !";
+            else winningText = "It is stalemate !";
+            
+            winPlayerText.text = winningText;
+            
             var buttonText = playAgainButton.GetComponentInChildren<TextMeshProUGUI>();
             
             if (hasWinner && gameStateStorage.GetValue().Winner() == Player.X)
@@ -78,7 +71,8 @@ namespace TheAiAlchemist
         
         private void OnChangePlayer()
         {
-            playerText.SetText($"In turn of <b>Player {gameStateStorage.GetValue().NextPlayer}</b>");
+            var whoTurn = gameStateStorage.GetValue().NextPlayer == playerFaction ? "Your turn" : "Bot turn";
+            playerText.SetText(whoTurn);
         }
         
         private void OnClickReset()

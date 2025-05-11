@@ -11,27 +11,27 @@ namespace TheAiAlchemist
 {
     public class GameManager : MonoBehaviour
     {
-        [SerializeField] private GameStateStorage gameStateStorage;
-        [SerializeField] private IntStorage askUnitIndex;
-        [SerializeField] private VoidChannel changePlayerChannel;
-        [SerializeField] private BoolChannel endGameChannel;
+        [SerializeField] protected GameStateStorage gameStateStorage;
+        [SerializeField] protected IntStorage askUnitIndex;
+        [SerializeField] protected VoidChannel changePlayerChannel;
+        [SerializeField] protected BoolChannel endGameChannel;
         [SerializeField] private MoveChannel humanMoveChannel;
         [SerializeField] private VoidChannel resetChannel;
-        [SerializeField] private IntChannel audioPlayIndex;
-        [SerializeField] private BoolChannel botThinkingChannel;
+        [SerializeField] protected IntChannel audioPlayIndex;
+        [SerializeField] protected BoolChannel botThinkingChannel;
         [SerializeField] private VoidChannel checkIapState;
         [SerializeField] private BoolChannel iapStateChannel;
         
-        [SerializeField] private AddressableManagerSO addressableManager;
-        [SerializeField] private SaveSystemManager saveSystemManager;
-        [SerializeField] private string[] modelAddress;
+        [SerializeField] protected AddressableManagerSO addressableManager;
+        [SerializeField] protected SaveSystemManager saveSystemManager;
+        [SerializeField] protected string[] modelAddress;
 
-        private IAgent _humanAgent;
-        private AlphaZeroAgent _botAgent;
-        private GameState _currentGameState;
-        private Dictionary<Player, IAgent> _players;
-        private int _minFreeLevel = 2;
-        private bool _isEndGame;
+        protected IAgent _humanAgent;
+        protected AlphaZeroAgent _botAgent;
+        protected GameState _currentGameState;
+        protected Dictionary<Player, IAgent> _players;
+        private int _minFreeLevel = 100; // Set it as 2 for monetization
+        protected bool _isEndGame;
 
         private void OnEnable()
         {
@@ -63,7 +63,7 @@ namespace TheAiAlchemist
             resetChannel.ExecuteChannel();
         }
 
-        private async Task<bool> LoadDecisionMakers()
+        protected virtual async Task<bool> LoadDecisionMakers()
         {
             var loadResult = true;
             _humanAgent = new AlphaZeroAlgorithm.Human();
@@ -94,7 +94,7 @@ namespace TheAiAlchemist
             await ApplySelectedMove(humanMove);
         }
 
-        private async Task StartNextTurn()
+        protected async Task StartNextTurn()
         {
             if (_currentGameState.IsOver())
             {
@@ -108,7 +108,7 @@ namespace TheAiAlchemist
             if (nextMove != null) await ApplySelectedMove(nextMove);
         }
 
-        private async Task ApplySelectedMove(Move move)
+        protected virtual async Task ApplySelectedMove(Move move)
         {
             if (_currentGameState.IsOver())
             {
@@ -145,15 +145,15 @@ namespace TheAiAlchemist
             }
         }
         
-        private void EndTurnSetup()
+        protected virtual void EndTurnSetup()
         {
             gameStateStorage.SetValue(_currentGameState);
             changePlayerChannel.ExecuteChannel();
             botThinkingChannel.ExecuteChannel(_currentGameState.NextPlayer == Player.O);
             askUnitIndex.SetValue(-1);
         }
-        
-        private async void EndGame()
+
+        protected virtual async void EndGame()
         {
             if (_isEndGame)
                 return;

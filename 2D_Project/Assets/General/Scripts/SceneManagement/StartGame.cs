@@ -16,6 +16,7 @@ namespace TheAiAlchemist
     {
         [SerializeField] private GameSceneSO locationsToLoad;
         [SerializeField] private GameSceneSO tutorialToLoad;
+        [SerializeField] private GameSceneSO bossLocationsToLoad;
         [SerializeField] private SaveSystemManager saveSystem;
         [SerializeField] private AddressableManagerSO addressableManagerSo;
         [SerializeField] private GeneralAssetLoader generalAssetLoader;
@@ -24,11 +25,13 @@ namespace TheAiAlchemist
         [Header("Broadcasting on")] 
         [SerializeField] private LoadEventChannel loadLocation;
         [SerializeField] private LoadEventChannel loadTutorial;
+        [SerializeField] private LoadEventChannel loadBossGame;
 
         [Header("Listening to")] 
         [SerializeField] private VoidChannel onNewGameButton;
         [SerializeField] private VoidChannel onTutorialButton;
         [SerializeField] private VoidChannel onResetButton;
+        [SerializeField] private VoidChannel onBossGameButton;
         // [SerializeField] private bool hasSaveData;
 
         private async void Start()
@@ -38,6 +41,7 @@ namespace TheAiAlchemist
             onNewGameButton.AddListener(StartNewGame);
             onTutorialButton.AddListener(TutorialGame);
             onResetButton.AddListener(OnResetSaveDataPress);
+            onBossGameButton.AddListener(StartBossGame);
         }
 
         private void OnDestroy()
@@ -45,8 +49,9 @@ namespace TheAiAlchemist
             onNewGameButton.RemoveListener(StartNewGame);
             onTutorialButton.RemoveListener(TutorialGame);
             onResetButton.RemoveListener(OnResetSaveDataPress);
+            onBossGameButton.RemoveListener(StartBossGame);
         }
-        
+
         private void StartNewGame()
         {
             loadLocation.RaiseEvent(locationsToLoad, showLoadScreen);
@@ -55,6 +60,11 @@ namespace TheAiAlchemist
         private void TutorialGame()
         {
             loadTutorial.RaiseEvent(tutorialToLoad, showLoadScreen);
+        }
+
+        private void StartBossGame()
+        {
+            loadBossGame.RaiseEvent(bossLocationsToLoad, showLoadScreen);
         }
 
         private void OnResetSaveDataPress()
