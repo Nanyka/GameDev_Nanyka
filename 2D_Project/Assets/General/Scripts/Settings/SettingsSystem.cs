@@ -11,11 +11,11 @@ namespace TheAiAlchemist
 {
     public class SettingsSystem : MonoBehaviour
     {
-        [SerializeField] private VoidChannel SaveSettingsEvent = default;
-        [SerializeField] private SettingsSO _currentSettings = default;
-        [SerializeField] private SaveSystemManager _saveSystem = default;
+        [SerializeField] private VoidChannel SaveSettingsEvent;
+        [SerializeField] private SettingsSO _currentSettings;
+        [SerializeField] private SaveSystemManager _saveSystem;
         [SerializeField] private VoidChannel changeSettingsChannel;
-        [SerializeField] private SettingsSO settingsSo = default;
+        [SerializeField] private SettingsSO settingsSo;
 
         private async void Awake()
         {

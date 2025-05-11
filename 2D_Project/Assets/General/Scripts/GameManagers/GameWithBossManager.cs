@@ -79,7 +79,7 @@ namespace TheAiAlchemist
             askUnitIndex.SetValue(-1);
         }
         
-        protected override async void EndGame()
+        protected override void EndGame()
         {
             if (_isEndGame)
                 return;
