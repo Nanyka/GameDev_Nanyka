@@ -70,23 +70,15 @@ namespace TheAiAlchemist
             if (string.IsNullOrEmpty(checkId))
             {
                 _saveSystem.SavePlayerId("");
-                try
+                if (AuthenticationService.Instance.SessionTokenExists)
                 {
-                    if (AuthenticationService.Instance.SessionTokenExists)
-                    {
-                        if (!AuthenticationService.Instance.IsSignedIn)
-                            await AuthenticationService.Instance.SignInAnonymouslyAsync();
+                    if (!AuthenticationService.Instance.IsSignedIn)
+                        await AuthenticationService.Instance.SignInAnonymouslyAsync();
 
-                        // Debug.Log($"Player id when token exist:{AuthenticationService.Instance.PlayerId}");
-                        _saveSystem.SavePlayerId(AuthenticationService.Instance.PlayerId);
-                    }
+                    // Debug.Log($"Player id when token exist:{AuthenticationService.Instance.PlayerId}");
+                    _saveSystem.SavePlayerId(AuthenticationService.Instance.PlayerId);
                 }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e);
-                    throw;
-                }
-                
+
                 return;
             }
             

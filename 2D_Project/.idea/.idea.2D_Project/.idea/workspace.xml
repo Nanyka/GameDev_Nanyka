@@ -5,30 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/PersistentManagers.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/PersistentManagers.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Channels/UGS.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Channels/UGS/CheckIapState.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Channels/UGS/CheckIapState.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Channels/UGS/ComparePlayerId.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Channels/UGS/ComparePlayerId.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Channels/UGS/IapStateChannel.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Channels/UGS/IapStateChannel.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Channels/UGS/UgsInitiated.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Channels/UGS/UgsInitiated.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/BackendSO/AuthManagerSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/BackendSO/AuthManagerSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Character/Plot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/Plot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/SaveSystem/SaveSystemManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/SaveSystem/SaveSystemManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Settings/SettingsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Settings/SettingsSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UGS/IAPInvoker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UGS/IAPInvoker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UGS/InitiateGameServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UGS/InitiateGameServices.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UI/MainMenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/MainMenuManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +33,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/UI/InGameAnnouncer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/Utils/Combination.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TriggerRoar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.authentication@868ebdf18f3f/Runtime/AuthenticationServiceInternal.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -242,7 +220,7 @@
       <workItem from="1746857519553" duration="649000" />
       <workItem from="1746889912759" duration="7130000" />
       <workItem from="1746927312987" duration="7734000" />
-      <workItem from="1747026701880" duration="9777000" />
+      <workItem from="1747026701880" duration="10078000" />
     </task>
     <servers />
   </component>
