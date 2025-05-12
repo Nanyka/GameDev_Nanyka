@@ -35,7 +35,7 @@ namespace TheAiAlchemist
         private void CheckIAPState()
         {
             // Check saveData, if available, return true
-            // Debug.Log(saveSystem.saveData.playerId);
+            // Debug.Log($"Use IAP with Player {saveSystem.saveData.playerId}");
             if (saveSystem.saveData.playerId != "")
             {
                 ListenIapFeedback(true);

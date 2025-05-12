@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using TheAiAlchemist;
 using Unity.Services.Authentication;
 using UnityEngine;
@@ -9,6 +10,10 @@ using UnityEngine.Serialization;
 // using UnityEngine.Rendering.Universal;
 namespace TheAiAlchemist
 {
+    /// <summary>
+    ///  Data is loaded from this script
+    /// </summary>
+    
     public class SettingsSystem : MonoBehaviour
     {
         [SerializeField] private VoidChannel SaveSettingsEvent;
@@ -16,6 +21,7 @@ namespace TheAiAlchemist
         [SerializeField] private SaveSystemManager _saveSystem;
         [SerializeField] private VoidChannel changeSettingsChannel;
         [SerializeField] private SettingsSO settingsSo;
+        [SerializeField] private AuthManagerSO authManager;
 
         private async void Awake()
         {
@@ -61,15 +67,24 @@ namespace TheAiAlchemist
             // Check internet availability
             if (Application.internetReachability == NetworkReachability.NotReachable) return;
             
-            if (checkId == "")
+            if (string.IsNullOrEmpty(checkId))
             {
-                if (AuthenticationService.Instance.SessionTokenExists)
+                _saveSystem.SavePlayerId("");
+                try
                 {
-                    if (!AuthenticationService.Instance.IsSignedIn)
-                        await AuthenticationService.Instance.SignInAnonymouslyAsync();
+                    if (AuthenticationService.Instance.SessionTokenExists)
+                    {
+                        if (!AuthenticationService.Instance.IsSignedIn)
+                            await AuthenticationService.Instance.SignInAnonymouslyAsync();
 
-                    // Debug.Log($"Player id when token exist:{AuthenticationService.Instance.PlayerId}");
-                    _saveSystem.SavePlayerId(AuthenticationService.Instance.PlayerId);
+                        // Debug.Log($"Player id when token exist:{AuthenticationService.Instance.PlayerId}");
+                        _saveSystem.SavePlayerId(AuthenticationService.Instance.PlayerId);
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    throw;
                 }
                 
                 return;
@@ -78,11 +93,25 @@ namespace TheAiAlchemist
             // Debug.Log($"Player id to check: {checkId}");
             
             // If available, check playerId. If playerId is matched, return true
-            if (AuthenticationService.Instance.PlayerId.Equals(checkId)) return;
+
+            try
+            {
+                if (await authManager.AnonymousCheckSignIn() && authManager.CheckPlayerId(checkId)) return;
+                
+                // if (authManager.CheckPlayerId(checkId)) return;
+
+                // If playerId is not match, save playerId in saveData as string.Empty and return false
+                // Debug.Log($"Player id did not match: {checkId}");
+                _saveSystem.SavePlayerId("");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                // Debug.Log($"Player id did not match: {checkId}");
+                _saveSystem.SavePlayerId("");
+                throw;
+            }
             
-            // If playerId is not match, save playerId in saveData as string.Empty and return false
-            // Debug.Log($"Player id did not match: {checkId}");
-            _saveSystem.SavePlayerId("");
         }
     }
 }

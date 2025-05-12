@@ -58,6 +58,8 @@ namespace TheAiAlchemist
         {
             // Debug.Log($"Visual {row}:{col}");
             var currentState = gameStateStorage.GetValue();
+            if (currentState == null) return;
+            
             foreach (var plot in currentState.Board.GetGrid())
             {
                 var checkPoint = plot.Key;

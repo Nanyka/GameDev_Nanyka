@@ -40,7 +40,6 @@ namespace TheAiAlchemist
 
         private void Start()
         {
-            // TODO: Hover to show "1% player can unlock the Boss"
             if (saveSystem.saveData.level < unlockBosLevel)
             {
                 bossGameButton.interactable = false;

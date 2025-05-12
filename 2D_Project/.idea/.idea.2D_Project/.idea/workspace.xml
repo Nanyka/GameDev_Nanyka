@@ -5,29 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/.cmake/api/v1/reply/cache-v2-b137e60b31edcab4e0e8.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/.cmake/api/v1/reply/cmakeFiles-v1-81e75b62680b11365452.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/.cmake/api/v1/reply/index-2025-05-11T04-45-06-0731.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/configure_fingerprint.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/configure_fingerprint.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/.cmake/api/v1/reply/cache-v2-15971cc1fdeb1c6aa63a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/.cmake/api/v1/reply/cmakeFiles-v1-4316535b400e96b73e6f.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/.cmake/api/v1/reply/index-2025-05-02T06-25-17-0568.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/configure_fingerprint.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/configure_fingerprint.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AndroidBuild/zero_tic_tac_toe_BurstDebugInformation_DoNotShip/tempburstlibs/armeabi-v7a/lib_burst_generated.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AndroidBuild/zero_tic_tac_toe_BurstDebugInformation_DoNotShip/tempburstlibs/armeabi-v7a/lib_burst_generated.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/IAPProductCatalog.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/IAPProductCatalog.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/PersistentManagers.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/PersistentManagers.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Channels/UGS.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Channels/UGS/CheckIapState.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Channels/UGS/CheckIapState.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Channels/UGS/ComparePlayerId.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Channels/UGS/ComparePlayerId.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Channels/UGS/IapStateChannel.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Channels/UGS/IapStateChannel.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Channels/UGS/UgsInitiated.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Channels/UGS/UgsInitiated.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/BackendSO/AuthManagerSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/BackendSO/AuthManagerSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Character/Plot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/Plot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/SaveSystem/SaveSystemManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/SaveSystem/SaveSystemManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Settings/SettingsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Settings/SettingsSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UGS/IAPInvoker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UGS/IAPInvoker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UGS/InitiateGameServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UGS/InitiateGameServices.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UI/MainMenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/MainMenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,6 +242,7 @@
       <workItem from="1746857519553" duration="649000" />
       <workItem from="1746889912759" duration="7130000" />
       <workItem from="1746927312987" duration="7734000" />
+      <workItem from="1747026701880" duration="9777000" />
     </task>
     <servers />
   </component>

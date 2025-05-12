@@ -83,8 +83,8 @@ public class SaveSystemManager : ScriptableObject
 		FileManager.WriteToFile(saveFilename, "");
 
 		SaveDataToDisk();
-
 	}
+	
 	public void SaveSettings(SettingsSO settings)
 	{
 		saveData.SaveSettings(settings);

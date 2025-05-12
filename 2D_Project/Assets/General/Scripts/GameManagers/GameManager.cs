@@ -21,6 +21,7 @@ namespace TheAiAlchemist
         [SerializeField] protected BoolChannel botThinkingChannel;
         [SerializeField] private VoidChannel checkIapState;
         [SerializeField] private BoolChannel iapStateChannel;
+        [SerializeField] private RemoteConfigManagerSO remoteConfigManager;
         
         [SerializeField] protected AddressableManagerSO addressableManager;
         [SerializeField] protected SaveSystemManager saveSystemManager;
@@ -30,7 +31,7 @@ namespace TheAiAlchemist
         protected AlphaZeroAgent _botAgent;
         protected GameState _currentGameState;
         protected Dictionary<Player, IAgent> _players;
-        private int _minFreeLevel = 100; // Set it as 2 for monetization
+        // private int _minFreeLevel = 100; // Set it as 2 for monetization
         protected bool _isEndGame;
 
         private void OnEnable()
@@ -179,7 +180,7 @@ namespace TheAiAlchemist
 
         private void ResetGame()
         {
-            if (saveSystemManager.saveData.level <= _minFreeLevel) 
+            if (saveSystemManager.saveData.level <= remoteConfigManager.GetNumericConfig(NumericConfigName.COFFEE_ASK)) 
                 StartGame(true);
             else
                 checkIapState.ExecuteChannel();

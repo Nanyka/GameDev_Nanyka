@@ -16,6 +16,7 @@ namespace TheAiAlchemist
     {
         // [SerializeField] private CloudSaveManagerSO _cloudSaveManager;
         // [SerializeField] private AddressableManagerSO addressableManager;
+        [SerializeField] private RemoteConfigManagerSO remoteConfigManager;
         [SerializeField] private BooleanStorage ugsInitialized;
 
         public async void Start()
@@ -37,6 +38,10 @@ namespace TheAiAlchemist
                     return;
 
                 AnalyticsService.Instance.StartDataCollection();
+                if (this == null)
+                    return;
+
+                await remoteConfigManager.FetchRemoteConfigs();
                 if (this == null)
                     return;
                 

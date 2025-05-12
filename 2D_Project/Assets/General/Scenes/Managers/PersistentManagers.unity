@@ -967,6 +967,7 @@ MonoBehaviour:
   _saveSystem: {fileID: 11400000, guid: cdd36171f065b461da7e56c89a4bdc16, type: 2}
   changeSettingsChannel: {fileID: 11400000, guid: f64a77ff1cfee49a6ac7b843f226adb3, type: 2}
   settingsSo: {fileID: 11400000, guid: 81f50747a96bd4932b682d58664706f5, type: 2}
+  authManager: {fileID: 11400000, guid: ce082540d4f9e4be29d82e7d4074c894, type: 2}
 --- !u!1 &1492261400
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,6 +1217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c3a306351d124720a2938eecfd91b7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  remoteConfigManager: {fileID: 11400000, guid: 1298bb7040547495b8621581fdff7754, type: 2}
   ugsInitialized: {fileID: 11400000, guid: 722d9a319161c41f5af22a703d2571dc, type: 2}
 --- !u!114 &2011603430
 MonoBehaviour:
