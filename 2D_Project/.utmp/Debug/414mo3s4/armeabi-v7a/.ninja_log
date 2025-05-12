@@ -1,5 +1,5 @@
 # ninja log v5
-0	103	1746952218403148229	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	dc7542ded0047a65
-103	208	1746952218499431661	/Users/mac/Desktop/Projects/GameDev_Nanyka/2D_Project/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/414mo3s4/obj/armeabi-v7a/libswappywrapper.so	707a813b574df3c5
-0	102	1746953311332499864	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	dc7542ded0047a65
 103	207	1746953311428370831	/Users/mac/Desktop/Projects/GameDev_Nanyka/2D_Project/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/414mo3s4/obj/armeabi-v7a/libswappywrapper.so	707a813b574df3c5
+0	102	1746953311332499864	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	dc7542ded0047a65
+1	101	1747037839424331516	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	dc7542ded0047a65
+101	207	1747037839519883737	/Users/mac/Desktop/Projects/GameDev_Nanyka/2D_Project/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/414mo3s4/obj/armeabi-v7a/libswappywrapper.so	707a813b574df3c5

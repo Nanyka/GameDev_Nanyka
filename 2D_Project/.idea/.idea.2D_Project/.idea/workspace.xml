@@ -5,7 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Settings/SettingsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Settings/SettingsSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/arm64-v8a/.cmake/api/v1/reply/index-2025-05-11T08-48-29-0924.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/arm64-v8a/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/arm64-v8a/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/arm64-v8a/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/arm64-v8a/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/arm64-v8a/configure_fingerprint.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/arm64-v8a/configure_fingerprint.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/.cmake/api/v1/reply/index-2025-05-11T08-48-31-0204.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/configure_fingerprint.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/configure_fingerprint.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/arm64-v8a/.cmake/api/v1/reply/index-2025-05-11T14-40-22-0082.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/arm64-v8a/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/arm64-v8a/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/arm64-v8a/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/arm64-v8a/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/arm64-v8a/configure_fingerprint.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/arm64-v8a/configure_fingerprint.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/.cmake/api/v1/reply/index-2025-05-11T14-40-23-0644.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/configure_fingerprint.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/configure_fingerprint.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CCDBuildData/5a0fe64e-3473-42ac-a3c6-1a3739bfa3a0/e36ba9c8-7ca2-48b3-b5f9-1f6d54144df5/latest/catalog_1.4.bin" beforeDir="false" afterPath="$PROJECT_DIR$/CCDBuildData/5a0fe64e-3473-42ac-a3c6-1a3739bfa3a0/e36ba9c8-7ca2-48b3-b5f9-1f6d54144df5/latest/catalog_1.4.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CCDBuildData/5a0fe64e-3473-42ac-a3c6-1a3739bfa3a0/e36ba9c8-7ca2-48b3-b5f9-1f6d54144df5/latest/catalog_1.4.hash" beforeDir="false" afterPath="$PROJECT_DIR$/CCDBuildData/5a0fe64e-3473-42ac-a3c6-1a3739bfa3a0/e36ba9c8-7ca2-48b3-b5f9-1f6d54144df5/latest/catalog_1.4.hash" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +241,7 @@
       <workItem from="1746857519553" duration="649000" />
       <workItem from="1746889912759" duration="7130000" />
       <workItem from="1746927312987" duration="7734000" />
-      <workItem from="1747026701880" duration="10078000" />
+      <workItem from="1747026701880" duration="10676000" />
     </task>
     <servers />
   </component>
