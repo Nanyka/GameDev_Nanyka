@@ -32,7 +32,7 @@ namespace TheAiAlchemist
                     return;
 
                 var options = new InitializationOptions();
-                options.SetEnvironmentName("dev");
+                options.SetEnvironmentName("production");
                 await UnityServices.InitializeAsync(options);
                 if (this == null)
                     return;

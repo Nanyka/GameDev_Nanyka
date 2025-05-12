@@ -27,6 +27,24 @@ MonoBehaviour:
       m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
     - m_Suffix: LoadPath
       m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+  - m_GroupTypePrefix: CCD.bc1d770f-a7c9-4505-bcd8-1e781643e202.5a0fe64e-3473-42ac-a3c6-1a3739bfa3a0.3ea1e820-6fce-4e21-a703-3944e78dd5d5.latest
+    m_Variables:
+    - m_Suffix: BuildPath
+      m_Value: CCDBuildData/5a0fe64e-3473-42ac-a3c6-1a3739bfa3a0/3ea1e820-6fce-4e21-a703-3944e78dd5d5/latest
+    - m_Suffix: CcdBadgeName
+      m_Value: latest
+    - m_Suffix: CcdBucketId
+      m_Value: 3ea1e820-6fce-4e21-a703-3944e78dd5d5
+    - m_Suffix: CcdBucketName
+      m_Value: iOS
+    - m_Suffix: Environmentid
+      m_Value: 5a0fe64e-3473-42ac-a3c6-1a3739bfa3a0
+    - m_Suffix: Environmentname
+      m_Value: dev
+    - m_Suffix: LoadPath
+      m_Value: https://bc1d770f-a7c9-4505-bcd8-1e781643e202.client-api.unity3dusercontent.com/client_api/v1/environments/dev/buckets/3ea1e820-6fce-4e21-a703-3944e78dd5d5/release_by_badge/latest/entry_by_path/content/?path=
+    - m_Suffix: PromoteOnly
+      m_Value: False
   - m_GroupTypePrefix: CCD.bc1d770f-a7c9-4505-bcd8-1e781643e202.5a0fe64e-3473-42ac-a3c6-1a3739bfa3a0.4ad9142d-6493-4127-afe8-811f93f0ba7c.latest
     m_Variables:
     - m_Suffix: BuildPath
@@ -45,6 +63,24 @@ MonoBehaviour:
       m_Value: https://bc1d770f-a7c9-4505-bcd8-1e781643e202.client-api.unity3dusercontent.com/client_api/v1/environments/dev/buckets/4ad9142d-6493-4127-afe8-811f93f0ba7c/release_by_badge/latest/entry_by_path/content/?path=
     - m_Suffix: PromoteOnly
       m_Value: False
+  - m_GroupTypePrefix: CCD.bc1d770f-a7c9-4505-bcd8-1e781643e202.5a0fe64e-3473-42ac-a3c6-1a3739bfa3a0.c6a8ce7e-6dcd-4ef0-9cf5-afb8c2b207c3.latest
+    m_Variables:
+    - m_Suffix: BuildPath
+      m_Value: CCDBuildData/5a0fe64e-3473-42ac-a3c6-1a3739bfa3a0/c6a8ce7e-6dcd-4ef0-9cf5-afb8c2b207c3/latest
+    - m_Suffix: CcdBadgeName
+      m_Value: latest
+    - m_Suffix: CcdBucketId
+      m_Value: c6a8ce7e-6dcd-4ef0-9cf5-afb8c2b207c3
+    - m_Suffix: CcdBucketName
+      m_Value: Android
+    - m_Suffix: Environmentid
+      m_Value: 5a0fe64e-3473-42ac-a3c6-1a3739bfa3a0
+    - m_Suffix: Environmentname
+      m_Value: dev
+    - m_Suffix: LoadPath
+      m_Value: https://bc1d770f-a7c9-4505-bcd8-1e781643e202.client-api.unity3dusercontent.com/client_api/v1/environments/dev/buckets/c6a8ce7e-6dcd-4ef0-9cf5-afb8c2b207c3/release_by_badge/latest/entry_by_path/content/?path=
+    - m_Suffix: PromoteOnly
+      m_Value: False
   - m_GroupTypePrefix: CCD.bc1d770f-a7c9-4505-bcd8-1e781643e202.5a0fe64e-3473-42ac-a3c6-1a3739bfa3a0.e36ba9c8-7ca2-48b3-b5f9-1f6d54144df5.latest
     m_Variables:
     - m_Suffix: BuildPath
@@ -61,6 +97,78 @@ MonoBehaviour:
       m_Value: dev
     - m_Suffix: LoadPath
       m_Value: https://bc1d770f-a7c9-4505-bcd8-1e781643e202.client-api.unity3dusercontent.com/client_api/v1/environments/dev/buckets/e36ba9c8-7ca2-48b3-b5f9-1f6d54144df5/release_by_badge/latest/entry_by_path/content/?path=
+    - m_Suffix: PromoteOnly
+      m_Value: False
+  - m_GroupTypePrefix: CCD.bc1d770f-a7c9-4505-bcd8-1e781643e202.a97a9fcb-e351-43c3-b99a-d811879d6e5e.63ecce0a-fe2b-43ab-bcf2-6adaafae46bc.latest
+    m_Variables:
+    - m_Suffix: BuildPath
+      m_Value: CCDBuildData/a97a9fcb-e351-43c3-b99a-d811879d6e5e/63ecce0a-fe2b-43ab-bcf2-6adaafae46bc/latest
+    - m_Suffix: CcdBadgeName
+      m_Value: latest
+    - m_Suffix: CcdBucketId
+      m_Value: 63ecce0a-fe2b-43ab-bcf2-6adaafae46bc
+    - m_Suffix: CcdBucketName
+      m_Value: default
+    - m_Suffix: Environmentid
+      m_Value: a97a9fcb-e351-43c3-b99a-d811879d6e5e
+    - m_Suffix: Environmentname
+      m_Value: production
+    - m_Suffix: LoadPath
+      m_Value: https://bc1d770f-a7c9-4505-bcd8-1e781643e202.client-api.unity3dusercontent.com/client_api/v1/environments/production/buckets/63ecce0a-fe2b-43ab-bcf2-6adaafae46bc/release_by_badge/latest/entry_by_path/content/?path=
+    - m_Suffix: PromoteOnly
+      m_Value: False
+  - m_GroupTypePrefix: CCD.bc1d770f-a7c9-4505-bcd8-1e781643e202.a97a9fcb-e351-43c3-b99a-d811879d6e5e.7cd824ba-3dd8-4a45-b8ef-77aa7ea4aeef.latest
+    m_Variables:
+    - m_Suffix: BuildPath
+      m_Value: CCDBuildData/a97a9fcb-e351-43c3-b99a-d811879d6e5e/7cd824ba-3dd8-4a45-b8ef-77aa7ea4aeef/latest
+    - m_Suffix: CcdBadgeName
+      m_Value: latest
+    - m_Suffix: CcdBucketId
+      m_Value: 7cd824ba-3dd8-4a45-b8ef-77aa7ea4aeef
+    - m_Suffix: CcdBucketName
+      m_Value: iOS
+    - m_Suffix: Environmentid
+      m_Value: a97a9fcb-e351-43c3-b99a-d811879d6e5e
+    - m_Suffix: Environmentname
+      m_Value: production
+    - m_Suffix: LoadPath
+      m_Value: https://bc1d770f-a7c9-4505-bcd8-1e781643e202.client-api.unity3dusercontent.com/client_api/v1/environments/production/buckets/7cd824ba-3dd8-4a45-b8ef-77aa7ea4aeef/release_by_badge/latest/entry_by_path/content/?path=
+    - m_Suffix: PromoteOnly
+      m_Value: False
+  - m_GroupTypePrefix: CCD.bc1d770f-a7c9-4505-bcd8-1e781643e202.a97a9fcb-e351-43c3-b99a-d811879d6e5e.b562b449-6dfe-4e8c-8cbc-a86b7dcbe206.latest
+    m_Variables:
+    - m_Suffix: BuildPath
+      m_Value: CCDBuildData/a97a9fcb-e351-43c3-b99a-d811879d6e5e/b562b449-6dfe-4e8c-8cbc-a86b7dcbe206/latest
+    - m_Suffix: CcdBadgeName
+      m_Value: latest
+    - m_Suffix: CcdBucketId
+      m_Value: b562b449-6dfe-4e8c-8cbc-a86b7dcbe206
+    - m_Suffix: CcdBucketName
+      m_Value: Android
+    - m_Suffix: Environmentid
+      m_Value: a97a9fcb-e351-43c3-b99a-d811879d6e5e
+    - m_Suffix: Environmentname
+      m_Value: production
+    - m_Suffix: LoadPath
+      m_Value: https://bc1d770f-a7c9-4505-bcd8-1e781643e202.client-api.unity3dusercontent.com/client_api/v1/environments/production/buckets/b562b449-6dfe-4e8c-8cbc-a86b7dcbe206/release_by_badge/latest/entry_by_path/content/?path=
+    - m_Suffix: PromoteOnly
+      m_Value: False
+  - m_GroupTypePrefix: CCD.bc1d770f-a7c9-4505-bcd8-1e781643e202.a97a9fcb-e351-43c3-b99a-d811879d6e5e.e8e1988b-65de-4b8f-b2ae-779c51a9764e.latest
+    m_Variables:
+    - m_Suffix: BuildPath
+      m_Value: CCDBuildData/a97a9fcb-e351-43c3-b99a-d811879d6e5e/e8e1988b-65de-4b8f-b2ae-779c51a9764e/latest
+    - m_Suffix: CcdBadgeName
+      m_Value: latest
+    - m_Suffix: CcdBucketId
+      m_Value: e8e1988b-65de-4b8f-b2ae-779c51a9764e
+    - m_Suffix: CcdBucketName
+      m_Value: StandaloneOSX
+    - m_Suffix: Environmentid
+      m_Value: a97a9fcb-e351-43c3-b99a-d811879d6e5e
+    - m_Suffix: Environmentname
+      m_Value: production
+    - m_Suffix: LoadPath
+      m_Value: https://bc1d770f-a7c9-4505-bcd8-1e781643e202.client-api.unity3dusercontent.com/client_api/v1/environments/production/buckets/e8e1988b-65de-4b8f-b2ae-779c51a9764e/release_by_badge/latest/entry_by_path/content/?path=
     - m_Suffix: PromoteOnly
       m_Value: False
   environments:
