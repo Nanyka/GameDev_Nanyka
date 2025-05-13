@@ -15,6 +15,16 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: 1909daa32556b491187c47d482d7b09f
   m_SerializeEntries:
+  - m_GUID: 0b3a143fd688746e7b6e4b2e93f8d5e2
+    m_Address: Assets/General/Scenes/Managers/TutorialPlay.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1298c027baa604192868daa85f5a4434
+    m_Address: Assets/General/Scenes/Locations/TutorialLocation.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 15a05c2c1d40540bebcb684d25374e08
     m_Address: Assets/General/ScriptableObjects/SceneData/SceneEvents/LoadLocationChannel.asset
     m_ReadOnly: 0
@@ -25,13 +35,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 80c0801af1bf94bce821b53db3b3aae6
-    m_Address: Assets/General/Scenes/Menus/MainMenu.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 969b7f174e8c76843aa3fcdbade0487b
-    m_Address: Assets/General/Scenes/Managers/PersistentManagers.unity
+  - m_GUID: 297e3467bd45f435499e08359e31b558
+    m_Address: Assets/General/ScriptableObjects/SceneData/SceneEvents/LoadBossChannel.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -40,18 +45,28 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 80c0801af1bf94bce821b53db3b3aae6
+    m_Address: Assets/General/Scenes/Menus/MainMenu.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9075679a35ef74c63b990f8722513622
+    m_Address: Assets/General/Scenes/Locations/BossLocation.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 969b7f174e8c76843aa3fcdbade0487b
+    m_Address: Assets/General/Scenes/Managers/PersistentManagers.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cc61d66bb60474e77b55362128f46291
+    m_Address: Assets/General/Scenes/Managers/GamePlayWithBoss.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f4b4289d4a9344b59b6c165ea9f38bd3
     m_Address: Assets/General/Scenes/Locations/BasicLocation.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1298c027baa604192868daa85f5a4434
-    m_Address: Assets/General/Scenes/Locations/TutorialLocation.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0b3a143fd688746e7b6e4b2e93f8d5e2
-    m_Address: Assets/General/Scenes/Managers/TutorialPlay.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -59,5 +74,5 @@ MonoBehaviour:
   m_Settings: {fileID: 11400000, guid: 67236932078454d7a84a4de4c3e3ced4, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: f114e4a97b907406d828288814a6d360, type: 2}
     - {fileID: 11400000, guid: d497ff94d98b642e483c504588388b87, type: 2}
+    - {fileID: 11400000, guid: f114e4a97b907406d828288814a6d360, type: 2}

@@ -9,6 +9,7 @@ namespace TheAiAlchemist
     {
         // [SerializeField] private TextMeshProUGUI strengthText;
         [SerializeField] private GeneralAssetLoader generalAssetLoader;
+        [SerializeField] private Player playerFaction;
 
         private IRender mRenderer;
 
@@ -20,7 +21,7 @@ namespace TheAiAlchemist
         public void Visualize(int strength, Player player)
         {
             mRenderer.ActivateRenderer(true);
-            var sprites = player == Player.X ? generalAssetLoader.blueUnitSprites : generalAssetLoader.redUnitSprites;
+            var sprites = player == playerFaction ? generalAssetLoader.blueUnitSprites : generalAssetLoader.redUnitSprites;
             mRenderer.SetSprite(sprites[strength - 1]);
         }
 

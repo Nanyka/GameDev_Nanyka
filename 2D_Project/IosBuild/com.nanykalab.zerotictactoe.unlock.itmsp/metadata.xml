@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<package version="software5.7" xmlns="http://apple.com/itunes/importer">
+  <provider>PZ76UZ2J6H</provider>
+  <team_id>PZ76UZ2J6H</team_id>
+  <software>
+    <vendor_id>com.nanykalab.zerotictactoe.unlock</vendor_id>
+    <software_metadata>
+      <in_app_purchases>
+        <in_app_purchase>
+          <product_id>com.zerotictactoe.unlock</product_id>
+          <reference_name>com.zerotictactoe.unlock</reference_name>
+          <type>non-consumable</type>
+          <products>
+            <product>
+              <cleared_for_sale>true</cleared_for_sale>
+              <wholesale_price_tier>1</wholesale_price_tier>
+            </product>
+          </products>
+          <locales>
+            <locale name="en-US">
+              <title>Unlock all ai bots</title>
+              <description>Unlock all ai bots</description>
+            </locale>
+          </locales>
+          <review_screenshot>
+            <file_name>Screenshot_4.png</file_name>
+            <size>561279</size>
+            <checksum>876f86ebf683a028f9759b2c677a9cd1</checksum>
+          </review_screenshot>
+        </in_app_purchase>
+        <in_app_purchase>
+          <product_id>com.nanykalab.zerotictactoe.unlock</product_id>
+          <reference_name>com.nanykalab.zerotictactoe.unlock</reference_name>
+          <type>non-consumable</type>
+          <products>
+            <product>
+              <cleared_for_sale>true</cleared_for_sale>
+              <wholesale_price_tier>1</wholesale_price_tier>
+            </product>
+          </products>
+          <locales>
+            <locale name="en-US">
+              <title>Unlock all ai bots 2</title>
+              <description>Unlock all ai bots 2</description>
+            </locale>
+          </locales>
+          <review_screenshot>
+            <file_name>Screenshot_4.png</file_name>
+            <size>561279</size>
+            <checksum>876f86ebf683a028f9759b2c677a9cd1</checksum>
+          </review_screenshot>
+        </in_app_purchase>
+      </in_app_purchases>
+    </software_metadata>
+  </software>
+</package>

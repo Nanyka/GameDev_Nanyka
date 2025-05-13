@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 1909daa32556b491187c47d482d7b09f
   m_currentHash:
     serializedVersion: 2
-    Hash: 4c17e96b8539a4d550b167904a8963f9
+    Hash: 7559a716aeded4b027e3c17d36f58db8
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 1
   m_CatalogRequestsTimeout: 0
@@ -53,9 +53,9 @@ MonoBehaviour:
   m_BuildAndReleaseBinFileOption: 0
   m_MonoScriptBundleCustomNaming: 
   m_RemoteCatalogBuildPath:
-    m_Id: dff98097ec1eb47649cc44e7a91110ca
+    m_Id: 6b51f5982d2dd4e5d9bffd5161aa0507
   m_RemoteCatalogLoadPath:
-    m_Id: ab7139160f8a3408e8da46de3a710c48
+    m_Id: 57500b53df48d44c6875d67692efa9c0
   m_ContentStateBuildPathProfileVariableName: <default settings path>
   m_CustomContentStateBuildPath: 
   m_ContentStateBuildPath: 
@@ -87,6 +87,22 @@ MonoBehaviour:
       - m_Id: dff98097ec1eb47649cc44e7a91110ca
         m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
     - m_InheritedParent: 
+      m_Id: 737634eedf6254b9b9da1108880a2ed1
+      m_ProfileName: Android
+      m_Values:
+      - m_Id: 1c7c3c032eb4d44a2a88a7c96bcf8e44
+        m_Value: production
+      - m_Id: 57500b53df48d44c6875d67692efa9c0
+        m_Value: https://bc1d770f-a7c9-4505-bcd8-1e781643e202.client-api.unity3dusercontent.com/client_api/v1/environments/production/buckets/b562b449-6dfe-4e8c-8cbc-a86b7dcbe206/release_by_badge/latest/entry_by_path/content/?path=
+      - m_Id: 6b51f5982d2dd4e5d9bffd5161aa0507
+        m_Value: CCDBuildData/a97a9fcb-e351-43c3-b99a-d811879d6e5e/b562b449-6dfe-4e8c-8cbc-a86b7dcbe206/latest
+      - m_Id: 92c386f01c9c04bb79cb5ad1a246de5b
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_Id: ab7139160f8a3408e8da46de3a710c48
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: dff98097ec1eb47649cc44e7a91110ca
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+    - m_InheritedParent: 
       m_Id: 838ae74351a3148bc8e39eb7bb708b91
       m_ProfileName: TestProfile
       m_Values:
@@ -96,6 +112,22 @@ MonoBehaviour:
         m_Value: https://bc1d770f-a7c9-4505-bcd8-1e781643e202.client-api.unity3dusercontent.com/client_api/v1/environments/dev/buckets/e36ba9c8-7ca2-48b3-b5f9-1f6d54144df5/release_by_badge/latest/entry_by_path/content/?path=
       - m_Id: 6b51f5982d2dd4e5d9bffd5161aa0507
         m_Value: CCDBuildData/5a0fe64e-3473-42ac-a3c6-1a3739bfa3a0/e36ba9c8-7ca2-48b3-b5f9-1f6d54144df5/latest
+      - m_Id: 92c386f01c9c04bb79cb5ad1a246de5b
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_Id: ab7139160f8a3408e8da46de3a710c48
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: dff98097ec1eb47649cc44e7a91110ca
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+    - m_InheritedParent: 
+      m_Id: a041c0dd9b00649a1b0bf4d98747e687
+      m_ProfileName: iOS
+      m_Values:
+      - m_Id: 1c7c3c032eb4d44a2a88a7c96bcf8e44
+        m_Value: production
+      - m_Id: 57500b53df48d44c6875d67692efa9c0
+        m_Value: https://bc1d770f-a7c9-4505-bcd8-1e781643e202.client-api.unity3dusercontent.com/client_api/v1/environments/production/buckets/7cd824ba-3dd8-4a45-b8ef-77aa7ea4aeef/release_by_badge/latest/entry_by_path/content/?path=
+      - m_Id: 6b51f5982d2dd4e5d9bffd5161aa0507
+        m_Value: CCDBuildData/a97a9fcb-e351-43c3-b99a-d811879d6e5e/7cd824ba-3dd8-4a45-b8ef-77aa7ea4aeef/latest
       - m_Id: 92c386f01c9c04bb79cb5ad1a246de5b
         m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
       - m_Id: ab7139160f8a3408e8da46de3a710c48
@@ -139,7 +171,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c0752a2156848407fb02cc0de2077649, type: 2}
   - {fileID: 11400000, guid: c11ac34a9d2fc497ea052838bc854a38, type: 2}
   - {fileID: 11400000, guid: cc960736798164a8a92933c385dbaf70, type: 2}
-  m_ActiveProfileId: 838ae74351a3148bc8e39eb7bb708b91
+  m_ActiveProfileId: 737634eedf6254b9b9da1108880a2ed1
   m_CcdManagedData:
     EnvironmentId: 
     EnvironmentName: 

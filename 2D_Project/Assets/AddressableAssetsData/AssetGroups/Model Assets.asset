@@ -15,30 +15,6 @@ MonoBehaviour:
   m_GroupName: Model Assets
   m_GUID: 452c3f20712ca4d76b4da4becaf54238
   m_SerializeEntries:
-  - m_GUID: 981ff0cf849e74e0fab665562df144c3
-    m_Address: Assets/General/AiModels/tttn_model_dataset_training_v5_6.onnx
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - ai_model
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b19842e36338d496c9d9824276e1dde2
-    m_Address: Assets/General/AiModels/tttn_model_dataset_training_v5_1.onnx
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - ai_model
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e0cf436fd9e00426cbbce9c0fa1effe1
-    m_Address: Assets/General/AiModels/tttn_model_dataset_training_v5_2.onnx
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - ai_model
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b62cb50418eb4421f9016a3dbc4ff054
-    m_Address: Assets/General/AiModels/tttn_model_dataset_training_v5_3.onnx
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - ai_model
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2fd2dca94da0e4253b8daa165a585024
     m_Address: Assets/General/AiModels/tttn_model_dataset_training_v5_4.onnx
     m_ReadOnly: 0
@@ -51,56 +27,32 @@ MonoBehaviour:
     m_SerializedLabels:
     - ai_model
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 50795e4cc1a42434f8379f3f334bdd3a
+    m_Address: Assets/General/Art/UI/remain_2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - sprites
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5c64cb32beed144a7813ff69d21c9507
     m_Address: Assets/General/AiModels/blank_model.onnx
     m_ReadOnly: 0
     m_SerializedLabels:
     - ai_model
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 30428a118a65e4bbeb4e4c9f1b859eb5
-    m_Address: Assets/General/Art/UI/blue_unit_2.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - sprites
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 2c55307a7927f4c4faa765cd017e8a90
-    m_Address: Assets/General/Art/UI/blue_unit_1.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - sprites
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0d2b35d1c77944916879a69eb3494595
+  - m_GUID: 664c8867c94ce49a5bea74fb7637c84b
     m_Address: Assets/General/Art/UI/blue_unit_3.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c7125c47e0f62414898f23d6ee6ada8d
-    m_Address: Assets/General/Art/UI/red_unit_3.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - sprites
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 86c6d77f0564a4759b794a69d3087f01
-    m_Address: Assets/General/Art/UI/red_unit_2.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - sprites
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c8d7723ae96464528ba4b73edacc6d36
+  - m_GUID: 74074685284d14752876d520046e2b10
     m_Address: Assets/General/Art/UI/red_unit_1.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: aac20cf35c6664749a9184145b6f543f
-    m_Address: Assets/General/Art/UI/remain_0.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - sprites
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 50795e4cc1a42434f8379f3f334bdd3a
-    m_Address: Assets/General/Art/UI/remain_2.asset
+  - m_GUID: 87358a004224e4bc38d1a1847b97e8df
+    m_Address: Assets/General/Art/UI/blue_unit_1.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
@@ -110,6 +62,54 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8b45d906498bb41b98e94e96b4708fd7
+    m_Address: Assets/General/Art/UI/blue_unit_2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 981ff0cf849e74e0fab665562df144c3
+    m_Address: Assets/General/AiModels/tttn_model_dataset_training_v5_6.onnx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ai_model
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aac20cf35c6664749a9184145b6f543f
+    m_Address: Assets/General/Art/UI/remain_0.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b19842e36338d496c9d9824276e1dde2
+    m_Address: Assets/General/AiModels/tttn_model_dataset_training_v5_1.onnx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ai_model
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b62cb50418eb4421f9016a3dbc4ff054
+    m_Address: Assets/General/AiModels/tttn_model_dataset_training_v5_3.onnx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ai_model
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c783563806a01432cb94f043aced54f6
+    m_Address: Assets/General/Art/UI/red_unit_3.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d08029bd2d80c4ca088c16e63b66a95c
+    m_Address: Assets/General/Art/UI/red_unit_2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e0cf436fd9e00426cbbce9c0fa1effe1
+    m_Address: Assets/General/AiModels/tttn_model_dataset_training_v5_2.onnx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ai_model
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 67236932078454d7a84a4de4c3e3ced4, type: 2}

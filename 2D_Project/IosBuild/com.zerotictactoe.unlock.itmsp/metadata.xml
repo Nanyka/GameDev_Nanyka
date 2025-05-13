@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<package version="software5.7" xmlns="http://apple.com/itunes/importer">
+  <provider>PZ76UZ2J6H</provider>
+  <team_id>PZ76UZ2J6H</team_id>
+  <software>
+    <vendor_id>com.zerotictactoe.unlock</vendor_id>
+    <software_metadata>
+      <in_app_purchases>
+        <in_app_purchase>
+          <product_id>com.zerotictactoe.unlock</product_id>
+          <reference_name>com.zerotictactoe.unlock</reference_name>
+          <type>non-consumable</type>
+          <products>
+            <product>
+              <cleared_for_sale>true</cleared_for_sale>
+              <wholesale_price_tier>1</wholesale_price_tier>
+            </product>
+          </products>
+          <locales>
+            <locale name="en-US">
+              <title>Unlock all ai bots</title>
+              <description>Unlock all ai bots</description>
+            </locale>
+          </locales>
+          <review_screenshot>
+            <file_name>Screenshot_4.png</file_name>
+            <size>133277</size>
+            <checksum>3d4e59c5d53b5288863f265447383609</checksum>
+          </review_screenshot>
+        </in_app_purchase>
+      </in_app_purchases>
+    </software_metadata>
+  </software>
+</package>

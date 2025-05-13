@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using Unity.Services.Authentication;
 using Unity.Services.Core;
@@ -16,6 +17,7 @@ namespace TheAiAlchemist
 
         public bool CheckPlayerId(string checkId)
         {
+            // Debug.Log($"Current id: {AuthenticationService.Instance.PlayerId}");
             return AuthenticationService.Instance.PlayerId.Equals(checkId);
         }
 
@@ -30,19 +32,37 @@ namespace TheAiAlchemist
                         return true;
                 }
 
-                Debug.Log($"Player id when token exist:{AuthenticationService.Instance.PlayerId}");
+                // Debug.Log($"Player id when token exist:{AuthenticationService.Instance.PlayerId}");
             }
             else
             {
-                Debug.Log("The playerId still not exist");
+                // Debug.Log("The playerId still not exist");
                 await AuthenticationService.Instance.SignInAnonymouslyAsync();
 
                 if (this == null)
                     return true;
-                Debug.Log($"Player id new one:{AuthenticationService.Instance.PlayerId}");
+                // Debug.Log($"Player id new one:{AuthenticationService.Instance.PlayerId}");
             }
 
             return false;
+        }
+        
+        public async Task<bool> AnonymousCheckSignIn()
+        {
+            // if (AuthenticationService.Instance.SessionTokenExists)
+            //     return AuthenticationService.Instance.IsSignedIn;
+            //
+            // return false;
+            try
+            {
+                await AuthenticationService.Instance.SignInAnonymouslyAsync();
+                return AuthenticationService.Instance.IsSignedIn;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
         
         public async Task<bool> AddOrSignUpWithPassAsync(string username, string password)
