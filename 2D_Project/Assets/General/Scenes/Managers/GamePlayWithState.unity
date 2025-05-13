@@ -249,6 +249,7 @@ MonoBehaviour:
   checkIapState: {fileID: 11400000, guid: 16bbdc9c2d06e491c9a5b735d54b486e, type: 2}
   iapStateChannel: {fileID: 11400000, guid: ea0e68b820cb54d90b5e5f1debd7f5ca, type: 2}
   remoteConfigManager: {fileID: 11400000, guid: 1298bb7040547495b8621581fdff7754, type: 2}
+  readyForGame: {fileID: 11400000, guid: cc4ca33b5993d440d8c801f53ad25559, type: 2}
   addressableManager: {fileID: 11400000, guid: 0c0284765747c49f8874c5e989378ca7, type: 2}
   saveSystemManager: {fileID: 11400000, guid: cdd36171f065b461da7e56c89a4bdc16, type: 2}
   modelAddress:
@@ -4146,7 +4147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b79b5624d944058bd39aad2b90fb275, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productId: com.nanykalab.zerotictactoe.unlock
+  productId: com.zerotictactoe.unlock
   buttonType: 0
   consumePurchase: 1
   onTransactionsRestored:

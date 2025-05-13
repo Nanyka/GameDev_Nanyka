@@ -23,12 +23,12 @@ namespace TheAiAlchemist
         [SerializeField] private LoadEventChannel _loadMenu = default;
         [SerializeField] private LoadEventChannel _coldStartupLocation = default;
 
-        [Header("Broadcasting on")] [SerializeField]
-        private BoolChannel _toggleLoadingScreen = default;
-
+        [Header("Broadcasting on")] 
+        [SerializeField] private BoolChannel _toggleLoadingScreen = default;
         [SerializeField] private VoidChannel _onSceneReady = default; //picked up by the SpawnSystem
         [SerializeField] private FadeChannel _fadeRequestChannel = default;
         [SerializeField] private VoidChannel _activateInputReader;
+        [SerializeField] private VoidChannel _readyForGame;
 
         private AsyncOperationHandle<SceneInstance> _loadingOperationHandle;
         private AsyncOperationHandle<SceneInstance> _gameplayManagerLoadingOpHandle;
@@ -254,6 +254,8 @@ namespace TheAiAlchemist
         {
             _onSceneReady.ExecuteChannel(); //Spawn system will spawn a gameplay scene
             _activateInputReader.ExecuteChannel(); // Assign main camera on InputManager and enable InputReader
+            _readyForGame.ExecuteChannel(); // Initiate game state
+
         }
 
         private void ExitGame()

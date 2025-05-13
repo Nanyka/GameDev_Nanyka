@@ -22,6 +22,7 @@ namespace TheAiAlchemist
         [SerializeField] private VoidChannel checkIapState;
         [SerializeField] private BoolChannel iapStateChannel;
         [SerializeField] private RemoteConfigManagerSO remoteConfigManager;
+        [SerializeField] private VoidChannel readyForGame;
         
         [SerializeField] protected AddressableManagerSO addressableManager;
         [SerializeField] protected SaveSystemManager saveSystemManager;
@@ -31,7 +32,6 @@ namespace TheAiAlchemist
         protected AlphaZeroAgent _botAgent;
         protected GameState _currentGameState;
         protected Dictionary<Player, IAgent> _players;
-        // private int _minFreeLevel = 100; // Set it as 2 for monetization
         protected bool _isEndGame;
 
         private void OnEnable()
@@ -39,6 +39,7 @@ namespace TheAiAlchemist
             humanMoveChannel.AddListener(HumanPlayAMove);
             resetChannel.AddListener(ResetGame);
             iapStateChannel.AddListener(StartGame);
+            readyForGame.AddListener(ReadyForGame);
         }
 
         private void OnDisable()
@@ -46,13 +47,19 @@ namespace TheAiAlchemist
             humanMoveChannel.RemoveListener(HumanPlayAMove);
             resetChannel.RemoveListener(ResetGame);
             iapStateChannel.RemoveListener(StartGame);
+            readyForGame.RemoveListener(ReadyForGame);
 
             _botAgent?.DisableAiElements();
         }
 
-        private async void Start()
+        private async void ReadyForGame()
         {
             await Init();
+        }
+
+        private async void Start()
+        {
+            // await Init();
         }
 
         private async Task Init()

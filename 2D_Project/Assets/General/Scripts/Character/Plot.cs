@@ -33,6 +33,7 @@ namespace TheAiAlchemist
 
         private void Start()
         {
+            // ResetPlot();
             VisualizeState();
         }
 

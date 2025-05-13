@@ -903,6 +903,7 @@ MonoBehaviour:
   _onSceneReady: {fileID: 11400000, guid: 55abaa0543fb84f05a1d902086d899ac, type: 2}
   _fadeRequestChannel: {fileID: 11400000, guid: 0388a63985273456d828cc63a0175f06, type: 2}
   _activateInputReader: {fileID: 11400000, guid: e3771b2e4ce834baa8b5aee9b097b476, type: 2}
+  _readyForGame: {fileID: 11400000, guid: cc4ca33b5993d440d8c801f53ad25559, type: 2}
 --- !u!4 &1416216799
 Transform:
   m_ObjectHideFlags: 0
