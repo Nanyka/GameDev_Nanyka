@@ -1220,6 +1220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   remoteConfigManager: {fileID: 11400000, guid: 1298bb7040547495b8621581fdff7754, type: 2}
   ugsInitialized: {fileID: 11400000, guid: 722d9a319161c41f5af22a703d2571dc, type: 2}
+  iapManager: {fileID: 11400000, guid: 7618bc2d9f4d3419db8b9137e32f5f5e, type: 2}
 --- !u!114 &2011603430
 MonoBehaviour:
   m_ObjectHideFlags: 0

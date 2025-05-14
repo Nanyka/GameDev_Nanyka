@@ -26,6 +26,7 @@
     <type fullname="TheAiAlchemist.HumanInteract" preserve="all" />
     <type fullname="TheAiAlchemist.IAPFeedback" preserve="all" />
     <type fullname="TheAiAlchemist.IAPInvoker" preserve="all" />
+    <type fullname="TheAiAlchemist.IAPManager" preserve="all" />
     <type fullname="TheAiAlchemist.InGameAnnouncer" preserve="all" />
     <type fullname="TheAiAlchemist.InGameSettings" preserve="all" />
     <type fullname="TheAiAlchemist.InitiateGameServices" preserve="all" />
@@ -39,6 +40,7 @@
     <type fullname="TheAiAlchemist.PlayerSelectHighlighter" preserve="all" />
     <type fullname="TheAiAlchemist.Plot" preserve="all" />
     <type fullname="TheAiAlchemist.PointChannel" preserve="all" />
+    <type fullname="TheAiAlchemist.PurchaseButton" preserve="all" />
     <type fullname="TheAiAlchemist.RemoteConfigManagerSO" preserve="all" />
     <type fullname="TheAiAlchemist.RenderComp" preserve="all" />
     <type fullname="TheAiAlchemist.SceneLoader" preserve="all" />
@@ -138,6 +140,7 @@
     <type fullname="UnityEngine.Events.UnityEvent`2" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.ExposedReference`1" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.RectOffset" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Events.UnityEvent`1" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="UnityEngine.DirectorModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="UnityEngine.Playables.PlayableDirector" preserve="all" />
@@ -180,6 +183,10 @@
     <type fullname="UnityEngine.Localization.LocalizedString" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Localization.Tables.TableEntryReference" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Localization.Tables.TableReference" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="UnityEngine.Purchasing">
+    <type fullname="UnityEngine.Purchasing.Extension.PurchaseFailureDescription" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Purchasing.Product" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="UnityEngine.TextCoreFontEngineModule">
     <type fullname="UnityEngine.TextCore.FaceInfo" preserve="nothing" serialized="true" />

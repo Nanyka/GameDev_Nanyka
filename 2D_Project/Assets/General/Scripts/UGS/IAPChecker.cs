@@ -7,7 +7,7 @@ using UnityEngine.Purchasing;
 
 namespace TheAiAlchemist
 {
-    public class IapChecker : MonoBehaviour, IStoreListener
+    public class IAPChecker : MonoBehaviour, IStoreListener
     {
         private IStoreController m_StoreController;
         private IExtensionProvider m_Extensions;

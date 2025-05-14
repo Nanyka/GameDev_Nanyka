@@ -18,6 +18,7 @@ namespace TheAiAlchemist
         // [SerializeField] private AddressableManagerSO addressableManager;
         [SerializeField] private RemoteConfigManagerSO remoteConfigManager;
         [SerializeField] private BooleanStorage ugsInitialized;
+        [SerializeField] private IAPManager iapManager;
 
         public async void Start()
         {
@@ -42,6 +43,10 @@ namespace TheAiAlchemist
                     return;
 
                 await remoteConfigManager.FetchRemoteConfigs();
+                if (this == null)
+                    return;
+                
+                iapManager.Init();
                 if (this == null)
                     return;
                 
