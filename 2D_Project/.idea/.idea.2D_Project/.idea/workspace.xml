@@ -5,23 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Test/TestIAPManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/Test/TestIAPManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/UGS/PurchaseButton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/UGS/PurchaseButton.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/FeatureImage_1024x500.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/Screenshot_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/Screenshot_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/Screenshot_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/Screenshot_4.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithBoss.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithBoss.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/PersistentManagers.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/PersistentManagers.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Test/TestUGS.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Test/TestUGS.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/SceneManagement/IAPManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/BackendSO/IAPManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/SceneManagement/IAPManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/BackendSO/IAPManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/SceneManagement/IapChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UGS/IAPChecker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/SceneManagement/IapChecker.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UGS/InitiateGameServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UGS/InitiateGameServices.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/TutorialPlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/TutorialPlay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Menus/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Menus/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/BackendSO/IAPManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/BackendSO/IAPManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,6 +238,7 @@
       <workItem from="1747054831565" duration="113000" />
       <workItem from="1747115830126" duration="8269000" />
       <workItem from="1747160902099" duration="1630000" />
+      <workItem from="1747241896371" duration="1296000" />
     </task>
     <servers />
   </component>

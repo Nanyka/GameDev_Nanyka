@@ -56,11 +56,11 @@ namespace TheAiAlchemist
         // IStoreListener ▶ Successfully initialized
         public void OnInitialized(IStoreController controller, IExtensionProvider extensions)
         {
-            Debug.Log($"It is Bin Lai Log: Found {controller.products.all.Length} total products.");
-            foreach (var p in controller.products.all)
-            {
-                Debug.Log($"  – {p.definition.id}: available={p.availableToPurchase}");
-            }
+            // Debug.Log($"It is Bin Lai Log: Found {controller.products.all.Length} total products.");
+            // foreach (var p in controller.products.all)
+            // {
+            //     Debug.Log($"  – {p.definition.id}: available={p.availableToPurchase}");
+            // }
 
             _mStoreController = controller;
             _mExtensions = extensions;
@@ -89,47 +89,45 @@ namespace TheAiAlchemist
         // IStoreListener ▶ Initialization failed
         public void OnInitializeFailed(InitializationFailureReason error)
         {
-            Debug.LogError($"IAP initialization failed: {error}");
+            // Debug.LogError($"IAP initialization failed: {error}");
 
-            // Gather invalid IDs by checking which products never came back availableToPurchase
-            if (_mStoreController != null)
-            {
-                var invalidIds = _mStoreController
-                    .products
-                    .all
-                    .Where(p => !p.availableToPurchase)
-                    .Select(p => p.definition.id)
-                    .ToArray();
-
-                Debug.LogError("Invalid product IDs: " + string.Join(", ", invalidIds));
-            }
-            else
-            {
-                Debug.LogError("No store controller available yet – did InitializePurchasing() run?");
-            }
+            // if (_mStoreController != null)
+            // {
+            //     var invalidIds = _mStoreController
+            //         .products
+            //         .all
+            //         .Where(p => !p.availableToPurchase)
+            //         .Select(p => p.definition.id)
+            //         .ToArray();
+            //
+            //     Debug.LogError("Invalid product IDs: " + string.Join(", ", invalidIds));
+            // }
+            // else
+            // {
+            //     Debug.LogError("No store controller available yet – did InitializePurchasing() run?");
+            // }
         }
 
         public void OnInitializeFailed(InitializationFailureReason error, string message)
         {
-            Debug.LogError($"It is Bin Lai Log: {message}");
-            Debug.LogError($"IAP initialization failed: {error}");
+            // Debug.LogError($"It is Bin Lai Log: {message}");
+            // Debug.LogError($"IAP initialization failed: {error}");
 
-            // Gather invalid IDs by checking which products never came back availableToPurchase
-            if (_mStoreController != null)
-            {
-                var invalidIds = _mStoreController
-                    .products
-                    .all
-                    .Where(p => !p.availableToPurchase)
-                    .Select(p => p.definition.id)
-                    .ToArray();
-
-                Debug.LogError("Invalid product IDs: " + string.Join(", ", invalidIds));
-            }
-            else
-            {
-                Debug.LogError("No store controller available yet – did InitializePurchasing() run?");
-            }
+            // if (_mStoreController != null)
+            // {
+            //     var invalidIds = _mStoreController
+            //         .products
+            //         .all
+            //         .Where(p => !p.availableToPurchase)
+            //         .Select(p => p.definition.id)
+            //         .ToArray();
+            //
+            //     Debug.LogError("Invalid product IDs: " + string.Join(", ", invalidIds));
+            // }
+            // else
+            // {
+            //     Debug.LogError("No store controller available yet – did InitializePurchasing() run?");
+            // }
         }
 
         // IStoreListener ▶ Purchase callbacks (no changes needed here)
