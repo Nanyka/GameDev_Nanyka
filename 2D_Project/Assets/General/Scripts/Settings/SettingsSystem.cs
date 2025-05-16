@@ -63,6 +63,7 @@ namespace TheAiAlchemist
         private async Task ComparePlayerId()
         {
             var checkId = _saveSystem.saveData.playerId;
+            Debug.Log($"Player id to check: {checkId}");
             
             // Check internet availability
             if (Application.internetReachability == NetworkReachability.NotReachable) return;
@@ -75,14 +76,12 @@ namespace TheAiAlchemist
                     if (!AuthenticationService.Instance.IsSignedIn)
                         await AuthenticationService.Instance.SignInAnonymouslyAsync();
 
-                    // Debug.Log($"Player id when token exist:{AuthenticationService.Instance.PlayerId}");
+                    Debug.Log($"Player id when token exist:{AuthenticationService.Instance.PlayerId}");
                     _saveSystem.SavePlayerId(AuthenticationService.Instance.PlayerId);
                 }
 
                 return;
             }
-            
-            // Debug.Log($"Player id to check: {checkId}");
             
             // If available, check playerId. If playerId is matched, return true
 

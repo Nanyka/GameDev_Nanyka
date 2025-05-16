@@ -16,21 +16,21 @@ namespace TheAiAlchemist
 
         private void OnEnable()
         {
-            onPurchaseCompleted.AddListener(PurchaseCompleted);
-            onPurchaseFailed.AddListener(PurchaseFailed);
+            // onPurchaseCompleted.AddListener(PurchaseCompleted);
+            // onPurchaseFailed.AddListener(PurchaseFailed);
             purchaseButton.onClick.AddListener(OnClickPurchase);
         }
 
         private void OnDisable()
         {
-            onPurchaseCompleted.RemoveListener(PurchaseCompleted);
-            onPurchaseFailed.RemoveListener(PurchaseFailed);
+            // onPurchaseCompleted.RemoveListener(PurchaseCompleted);
+            // onPurchaseFailed.RemoveListener(PurchaseFailed);
             purchaseButton.onClick.RemoveListener(OnClickPurchase);
         }
 
         private void Start()
         {
-            iapManager.SetUpEvents(onPurchaseCompleted, onPurchaseFailed);
+            iapManager.SetUpPurchaseEvents(onPurchaseCompleted, onPurchaseFailed);
             iapManager.Init();
         }
 

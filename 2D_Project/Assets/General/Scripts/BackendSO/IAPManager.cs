@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Unity.Services.Core;
@@ -13,30 +14,31 @@ namespace TheAiAlchemist
     [CreateAssetMenu(fileName = "IAPManager", menuName = "TheAiAlchemist/BackEnd/IAPManager")]
     public class IAPManager : ScriptableObject, IStoreListener
     {
-        [SerializeField] private string[] products = {"com.nanykalab.zerotictactoe.unlock", "unlock_all_ai_bots"};
-        
+        [SerializeField] private string[] products = { "com.nanykalab.zerotictactoe.unlock", "unlock_all_ai_bots" };
+
         private IStoreController _mStoreController;
         private IExtensionProvider _mExtensions;
-        private UnityEvent<Product> _purchasedEvent = new();
-        private UnityEvent<Product, PurchaseFailureDescription> _purchaseFailedEvent = new();
-        
-        public void SetUpEvents(UnityEvent<Product> purchaseCompletedEvent, 
+        private UnityEvent<Product> _purchasedEvent;
+        private UnityEvent<Product, PurchaseFailureDescription> _purchaseFailedEvent;
+        private UnityEvent<bool, string> onRestoreCompleted;
+        private UnityEvent<Product> onProductFetched;
+
+        public void SetUpPurchaseEvents(UnityEvent<Product> purchaseCompletedEvent,
             UnityEvent<Product, PurchaseFailureDescription> purchaseFailedEvent)
         {
-            
             _purchasedEvent = purchaseCompletedEvent;
             _purchaseFailedEvent = purchaseFailedEvent;
         }
 
-        public async void Init()
+        public void SetUpRestoreEvents(UnityEvent<bool, string> restoreCompletedEvent,
+            UnityEvent<Product> productFetchedEvent)
         {
-            
-            // var options = new InitializationOptions();
-            // options.SetEnvironmentName("production");
-            // await UnityServices.InitializeAsync(options);
-            // if (this == null)
-            //     return;
+            onRestoreCompleted = restoreCompletedEvent;
+            onProductFetched = productFetchedEvent;
+        }
 
+        public void Init()
+        {
             if (_mStoreController == null)
                 InitializePurchasing();
         }
@@ -65,9 +67,9 @@ namespace TheAiAlchemist
             _mStoreController = controller;
             _mExtensions = extensions;
         }
-        
+
         #region Purchasing button
-        
+
         public void Purchase(string productId)
         {
             if (!IsInitialized())
@@ -78,7 +80,7 @@ namespace TheAiAlchemist
 
             _mStoreController.InitiatePurchase(productId);
         }
-        
+
         #endregion
 
         private bool IsInitialized()
@@ -145,8 +147,37 @@ namespace TheAiAlchemist
                 reason,
                 msg
             );
-            
+
             _purchaseFailedEvent?.Invoke(product, desc);
         }
+
+        #region Restore button
+
+        /// <summary>
+        /// Attempts to restore previously made non‐consumable purchases (iOS / macOS only).
+        /// </summary>
+        public void Restore()
+        {
+            if (!IsInitialized())
+            {
+                Debug.LogError("Restore failed because Purchasing was not initialized correctly");
+                return;
+            }
+
+            // Only applicable on Apple platforms
+#if UNITY_IOS || UNITY_STANDALONE_OSX
+            Debug.Log("RestorePurchases started …");
+
+            var apple = _mExtensions.GetExtension<IAppleExtensions>();
+            apple.RestoreTransactions((result,message) =>
+            {
+                Debug.Log($"RestorePurchases is {result} with message: {message}");
+            });
+#else
+        Debug.LogWarning("RestorePurchases is not supported on this platform. Current = " + Application.platform);
+#endif
+        }
+
+        #endregion
     }
 }

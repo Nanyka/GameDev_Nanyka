@@ -27,7 +27,7 @@ namespace TheAiAlchemist
 
         private void Start()
         {
-            iapManager.SetUpEvents(onPurchaseCompleted, onPurchaseFailed);
+            iapManager.SetUpPurchaseEvents(onPurchaseCompleted, onPurchaseFailed);
             iapManager.Init();
         }
 

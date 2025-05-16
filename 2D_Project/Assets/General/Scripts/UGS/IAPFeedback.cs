@@ -49,5 +49,18 @@ namespace TheAiAlchemist
             // Debug.Log($"PurchaseFailed: {reason.message}");
             
         }
+        
+        public void OnPurchaseRestored(Boolean isRestored, string message)
+        {
+            // Return true
+            if (isRestored)
+                _iapInvoker.ListenIapFeedback(true);
+            Debug.Log($"PurchaseRestored successfulness is {isRestored}: {message}");
+        }
+
+        public void OnProductFetchedEvent(Product product)
+        {
+            Debug.Log($"Purchase fetched: {product.definition.id}");
+        }
     }
 }
