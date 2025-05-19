@@ -18,6 +18,7 @@ namespace TheAiAlchemist
         [SerializeField] private GameObject internetText;
         [SerializeField] private TextMeshProUGUI iapText;
         [SerializeField] private GameObject unlockButton;
+        [SerializeField] private GameObject restoreButton;
         [SerializeField] private GameObject thanksButton;
         
         private bool _isPurchased = false;
@@ -35,7 +36,7 @@ namespace TheAiAlchemist
         private void CheckIAPState()
         {
             // Check saveData, if available, return true
-            // Debug.Log($"Use IAP with Player {saveSystem.saveData.playerId}");
+            Debug.Log($"Use IAP with Player {saveSystem.saveData.playerId}");
             if (saveSystem.saveData.playerId != "")
             {
                 ListenIapFeedback(true);
@@ -44,7 +45,7 @@ namespace TheAiAlchemist
                 return;
             }
             
-            // Debug.LogWarning("No player ID specified");
+            Debug.LogWarning("No player ID specified");
             
             // If not, check internet availability
 
@@ -61,6 +62,7 @@ namespace TheAiAlchemist
             iapText.text = "If you’re enjoying it, consider buying me a coffee to support the development!" +
                            "\nThanks so much! 😊";
             unlockButton.SetActive(true);
+            restoreButton.SetActive(true);
             thanksButton.SetActive(false);
             iapPanel.SetActive(true);
         }
@@ -71,6 +73,7 @@ namespace TheAiAlchemist
             iapText.text = _isPurchased ? "Thanks a ton for the coffee!\nIt keeps both me and the game running! 😊" :
                 "Thanks so much for playing!\n Your support means a lot.";
             unlockButton.SetActive(false);
+            restoreButton.SetActive(false);
             thanksButton.SetActive(true);
             
             // iapPanel.SetActive(false);
