@@ -84,7 +84,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -151,28 +151,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UIElement1_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1024
-        height: 1536
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7191673f5f8d73d00800000000000000
-      internalID: 952468397075339543
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: UIElement1_1
       rect:
         serializedVersion: 2
@@ -181,7 +159,7 @@ TextureImporter:
         width: 168
         height: 148
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -203,7 +181,7 @@ TextureImporter:
         width: 175
         height: 189
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -220,13 +198,13 @@ TextureImporter:
       name: UIElement1_3
       rect:
         serializedVersion: 2
-        x: 231
-        y: 469
-        width: 792
-        height: 329
+        x: 237
+        y: 605
+        width: 549
+        height: 189
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 55, y: 48, z: 78, w: 49}
       customData: 
       outline: []
       physicsShape: []
@@ -242,13 +220,13 @@ TextureImporter:
       name: UIElement1_4
       rect:
         serializedVersion: 2
-        x: 252
-        y: 391
-        width: 520
-        height: 178
+        x: 256
+        y: 398
+        width: 512
+        height: 169
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 47, y: 36, z: 48, w: 42}
       customData: 
       outline: []
       physicsShape: []
@@ -264,7 +242,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 060386049e2694172a08565823f3ebc1
     internalID: 0
     vertices: []
     indices: 
@@ -273,7 +251,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UIElement1_0: 952468397075339543
+      UIElement1_1: -4372138162791548938
+      UIElement1_2: 5447839173921436072
+      UIElement1_3: 1588149629851110866
+      UIElement1_4: 4342167717303360231
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

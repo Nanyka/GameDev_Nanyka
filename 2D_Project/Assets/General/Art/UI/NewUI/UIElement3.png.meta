@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2321c843fa1594828a4e00aeee256a1e
+guid: 4fdd8278800b1471681e978167c554c9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6311352213680616822
-    second: background2_0
+      213: 3389063769935349751
+    second: UIElement3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -139,23 +139,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: background2_0
+      name: UIElement3_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1024
-        height: 1536
+        x: 115
+        y: 413
+        width: 795
+        height: 608
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a8a0133c9929968a0800000000000000
-      internalID: -6311352213680616822
+      spriteID: 7f78420fa8f580f20800000000000000
+      internalID: 3389063769935349751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIElement3_1
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 1287
+        width: 112
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 086d3178915e142c89aa2293a52c21c7
+      internalID: 1874978019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIElement3_2
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 1163
+        width: 454
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 54, y: 0, z: 52, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cfeadf83a34d49f79d14ac223740b4b
+      internalID: 838488753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIElement3_3
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 1030
+        width: 87
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e7bb036e09da45029b363eba670de8e
+      internalID: -12670572
       vertices: []
       indices: 
       edges: []
@@ -164,7 +230,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 3ede5b24ab53b4f58893b8f2246a4814
     internalID: 0
     vertices: []
     indices: 
@@ -172,9 +238,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      background2_0: -6311352213680616822
+      UIElement3_0: 3389063769935349751
+      UIElement3_1: 1874978019
+      UIElement3_2: 838488753
+      UIElement3_3: -12670572
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

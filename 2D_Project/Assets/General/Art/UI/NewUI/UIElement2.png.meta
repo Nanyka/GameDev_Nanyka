@@ -151,37 +151,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UIElement2_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 8
-        width: 1024
-        height: 1470
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6f7464ad6d1b266f0800000000000000
-      internalID: -692795856318478346
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: UIElement2_1
       rect:
         serializedVersion: 2
-        x: 5
-        y: 139
-        width: 275
-        height: 215
+        x: 97
+        y: 143
+        width: 177
+        height: 161
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -203,7 +181,7 @@ TextureImporter:
         width: 177
         height: 164
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -225,7 +203,7 @@ TextureImporter:
         width: 589
         height: 244
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -238,33 +216,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: UIElement2_4
-      rect:
-        serializedVersion: 2
-        x: 254
-        y: 175
-        width: 530
-        height: 314
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e546c38b6bcc8e6c0800000000000000
-      internalID: -4113813174455868322
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 63d49e4c8039b4c979f0d32f6bc3088f
     internalID: 0
     vertices: []
     indices: 
@@ -273,7 +229,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UIElement2_1: 7875099626862279577
+      UIElement2_2: 7467037621113697772
+      UIElement2_3: -7898248043320211536
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
