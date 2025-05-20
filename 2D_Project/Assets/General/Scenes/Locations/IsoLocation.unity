@@ -1478,7 +1478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generalAssetLoader: {fileID: 11400000, guid: 013c89adcb531482295c96f6a38d0ee4, type: 2}
-  playerFaction: 2
+  playerFaction: 1
 --- !u!212 &4603823593483734897
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2132,7 +2132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generalAssetLoader: {fileID: 11400000, guid: 013c89adcb531482295c96f6a38d0ee4, type: 2}
-  playerFaction: 2
+  playerFaction: 1
 --- !u!114 &7121785691920392430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2146,7 +2146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generalAssetLoader: {fileID: 11400000, guid: 013c89adcb531482295c96f6a38d0ee4, type: 2}
-  playerFaction: 2
+  playerFaction: 1
 --- !u!114 &7121785692134343676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2160,7 +2160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generalAssetLoader: {fileID: 11400000, guid: 013c89adcb531482295c96f6a38d0ee4, type: 2}
-  playerFaction: 2
+  playerFaction: 1
 --- !u!114 &7121785692333003355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2174,7 +2174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generalAssetLoader: {fileID: 11400000, guid: 013c89adcb531482295c96f6a38d0ee4, type: 2}
-  playerFaction: 2
+  playerFaction: 1
 --- !u!114 &7121785692535831655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2188,7 +2188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generalAssetLoader: {fileID: 11400000, guid: 013c89adcb531482295c96f6a38d0ee4, type: 2}
-  playerFaction: 2
+  playerFaction: 1
 --- !u!114 &7121785693062592945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2202,7 +2202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generalAssetLoader: {fileID: 11400000, guid: 013c89adcb531482295c96f6a38d0ee4, type: 2}
-  playerFaction: 2
+  playerFaction: 1
 --- !u!114 &7121785693210658195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2216,7 +2216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generalAssetLoader: {fileID: 11400000, guid: 013c89adcb531482295c96f6a38d0ee4, type: 2}
-  playerFaction: 2
+  playerFaction: 1
 --- !u!114 &7121785693218479464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2230,7 +2230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generalAssetLoader: {fileID: 11400000, guid: 013c89adcb531482295c96f6a38d0ee4, type: 2}
-  playerFaction: 2
+  playerFaction: 1
 --- !u!212 &8240242058785961480
 SpriteRenderer:
   m_ObjectHideFlags: 0

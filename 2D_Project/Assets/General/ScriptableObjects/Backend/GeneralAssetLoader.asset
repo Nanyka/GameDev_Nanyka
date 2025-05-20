@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: GeneralAssetLoader
   m_EditorClassIdentifier: 
   blueUnitAddress:
-  - Assets/General/Art/UI/blue_unit_1.asset
-  - Assets/General/Art/UI/blue_unit_2.asset
-  - Assets/General/Art/UI/blue_unit_3.asset
+  - Assets/General/Art/UI/NewUI/green_1.asset
+  - Assets/General/Art/UI/NewUI/green_2.asset
+  - Assets/General/Art/UI/NewUI/green_3.asset
   redUnitAddress:
-  - Assets/General/Art/UI/red_unit_1.asset
-  - Assets/General/Art/UI/red_unit_2.asset
-  - Assets/General/Art/UI/red_unit_3.asset
+  - Assets/General/Art/UI/NewUI/red_1.asset
+  - Assets/General/Art/UI/NewUI/red_2.asset
+  - Assets/General/Art/UI/NewUI/red_3.asset
   remainAmountAddress:
   - Assets/General/Art/UI/remain_0.asset
   - Assets/General/Art/UI/remain_1.asset

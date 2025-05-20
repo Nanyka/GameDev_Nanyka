@@ -16,11 +16,11 @@ MonoBehaviour:
   description: 
   sceneType: 0
   sceneReference:
-    m_AssetGUID: f4b4289d4a9344b59b6c165ea9f38bd3
+    m_AssetGUID: 4d7af444154644a0aa5e9b0282b1a210
     m_SubObjectName: 
     m_SubObjectType: 
+    m_SubObjectGUID: 
     m_EditorAssetChanged: 0
-  musicTrack: {fileID: 0}
   locationName:
     m_TableReference:
       m_TableCollectionName: 

@@ -45,6 +45,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4d7af444154644a0aa5e9b0282b1a210
+    m_Address: Assets/General/Scenes/Locations/IsoLocation.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 80c0801af1bf94bce821b53db3b3aae6
     m_Address: Assets/General/Scenes/Menus/MainMenu.unity
     m_ReadOnly: 0
