@@ -5,13 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Model Assets.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Model Assets.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/NewUI/background2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/UI/NewUI/background2.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Locations/BossLocation.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Locations/BossLocation.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Locations/IsoLocation.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Locations/IsoLocation.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithBoss.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithBoss.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/PersistentManagers.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/PersistentManagers.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Backend/GeneralAssetLoader.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/ScriptableObjects/Backend/GeneralAssetLoader.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/ScriptableObjects/SceneData/Locations/BasicLocation.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/ScriptableObjects/SceneData/Locations/BasicLocation.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/BackendSO/GeneralAssetLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/BackendSO/GeneralAssetLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Character/IRender.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/IRender.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Character/Plot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/Plot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Character/RenderComp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/RenderComp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Character/UnitVisualize.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/UnitVisualize.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Materials_URP/Exterior.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Materials_URP/Exterior.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Materials_URP/Wheel.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Materials_URP/Wheel.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Materials_URP/Window.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Materials_URP/Window.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Materials_URP/interior.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Materials_URP/interior.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Sand by Joao Paulo/Stylized_Sand_001_basecolor_URP.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Sand by Joao Paulo/Stylized_Sand_001_basecolor_URP.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,7 +248,7 @@
       <workItem from="1747160902099" duration="1630000" />
       <workItem from="1747241896371" duration="1296000" />
       <workItem from="1747372038403" duration="5161000" />
-      <workItem from="1747725625545" duration="562000" />
+      <workItem from="1747725625545" duration="2649000" />
     </task>
     <servers />
   </component>

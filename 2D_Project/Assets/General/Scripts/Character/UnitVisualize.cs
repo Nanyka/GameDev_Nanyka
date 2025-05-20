@@ -9,6 +9,7 @@ namespace TheAiAlchemist
     {
         // [SerializeField] private TextMeshProUGUI strengthText;
         [SerializeField] private GeneralAssetLoader generalAssetLoader;
+        [SerializeField] private GameStateStorage gameStateStorage;
         [SerializeField] private Player playerFaction;
 
         private IRender mRenderer;
@@ -21,16 +22,17 @@ namespace TheAiAlchemist
         public void Visualize(int strength, Player player)
         {
             mRenderer.ActivateRenderer(true);
-            var sprites = player == playerFaction ? generalAssetLoader.blueUnitSprites : generalAssetLoader.redUnitSprites;
+            var sprites = player == playerFaction
+                ? generalAssetLoader.blueUnitSprites
+                : generalAssetLoader.redUnitSprites;
             mRenderer.SetSprite(sprites[strength - 1]);
+            mRenderer.ChangeMaterial(generalAssetLoader.UnlitMaterial);
         }
 
-        // public void Visualize(int strength, Color color)
-        // {
-        //     mRenderer.ActivateRenderer(true);
-        //     // mRenderer.ChangeColor(color);
-        //     // strengthText.text = strength.ToString();
-        // }
+        public void Highlight()
+        {
+            mRenderer.ChangeMaterial(generalAssetLoader.LitMaterial);
+        }
 
         public void Disable()
         {

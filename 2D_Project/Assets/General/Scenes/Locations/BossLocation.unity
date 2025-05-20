@@ -169,6 +169,7 @@ MonoBehaviour:
   changePlayerChannel: {fileID: 11400000, guid: f28658ecf3d9946e59e23c3659afaea8, type: 2}
   gameStateStorage: {fileID: 11400000, guid: ed2e312f50fbd4ff5a218f51fc91f438, type: 2}
   resetChannel: {fileID: 11400000, guid: c4ab14a3f61c34cc297c58192f1e27e3, type: 2}
+  endGameChannel: {fileID: 11400000, guid: d1a037fe1d9e9452996bdbc29f4afccd, type: 2}
   row: 2
   col: 3
   askUnitIndex: {fileID: 11400000, guid: 123bae78151b34f83ad2d49766ac0c22, type: 2}
@@ -274,6 +275,7 @@ MonoBehaviour:
   changePlayerChannel: {fileID: 11400000, guid: f28658ecf3d9946e59e23c3659afaea8, type: 2}
   gameStateStorage: {fileID: 11400000, guid: ed2e312f50fbd4ff5a218f51fc91f438, type: 2}
   resetChannel: {fileID: 11400000, guid: c4ab14a3f61c34cc297c58192f1e27e3, type: 2}
+  endGameChannel: {fileID: 11400000, guid: d1a037fe1d9e9452996bdbc29f4afccd, type: 2}
   row: 2
   col: 1
   askUnitIndex: {fileID: 11400000, guid: 123bae78151b34f83ad2d49766ac0c22, type: 2}
@@ -379,6 +381,7 @@ MonoBehaviour:
   changePlayerChannel: {fileID: 11400000, guid: f28658ecf3d9946e59e23c3659afaea8, type: 2}
   gameStateStorage: {fileID: 11400000, guid: ed2e312f50fbd4ff5a218f51fc91f438, type: 2}
   resetChannel: {fileID: 11400000, guid: c4ab14a3f61c34cc297c58192f1e27e3, type: 2}
+  endGameChannel: {fileID: 11400000, guid: d1a037fe1d9e9452996bdbc29f4afccd, type: 2}
   row: 2
   col: 2
   askUnitIndex: {fileID: 11400000, guid: 123bae78151b34f83ad2d49766ac0c22, type: 2}
@@ -484,6 +487,7 @@ MonoBehaviour:
   changePlayerChannel: {fileID: 11400000, guid: f28658ecf3d9946e59e23c3659afaea8, type: 2}
   gameStateStorage: {fileID: 11400000, guid: ed2e312f50fbd4ff5a218f51fc91f438, type: 2}
   resetChannel: {fileID: 11400000, guid: c4ab14a3f61c34cc297c58192f1e27e3, type: 2}
+  endGameChannel: {fileID: 11400000, guid: d1a037fe1d9e9452996bdbc29f4afccd, type: 2}
   row: 1
   col: 3
   askUnitIndex: {fileID: 11400000, guid: 123bae78151b34f83ad2d49766ac0c22, type: 2}
@@ -589,6 +593,7 @@ MonoBehaviour:
   changePlayerChannel: {fileID: 11400000, guid: f28658ecf3d9946e59e23c3659afaea8, type: 2}
   gameStateStorage: {fileID: 11400000, guid: ed2e312f50fbd4ff5a218f51fc91f438, type: 2}
   resetChannel: {fileID: 11400000, guid: c4ab14a3f61c34cc297c58192f1e27e3, type: 2}
+  endGameChannel: {fileID: 11400000, guid: d1a037fe1d9e9452996bdbc29f4afccd, type: 2}
   row: 3
   col: 1
   askUnitIndex: {fileID: 11400000, guid: 123bae78151b34f83ad2d49766ac0c22, type: 2}
@@ -781,6 +786,7 @@ MonoBehaviour:
   changePlayerChannel: {fileID: 11400000, guid: f28658ecf3d9946e59e23c3659afaea8, type: 2}
   gameStateStorage: {fileID: 11400000, guid: ed2e312f50fbd4ff5a218f51fc91f438, type: 2}
   resetChannel: {fileID: 11400000, guid: c4ab14a3f61c34cc297c58192f1e27e3, type: 2}
+  endGameChannel: {fileID: 11400000, guid: d1a037fe1d9e9452996bdbc29f4afccd, type: 2}
   row: 3
   col: 2
   askUnitIndex: {fileID: 11400000, guid: 123bae78151b34f83ad2d49766ac0c22, type: 2}
@@ -886,6 +892,7 @@ MonoBehaviour:
   changePlayerChannel: {fileID: 11400000, guid: f28658ecf3d9946e59e23c3659afaea8, type: 2}
   gameStateStorage: {fileID: 11400000, guid: ed2e312f50fbd4ff5a218f51fc91f438, type: 2}
   resetChannel: {fileID: 11400000, guid: c4ab14a3f61c34cc297c58192f1e27e3, type: 2}
+  endGameChannel: {fileID: 11400000, guid: d1a037fe1d9e9452996bdbc29f4afccd, type: 2}
   row: 1
   col: 2
   askUnitIndex: {fileID: 11400000, guid: 123bae78151b34f83ad2d49766ac0c22, type: 2}
@@ -1064,6 +1071,7 @@ MonoBehaviour:
   changePlayerChannel: {fileID: 11400000, guid: f28658ecf3d9946e59e23c3659afaea8, type: 2}
   gameStateStorage: {fileID: 11400000, guid: ed2e312f50fbd4ff5a218f51fc91f438, type: 2}
   resetChannel: {fileID: 11400000, guid: c4ab14a3f61c34cc297c58192f1e27e3, type: 2}
+  endGameChannel: {fileID: 11400000, guid: d1a037fe1d9e9452996bdbc29f4afccd, type: 2}
   row: 3
   col: 3
   askUnitIndex: {fileID: 11400000, guid: 123bae78151b34f83ad2d49766ac0c22, type: 2}
@@ -1478,6 +1486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generalAssetLoader: {fileID: 11400000, guid: 013c89adcb531482295c96f6a38d0ee4, type: 2}
+  gameStateStorage: {fileID: 0}
   playerFaction: 2
 --- !u!212 &4603823593483734897
 SpriteRenderer:
@@ -2115,6 +2124,7 @@ MonoBehaviour:
   changePlayerChannel: {fileID: 11400000, guid: f28658ecf3d9946e59e23c3659afaea8, type: 2}
   gameStateStorage: {fileID: 11400000, guid: ed2e312f50fbd4ff5a218f51fc91f438, type: 2}
   resetChannel: {fileID: 11400000, guid: c4ab14a3f61c34cc297c58192f1e27e3, type: 2}
+  endGameChannel: {fileID: 11400000, guid: d1a037fe1d9e9452996bdbc29f4afccd, type: 2}
   row: 1
   col: 1
   askUnitIndex: {fileID: 11400000, guid: 123bae78151b34f83ad2d49766ac0c22, type: 2}
@@ -2132,6 +2142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generalAssetLoader: {fileID: 11400000, guid: 013c89adcb531482295c96f6a38d0ee4, type: 2}
+  gameStateStorage: {fileID: 0}
   playerFaction: 2
 --- !u!114 &7121785691920392430
 MonoBehaviour:
@@ -2146,6 +2157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generalAssetLoader: {fileID: 11400000, guid: 013c89adcb531482295c96f6a38d0ee4, type: 2}
+  gameStateStorage: {fileID: 0}
   playerFaction: 2
 --- !u!114 &7121785692134343676
 MonoBehaviour:
@@ -2160,6 +2172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generalAssetLoader: {fileID: 11400000, guid: 013c89adcb531482295c96f6a38d0ee4, type: 2}
+  gameStateStorage: {fileID: 0}
   playerFaction: 2
 --- !u!114 &7121785692333003355
 MonoBehaviour:
@@ -2174,6 +2187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generalAssetLoader: {fileID: 11400000, guid: 013c89adcb531482295c96f6a38d0ee4, type: 2}
+  gameStateStorage: {fileID: 0}
   playerFaction: 2
 --- !u!114 &7121785692535831655
 MonoBehaviour:
@@ -2188,6 +2202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generalAssetLoader: {fileID: 11400000, guid: 013c89adcb531482295c96f6a38d0ee4, type: 2}
+  gameStateStorage: {fileID: 0}
   playerFaction: 2
 --- !u!114 &7121785693062592945
 MonoBehaviour:
@@ -2202,6 +2217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generalAssetLoader: {fileID: 11400000, guid: 013c89adcb531482295c96f6a38d0ee4, type: 2}
+  gameStateStorage: {fileID: 0}
   playerFaction: 2
 --- !u!114 &7121785693210658195
 MonoBehaviour:
@@ -2216,6 +2232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generalAssetLoader: {fileID: 11400000, guid: 013c89adcb531482295c96f6a38d0ee4, type: 2}
+  gameStateStorage: {fileID: 0}
   playerFaction: 2
 --- !u!114 &7121785693218479464
 MonoBehaviour:
@@ -2230,6 +2247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generalAssetLoader: {fileID: 11400000, guid: 013c89adcb531482295c96f6a38d0ee4, type: 2}
+  gameStateStorage: {fileID: 0}
   playerFaction: 2
 --- !u!212 &8240242058785961480
 SpriteRenderer:

@@ -11,6 +11,7 @@ namespace TheAiAlchemist
         [SerializeField] private VoidChannel changePlayerChannel;
         [SerializeField] private GameStateStorage gameStateStorage;
         [SerializeField] private VoidChannel resetChannel;
+        [SerializeField] private BoolChannel endGameChannel;
 
         [SerializeField] protected int row;
         [SerializeField] protected int col;
@@ -23,12 +24,14 @@ namespace TheAiAlchemist
         {
             changePlayerChannel.AddListener(VisualizeState);
             resetChannel.AddListener(ResetPlot);
+            endGameChannel.AddListener(HighlightWinner);
         }
 
         private void OnDisable()
         {
             changePlayerChannel.RemoveListener(VisualizeState);
             resetChannel.RemoveListener(ResetPlot);
+            endGameChannel.RemoveListener(HighlightWinner);
         }
 
         private void Start()
@@ -76,6 +79,24 @@ namespace TheAiAlchemist
             // Debug.Log("Reset plot");
             currentStrength = 0;
             unitVisualize.Disable();
+        }
+        
+        private void HighlightWinner(bool hasWinner)
+        {
+            if (hasWinner)
+            {
+                var winnerPoints = gameStateStorage.GetValue().GetWinningLine();
+                if (winnerPoints != null)
+                    foreach (Point p in winnerPoints)
+                    {
+                        if (p.Row == row && p.Col == col)
+                        {
+                            // Debug.Log("Match found at Point (" + p.Row + ", " + p.Col + ")");
+                            unitVisualize.Highlight();
+                            return;
+                        }
+                    }
+            }
         }
     }
 }

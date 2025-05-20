@@ -36,7 +36,7 @@ namespace TheAiAlchemist
         private void CheckIAPState()
         {
             // Check saveData, if available, return true
-            Debug.Log($"Use IAP with Player {saveSystem.saveData.playerId}");
+            // Debug.Log($"Use IAP with Player {saveSystem.saveData.playerId}");
             if (saveSystem.saveData.playerId != "")
             {
                 ListenIapFeedback(true);
@@ -45,7 +45,7 @@ namespace TheAiAlchemist
                 return;
             }
             
-            Debug.LogWarning("No player ID specified");
+            // Debug.LogWarning("No player ID specified");
             
             // If not, check internet availability
 

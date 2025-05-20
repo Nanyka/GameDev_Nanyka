@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e038bfb2e8346bc96d27ac5b1981bea, type: 3}
   m_Name: GeneralAssetLoader
   m_EditorClassIdentifier: 
+  UnlitMaterial: {fileID: 2100000, guid: c176bc9ed4006411498adc3b2723c8df, type: 2}
+  LitMaterial: {fileID: 2100000, guid: 218284f1c4e1b46eda3434ff771aeecb, type: 2}
   blueUnitAddress:
   - Assets/General/Art/UI/NewUI/green_1.asset
   - Assets/General/Art/UI/NewUI/green_2.asset

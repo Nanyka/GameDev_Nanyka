@@ -9,6 +9,8 @@ namespace TheAiAlchemist
     public class GeneralAssetLoader : ScriptableObject
     {
         [Header("Inputs")]
+        public Material UnlitMaterial;
+        public Material LitMaterial;
         public string[] blueUnitAddress;
         public string[] redUnitAddress;
         public string[] remainAmountAddress;
