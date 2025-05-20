@@ -19,6 +19,7 @@ namespace TheAiAlchemist
         [SerializeField] private UnitVisualize unitVisualize;
 
         protected int currentStrength;
+        private int visualStrength;
 
         private void OnEnable()
         {
@@ -34,11 +35,11 @@ namespace TheAiAlchemist
             endGameChannel.RemoveListener(HighlightWinner);
         }
 
-        private void Start()
-        {
-            // ResetPlot();
-            VisualizeState();
-        }
+        // private void Start()
+        // {
+        //     // ResetPlot();
+        //     VisualizeState();
+        // }
 
         protected virtual void OnMouseUpAsButton()
         {
@@ -60,7 +61,6 @@ namespace TheAiAlchemist
 
         private void VisualizeState()
         {
-            // Debug.Log($"Visual {row}:{col}");
             var currentState = gameStateStorage.GetValue();
             if (currentState == null) return;
             
@@ -69,7 +69,10 @@ namespace TheAiAlchemist
                 var checkPoint = plot.Key;
                 if (checkPoint.Row == row && checkPoint.Col == col)
                 {
+                    if (checkPoint.Strength <= visualStrength) continue;
+                    // Debug.Log($"Visual {row}:{col}");
                     unitVisualize.Visualize(checkPoint.Strength, plot.Value);
+                    visualStrength = checkPoint.Strength;
                 }
             }
         }
@@ -78,6 +81,7 @@ namespace TheAiAlchemist
         {
             // Debug.Log("Reset plot");
             currentStrength = 0;
+            visualStrength = 0;
             unitVisualize.Disable();
         }
         

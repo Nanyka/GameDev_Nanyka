@@ -5,14 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/General/Art/Material/Unlit.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/Material/Unlit.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/UnitDropperVfx.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/UnitDropperVfx.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Locations/BossLocation.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Locations/BossLocation.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Locations/IsoLocation.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Locations/IsoLocation.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Locations/TutorialLocation.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Locations/TutorialLocation.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithBoss.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithBoss.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/TutorialPlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/TutorialPlay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Menus/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Menus/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Test/TestUGS.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Test/TestUGS.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Character/Plot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/Plot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Character/UnitVisualize.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/UnitVisualize.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameWithBossManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameWithBossManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,6 +240,7 @@
       <workItem from="1747372038403" duration="5161000" />
       <workItem from="1747725625545" duration="2863000" />
       <workItem from="1747743996466" duration="691000" />
+      <workItem from="1747754763198" duration="9330000" />
     </task>
     <servers />
   </component>

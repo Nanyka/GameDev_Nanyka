@@ -535,6 +535,7 @@ MonoBehaviour:
   gameStateStorage: {fileID: 11400000, guid: ed2e312f50fbd4ff5a218f51fc91f438, type: 2}
   askUnitIndex: {fileID: 11400000, guid: 123bae78151b34f83ad2d49766ac0c22, type: 2}
   changePlayerChannel: {fileID: 11400000, guid: f28658ecf3d9946e59e23c3659afaea8, type: 2}
+  finishDropChannel: {fileID: 11400000, guid: 9e158e8875d34402ea899c94ed3fae71, type: 2}
   endGameChannel: {fileID: 11400000, guid: d1a037fe1d9e9452996bdbc29f4afccd, type: 2}
   humanMoveChannel: {fileID: 11400000, guid: 09fd83887c8134a6fbbb08efccd82cc3, type: 2}
   resetChannel: {fileID: 11400000, guid: c4ab14a3f61c34cc297c58192f1e27e3, type: 2}
@@ -896,7 +897,7 @@ MonoBehaviour:
   winPlayerText: {fileID: 1013703406}
   playAgainButton: {fileID: 597193251}
   homeButton: {fileID: 1774457853}
-  waitToShowWin: 1.5
+  waitToShowWin: 2
   playerFaction: 2
 --- !u!1 &327366381
 GameObject:

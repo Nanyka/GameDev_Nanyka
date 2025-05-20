@@ -9,24 +9,26 @@ namespace TheAiAlchemist
     {
         // [SerializeField] private TextMeshProUGUI strengthText;
         [SerializeField] private GeneralAssetLoader generalAssetLoader;
-        [SerializeField] private GameStateStorage gameStateStorage;
         [SerializeField] private Player playerFaction;
 
         private IRender mRenderer;
+        private UnitDropperVfx unitDropperVfx;
 
         private void Awake()
         {
             mRenderer = GetComponent<IRender>();
+            unitDropperVfx = GetComponent<UnitDropperVfx>();
         }
 
         public void Visualize(int strength, Player player)
         {
-            mRenderer.ActivateRenderer(true);
+            // mRenderer.ActivateRenderer(true);
             var sprites = player == playerFaction
                 ? generalAssetLoader.blueUnitSprites
                 : generalAssetLoader.redUnitSprites;
-            mRenderer.SetSprite(sprites[strength - 1]);
+            // mRenderer.SetSprite(sprites[strength - 1]);
             mRenderer.ChangeMaterial(generalAssetLoader.UnlitMaterial);
+            unitDropperVfx.PlayEffect(sprites[strength - 1]);
         }
 
         public void Highlight()

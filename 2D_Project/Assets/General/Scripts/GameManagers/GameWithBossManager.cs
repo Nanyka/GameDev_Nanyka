@@ -50,7 +50,7 @@ namespace TheAiAlchemist
                 _currentGameState = _currentGameState.ApplyMove(move);
                 audioPlayIndex.ExecuteChannel(player.HasValue ? 1 : 0);
 
-                await StartNextTurn();
+                StartNextTurn();
             }
             catch (IllegalMoveError ex)
             {
