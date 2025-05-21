@@ -334,8 +334,8 @@ MonoBehaviour:
   settingsSo: {fileID: 11400000, guid: 81f50747a96bd4932b682d58664706f5, type: 2}
   audioPlayIndex: {fileID: 11400000, guid: d750ba0a012f34d5a9995cb2ff4e81d9, type: 2}
   soundClips:
-  - {fileID: 8300000, guid: 63ad28c74ec5748fb9bb9ad8d1df48f2, type: 3}
-  - {fileID: 8300000, guid: bd07c2cd1963b425dab7199a0700a12e, type: 3}
+  - {fileID: 8300000, guid: 05072814da60644728bebae279689dbb, type: 3}
+  - {fileID: 8300000, guid: 58d7ad00ff6124a54b37f05292db5da2, type: 3}
   - {fileID: 8300000, guid: 009756371d01a4be9a5e9a35c5c1b56a, type: 3}
   sfxSource: {fileID: 728311745}
   musicSource: {fileID: 1843896744}
