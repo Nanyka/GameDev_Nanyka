@@ -78,6 +78,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432302efc90a84cfea22509c3d60af12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animTriggerUnits:
+  - parameterName: Roar
+    triggerRatio: 10
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0

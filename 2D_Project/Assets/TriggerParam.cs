@@ -1,12 +1,28 @@
+using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
-public class TriggerRoar : StateMachineBehaviour
+public class TriggerParam : StateMachineBehaviour
 {
+    [SerializeField] private AnimTriggerUnit[] animTriggerUnits;
+    
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (Random.Range(0,10) <= 1)
-            animator.SetTrigger("Roar");
+        // if (Random.Range(0,10) <= triggerRatio)
+        //     animator.SetTrigger(parameterName);
+        var randomValue = Random.Range(0, 100f);
+        var currentValue = 0f;
+        foreach (var animTriggerUnit in animTriggerUnits)
+        {
+            currentValue += animTriggerUnit.triggerRatio;
+            // Debug.Log($"Random: {randomValue}, Current: {currentValue},");
+            if (randomValue < currentValue)
+            {
+                animator.SetTrigger(animTriggerUnit.parameterName);
+                break;
+            }
+        }
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -33,4 +49,11 @@ public class TriggerRoar : StateMachineBehaviour
     //{
     //    // Implement code that sets up animation IK (inverse kinematics)
     //}
+}
+
+[Serializable]
+public class AnimTriggerUnit
+{
+    public string parameterName;
+    public float triggerRatio;
 }

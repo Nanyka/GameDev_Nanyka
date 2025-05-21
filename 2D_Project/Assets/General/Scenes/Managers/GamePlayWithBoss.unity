@@ -539,7 +539,6 @@ MonoBehaviour:
   endGameChannel: {fileID: 11400000, guid: d1a037fe1d9e9452996bdbc29f4afccd, type: 2}
   humanMoveChannel: {fileID: 11400000, guid: 09fd83887c8134a6fbbb08efccd82cc3, type: 2}
   resetChannel: {fileID: 11400000, guid: c4ab14a3f61c34cc297c58192f1e27e3, type: 2}
-  audioPlayIndex: {fileID: 11400000, guid: d750ba0a012f34d5a9995cb2ff4e81d9, type: 2}
   botThinkingChannel: {fileID: 11400000, guid: fe4f26de5816345e3986a808891b9ab6, type: 2}
   checkIapState: {fileID: 11400000, guid: 16bbdc9c2d06e491c9a5b735d54b486e, type: 2}
   iapStateChannel: {fileID: 11400000, guid: ea0e68b820cb54d90b5e5f1debd7f5ca, type: 2}
@@ -5407,7 +5406,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 693935913}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5426,7 +5425,7 @@ Animator:
   m_GameObject: {fileID: 1247677835}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 62bbc207638b14820ae7023427d29fd4, type: 2}
+  m_Controller: {fileID: 9100000, guid: 00d02bebc32814d89b65f7e3a6a0b4fe, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

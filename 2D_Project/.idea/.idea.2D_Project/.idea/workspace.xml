@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/Animation/Boss.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/Animation/Boss.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Art/Animation/MiniBot.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/Animation/MiniBot.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithBoss.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithBoss.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Character/Plot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/Plot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Character/UnitVisualize.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/UnitVisualize.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameWithBossManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameWithBossManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/TutorialManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/TutorialManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UI/UnitDropperVfx.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UI/UnitDropperVfx.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TriggerRoar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TriggerParam.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TriggerRoar.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TriggerParam.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +235,7 @@
       <workItem from="1747725625545" duration="2863000" />
       <workItem from="1747743996466" duration="691000" />
       <workItem from="1747754763198" duration="9395000" />
-      <workItem from="1747835357964" duration="942000" />
+      <workItem from="1747835357964" duration="3235000" />
     </task>
     <servers />
   </component>
