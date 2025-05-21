@@ -169,7 +169,6 @@ MonoBehaviour:
   endGameChannel: {fileID: 11400000, guid: d1a037fe1d9e9452996bdbc29f4afccd, type: 2}
   humanMoveChannel: {fileID: 11400000, guid: 09fd83887c8134a6fbbb08efccd82cc3, type: 2}
   resetChannel: {fileID: 11400000, guid: c4ab14a3f61c34cc297c58192f1e27e3, type: 2}
-  audioPlayIndex: {fileID: 11400000, guid: d750ba0a012f34d5a9995cb2ff4e81d9, type: 2}
   finishDropChannel: {fileID: 11400000, guid: 9e158e8875d34402ea899c94ed3fae71, type: 2}
 --- !u!1 &101918291
 GameObject:
@@ -495,6 +494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   finishDropChannel: {fileID: 11400000, guid: 9e158e8875d34402ea899c94ed3fae71, type: 2}
+  audioPlayIndex: {fileID: 11400000, guid: d750ba0a012f34d5a9995cb2ff4e81d9, type: 2}
   unitTransform: {fileID: 1187805662}
   spriteRenderer: {fileID: 1187805661}
   dropHeight: 5
@@ -9034,6 +9034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   finishDropChannel: {fileID: 11400000, guid: 9e158e8875d34402ea899c94ed3fae71, type: 2}
+  audioPlayIndex: {fileID: 11400000, guid: d750ba0a012f34d5a9995cb2ff4e81d9, type: 2}
   unitTransform: {fileID: 1629783699}
   spriteRenderer: {fileID: 1629783698}
   dropHeight: 5
@@ -9830,6 +9831,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   finishDropChannel: {fileID: 11400000, guid: 9e158e8875d34402ea899c94ed3fae71, type: 2}
+  audioPlayIndex: {fileID: 11400000, guid: d750ba0a012f34d5a9995cb2ff4e81d9, type: 2}
   unitTransform: {fileID: 518113598}
   spriteRenderer: {fileID: 518113597}
   dropHeight: 5

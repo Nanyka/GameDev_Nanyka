@@ -9,6 +9,7 @@ namespace TheAiAlchemist
     public class UnitDropperVfx : MonoBehaviour
     {        
         [SerializeField] protected VoidChannel finishDropChannel;
+        [SerializeField] protected IntChannel audioPlayIndex;
         
         [Header("Drop Settings")]
         public Transform unitTransform;      // your unit’s Transform
@@ -32,7 +33,7 @@ namespace TheAiAlchemist
             _originalPosition = unitTransform.position;
         }
 
-        public void PlayEffect(Sprite effectSprite)
+        public void PlayEffect(Sprite effectSprite, bool isBeatOpponent = false)
         {
             spriteRenderer.sprite = effectSprite;
             
@@ -66,6 +67,7 @@ namespace TheAiAlchemist
                     {
                         hitEffect.transform.position = _targetPosition;
                         hitEffect.Play();
+                        audioPlayIndex.ExecuteChannel(isBeatOpponent ? 1 : 0);
                     }
                     
                     spriteRenderer.color = new Color(1f, 1f, 1f, 0f);

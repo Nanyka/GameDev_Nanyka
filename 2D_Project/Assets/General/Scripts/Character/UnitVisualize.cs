@@ -20,7 +20,7 @@ namespace TheAiAlchemist
             unitDropperVfx = GetComponent<UnitDropperVfx>();
         }
 
-        public void Visualize(int strength, Player player)
+        public void Visualize(int strength, Player player, bool isBeatOpponent)
         {
             // mRenderer.ActivateRenderer(true);
             var sprites = player == playerFaction
@@ -28,7 +28,7 @@ namespace TheAiAlchemist
                 : generalAssetLoader.redUnitSprites;
             // mRenderer.SetSprite(sprites[strength - 1]);
             mRenderer.ChangeMaterial(generalAssetLoader.UnlitMaterial);
-            unitDropperVfx.PlayEffect(sprites[strength - 1]);
+            unitDropperVfx.PlayEffect(sprites[strength - 1], isBeatOpponent);
         }
 
         public void Highlight()

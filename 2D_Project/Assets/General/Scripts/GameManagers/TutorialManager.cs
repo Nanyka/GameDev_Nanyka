@@ -15,7 +15,7 @@ namespace TheAiAlchemist
         [SerializeField] private BoolChannel endGameChannel;
         [SerializeField] private MoveChannel humanMoveChannel;
         [SerializeField] private VoidChannel resetChannel;
-        [SerializeField] private IntChannel audioPlayIndex;
+        // [SerializeField] private IntChannel audioPlayIndex;
         [SerializeField] protected VoidChannel finishDropChannel;
 
         private IAgent _humanAgent;
@@ -100,7 +100,7 @@ namespace TheAiAlchemist
             {
                 var isOnGrid = Board.IsOnGrid(move.Point);
                 _currentGameState = _currentGameState.ApplyMove(move);
-                audioPlayIndex.ExecuteChannel(isOnGrid ? 1 : 0);
+                // audioPlayIndex.ExecuteChannel(isOnGrid ? 1 : 0);
                 await StartNextTurn();
             }
             catch (IllegalMoveError ex)

@@ -18,7 +18,7 @@ namespace TheAiAlchemist
         [SerializeField] protected BoolChannel endGameChannel;
         [SerializeField] private MoveChannel humanMoveChannel;
         [SerializeField] private VoidChannel resetChannel;
-        [SerializeField] protected IntChannel audioPlayIndex;
+        // [SerializeField] protected IntChannel audioPlayIndex;
         [SerializeField] protected BoolChannel botThinkingChannel;
         [SerializeField] private VoidChannel checkIapState;
         [SerializeField] private BoolChannel iapStateChannel;
@@ -137,7 +137,6 @@ namespace TheAiAlchemist
                 var point = move.Point;
                 var player = _currentGameState.Board.GetPlayerAtCoord(point.Row, point.Col);
                 _currentGameState = _currentGameState.ApplyMove(move);
-                audioPlayIndex.ExecuteChannel(player.HasValue ? 1 : 0);
 
                 StartNextTurn();
             }

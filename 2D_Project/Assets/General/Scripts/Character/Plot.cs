@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using AlphaZeroAlgorithm;
 using UnityEngine;
@@ -70,8 +71,8 @@ namespace TheAiAlchemist
                 if (checkPoint.Row == row && checkPoint.Col == col)
                 {
                     if (checkPoint.Strength <= visualStrength) continue;
-                    // Debug.Log($"Visual {row}:{col}");
-                    unitVisualize.Visualize(checkPoint.Strength, plot.Value);
+                    bool isBeatOpponent = checkPoint.Strength > visualStrength && visualStrength != 0;
+                    unitVisualize.Visualize(checkPoint.Strength, plot.Value, isBeatOpponent);
                     visualStrength = checkPoint.Strength;
                 }
             }
@@ -96,11 +97,18 @@ namespace TheAiAlchemist
                         if (p.Row == row && p.Col == col)
                         {
                             // Debug.Log("Match found at Point (" + p.Row + ", " + p.Col + ")");
-                            unitVisualize.Highlight();
+                            // unitVisualize.Highlight();
+                            StartCoroutine(WaitToHighlight());
                             return;
                         }
                     }
             }
+        }
+        
+        private IEnumerator WaitToHighlight()
+        {
+            yield return new WaitForSeconds(0.5f);
+            unitVisualize.Highlight();
         }
     }
 }
