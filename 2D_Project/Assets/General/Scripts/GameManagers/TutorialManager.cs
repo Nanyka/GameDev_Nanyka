@@ -16,6 +16,7 @@ namespace TheAiAlchemist
         [SerializeField] private MoveChannel humanMoveChannel;
         [SerializeField] private VoidChannel resetChannel;
         [SerializeField] private IntChannel audioPlayIndex;
+        [SerializeField] protected VoidChannel finishDropChannel;
 
         private IAgent _humanAgent;
         private TutorialBot _botAgent;
@@ -26,12 +27,14 @@ namespace TheAiAlchemist
         {
             humanMoveChannel.AddListener(HumanPlayAMove);
             resetChannel.AddListener(ResetGame);
+            finishDropChannel.AddListener(GetNextPlayerMove);
         }
 
         private void OnDisable()
         {
             humanMoveChannel.RemoveListener(HumanPlayAMove);
             resetChannel.RemoveListener(ResetGame);
+            finishDropChannel.RemoveListener(GetNextPlayerMove);
         }
 
         private async void Start()
@@ -72,6 +75,14 @@ namespace TheAiAlchemist
             changePlayerChannel.ExecuteChannel();
             askUnitIndex.SetValue(-1);
 
+            // var nextMove = await _players[_currentGameState.NextPlayer].SelectMove(_currentGameState);
+            // if (nextMove != null) await ApplySelectedMove(nextMove);
+        }
+        
+        private async void GetNextPlayerMove()
+        {
+            if (_currentGameState.IsOver())
+                return;
             var nextMove = await _players[_currentGameState.NextPlayer].SelectMove(_currentGameState);
             if (nextMove != null) await ApplySelectedMove(nextMove);
         }
@@ -122,6 +133,7 @@ namespace TheAiAlchemist
         {
             _currentGameState = GameSetup.SetupNewGame();
             await StartNextTurn();
+            GetNextPlayerMove();
         }
     }
 }

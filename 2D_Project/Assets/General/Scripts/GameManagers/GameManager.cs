@@ -117,6 +117,7 @@ namespace TheAiAlchemist
 
         private async void GetNextPlayerMove()
         {
+            if (_currentGameState.IsOver()) return;
             var nextMove = await _players[_currentGameState.NextPlayer].SelectMove(_currentGameState);
             if (nextMove != null) await ApplySelectedMove(nextMove);
         }
