@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Art/Animation/Boss.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/Animation/Boss.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Art/Animation/MiniBot.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/Animation/MiniBot.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithBoss.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithBoss.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TriggerRoar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TriggerParam.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TriggerRoar.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TriggerParam.cs.meta" afterDir="false" />
-    </list>
+    <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -235,7 +228,7 @@
       <workItem from="1747725625545" duration="2863000" />
       <workItem from="1747743996466" duration="691000" />
       <workItem from="1747754763198" duration="9395000" />
-      <workItem from="1747835357964" duration="3235000" />
+      <workItem from="1747835357964" duration="3838000" />
     </task>
     <servers />
   </component>
