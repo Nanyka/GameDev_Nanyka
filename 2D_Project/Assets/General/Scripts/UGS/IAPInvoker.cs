@@ -62,7 +62,9 @@ namespace TheAiAlchemist
             iapText.text = "If you’re enjoying it, consider buying me a coffee to support the development!" +
                            "\nThanks so much! 😊";
             unlockButton.SetActive(true);
+#if UNITY_IOS
             restoreButton.SetActive(true);
+#endif
             thanksButton.SetActive(false);
             iapPanel.SetActive(true);
         }
@@ -73,7 +75,9 @@ namespace TheAiAlchemist
             iapText.text = _isPurchased ? "Thanks a ton for the coffee!\nIt keeps both me and the game running! 😊" :
                 "Thanks so much for playing!\n Your support means a lot.";
             unlockButton.SetActive(false);
+#if UNITY_IOS
             restoreButton.SetActive(false);
+#endif
             thanksButton.SetActive(true);
             
             // iapPanel.SetActive(false);

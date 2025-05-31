@@ -245,7 +245,6 @@ MonoBehaviour:
   endGameChannel: {fileID: 11400000, guid: d1a037fe1d9e9452996bdbc29f4afccd, type: 2}
   humanMoveChannel: {fileID: 11400000, guid: 09fd83887c8134a6fbbb08efccd82cc3, type: 2}
   resetChannel: {fileID: 11400000, guid: c4ab14a3f61c34cc297c58192f1e27e3, type: 2}
-  audioPlayIndex: {fileID: 11400000, guid: d750ba0a012f34d5a9995cb2ff4e81d9, type: 2}
   botThinkingChannel: {fileID: 11400000, guid: fe4f26de5816345e3986a808891b9ab6, type: 2}
   checkIapState: {fileID: 11400000, guid: 16bbdc9c2d06e491c9a5b735d54b486e, type: 2}
   iapStateChannel: {fileID: 11400000, guid: ea0e68b820cb54d90b5e5f1debd7f5ca, type: 2}
@@ -1531,7 +1530,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &498173914
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3560,7 +3559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9730f33bfbb64ace87b74c0fc614899e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productId: com.nanykalab.zerotictactoe.unlock
+  productId: unlock_all_ai_bots
   iapManager: {fileID: 11400000, guid: 7618bc2d9f4d3419db8b9137e32f5f5e, type: 2}
   onPurchaseCompleted:
     m_PersistentCalls:

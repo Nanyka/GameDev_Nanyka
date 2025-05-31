@@ -1645,7 +1645,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &569719457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3847,7 +3847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9730f33bfbb64ace87b74c0fc614899e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productId: com.nanykalab.zerotictactoe.unlock
+  productId: unlock_all_ai_bots
   iapManager: {fileID: 11400000, guid: 7618bc2d9f4d3419db8b9137e32f5f5e, type: 2}
   onPurchaseCompleted:
     m_PersistentCalls:
