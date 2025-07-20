@@ -49,7 +49,7 @@ namespace TheAiAlchemist
             _loadBossGame.OnLoadingRequested += LoadBossGame;
             _loadMenu.OnLoadingRequested += LoadMenu;
 #if UNITY_EDITOR
-            _coldStartupLocation.OnLoadingRequested += LocationColdStartup;
+            // _coldStartupLocation.OnLoadingRequested += LocationColdStartup;
 #endif
         }
 
@@ -60,7 +60,7 @@ namespace TheAiAlchemist
             _loadBossGame.OnLoadingRequested -= LoadBossGame;
             _loadMenu.OnLoadingRequested -= LoadMenu;
 #if UNITY_EDITOR
-            _coldStartupLocation.OnLoadingRequested -= LocationColdStartup;
+            // _coldStartupLocation.OnLoadingRequested -= LocationColdStartup;
 #endif
         }
 
@@ -75,8 +75,7 @@ namespace TheAiAlchemist
             if (_currentlyLoadedScene.sceneType == GameSceneSO.GameSceneType.Location)
             {
                 //Gameplay managers is loaded synchronously
-                _gameplayManagerLoadingOpHandle =
-                    _gameplayScene.sceneReference.LoadSceneAsync(LoadSceneMode.Additive, true);
+                _gameplayManagerLoadingOpHandle = _gameplayScene.sceneReference.LoadSceneAsync(LoadSceneMode.Additive, true);
                 _gameplayManagerLoadingOpHandle.WaitForCompletion();
                 _gameplayManagerSceneInstance = _gameplayManagerLoadingOpHandle.Result;
 
@@ -97,7 +96,7 @@ namespace TheAiAlchemist
             _sceneToLoad = locationToLoad;
             _showLoadingScreen = showLoadingScreen;
             _isLoading = true;
-
+            
             //In case we are coming from the main menu, we need to load the Gameplay manager scene first
             if (!_gameplayManagerSceneInstance.Scene.isLoaded)
             {
@@ -237,6 +236,7 @@ namespace TheAiAlchemist
             _currentlyLoadedScene = _sceneToLoad;
 
             Scene s = obj.Result.Scene;
+            // Debug.Log(s.name);
             SceneManager.SetActiveScene(s);
             LightProbes.TetrahedralizeAsync();
 
@@ -255,7 +255,6 @@ namespace TheAiAlchemist
             _onSceneReady.ExecuteChannel(); //Spawn system will spawn a gameplay scene
             _activateInputReader.ExecuteChannel(); // Assign main camera on InputManager and enable InputReader
             _readyForGame.ExecuteChannel(); // Initiate game state
-
         }
 
         private void ExitGame()

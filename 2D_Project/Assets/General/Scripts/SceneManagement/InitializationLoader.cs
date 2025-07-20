@@ -18,9 +18,10 @@ namespace TheAiAlchemist
 		[SerializeField] private GameSceneSO _managersScene = default;
 		[SerializeField] private GameSceneSO _menuToLoad = default;
 
-		[FormerlySerializedAs("_menuLoadChannel")]
 		[Header("Broadcasting on")]
-		[SerializeField] private AssetReference _loadMenuChannel = default;
+		// [SerializeField] private AssetReference _loadMenuChannel = default;
+
+		[SerializeField] private LoadEventChannel _loadMenu;
 
 		private void Start()
 		{
@@ -30,7 +31,9 @@ namespace TheAiAlchemist
 
 		private void LoadEventChannel(AsyncOperationHandle<SceneInstance> obj)
 		{
-			_loadMenuChannel.LoadAssetAsync<LoadEventChannel>().Completed += LoadMainMenu;
+			// _loadMenuChannel.LoadAssetAsync<LoadEventChannel>().Completed += LoadMainMenu;
+			_loadMenu.RaiseEvent(_menuToLoad, true);
+			SceneManager.UnloadSceneAsync(0);
 		}
 
 		private void LoadMainMenu(AsyncOperationHandle<LoadEventChannel> obj)

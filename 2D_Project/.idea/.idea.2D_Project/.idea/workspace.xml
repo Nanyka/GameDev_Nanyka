@@ -6,49 +6,49 @@
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/arm64-v8a/.cmake/api/v1/reply/index-2025-05-13T06-46-23-0351.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/arm64-v8a/.cmake/api/v1/reply/index-2025-05-27T18-43-30-0959.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/arm64-v8a/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/arm64-v8a/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/arm64-v8a/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/arm64-v8a/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/arm64-v8a/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/arm64-v8a/CMakeFiles/CMakeOutput.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/arm64-v8a/configure_fingerprint.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/arm64-v8a/configure_fingerprint.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/.cmake/api/v1/reply/index-2025-05-13T06-46-24-0679.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/.cmake/api/v1/reply/index-2025-05-27T18-43-31-0881.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/configure_fingerprint.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/Debug/414mo3s4/armeabi-v7a/configure_fingerprint.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/arm64-v8a/.cmake/api/v1/reply/cache-v2-3445500f62d4b50dde5b.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/arm64-v8a/.cmake/api/v1/reply/cmakeFiles-v1-7b24cc38ba333e75bcf9.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/arm64-v8a/.cmake/api/v1/reply/index-2025-05-13T06-59-41-0519.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/arm64-v8a/.cmake/api/v1/reply/cache-v2-f1c76c8d6d2dd9f543ab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/arm64-v8a/.cmake/api/v1/reply/cmakeFiles-v1-ee7e55d65fb1054dafc2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/arm64-v8a/.cmake/api/v1/reply/index-2025-05-31T11-09-24-0594.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/arm64-v8a/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/arm64-v8a/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/arm64-v8a/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/arm64-v8a/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/arm64-v8a/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/arm64-v8a/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/arm64-v8a/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/arm64-v8a/CMakeFiles/CMakeOutput.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/arm64-v8a/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/arm64-v8a/build.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/arm64-v8a/configure_fingerprint.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/arm64-v8a/configure_fingerprint.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/.cmake/api/v1/reply/index-2025-05-13T06-59-42-0842.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/.cmake/api/v1/reply/index-2025-05-31T11-09-26-0436.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/configure_fingerprint.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/3o4c4x4y/armeabi-v7a/configure_fingerprint.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AndroidBuild/ZeroTicTacToe_BurstDebugInformation_DoNotShip/tempburstlibs/arm64-v8a/lib_burst_generated.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AndroidBuild/ZeroTicTacToe_BurstDebugInformation_DoNotShip/tempburstlibs/armeabi-v7a/lib_burst_generated.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AndroidBuild/zero_tic_tac_toe_BurstDebugInformation_DoNotShip/tempburstlibs/arm64-v8a/lib_burst_generated.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AndroidBuild/zero_tic_tac_toe_BurstDebugInformation_DoNotShip/tempburstlibs/armeabi-v7a/lib_burst_generated.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Art/UI/NewUI/logo_dark.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Art/UI/NewUI/logo_dark.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Locations/TutorialLocation.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Locations/TutorialLocation.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithBoss.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithBoss.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UGS/IAPInvoker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UGS/IAPInvoker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/IAPProductCatalog.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/IAPProductCatalog.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CCDBuildData/a97a9fcb-e351-43c3-b99a-d811879d6e5e/7cd824ba-3dd8-4a45-b8ef-77aa7ea4aeef/latest/catalog_1.4.3.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CCDBuildData/a97a9fcb-e351-43c3-b99a-d811879d6e5e/7cd824ba-3dd8-4a45-b8ef-77aa7ea4aeef/latest/catalog_1.4.3.hash" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CCDBuildData/a97a9fcb-e351-43c3-b99a-d811879d6e5e/7cd824ba-3dd8-4a45-b8ef-77aa7ea4aeef/latest/catalog_1.4.7.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CCDBuildData/a97a9fcb-e351-43c3-b99a-d811879d6e5e/7cd824ba-3dd8-4a45-b8ef-77aa7ea4aeef/latest/catalog_1.4.7.hash" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CCDBuildData/a97a9fcb-e351-43c3-b99a-d811879d6e5e/7cd824ba-3dd8-4a45-b8ef-77aa7ea4aeef/latest/catalog_1.4.8.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CCDBuildData/a97a9fcb-e351-43c3-b99a-d811879d6e5e/7cd824ba-3dd8-4a45-b8ef-77aa7ea4aeef/latest/catalog_1.4.8.hash" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CCDBuildData/a97a9fcb-e351-43c3-b99a-d811879d6e5e/7cd824ba-3dd8-4a45-b8ef-77aa7ea4aeef/latest/modelassets_assets_all_6ba78cd7715fed83b69389338aa217eb.bundle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Initialization.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Initialization.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/PersistentManagers.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/PersistentManagers.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/SceneManagement/InitializationLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/SceneManagement/InitializationLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/SceneManagement/SceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/SceneManagement/SceneLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/SceneManagement/ScriptableObjects/PersistentManagersSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/SceneManagement/ScriptableObjects/PersistentManagersSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CCDBuildData/a97a9fcb-e351-43c3-b99a-d811879d6e5e/b562b449-6dfe-4e8c-8cbc-a86b7dcbe206/latest/catalog_1.4.2.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CCDBuildData/a97a9fcb-e351-43c3-b99a-d811879d6e5e/b562b449-6dfe-4e8c-8cbc-a86b7dcbe206/latest/catalog_1.4.2.hash" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CCDBuildData/a97a9fcb-e351-43c3-b99a-d811879d6e5e/b562b449-6dfe-4e8c-8cbc-a86b7dcbe206/latest/catalog_1.4.8.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CCDBuildData/a97a9fcb-e351-43c3-b99a-d811879d6e5e/b562b449-6dfe-4e8c-8cbc-a86b7dcbe206/latest/catalog_1.4.8.hash" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,9 +75,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/UI/EndGameMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/UI/InGameAnnouncer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/Utils/Combination.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TriggerRoar.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.purchasing@649c6c7b3b1b/Runtime/Codeless/IAPButton.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@8199bdf7ecb0/Runtime/AssetReference.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@dcc61ebd6655/Runtime/Behaviours/CinemachineVirtualCamera.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.authentication@868ebdf18f3f/Runtime/AuthenticationServiceInternal.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/53ee74b2d3444cda83e16b9bb32f219d1ea400/e8/1e02f4dd/UnityEvent`1.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -275,6 +276,12 @@
       <workItem from="1747754763198" duration="9395000" />
       <workItem from="1747835357964" duration="3838000" />
       <workItem from="1748687718973" duration="1951000" />
+      <workItem from="1752150974363" duration="5852000" />
+      <workItem from="1752256317838" duration="3160000" />
+      <workItem from="1752303329120" duration="541000" />
+      <workItem from="1752306364197" duration="2838000" />
+      <workItem from="1752842714389" duration="41000" />
+      <workItem from="1753033633717" duration="1671000" />
     </task>
     <servers />
   </component>

@@ -943,7 +943,7 @@ MonoBehaviour:
   _loadTutorial: {fileID: 11400000, guid: ff4f1ea0fc5504770ae449f6e446b338, type: 2}
   _loadBossGame: {fileID: 11400000, guid: 297e3467bd45f435499e08359e31b558, type: 2}
   _loadMenu: {fileID: 11400000, guid: 202aa3967ce7d43dfb3b9cc7700c9f53, type: 2}
-  _coldStartupLocation: {fileID: 11400000, guid: b0f1398eb1d6a428daee31f0e0fbe9c2, type: 2}
+  _coldStartupLocation: {fileID: 0}
   _toggleLoadingScreen: {fileID: 11400000, guid: d07f5a3a1285343f2858668d333b644d, type: 2}
   _onSceneReady: {fileID: 11400000, guid: 55abaa0543fb84f05a1d902086d899ac, type: 2}
   _fadeRequestChannel: {fileID: 11400000, guid: 0388a63985273456d828cc63a0175f06, type: 2}
