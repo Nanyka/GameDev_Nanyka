@@ -1,5 +1,5 @@
 # ninja log v5
-1	401	1752773299434146526	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	5e23aa14a7e52817
-402	627	1752773299643912003	/Users/mac/Desktop/Projects/GameDev_Nanyka/2D_Project/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/3o4c4x4y/obj/arm64-v8a/libswappywrapper.so	efac497deab706bf
-0	296	1753038045221732821	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	5e23aa14a7e52817
-296	499	1753038045412495505	/Users/mac/Desktop/Projects/GameDev_Nanyka/2D_Project/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/3o4c4x4y/obj/arm64-v8a/libswappywrapper.so	efac497deab706bf
+1	557	1755329922561991352	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	5e23aa14a7e52817
+558	768	1755329922766972628	/Users/mac/Desktop/Projects/GameDev_Nanyka/2D_Project/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/3o4c4x4y/obj/arm64-v8a/libswappywrapper.so	efac497deab706bf
+0	274	1755330085681155534	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	5e23aa14a7e52817
+275	471	1755330085865496360	/Users/mac/Desktop/Projects/GameDev_Nanyka/2D_Project/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/3o4c4x4y/obj/arm64-v8a/libswappywrapper.so	efac497deab706bf

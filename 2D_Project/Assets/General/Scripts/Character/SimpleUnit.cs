@@ -22,6 +22,7 @@ namespace TheAiAlchemist
 
         private ISelectionInteract interact;
         private int remainAmount;
+        private bool isInit;
 
         private void OnEnable()
         {
@@ -42,19 +43,20 @@ namespace TheAiAlchemist
         private void Awake()
         {
             interact = GetComponent<ISelectionInteract>();
+            isInit = false;
         }
 
-        private void Start()
-        {
-            ResetUnitButton();
-        }
+        // private void Start()
+        // {
+        //     ResetUnitButton();
+        // }
 
         private void ResetUnitButton()
         {
             remainAmount = amountOfItem;
             interact.OnUpdateRemainAmount(remainAmount);
             // interact.OnUpdateText($"{mUnitIndex} ({remainAmount})");
-            mButton.interactable = true;
+            SetButtonActive();
         }
 
         public void WhichUnit()
@@ -68,16 +70,25 @@ namespace TheAiAlchemist
 
         private void UpdateRemainAmount()
         {
+            if (isInit == false)
+            {
+                isInit = true;
+                ResetUnitButton();
+            }
+            
             var inventory = currentState.GetValue().PlayerInventories[forPlayer];
             remainAmount = inventory.GetInventoryDictionary()[mUnitIndex];
             interact.OnUpdateRemainAmount(remainAmount);
             // interact.OnUpdateText($"{mUnitIndex} ({remainAmount})");
-            if (remainAmount <= 0)
-            {
-                mButton.interactable = false;
-            }
+            SetButtonActive();
         }
-        
+
+        private void SetButtonActive()
+        {
+            var isActive = remainAmount <= 0 || mUnitIndex > (Mathf.RoundToInt(currentState.GetValue().Step / 2) + 1);
+            mButton.interactable = !isActive;
+        }
+
         private void HighlightSelection(int selectedIndex)
         {
             if (selectedIndex == mUnitIndex)

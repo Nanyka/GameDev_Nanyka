@@ -109,10 +109,8 @@ namespace TheAiAlchemist
         {
             if (_currentGameState.IsOver())
                 EndGame();
-
+            
             EndTurnSetup();
-            // Debug.Log($"Next player: {_currentGameState.NextPlayer}");
-            // GetNextPlayerMove();
         }
 
         private async void GetNextPlayerMove()

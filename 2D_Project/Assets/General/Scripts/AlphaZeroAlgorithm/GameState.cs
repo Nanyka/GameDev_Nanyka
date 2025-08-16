@@ -10,16 +10,15 @@ namespace AlphaZeroAlgorithm
     {
         public Board Board { get; }
         public Player NextPlayer { get; }
-
         private Move? LastMove { get; }
-
         public Dictionary<Player, Inventory> PlayerInventories { get; }
+        public int Step;
 
 
         // Need a constructor that takes all necessary components
         // Expects Inventory objects that implement ICloneable
         public GameState(Board board, Player nextPlayer, Move? lastMove,
-            Dictionary<Player, Inventory> playerInventories)
+            Dictionary<Player, Inventory> playerInventories, int step = 0)
         {
             if (playerInventories == null) throw new ArgumentNullException(nameof(playerInventories));
             if (!playerInventories.ContainsKey(Player.X) || !playerInventories.ContainsKey(Player.O))
@@ -46,6 +45,7 @@ namespace AlphaZeroAlgorithm
                 // Clone the Inventory object and add to the new dictionary
                 PlayerInventories[entry.Key] = (Inventory)((ICloneable)entry.Value).Clone();
             }
+            Step = step;
         }
 
         // --- Factory method to start a new game ---
@@ -126,7 +126,7 @@ namespace AlphaZeroAlgorithm
             nextBoard.Place(NextPlayer, pieceToPlay);
 
             // 5. Return the new GameState object
-            return new GameState(nextBoard, NextPlayer.Other(), move, nextInventories);
+            return new GameState(nextBoard, NextPlayer.Other(), move, nextInventories, Step + 1);
         }
 
         public Inventory GetInventory(Player player)
@@ -165,12 +165,10 @@ namespace AlphaZeroAlgorithm
 
         public List<Move> LegalMoves()
         {
-            // if (IsOver()) return new List<Move>();
-
             List<Move> moves = new List<Move>();
             Inventory currentInventory = GetInventory(NextPlayer);
-
-            for (int strength = 1; strength <= GameConstants.NumStrengths; strength++)
+            
+            for (int strength = 1; strength <= UnlockedMoveIndex(); strength++)
             {
                 if (currentInventory.Enough(strength))
                 {
@@ -190,6 +188,11 @@ namespace AlphaZeroAlgorithm
             }
 
             return moves;
+        }
+
+        private int UnlockedMoveIndex()
+        {
+            return Mathf.Min(Mathf.RoundToInt(Step/2)+1, GameConstants.NumStrengths);
         }
 
         public bool IsOver()
