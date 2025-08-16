@@ -14,10 +14,11 @@ namespace TheAiAlchemist
         [SerializeField] protected GameStateStorage gameStateStorage;
         [SerializeField] protected IntStorage askUnitIndex;
         [SerializeField] protected VoidChannel changePlayerChannel;
+        [SerializeField] protected VoidChannel finishDropChannel;
         [SerializeField] protected BoolChannel endGameChannel;
         [SerializeField] private MoveChannel humanMoveChannel;
         [SerializeField] private VoidChannel resetChannel;
-        [SerializeField] protected IntChannel audioPlayIndex;
+        // [SerializeField] protected IntChannel audioPlayIndex;
         [SerializeField] protected BoolChannel botThinkingChannel;
         [SerializeField] private VoidChannel checkIapState;
         [SerializeField] private BoolChannel iapStateChannel;
@@ -40,6 +41,7 @@ namespace TheAiAlchemist
             resetChannel.AddListener(ResetGame);
             iapStateChannel.AddListener(StartGame);
             readyForGame.AddListener(ReadyForGame);
+            finishDropChannel.AddListener(GetNextPlayerMove);
         }
 
         private void OnDisable()
@@ -48,6 +50,7 @@ namespace TheAiAlchemist
             resetChannel.RemoveListener(ResetGame);
             iapStateChannel.RemoveListener(StartGame);
             readyForGame.RemoveListener(ReadyForGame);
+            finishDropChannel.RemoveListener(GetNextPlayerMove);
 
             _botAgent?.DisableAiElements();
         }
@@ -102,16 +105,17 @@ namespace TheAiAlchemist
             await ApplySelectedMove(humanMove);
         }
 
-        protected async Task StartNextTurn()
+        protected void StartNextTurn()
         {
             if (_currentGameState.IsOver())
-            {
                 EndGame();
-                return;
-            }
-
+            
             EndTurnSetup();
+        }
 
+        private async void GetNextPlayerMove()
+        {
+            if (_currentGameState.IsOver()) return;
             var nextMove = await _players[_currentGameState.NextPlayer].SelectMove(_currentGameState);
             if (nextMove != null) await ApplySelectedMove(nextMove);
         }
@@ -127,12 +131,12 @@ namespace TheAiAlchemist
 
             try
             {
+                // Debug.Log($"Point to {move}");
                 var point = move.Point;
                 var player = _currentGameState.Board.GetPlayerAtCoord(point.Row, point.Col);
                 _currentGameState = _currentGameState.ApplyMove(move);
-                audioPlayIndex.ExecuteChannel(player.HasValue ? 1 : 0);
 
-                await StartNextTurn();
+                StartNextTurn();
             }
             catch (IllegalMoveError ex)
             {
@@ -187,17 +191,22 @@ namespace TheAiAlchemist
 
         private void ResetGame()
         {
-            if (saveSystemManager.saveData.level <= remoteConfigManager.GetNumericConfig(NumericConfigName.COFFEE_ASK)) 
+            if (saveSystemManager.saveData.level <= remoteConfigManager.GetNumericConfig(NumericConfigName.COFFEE_ASK))
+            {
                 StartGame(true);
+                GetNextPlayerMove();
+            }
             else
                 checkIapState.ExecuteChannel();
         }
         
-        private async void StartGame(bool iapState)
+        private void StartGame(bool iapState)
         {
             _isEndGame = false;
             _currentGameState = GameSetup.SetupNewGame();
-            await StartNextTurn();
+            // gameStateStorage.SetValue(_currentGameState);
+            StartNextTurn();
+            GetNextPlayerMove();
             
             // if (iapState)
             // {

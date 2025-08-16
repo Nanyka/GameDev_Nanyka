@@ -13,9 +13,9 @@ namespace TheAiAlchemist
             mRenderer.enabled = isActive;
         }
 
-        public void ChangeColor(Color color)
+        public void ChangeMaterial(Material material)
         {
-            mRenderer.color = color;
+            mRenderer.material = material;
         }
 
         public void SetSprite(Sprite sprite)

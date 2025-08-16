@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using AlphaZeroAlgorithm;
 using UnityEngine;
@@ -11,6 +12,7 @@ namespace TheAiAlchemist
         [SerializeField] private VoidChannel changePlayerChannel;
         [SerializeField] private GameStateStorage gameStateStorage;
         [SerializeField] private VoidChannel resetChannel;
+        [SerializeField] private BoolChannel endGameChannel;
 
         [SerializeField] protected int row;
         [SerializeField] protected int col;
@@ -18,24 +20,27 @@ namespace TheAiAlchemist
         [SerializeField] private UnitVisualize unitVisualize;
 
         protected int currentStrength;
+        private int visualStrength;
 
         private void OnEnable()
         {
             changePlayerChannel.AddListener(VisualizeState);
             resetChannel.AddListener(ResetPlot);
+            endGameChannel.AddListener(HighlightWinner);
         }
 
         private void OnDisable()
         {
             changePlayerChannel.RemoveListener(VisualizeState);
             resetChannel.RemoveListener(ResetPlot);
+            endGameChannel.RemoveListener(HighlightWinner);
         }
 
-        private void Start()
-        {
-            // ResetPlot();
-            VisualizeState();
-        }
+        // private void Start()
+        // {
+        //     // ResetPlot();
+        //     VisualizeState();
+        // }
 
         protected virtual void OnMouseUpAsButton()
         {
@@ -57,7 +62,6 @@ namespace TheAiAlchemist
 
         private void VisualizeState()
         {
-            // Debug.Log($"Visual {row}:{col}");
             var currentState = gameStateStorage.GetValue();
             if (currentState == null) return;
             
@@ -66,7 +70,10 @@ namespace TheAiAlchemist
                 var checkPoint = plot.Key;
                 if (checkPoint.Row == row && checkPoint.Col == col)
                 {
-                    unitVisualize.Visualize(checkPoint.Strength, plot.Value);
+                    if (checkPoint.Strength <= visualStrength) continue;
+                    bool isBeatOpponent = checkPoint.Strength > visualStrength && visualStrength != 0;
+                    unitVisualize.Visualize(checkPoint.Strength, plot.Value, isBeatOpponent);
+                    visualStrength = checkPoint.Strength;
                 }
             }
         }
@@ -75,7 +82,33 @@ namespace TheAiAlchemist
         {
             // Debug.Log("Reset plot");
             currentStrength = 0;
+            visualStrength = 0;
             unitVisualize.Disable();
+        }
+        
+        private void HighlightWinner(bool hasWinner)
+        {
+            if (hasWinner)
+            {
+                var winnerPoints = gameStateStorage.GetValue().GetWinningLine();
+                if (winnerPoints != null)
+                    foreach (Point p in winnerPoints)
+                    {
+                        if (p.Row == row && p.Col == col)
+                        {
+                            // Debug.Log("Match found at Point (" + p.Row + ", " + p.Col + ")");
+                            // unitVisualize.Highlight();
+                            StartCoroutine(WaitToHighlight());
+                            return;
+                        }
+                    }
+            }
+        }
+        
+        private IEnumerator WaitToHighlight()
+        {
+            yield return new WaitForSeconds(0.5f);
+            unitVisualize.Highlight();
         }
     }
 }

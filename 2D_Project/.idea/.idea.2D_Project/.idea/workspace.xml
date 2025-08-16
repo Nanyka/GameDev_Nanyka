@@ -5,18 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9f45e15-49ff-4f27-a6d0-c7e0fae4efd7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/UGS/RestoreButton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/General/Scripts/UGS/RestoreButton.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithBoss.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithBoss.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scenes/Managers/GamePlayWithState.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/BackendSO/IAPManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/BackendSO/IAPManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Settings/SettingsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Settings/SettingsSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Test/TestIAPManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Test/TestIAPManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UGS/IAPFeedback.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UGS/IAPFeedback.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UGS/IAPInvoker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UGS/IAPInvoker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/UGS/PurchaseButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/UGS/PurchaseButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/AlphaZeroAlgorithm/GameState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/Character/SimpleUnit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/Character/SimpleUnit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/General/Scripts/GameManagers/GameManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,9 +38,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/UI/EndGameMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/UI/InGameAnnouncer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/General/Scripts/Utils/Combination.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TriggerRoar.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.purchasing@649c6c7b3b1b/Runtime/Codeless/IAPButton.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@8199bdf7ecb0/Runtime/AssetReference.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@dcc61ebd6655/Runtime/Behaviours/CinemachineVirtualCamera.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.authentication@868ebdf18f3f/Runtime/AuthenticationServiceInternal.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/53ee74b2d3444cda83e16b9bb32f219d1ea400/e8/1e02f4dd/UnityEvent`1.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -67,7 +63,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;do_not_show_Android_plugin_suggestion&quot;: &quot;true&quot;,
     &quot;do_not_show_solution_notification&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;iOS__publishing&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;redesign&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -238,6 +234,19 @@
       <workItem from="1747160902099" duration="1630000" />
       <workItem from="1747241896371" duration="1296000" />
       <workItem from="1747372038403" duration="5161000" />
+      <workItem from="1747725625545" duration="2863000" />
+      <workItem from="1747743996466" duration="691000" />
+      <workItem from="1747754763198" duration="9395000" />
+      <workItem from="1747835357964" duration="3838000" />
+      <workItem from="1748687718973" duration="1951000" />
+      <workItem from="1752150974363" duration="5852000" />
+      <workItem from="1752256317838" duration="3160000" />
+      <workItem from="1752303329120" duration="541000" />
+      <workItem from="1752306364197" duration="2838000" />
+      <workItem from="1752842714389" duration="41000" />
+      <workItem from="1753033633717" duration="1671000" />
+      <workItem from="1754675965918" duration="54000" />
+      <workItem from="1755326333306" duration="3324000" />
     </task>
     <servers />
   </component>

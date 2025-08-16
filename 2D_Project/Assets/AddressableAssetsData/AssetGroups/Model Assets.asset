@@ -15,6 +15,24 @@ MonoBehaviour:
   m_GroupName: Model Assets
   m_GUID: 452c3f20712ca4d76b4da4becaf54238
   m_SerializeEntries:
+  - m_GUID: 10dfc3ae413c04a8ba5951483cc8c19c
+    m_Address: Assets/General/Art/UI/NewUI/green_2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 24ddfa986328f47199d6d4a17197449e
+    m_Address: Assets/General/Art/UI/NewUI/red_1.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2e6805e9a55d8441da616a76a37a56ed
+    m_Address: Assets/General/Art/UI/NewUI/green_3.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - sprites
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2fd2dca94da0e4253b8daa165a585024
     m_Address: Assets/General/AiModels/tttn_model_dataset_training_v5_4.onnx
     m_ReadOnly: 0
@@ -45,8 +63,20 @@ MonoBehaviour:
     m_SerializedLabels:
     - sprites
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 67bcd205d7bbe49199001399b74a822d
+    m_Address: Assets/General/Art/UI/NewUI/green_1.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - sprites
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 74074685284d14752876d520046e2b10
     m_Address: Assets/General/Art/UI/red_unit_1.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - sprites
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 78351ecd9e23345edadb0a811f7cb059
+    m_Address: Assets/General/Art/UI/NewUI/red_2.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - sprites
@@ -110,6 +140,12 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - ai_model
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e1a87b613fe85489bbc06afaf3e269d0
+    m_Address: Assets/General/Art/UI/NewUI/red_3.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - sprites
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 67236932078454d7a84a4de4c3e3ced4, type: 2}

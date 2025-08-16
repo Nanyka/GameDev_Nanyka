@@ -6,5 +6,6 @@ namespace TheAiAlchemist
     [CreateAssetMenu(fileName = "PersistentManager", menuName = "TheAiAlchemist/SceneData/PersistentManager")]
     public class PersistentManagersSO : GameSceneSO
     {
+        
     }
 }

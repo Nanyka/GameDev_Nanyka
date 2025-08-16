@@ -9,14 +9,16 @@ namespace TheAiAlchemist
     public class GeneralAssetLoader : ScriptableObject
     {
         [Header("Inputs")]
+        public Material UnlitMaterial;
+        public Material LitMaterial;
         public string[] blueUnitAddress;
         public string[] redUnitAddress;
         public string[] remainAmountAddress;
 
-        [Header("Outputs")]
-        public List<Sprite> blueUnitSprites;
-        public List<Sprite> redUnitSprites;
-        public List<Sprite> remainAmountSprites;
+        // [Header("Outputs")]
+        [HideInInspector] public List<Sprite> blueUnitSprites;
+        [HideInInspector] public List<Sprite> redUnitSprites;
+        [HideInInspector] public List<Sprite> remainAmountSprites;
         
         public void ResetBlueSprites(List<Sprite> sprites)
         {
